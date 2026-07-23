@@ -13,6 +13,9 @@ script/report rubocop                       # RuboCop-discouraged language
 script/report ruby-requirements --sample 500
 script/report platforms --sample 500
 script/report gem-ages --sample 500
+script/report c-extensions --sample 500
+script/report feature-usage --sample 100     # downloads gems; heavier
+script/report ruby-deprecations
 script/report all --sample 500
 ```
 

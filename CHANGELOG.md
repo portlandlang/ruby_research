@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-22 (later)
+
+- `ruby-deprecations` report: deprecation/removal bullets extracted from ruby/ruby NEWS files, Ruby 2.0 through head.
+- `c-extensions` report: native-gem census with extension-kind and last-release-year histograms. Full gemspecs read from each `.gem`'s metadata.gz via ranged HTTP (the quick-index marshaled specs strip `extensions`).
+- `feature-usage` report: Prism AST node tally across sampled gem sources — occurrences, per-gem coverage, unused node types, and files that no longer parse under current Ruby.
+- `GemSourceClient`: cached `.gem` downloads, in-memory Ruby source extraction, ranged metadata reads.
+
 ## 2026-07-22
 
 - Project scaffold: `script/setup`, `script/test`, `script/report`, RSpec, RuboCop.

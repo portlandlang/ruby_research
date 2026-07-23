@@ -16,10 +16,11 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
 - **RubyGems API** (`/api/v1/...`): download counts and gem-level metadata.
   Rate limited to 10 req/s; the client throttles and caches.
 - **RuboCop's shipped `default.yml`**: community-consensus discouragements.
-- **ruby/ruby NEWS files** (planned): per-version deprecations and removals.
-- **Gem source code** (planned): download + unpack gems, parse with Prism to
-  measure real language feature usage. Needed for the "which language parts
-  are used/unused" and Portland-compatibility questions.
+- **ruby/ruby NEWS files**: per-version deprecations and removals (2.0 → head).
+- **Gem source code**: `.gem` downloads, parsed in memory with Prism to measure
+  real language feature usage. Full gemspecs (the quick-index marshaled specs
+  strip `extensions`) come from each gem's `metadata.gz` via a ranged HTTP
+  read of the tar head — no full download needed for the C-extension census.
 
 ## Question → report mapping
 
@@ -27,16 +28,16 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
 
 | Question | Report | Status |
 |---|---|---|
-| Discouraged by the language itself | `ruby-deprecations` (parse ruby/ruby NEWS + `Warning` categories) | planned |
+| Discouraged by the language itself | `script/report ruby-deprecations` (ruby/ruby NEWS files, 2.0 → head) | working |
 | Discouraged by RuboCop and other linters | `script/report rubocop` | working |
-| Disallowed on which Ruby versions | `ruby-deprecations` | planned |
+| Disallowed on which Ruby versions | `script/report ruby-deprecations` | working (v1: extracted NEWS bullets per version) |
 
 ### Gems
 
 | Question | Report | Status |
 |---|---|---|
-| Language parts used in published gems | `feature-usage` (Prism parse of gem sources) | planned |
-| Parts unused by any gem | `feature-usage`, full-corpus run | planned |
+| Language parts used in published gems | `script/report feature-usage` (Prism AST tally over gem sources) | working (sampled) |
+| Parts unused by any gem | `feature-usage`, full-corpus run | working (needs full-corpus run for a definitive answer) |
 | Parts only used by old/unmaintained gems | `feature-usage` joined with `gem-ages` | planned |
 | Histogram threshold of "very old/unmaintained" | `script/report gem-ages` | working |
 | Which gems work on which Ruby versions | `script/report ruby-requirements` | working |
@@ -45,8 +46,8 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
 
 | Question | Report | Status |
 |---|---|---|
-| How many C extension gems | `c-extensions` (unpack gemspecs, check `extensions`) | planned |
-| How many actively maintained | `c-extensions` joined with `gem-ages` + download counts | planned |
+| How many C extension gems | `script/report c-extensions` | working |
+| How many actively maintained | `c-extensions` (includes last-release-year histogram); download counts | partial |
 | Replaceable by pure Ruby | `c-extensions` + manual curation layer | planned |
 | Effectively required in the community | `c-extensions` + reverse-dependency counts | planned |
 
