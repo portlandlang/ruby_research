@@ -35,14 +35,30 @@ sources = RubyResearch::GemSourceClient.new
 names = compact_index.names
 names = names.sample(sample, random: Random.new(42)) if sample
 errors = []
+started_at = Time.now
+
+# Live single-line ticker on stderr, updated at most once a second so slow
+# hotspot runs visibly move without scrolling 195k lines.
+last_tick = Time.now - 2
+progress = lambda do |stage_name, position|
+  now = Time.now
+  return if now - last_tick < 1 && position != names.size
+
+  last_tick = now
+  megabytes = (RubyResearch::HttpClient.bytes_fetched / 1024.0 / 1024).round(1)
+  elapsed_minutes = ((now - started_at) / 60).round(1)
+  $stderr.print "\r  #{stage_name}: #{position}/#{names.size} gems · #{megabytes} MB fetched · " \
+                "#{errors.size} errors · #{elapsed_minutes} min elapsed   "
+end
 
 fetch_index = lambda do
   names.each_with_index do |name, position|
     compact_index.versions_of(name)
-    warn "  index #{position + 1}/#{names.size}" if ((position + 1) % 1000).zero?
+    progress.call('index', position + 1)
   rescue StandardError => e
     errors << { gem: name, stage: 'index', error: e.message }
   end
+  warn ''
 end
 
 latest_version_of = lambda do |name|
@@ -54,20 +70,22 @@ fetch_metadata = lambda do
   names.each_with_index do |name, position|
     latest = latest_version_of.call(name)
     sources.full_gemspec(name, latest[:version], platform: latest[:platform]) if latest
-    warn "  metadata #{position + 1}/#{names.size}" if ((position + 1) % 500).zero?
+    progress.call('metadata', position + 1)
   rescue StandardError => e
     errors << { gem: name, stage: 'metadata', error: e.message }
   end
+  warn ''
 end
 
 fetch_gems = lambda do
   names.each_with_index do |name, position|
     latest = latest_version_of.call(name)
     sources.download(name, latest[:version], platform: latest[:platform]) if latest
-    warn "  gems #{position + 1}/#{names.size}" if ((position + 1) % 100).zero?
+    progress.call('gems', position + 1)
   rescue StandardError => e
     errors << { gem: name, stage: 'gems', error: e.message }
   end
+  warn ''
 end
 
 stages = {
@@ -91,4 +109,4 @@ selected.each(&:call)
 megabytes = (RubyResearch::HttpClient.bytes_fetched / 1024.0 / 1024).round(1)
 puts "Fetched #{megabytes} MB over the wire this run. Errors: #{errors.size}"
 errors.first(20).each { puts "  #{it[:stage]} #{it[:gem]}: #{it[:error]}" }
-puts "  (rerun the same command to retry errored gems)" if errors.any?
+puts '  (rerun the same command to retry errored gems)' if errors.any?
