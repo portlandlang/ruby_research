@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-07-22 (design-decision censuses)
+
+- `mutation-shapes` report: classifies receiver-mutation sites as accumulator / escaped / aliased / shared, feeding the `<<`-as-rebinding decision.
+- `error-handling` report: rescue shapes (specific vs bare, re-raise vs swallow), `foo rescue nil`, ensure, retry, custom error classes.
+- `nil-idioms` report: nil checks, `&.`, `||` defaults, `||=`, truthiness-on-variable sites, and the fetch arity breakdown.
+- Split `<<`/`>>` out of the bitwise-operators feature in `config/portland_removals.yml` — true bitwise usage is 6% of gems, shift/append 54%.
+
 ## 2026-07-22 (Portland)
 
 - `config/portland_removals.yml`: Ruby features Portland removes/changes, derived from the Portland docs, with static-detection metadata (Prism node types, method names, constants).

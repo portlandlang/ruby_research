@@ -1,0 +1,28 @@
+{
+  "corpus_size": 195399,
+  "sampled": 50,
+  "analyzed": 50,
+  "errors": [],
+  "total_mutation_sites": 1713,
+  "site_counts": {
+    "accumulator": 280,
+    "escaped_local": 83,
+    "aliased_local": 536,
+    "shared_receiver": 788,
+    "implicit_self": 26
+  },
+  "site_percentages": {
+    "accumulator": 16.3,
+    "escaped_local": 4.8,
+    "aliased_local": 31.3,
+    "shared_receiver": 46.0,
+    "implicit_self": 1.5
+  },
+  "gem_coverage": {
+    "accumulator": 24,
+    "escaped_local": 12,
+    "aliased_local": 26,
+    "shared_receiver": 32,
+    "implicit_self": 4
+  }
+}

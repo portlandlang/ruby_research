@@ -17,6 +17,9 @@ script/report c-extensions --sample 500
 script/report feature-usage --sample 100     # downloads gems; heavier
 script/report ruby-deprecations
 script/report portland-compatibility --sample 100
+script/report error-handling --sample 100
+script/report nil-idioms --sample 100
+script/report mutation-shapes --sample 100
 script/report all --sample 500
 ```
 

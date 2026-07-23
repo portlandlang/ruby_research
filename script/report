@@ -10,6 +10,9 @@
 #   script/report feature-usage [--sample N]   (defaults to 100; downloads gems)
 #   script/report ruby-deprecations
 #   script/report portland-compatibility [--sample N]   (defaults to 100; downloads gems)
+#   script/report error-handling [--sample N]           (defaults to 100; downloads gems)
+#   script/report nil-idioms [--sample N]               (defaults to 100; downloads gems)
+#   script/report mutation-shapes [--sample N]          (defaults to 100; downloads gems)
 #   script/report all [--sample N]
 #
 # Reports are written to reports/<name>.md and reports/<name>.json.
@@ -32,7 +35,10 @@ reports = {
   'c-extensions' => -> { RubyResearch::Reports::CExtensions.new(sample: sample).run },
   'feature-usage' => -> { RubyResearch::Reports::FeatureUsage.new(sample: sample || 100).run },
   'ruby-deprecations' => -> { RubyResearch::Reports::RubyDeprecations.new.run },
-  'portland-compatibility' => -> { RubyResearch::Reports::PortlandCompatibility.new(sample: sample || 100).run }
+  'portland-compatibility' => -> { RubyResearch::Reports::PortlandCompatibility.new(sample: sample || 100).run },
+  'error-handling' => -> { RubyResearch::Reports::ErrorHandling.new(sample: sample || 100).run },
+  'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample || 100).run },
+  'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample || 100).run }
 }
 
 selected =

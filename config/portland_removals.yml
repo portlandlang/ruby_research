@@ -97,9 +97,16 @@ features:
   - name: bitwise-operators
     kind: removed
     status: tentative
-    description: "Bitwise operators leave the grammar (named methods remain); `<<` counts here are inflated by Array/IO append"
+    description: "Bitwise operators & | ^ ~ leave the grammar (named methods remain)"
     source: docs/ruby/bitwise-operators.md
-    method_names: ["&", "|", "^", "~", "<<", ">>"]
+    method_names: ["&", "|", "^", "~"]
+
+  - name: shift-operators
+    kind: removed
+    status: tentative
+    description: "`<<` / `>>` tracked separately from & | ^ ~ because `<<` counts are dominated by Array/IO/String append, which travels with the undecided mutable-values question"
+    source: docs/ruby/bitwise-operators.md
+    method_names: ["<<", ">>"]
 
   - name: ambient-nil
     kind: changed

@@ -61,6 +61,17 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
 | Gems using things unavailable on macOS | `c-extensions` (linked system libraries) | planned |
 | Intel-only gems | `script/report platforms` | working (platform-tag heuristic; source-only C extensions need build testing) |
 
+### Design-decision censuses
+
+Reports feeding specific open Portland decisions (see
+PORTLAND_DECISION_CANDIDATES.md):
+
+| Decision | Report | Status |
+|---|---|---|
+| Mutable values / `<<` as rebinding | `script/report mutation-shapes` (accumulator vs aliased vs shared mutation sites) | working (heuristic) |
+| Exceptions vs results | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes) | working |
+| Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `||` defaults, fetch arity) | working |
+
 ## Portland removal list
 
 `config/portland_removals.yml` encodes what Portland removes/changes, derived
