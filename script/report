@@ -6,6 +6,9 @@
 #   script/report ruby-requirements [--sample N]
 #   script/report platforms [--sample N]
 #   script/report gem-ages [--sample N]
+#   script/report c-extensions [--sample N]
+#   script/report feature-usage [--sample N]   (defaults to 100; downloads gems)
+#   script/report ruby-deprecations
 #   script/report all [--sample N]
 #
 # Reports are written to reports/<name>.md and reports/<name>.json.
@@ -24,7 +27,10 @@ reports = {
   'rubocop' => -> { RubyResearch::Reports::RubocopDiscouragements.new.run },
   'ruby-requirements' => -> { RubyResearch::Reports::RubyRequirements.new(sample: sample).run },
   'platforms' => -> { RubyResearch::Reports::Platforms.new(sample: sample).run },
-  'gem-ages' => -> { RubyResearch::Reports::GemAges.new(sample: sample).run }
+  'gem-ages' => -> { RubyResearch::Reports::GemAges.new(sample: sample).run },
+  'c-extensions' => -> { RubyResearch::Reports::CExtensions.new(sample: sample).run },
+  'feature-usage' => -> { RubyResearch::Reports::FeatureUsage.new(sample: sample || 100).run },
+  'ruby-deprecations' => -> { RubyResearch::Reports::RubyDeprecations.new.run }
 }
 
 selected =
