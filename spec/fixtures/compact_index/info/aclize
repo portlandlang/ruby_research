@@ -1,0 +1,7 @@
+---
+0.1.0 actionpack:~> 4.0,i18n:~> 0.7|checksum:09dd5f9a23a24e27433d4768eb1d67fa1e8aa40fc880b01d65fb03d1c7ce4c45,created_at:2015-11-19T18:47:26Z
+0.2.0 actionpack:~> 4.0,i18n:~> 0.7|checksum:cb53eabe1f5c3200be9e0a7e7946ec9d8b50c3eebdb094fa24e75ddcd9177bd5,created_at:2015-11-23T16:05:15Z
+0.2.1 actionpack:~> 4.0,i18n:~> 0.7|checksum:0142d7ab253d22b67d3b46b10cf04ffe695d3d3a1e6ae33ac080f55af9bc069a,created_at:2015-11-23T18:08:48Z
+0.2.2 actionpack:~> 4.0,i18n:~> 0.7|checksum:77b1295fc4ac609e33dca99868a3633abdde8288502ec0fee33693ebbb849e9b,created_at:2016-03-30T14:29:37Z
+1.0.0 actionpack:~> 5.0,i18n:~> 1.0|checksum:4d4b77a97a4796ec8d216c3e2a672e969e69bb83b6dd9e7f59747fe20cba915e,created_at:2019-04-23T16:40:13Z
+1.0.1 actionpack:< 7&>= 5.0,i18n:~> 1.0|checksum:1dbd7997457e0164bc566200e6660b2938f3cd87fe9071e764c78e23fab0146a,created_at:2020-05-22T08:58:59Z
