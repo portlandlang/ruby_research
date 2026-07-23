@@ -89,6 +89,17 @@ gems out of the 50-gem feature-usage sample use the feature at least once
 
 ## Collides with immutability / typed-values direction
 
+- **In-place mutation methods** — bang mutators (`map!`, `sort!`, `gsub!`,
+  `merge!`, …) and the non-bang mutators that change receivers just as much
+  (`push`, `pop`, `clear`, `delete`, `concat`, `replace`, `[]=`, `<<`).
+  Receiver mutation is a separate decision from `mutable`-marked rebinding,
+  and the docs' undecided "mutable values" question covers it only
+  implicitly. Also needs a ruling on the `!` convention itself: if nothing
+  mutates, does `!` retire, or get redefined (e.g. "may panic")? Sample
+  prevalence: bang mutators 24/50 gems, non-bang mutators 39/50, either
+  42/50 — the widest-reaching item on this list. Detect: `call_node` names
+  ending in `!` (minus non-mutating bangs like `exit!`) plus a curated
+  mutator list.
 - **`freeze` / `frozen?` / `dup` / `clone`** — under immutable-by-default
   these are redundant, meaningless, or need redefined semantics (travels
   with the undecided mutable-values question). Detect: method names.
