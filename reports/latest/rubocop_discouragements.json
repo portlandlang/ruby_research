@@ -1,0 +1,4855 @@
+{
+  "generated_with": "rubocop 1.88.2",
+  "enabled_by_default_count": 394,
+  "disabled_by_default_count": 212,
+  "cops": [
+    {
+      "cop": "Bundler/DuplicatedGem",
+      "department": "Bundler",
+      "description": "Checks for duplicate gem entries in Gemfile.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Bundler/DuplicatedGroup",
+      "department": "Bundler",
+      "description": "Checks for duplicate group entries in Gemfile.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Bundler/GemComment",
+      "department": "Bundler",
+      "description": "Add a comment describing each gem.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Bundler/GemFilename",
+      "department": "Bundler",
+      "description": "Enforces the filename for managing gems.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Bundler/GemVersion",
+      "department": "Bundler",
+      "description": "Requires or forbids specifying gem versions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Bundler/InsecureProtocolSource",
+      "department": "Bundler",
+      "description": "The source `:gemcutter`, `:rubygems` and `:rubyforge` are deprecated because HTTP requests are insecure. Please change your source to 'https://rubygems.org' if possible, or 'http://rubygems.org' if not.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Bundler/OrderedGems",
+      "department": "Bundler",
+      "description": "Gems within groups in the Gemfile should be alphabetically sorted.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/AddRuntimeDependency",
+      "department": "Gemspec",
+      "description": "Prefer `add_dependency` over `add_runtime_dependency`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#add_dependency_vs_add_runtime_dependency"
+    },
+    {
+      "cop": "Gemspec/AttributeAssignment",
+      "department": "Gemspec",
+      "description": "Use consistent style for Gemspec attributes assignment.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/DependencyVersion",
+      "department": "Gemspec",
+      "description": "Requires or forbids specifying gem dependency versions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/DeprecatedAttributeAssignment",
+      "department": "Gemspec",
+      "description": "Checks that deprecated attribute assignments are not set in a gemspec file.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/DevelopmentDependencies",
+      "department": "Gemspec",
+      "description": "Checks that development dependencies are specified in Gemfile rather than gemspec.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/DuplicatedAssignment",
+      "department": "Gemspec",
+      "description": "An attribute assignment method calls should be listed only once in a gemspec.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/OrderedDependencies",
+      "department": "Gemspec",
+      "description": "Dependencies in the gemspec should be alphabetically sorted.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/RequireMFA",
+      "department": "Gemspec",
+      "description": "Checks that the gemspec has metadata to require Multi-Factor Authentication from RubyGems.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/RequiredRubyVersion",
+      "department": "Gemspec",
+      "description": "Checks that `required_ruby_version` of gemspec is specified and equal to `TargetRubyVersion` of .rubocop.yml.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Gemspec/RubyVersionGlobalsUsage",
+      "department": "Gemspec",
+      "description": "Checks usage of RUBY_VERSION in gemspec.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-ruby-version-in-the-gemspec"
+    },
+    {
+      "cop": "Layout/AccessModifierIndentation",
+      "department": "Layout",
+      "description": "Checks indentation of private/protected visibility modifiers.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#indent-public-private-protected"
+    },
+    {
+      "cop": "Layout/ArgumentAlignment",
+      "department": "Layout",
+      "description": "Align the arguments of a method call if they span more than one line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-double-indent"
+    },
+    {
+      "cop": "Layout/ArrayAlignment",
+      "department": "Layout",
+      "description": "Align the elements of an array literal if they span more than one line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-double-indent"
+    },
+    {
+      "cop": "Layout/AssignmentIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the first line of the right-hand-side of a multi-line assignment.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/BeginEndAlignment",
+      "department": "Layout",
+      "description": "Align ends corresponding to begins correctly.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/BlockAlignment",
+      "department": "Layout",
+      "description": "Align block ends correctly.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/BlockEndNewline",
+      "department": "Layout",
+      "description": "Put end statement of multiline block on its own line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/CaseIndentation",
+      "department": "Layout",
+      "description": "Checks how the `when` and `in` clauses of a `case` expression are indented.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#indent-when-to-case"
+    },
+    {
+      "cop": "Layout/ClassStructure",
+      "department": "Layout",
+      "description": "Enforces a configured order of definitions within a class body.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": "#consistent-classes"
+    },
+    {
+      "cop": "Layout/ClosingHeredocIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of here document closings.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/ClosingParenthesisIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of hanging closing parentheses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/CommentIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of comments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/ConditionPosition",
+      "department": "Layout",
+      "description": "Checks for condition placed in a confusing position relative to the keyword.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#same-line-condition"
+    },
+    {
+      "cop": "Layout/DefEndAlignment",
+      "department": "Layout",
+      "description": "Align ends corresponding to defs correctly.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/DotPosition",
+      "department": "Layout",
+      "description": "Checks the position of the dot in multi-line method calls.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#consistent-multi-line-chains"
+    },
+    {
+      "cop": "Layout/ElseAlignment",
+      "department": "Layout",
+      "description": "Align elses and elsifs correctly.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/EmptyComment",
+      "department": "Layout",
+      "description": "Checks empty comment.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/EmptyLineAfterGuardClause",
+      "department": "Layout",
+      "description": "Add empty line after guard clause.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/EmptyLineAfterMagicComment",
+      "department": "Layout",
+      "description": "Add an empty line after magic comments to separate them from code.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#separate-magic-comments-from-code"
+    },
+    {
+      "cop": "Layout/EmptyLineAfterMultilineCondition",
+      "department": "Layout",
+      "description": "Enforces empty line after multiline condition.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/EmptyLineBetweenDefs",
+      "department": "Layout",
+      "description": "Use empty lines between class/module/method defs.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-between-methods"
+    },
+    {
+      "cop": "Layout/EmptyLines",
+      "department": "Layout",
+      "description": "Don't use several empty lines in a row.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#two-or-more-empty-lines"
+    },
+    {
+      "cop": "Layout/EmptyLinesAfterModuleInclusion",
+      "department": "Layout",
+      "description": "Keeps track of empty lines after module inclusion methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-after-module-inclusion"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundAccessModifier",
+      "department": "Layout",
+      "description": "Keep blank lines around access modifiers.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-access-modifier"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundArguments",
+      "department": "Layout",
+      "description": "Keeps track of empty lines around method arguments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundAttributeAccessor",
+      "department": "Layout",
+      "description": "Keep blank lines around attribute accessors.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-attribute-accessor"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundBeginBody",
+      "department": "Layout",
+      "description": "Keeps track of empty lines around begin-end bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-bodies"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundBlockBody",
+      "department": "Layout",
+      "description": "Keeps track of empty lines around block bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-bodies"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundClassBody",
+      "department": "Layout",
+      "description": "Keeps track of empty lines around class bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-bodies"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundExceptionHandlingKeywords",
+      "department": "Layout",
+      "description": "Keeps track of empty lines around exception handling keywords.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-bodies"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundMethodBody",
+      "department": "Layout",
+      "description": "Keeps track of empty lines around method bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-bodies"
+    },
+    {
+      "cop": "Layout/EmptyLinesAroundModuleBody",
+      "department": "Layout",
+      "description": "Keeps track of empty lines around module bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-lines-around-bodies"
+    },
+    {
+      "cop": "Layout/EndAlignment",
+      "department": "Layout",
+      "description": "Align ends correctly.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/EndOfLine",
+      "department": "Layout",
+      "description": "Use Unix-style line endings.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#crlf"
+    },
+    {
+      "cop": "Layout/ExtraSpacing",
+      "department": "Layout",
+      "description": "Do not use unnecessary spacing.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstArgumentIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the first argument in a method call.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstArrayElementIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the first element in an array literal.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstArrayElementLineBreak",
+      "department": "Layout",
+      "description": "Checks for a line break before the first element in a multi-line array.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstHashElementIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the first key in a hash literal.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstHashElementLineBreak",
+      "department": "Layout",
+      "description": "Checks for a line break before the first element in a multi-line hash.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstMethodArgumentLineBreak",
+      "department": "Layout",
+      "description": "Checks for a line break before the first argument in a multi-line method call.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstMethodParameterLineBreak",
+      "department": "Layout",
+      "description": "Checks for a line break before the first parameter in a multi-line method parameter definition.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/FirstParameterIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the first parameter in a method definition.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/HashAlignment",
+      "department": "Layout",
+      "description": "Align the elements of a hash literal if they span more than one line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/HeredocArgumentClosingParenthesis",
+      "department": "Layout",
+      "description": "Checks for the placement of the closing parenthesis in a method call that passes a HEREDOC string as an argument.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#heredoc-argument-closing-parentheses"
+    },
+    {
+      "cop": "Layout/HeredocIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the here document bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#squiggly-heredocs"
+    },
+    {
+      "cop": "Layout/IndentationConsistency",
+      "department": "Layout",
+      "description": "Keep indentation straight.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-indentation"
+    },
+    {
+      "cop": "Layout/IndentationStyle",
+      "department": "Layout",
+      "description": "Consistent indentation either with tabs only or spaces only.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-indentation"
+    },
+    {
+      "cop": "Layout/IndentationWidth",
+      "department": "Layout",
+      "description": "Use 2 spaces for indentation.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-indentation"
+    },
+    {
+      "cop": "Layout/InitialIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the first non-blank non-comment line in a file.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/LeadingCommentSpace",
+      "department": "Layout",
+      "description": "Comments should start with a space.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#hash-space"
+    },
+    {
+      "cop": "Layout/LeadingEmptyLines",
+      "department": "Layout",
+      "description": "Checks for unnecessary blank lines at the beginning of a file.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/LineContinuationLeadingSpace",
+      "department": "Layout",
+      "description": "Use trailing spaces instead of leading spaces in strings broken over multiple lines (by a backslash).",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/LineContinuationSpacing",
+      "department": "Layout",
+      "description": "Checks the spacing in front of backslash in line continuations.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/LineEndStringConcatenationIndentation",
+      "department": "Layout",
+      "description": "Checks the indentation of the next line after a line that ends with a string literal and a backslash.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/LineLength",
+      "department": "Layout",
+      "description": "Checks that line length does not exceed the configured limit.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#max-line-length"
+    },
+    {
+      "cop": "Layout/MultilineArrayBraceLayout",
+      "department": "Layout",
+      "description": "Checks that the closing brace in an array literal is either on the same line as the last array element, or a new line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineArrayLineBreaks",
+      "department": "Layout",
+      "description": "Checks that each item in a multi-line array literal starts on a separate line.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineAssignmentLayout",
+      "department": "Layout",
+      "description": "Checks for a newline after the assignment operator in multi-line assignments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#indent-conditional-assignment"
+    },
+    {
+      "cop": "Layout/MultilineBlockLayout",
+      "department": "Layout",
+      "description": "Ensures newlines after multiline block do statements.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineHashBraceLayout",
+      "department": "Layout",
+      "description": "Checks that the closing brace in a hash literal is either on the same line as the last hash element, or a new line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineHashKeyLineBreaks",
+      "department": "Layout",
+      "description": "Checks that each item in a multi-line hash literal starts on a separate line.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineMethodArgumentLineBreaks",
+      "department": "Layout",
+      "description": "Checks that each argument in a multi-line method call starts on a separate line.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineMethodCallBraceLayout",
+      "department": "Layout",
+      "description": "Checks that the closing brace in a method call is either on the same line as the last method argument, or a new line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineMethodCallIndentation",
+      "department": "Layout",
+      "description": "Checks indentation of method calls with the dot operator that span more than one line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineMethodDefinitionBraceLayout",
+      "department": "Layout",
+      "description": "Checks that the closing brace in a method definition is either on the same line as the last method parameter, or a new line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineMethodParameterLineBreaks",
+      "department": "Layout",
+      "description": "Checks that each parameter in a multi-line method definition starts on a separate line.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/MultilineOperationIndentation",
+      "department": "Layout",
+      "description": "Checks indentation of binary operations that span more than one line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/ParameterAlignment",
+      "department": "Layout",
+      "description": "Align the parameters of a method definition if they span more than one line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-double-indent"
+    },
+    {
+      "cop": "Layout/RedundantLineBreak",
+      "department": "Layout",
+      "description": "Do not break up an expression into multiple lines when it fits on a single line.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/RescueEnsureAlignment",
+      "department": "Layout",
+      "description": "Align rescues and ensures correctly.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SingleLineBlockChain",
+      "department": "Layout",
+      "description": "Put method call on a separate line if chained to a single line block.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceAfterColon",
+      "department": "Layout",
+      "description": "Use spaces after colons.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-operators"
+    },
+    {
+      "cop": "Layout/SpaceAfterComma",
+      "department": "Layout",
+      "description": "Use spaces after commas.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-operators"
+    },
+    {
+      "cop": "Layout/SpaceAfterMethodName",
+      "department": "Layout",
+      "description": "Do not put a space between a method name and the opening parenthesis in a method definition.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#parens-no-spaces"
+    },
+    {
+      "cop": "Layout/SpaceAfterNot",
+      "department": "Layout",
+      "description": "Tracks redundant space after the ! operator.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-space-bang"
+    },
+    {
+      "cop": "Layout/SpaceAfterSemicolon",
+      "department": "Layout",
+      "description": "Use spaces after semicolons.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-operators"
+    },
+    {
+      "cop": "Layout/SpaceAroundBlockParameters",
+      "department": "Layout",
+      "description": "Checks the spacing inside and after block parameters pipes.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceAroundEqualsInParameterDefault",
+      "department": "Layout",
+      "description": "Checks that the equals signs in parameter default assignments have or don't have surrounding space depending on configuration.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-around-equals"
+    },
+    {
+      "cop": "Layout/SpaceAroundKeyword",
+      "department": "Layout",
+      "description": "Use a space around keywords if appropriate.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceAroundMethodCallOperator",
+      "department": "Layout",
+      "description": "Checks method call operators to not have spaces around them.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceAroundOperators",
+      "department": "Layout",
+      "description": "Use a single space around operators.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-operators"
+    },
+    {
+      "cop": "Layout/SpaceBeforeBlockBraces",
+      "department": "Layout",
+      "description": "Checks that the left block brace has or doesn't have space before it.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceBeforeBrackets",
+      "department": "Layout",
+      "description": "Checks for receiver with a space before the opening brackets.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#space-in-brackets-access"
+    },
+    {
+      "cop": "Layout/SpaceBeforeComma",
+      "department": "Layout",
+      "description": "No spaces before commas.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceBeforeComment",
+      "department": "Layout",
+      "description": "Checks for missing space between code and a comment on the same line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceBeforeFirstArg",
+      "department": "Layout",
+      "description": "Checks that exactly one space is used between a method name and the first argument for method calls without parentheses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceBeforeSemicolon",
+      "department": "Layout",
+      "description": "No spaces before semicolons.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceInLambdaLiteral",
+      "department": "Layout",
+      "description": "Checks for spaces in lambda literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceInsideArrayLiteralBrackets",
+      "department": "Layout",
+      "description": "Checks the spacing inside array literal brackets.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceInsideArrayPercentLiteral",
+      "department": "Layout",
+      "description": "No unnecessary additional spaces between elements in %i/%w literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceInsideBlockBraces",
+      "department": "Layout",
+      "description": "Checks that block braces have or don't have surrounding space. For blocks taking parameters, checks that the left brace has or doesn't have trailing space.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceInsideHashLiteralBraces",
+      "department": "Layout",
+      "description": "Use spaces inside hash literal braces - or don't.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-braces"
+    },
+    {
+      "cop": "Layout/SpaceInsideParens",
+      "department": "Layout",
+      "description": "No spaces after ( or before ).",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#spaces-braces"
+    },
+    {
+      "cop": "Layout/SpaceInsidePercentLiteralDelimiters",
+      "department": "Layout",
+      "description": "No unnecessary spaces inside delimiters of %i/%w/%x literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceInsideRangeLiteral",
+      "department": "Layout",
+      "description": "No spaces inside range literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-space-inside-range-literals"
+    },
+    {
+      "cop": "Layout/SpaceInsideReferenceBrackets",
+      "department": "Layout",
+      "description": "Checks the spacing inside referential brackets.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Layout/SpaceInsideStringInterpolation",
+      "department": "Layout",
+      "description": "Checks for padding/surrounding spaces inside string interpolation.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#string-interpolation"
+    },
+    {
+      "cop": "Layout/TrailingEmptyLines",
+      "department": "Layout",
+      "description": "Checks trailing blank lines and final newline.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#newline-eof"
+    },
+    {
+      "cop": "Layout/TrailingWhitespace",
+      "department": "Layout",
+      "description": "Avoid trailing whitespace.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-trailing-whitespace"
+    },
+    {
+      "cop": "Lint/AmbiguousAssignment",
+      "department": "Lint",
+      "description": "Checks for mistyped shorthand assignments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/AmbiguousBlockAssociation",
+      "department": "Lint",
+      "description": "Checks for ambiguous block association with method when param passed without parentheses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/AmbiguousOperator",
+      "department": "Lint",
+      "description": "Checks for ambiguous operators in the first argument of a method invocation without parentheses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#method-invocation-parens"
+    },
+    {
+      "cop": "Lint/AmbiguousOperatorPrecedence",
+      "department": "Lint",
+      "description": "Checks for expressions containing multiple binary operations with ambiguous precedence.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/AmbiguousRange",
+      "department": "Lint",
+      "description": "Checks for ranges with ambiguous boundaries.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/AmbiguousRegexpLiteral",
+      "department": "Lint",
+      "description": "Checks for ambiguous regexp literals in the first argument of a method invocation without parentheses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ArrayLiteralInRegexp",
+      "department": "Lint",
+      "description": "Checks for an array literal interpolated inside a regexp.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/AssignmentInCondition",
+      "department": "Lint",
+      "description": "Don't use assignment in conditions.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#safe-assignment-in-condition"
+    },
+    {
+      "cop": "Lint/BigDecimalNew",
+      "department": "Lint",
+      "description": "`BigDecimal.new()` is deprecated. Use `BigDecimal()` instead.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/BinaryOperatorWithIdenticalOperands",
+      "department": "Lint",
+      "description": "Checks for places where binary operator has identical operands.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/BooleanSymbol",
+      "department": "Lint",
+      "description": "Checks for `:true` and `:false` symbols.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/CircularArgumentReference",
+      "department": "Lint",
+      "description": "Default values in optional keyword arguments and optional ordinal arguments should not refer back to the name of the argument.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ConstantDefinitionInBlock",
+      "department": "Lint",
+      "description": "Do not define constants within a block.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-constant-definition-in-block"
+    },
+    {
+      "cop": "Lint/ConstantOverwrittenInRescue",
+      "department": "Lint",
+      "description": "Checks for overwriting an exception with an exception result by use `rescue =>`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ConstantReassignment",
+      "department": "Lint",
+      "description": "Checks for constant reassignments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ConstantResolution",
+      "department": "Lint",
+      "description": "Checks that constants are fully qualified with `::`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/CopDirectiveSyntax",
+      "department": "Lint",
+      "description": "Checks that `# rubocop:` directives are strictly formatted.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DataDefineOverride",
+      "department": "Lint",
+      "description": "Disallow overriding the `Data` built-in methods via `Data.define`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/Debugger",
+      "department": "Lint",
+      "description": "Checks for debugger calls.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DeprecatedClassMethods",
+      "department": "Lint",
+      "description": "Checks for deprecated class method calls.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DeprecatedConstants",
+      "department": "Lint",
+      "description": "Checks for deprecated constants.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DeprecatedOpenSSLConstant",
+      "department": "Lint",
+      "description": "Don't use algorithm constants for `OpenSSL::Cipher` and `OpenSSL::Digest`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DisjunctiveAssignmentInConstructor",
+      "department": "Lint",
+      "description": "In constructor, plain assignment is preferred over disjunctive.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateBranch",
+      "department": "Lint",
+      "description": "Checks that there are no repeated bodies within `if/unless`, `case-when` and `rescue` constructs.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateCaseCondition",
+      "department": "Lint",
+      "description": "Do not repeat values in case conditionals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateElsifCondition",
+      "department": "Lint",
+      "description": "Do not repeat conditions used in if `elsif`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateHashKey",
+      "department": "Lint",
+      "description": "Checks for duplicate keys in hash literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateMagicComment",
+      "department": "Lint",
+      "description": "Checks for duplicated magic comments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateMatchPattern",
+      "department": "Lint",
+      "description": "Do not repeat patterns in `in` keywords.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateMethods",
+      "department": "Lint",
+      "description": "Checks for duplicate method definitions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateRegexpCharacterClassElement",
+      "department": "Lint",
+      "description": "Checks for duplicate elements in Regexp character classes.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateRequire",
+      "department": "Lint",
+      "description": "Checks for duplicate `require`s and `require_relative`s.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateRescueException",
+      "department": "Lint",
+      "description": "Checks that there are no repeated exceptions used in `rescue` expressions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/DuplicateSetElement",
+      "department": "Lint",
+      "description": "Checks for duplicate elements in Set.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EachWithObjectArgument",
+      "department": "Lint",
+      "description": "Checks for immutable argument given to each_with_object.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ElseLayout",
+      "department": "Lint",
+      "description": "Checks for odd code arrangement in an else block.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyBlock",
+      "department": "Lint",
+      "description": "Checks for blocks without a body.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyClass",
+      "department": "Lint",
+      "description": "Checks for classes and metaclasses without a body.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyConditionalBody",
+      "department": "Lint",
+      "description": "Checks for the presence of `if`, `elsif` and `unless` branches without a body.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyEnsure",
+      "department": "Lint",
+      "description": "Checks for empty ensure block.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyExpression",
+      "department": "Lint",
+      "description": "Checks for empty expressions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyFile",
+      "department": "Lint",
+      "description": "Enforces that Ruby source files are not empty.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyInPattern",
+      "department": "Lint",
+      "description": "Checks for the presence of `in` pattern branches without a body.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyInterpolation",
+      "department": "Lint",
+      "description": "Checks for empty string interpolation.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EmptyWhen",
+      "department": "Lint",
+      "description": "Checks for `when` branches with empty bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/EnsureReturn",
+      "department": "Lint",
+      "description": "Do not use return in an ensure block.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-return-ensure"
+    },
+    {
+      "cop": "Lint/ErbNewArguments",
+      "department": "Lint",
+      "description": "Use `:trim_mode` and `:eoutvar` keyword arguments to `ERB.new`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/FlipFlop",
+      "department": "Lint",
+      "description": "Checks for flip-flops.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-flip-flops"
+    },
+    {
+      "cop": "Lint/FloatComparison",
+      "department": "Lint",
+      "description": "Checks for the presence of precise comparison of floating point numbers.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#float-comparison"
+    },
+    {
+      "cop": "Lint/FloatOutOfRange",
+      "department": "Lint",
+      "description": "Catches floating-point literals too large or small for Ruby to represent.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/FormatParameterMismatch",
+      "department": "Lint",
+      "description": "Checks for a mismatch between the format fields and the arguments to `format`/`sprintf`/`%`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/HashCompareByIdentity",
+      "department": "Lint",
+      "description": "Prefer using `Hash#compare_by_identity` than using `object_id` for keys.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#identity-comparison"
+    },
+    {
+      "cop": "Lint/HashNewWithKeywordArgumentsAsDefault",
+      "department": "Lint",
+      "description": "Checks for the deprecated use of keyword arguments for hash default in `Hash.new`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/HeredocMethodCallPosition",
+      "department": "Lint",
+      "description": "Checks for the ordering of a method call where the receiver of the call is a HEREDOC.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#heredoc-method-calls"
+    },
+    {
+      "cop": "Lint/IdentityComparison",
+      "department": "Lint",
+      "description": "Prefer `equal?` over `==` when comparing `object_id`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#identity-comparison"
+    },
+    {
+      "cop": "Lint/ImplicitStringConcatenation",
+      "department": "Lint",
+      "description": "Checks for adjacent string literals on the same line, which could better be represented as a single string literal.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/IncompatibleIoSelectWithFiberScheduler",
+      "department": "Lint",
+      "description": "Checks for `IO.select` that is incompatible with Fiber Scheduler.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/IneffectiveAccessModifier",
+      "department": "Lint",
+      "description": "Checks for attempts to use `private` or `protected` to set the visibility of a class method, which does not work.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/InheritException",
+      "department": "Lint",
+      "description": "Avoid inheriting from the `Exception` class.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/InterpolationCheck",
+      "department": "Lint",
+      "description": "Checks for interpolation in a single quoted string.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ItWithoutArgumentsInBlock",
+      "department": "Lint",
+      "description": "Checks uses of `it` calls without arguments in block.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/LambdaWithoutLiteralBlock",
+      "department": "Lint",
+      "description": "Checks uses of lambda without a literal block.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/LiteralAsCondition",
+      "department": "Lint",
+      "description": "Checks of literals used in conditions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/LiteralAssignmentInCondition",
+      "department": "Lint",
+      "description": "Checks for literal assignments in the conditions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/LiteralInInterpolation",
+      "department": "Lint",
+      "description": "Checks for literals used in interpolation.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/Loop",
+      "department": "Lint",
+      "description": "Use Kernel#loop with break rather than begin/end/until or begin/end/while for post-loop tests.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#loop-with-break"
+    },
+    {
+      "cop": "Lint/MissingCopEnableDirective",
+      "department": "Lint",
+      "description": "Checks for a `# rubocop:enable` after `# rubocop:disable`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/MissingSuper",
+      "department": "Lint",
+      "description": "Checks for the presence of constructors and lifecycle callbacks without calls to `super`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/MixedCaseRange",
+      "department": "Lint",
+      "description": "Checks for mixed-case character ranges since they include likely unintended characters.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/MixedRegexpCaptureTypes",
+      "department": "Lint",
+      "description": "Do not mix named captures and numbered captures in a Regexp literal.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/MultipleComparison",
+      "department": "Lint",
+      "description": "Use `&&` operator to compare multiple values.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NestedMethodDefinition",
+      "department": "Lint",
+      "description": "Do not use nested method definitions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-nested-methods"
+    },
+    {
+      "cop": "Lint/NestedPercentLiteral",
+      "department": "Lint",
+      "description": "Checks for nested percent literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NextWithoutAccumulator",
+      "department": "Lint",
+      "description": "Do not omit the accumulator when calling `next` in a `reduce`/`inject` block.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NoReturnInBeginEndBlocks",
+      "department": "Lint",
+      "description": "Do not `return` inside `begin..end` blocks in assignment contexts.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NonAtomicFileOperation",
+      "department": "Lint",
+      "description": "Checks for non-atomic file operations.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": "#atomic-file-operations"
+    },
+    {
+      "cop": "Lint/NonDeterministicRequireOrder",
+      "department": "Lint",
+      "description": "Always sort arrays returned by Dir.glob when requiring files.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NonLocalExitFromIterator",
+      "department": "Lint",
+      "description": "Do not use return in iterator to cause non-local exit.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NumberConversion",
+      "department": "Lint",
+      "description": "Checks unsafe usage of number conversion methods.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NumberedParameterAssignment",
+      "department": "Lint",
+      "description": "Checks for uses of numbered parameter assignment.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/NumericOperationWithConstantResult",
+      "department": "Lint",
+      "description": "Checks for numeric operations with constant results.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/OrAssignmentToConstant",
+      "department": "Lint",
+      "description": "Checks unintended or-assignment to constant.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/OrderedMagicComments",
+      "department": "Lint",
+      "description": "Checks the proper ordering of magic comments and whether a magic comment is not placed before a shebang.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/OutOfRangeRegexpRef",
+      "department": "Lint",
+      "description": "Checks for out of range reference for Regexp because it always returns nil.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ParenthesesAsGroupedExpression",
+      "department": "Lint",
+      "description": "Checks for method calls with a space before the opening parenthesis.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#parens-no-spaces"
+    },
+    {
+      "cop": "Lint/PercentStringArray",
+      "department": "Lint",
+      "description": "Checks for unwanted commas and quotes in %w/%W literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/PercentSymbolArray",
+      "department": "Lint",
+      "description": "Checks for unwanted commas and colons in %i/%I literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RaiseException",
+      "department": "Lint",
+      "description": "Checks for `raise` or `fail` statements which are raising `Exception` class.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#raise-exception"
+    },
+    {
+      "cop": "Lint/RandOne",
+      "department": "Lint",
+      "description": "Checks for `rand(1)` calls. Such calls always return `0` and most likely a mistake.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantCopDisableDirective",
+      "department": "Lint",
+      "description": "Checks for rubocop:disable comments that can be removed. Note: this cop is not disabled when disabling all cops. It must be explicitly disabled.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantCopEnableDirective",
+      "department": "Lint",
+      "description": "Checks for rubocop:enable comments that can be removed.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantDirGlobSort",
+      "department": "Lint",
+      "description": "Checks for redundant `sort` method to `Dir.glob` and `Dir[]`.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantRegexpQuantifiers",
+      "department": "Lint",
+      "description": "Checks for redundant quantifiers in Regexps.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantRequireStatement",
+      "department": "Lint",
+      "description": "Checks for unnecessary `require` statement.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantSafeNavigation",
+      "department": "Lint",
+      "description": "Checks for redundant safe navigation calls.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantSplatExpansion",
+      "department": "Lint",
+      "description": "Checks for splat unnecessarily being called on literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantStringCoercion",
+      "department": "Lint",
+      "description": "Checks for Object#to_s usage in string interpolation.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-to-s"
+    },
+    {
+      "cop": "Lint/RedundantTypeConversion",
+      "department": "Lint",
+      "description": "Checks for redundantly converting a literal to the same type.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantWithIndex",
+      "department": "Lint",
+      "description": "Checks for redundant `with_index`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RedundantWithObject",
+      "department": "Lint",
+      "description": "Checks for redundant `with_object`.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RefinementImportMethods",
+      "department": "Lint",
+      "description": "Use `Refinement#import_methods` when using `include` or `prepend` in `refine` block.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RegexpAsCondition",
+      "department": "Lint",
+      "description": "Do not use regexp literal as a condition. The regexp literal matches `$_` implicitly.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RequireParentheses",
+      "department": "Lint",
+      "description": "Use parentheses in the method call to avoid confusion about precedence.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RequireRangeParentheses",
+      "department": "Lint",
+      "description": "Checks that a range literal is enclosed in parentheses when the end of the range is at a line break.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RequireRelativeSelfPath",
+      "department": "Lint",
+      "description": "Checks for uses a file requiring itself with `require_relative`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/RescueException",
+      "department": "Lint",
+      "description": "Avoid rescuing the Exception class.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-blind-rescues"
+    },
+    {
+      "cop": "Lint/RescueType",
+      "department": "Lint",
+      "description": "Avoid rescuing from non constants that could result in a `TypeError`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ReturnInVoidContext",
+      "department": "Lint",
+      "description": "Checks for return in void context.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SafeNavigationChain",
+      "department": "Lint",
+      "description": "Do not chain ordinary method call after safe navigation operator.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SafeNavigationConsistency",
+      "department": "Lint",
+      "description": "Check to make sure that if safe navigation is used in an `&&` or `||` condition, consistent and appropriate safe navigation, without excess or deficiency, is used for all method calls on the same object.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SafeNavigationWithEmpty",
+      "department": "Lint",
+      "description": "Avoid `foo&.empty?` in conditionals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ScriptPermission",
+      "department": "Lint",
+      "description": "Grant script file execute permission.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SelfAssignment",
+      "department": "Lint",
+      "description": "Checks for self-assignments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SendWithMixinArgument",
+      "department": "Lint",
+      "description": "Checks for `send` method when using mixin.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ShadowedArgument",
+      "department": "Lint",
+      "description": "Avoid reassigning arguments before they were used.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ShadowedException",
+      "department": "Lint",
+      "description": "Avoid rescuing a higher level exception before a lower level exception.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ShadowingOuterLocalVariable",
+      "department": "Lint",
+      "description": "Do not use the same name as outer local variable for block arguments or block local variables.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SharedMutableDefault",
+      "department": "Lint",
+      "description": "Checks for mutable literals used as default arguments during Hash initialization.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#no-mutable-defaults"
+    },
+    {
+      "cop": "Lint/StructNewOverride",
+      "department": "Lint",
+      "description": "Disallow overriding the `Struct` built-in methods via `Struct.new`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SuppressedException",
+      "department": "Lint",
+      "description": "Don't suppress exceptions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#dont-hide-exceptions"
+    },
+    {
+      "cop": "Lint/SuppressedExceptionInNumberConversion",
+      "department": "Lint",
+      "description": "Checks for cases where exceptions unrelated to the numeric constructors may be unintentionally swallowed.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/SymbolConversion",
+      "department": "Lint",
+      "description": "Checks for unnecessary symbol conversions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/Syntax",
+      "department": "Lint",
+      "description": "Checks for syntax errors.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ToEnumArguments",
+      "department": "Lint",
+      "description": "Ensures that `to_enum`/`enum_for`, called for the current method, has correct arguments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/ToJSON",
+      "department": "Lint",
+      "description": "Ensure #to_json includes an optional argument.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/TopLevelReturnWithArgument",
+      "department": "Lint",
+      "description": "Detects top level return statements with argument.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/TrailingCommaInAttributeDeclaration",
+      "department": "Lint",
+      "description": "Checks for trailing commas in attribute declarations.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/TripleQuotes",
+      "department": "Lint",
+      "description": "Checks for useless triple quote constructs.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnderscorePrefixedVariableName",
+      "department": "Lint",
+      "description": "Do not use prefix `_` for a variable that is used.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnescapedBracketInRegexp",
+      "department": "Lint",
+      "description": "Checks for unescaped literal `]` in Regexp.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnexpectedBlockArity",
+      "department": "Lint",
+      "description": "Looks for blocks that have fewer arguments that the calling method expects.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnifiedInteger",
+      "department": "Lint",
+      "description": "Use Integer instead of Fixnum or Bignum.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnmodifiedReduceAccumulator",
+      "department": "Lint",
+      "description": "Checks for `reduce` or `inject` blocks that do not update the accumulator each iteration.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnreachableCode",
+      "department": "Lint",
+      "description": "Checks for unreachable code.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnreachableLoop",
+      "department": "Lint",
+      "description": "Checks for loops that will have at most one iteration.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnreachablePatternBranch",
+      "department": "Lint",
+      "description": "Checks for unreachable `in` pattern branches after an unconditional catch-all pattern.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UnusedBlockArgument",
+      "department": "Lint",
+      "description": "Checks for unused block arguments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#underscore-unused-vars"
+    },
+    {
+      "cop": "Lint/UnusedMethodArgument",
+      "department": "Lint",
+      "description": "Checks for unused method arguments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#underscore-unused-vars"
+    },
+    {
+      "cop": "Lint/UriEscapeUnescape",
+      "department": "Lint",
+      "description": "`URI.escape` method is obsolete and should not be used. Instead, use `CGI.escape`, `URI.encode_www_form` or `URI.encode_www_form_component` depending on your specific use case. Also `URI.unescape` method is obsolete and should not be used. Instead, use `CGI.unescape`, `URI.decode_www_form` or `URI.decode_www_form_component` depending on your specific use case.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UriRegexp",
+      "department": "Lint",
+      "description": "Use `URI::DEFAULT_PARSER.make_regexp` instead of `URI.regexp`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessAccessModifier",
+      "department": "Lint",
+      "description": "Checks for useless access modifiers.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessAssignment",
+      "department": "Lint",
+      "description": "Checks for useless assignment to a local variable.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#underscore-unused-vars"
+    },
+    {
+      "cop": "Lint/UselessConstantScoping",
+      "department": "Lint",
+      "description": "Checks for useless constant scoping.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessDefaultValueArgument",
+      "department": "Lint",
+      "description": "Checks for usage of `fetch` or `Array.new` with default value argument and block.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessDefined",
+      "department": "Lint",
+      "description": "Checks for calls to `defined?` with strings and symbols. The result of such a call will always be truthy.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessElseWithoutRescue",
+      "department": "Lint",
+      "description": "Checks for useless `else` in `begin..end` without `rescue`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessMethodDefinition",
+      "department": "Lint",
+      "description": "Checks for useless method definitions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessNumericOperation",
+      "department": "Lint",
+      "description": "Checks for useless numeric operations.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessOr",
+      "department": "Lint",
+      "description": "Checks for useless OR expressions.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessRescue",
+      "department": "Lint",
+      "description": "Checks for useless `rescue`s.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessRuby2Keywords",
+      "department": "Lint",
+      "description": "Finds unnecessary uses of `ruby2_keywords`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessSetterCall",
+      "department": "Lint",
+      "description": "Checks for useless setter call to a local variable.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/UselessTimes",
+      "department": "Lint",
+      "description": "Checks for useless `Integer#times` calls.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Lint/Void",
+      "department": "Lint",
+      "description": "Checks for operators, literals, lambdas, and procs used in void context.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Metrics/AbcSize",
+      "department": "Metrics",
+      "description": "Checks that the ABC size of methods is not higher than the configured maximum.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Metrics/BlockLength",
+      "department": "Metrics",
+      "description": "Avoid long blocks with many lines.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Metrics/BlockNesting",
+      "department": "Metrics",
+      "description": "Avoid excessive block nesting.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#three-is-the-number-thou-shalt-count"
+    },
+    {
+      "cop": "Metrics/ClassLength",
+      "department": "Metrics",
+      "description": "Avoid classes longer than 100 lines of code.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Metrics/CollectionLiteralLength",
+      "department": "Metrics",
+      "description": "Checks for `Array` or `Hash` literals with many entries.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Metrics/CyclomaticComplexity",
+      "department": "Metrics",
+      "description": "Checks that the cyclomatic complexity of methods is not higher than the configured maximum.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Metrics/MethodLength",
+      "department": "Metrics",
+      "description": "Avoid methods longer than 10 lines of code.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#short-methods"
+    },
+    {
+      "cop": "Metrics/ModuleLength",
+      "department": "Metrics",
+      "description": "Avoid modules longer than 100 lines of code.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Metrics/ParameterLists",
+      "department": "Metrics",
+      "description": "Avoid parameter lists longer than three or four parameters.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#too-many-params"
+    },
+    {
+      "cop": "Metrics/PerceivedComplexity",
+      "department": "Metrics",
+      "description": "Checks that the perceived complexity of methods is not higher than the configured maximum.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Migration/DepartmentName",
+      "department": "Migration",
+      "description": "Checks that cop names in `rubocop:disable` (etc.) comments are given with a department name.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Naming/AccessorMethodName",
+      "department": "Naming",
+      "description": "Checks the naming of accessor methods for get_/set_.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#accessor_mutator_method_names"
+    },
+    {
+      "cop": "Naming/AsciiIdentifiers",
+      "department": "Naming",
+      "description": "Use only ascii symbols in identifiers and constants.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#english-identifiers"
+    },
+    {
+      "cop": "Naming/BinaryOperatorParameterName",
+      "department": "Naming",
+      "description": "Checks that the sole parameter of binary operator methods is named `other`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#other-arg"
+    },
+    {
+      "cop": "Naming/BlockForwarding",
+      "department": "Naming",
+      "description": "Use anonymous block forwarding.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#block-forwarding"
+    },
+    {
+      "cop": "Naming/BlockParameterName",
+      "department": "Naming",
+      "description": "Checks for block parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Naming/ClassAndModuleCamelCase",
+      "department": "Naming",
+      "description": "Use CamelCase for classes and modules.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#camelcase-classes"
+    },
+    {
+      "cop": "Naming/ConstantName",
+      "department": "Naming",
+      "description": "Constants should use SCREAMING_SNAKE_CASE.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#screaming-snake-case"
+    },
+    {
+      "cop": "Naming/FileName",
+      "department": "Naming",
+      "description": "Use snake_case for source file names.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#snake-case-files"
+    },
+    {
+      "cop": "Naming/HeredocDelimiterCase",
+      "department": "Naming",
+      "description": "Use configured case for heredoc delimiters.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#heredoc-delimiters"
+    },
+    {
+      "cop": "Naming/HeredocDelimiterNaming",
+      "department": "Naming",
+      "description": "Use descriptive heredoc delimiters.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#heredoc-delimiters"
+    },
+    {
+      "cop": "Naming/InclusiveLanguage",
+      "department": "Naming",
+      "description": "Recommend the use of inclusive language instead of problematic terms.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Naming/MemoizedInstanceVariableName",
+      "department": "Naming",
+      "description": "Memoized method name should match memo instance variable name.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Naming/MethodName",
+      "department": "Naming",
+      "description": "Use the configured style when naming methods.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#snake-case-symbols-methods-vars"
+    },
+    {
+      "cop": "Naming/MethodParameterName",
+      "department": "Naming",
+      "description": "Checks for method parameter names that contain capital letters, end in numbers, or do not meet a minimal length.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Naming/PredicateMethod",
+      "department": "Naming",
+      "description": "Checks that predicate methods end with `?` and non-predicate methods do not.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Naming/PredicatePrefix",
+      "department": "Naming",
+      "description": "Checks that predicate method names end with a question mark and do not start with a forbidden prefix.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#bool-methods-qmark"
+    },
+    {
+      "cop": "Naming/RescuedExceptionsVariableName",
+      "department": "Naming",
+      "description": "Use consistent rescued exceptions variables naming.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Naming/VariableName",
+      "department": "Naming",
+      "description": "Use the configured style when naming variables.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#snake-case-symbols-methods-vars"
+    },
+    {
+      "cop": "Naming/VariableNumber",
+      "department": "Naming",
+      "description": "Use the configured style when numbering symbols, methods and variables.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#snake-case-symbols-methods-vars-with-numbers"
+    },
+    {
+      "cop": "Security/CompoundHash",
+      "department": "Security",
+      "description": "Checks for `hash` implementations that combine values manually instead of delegating to `Array#hash`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Security/Eval",
+      "department": "Security",
+      "description": "Checks for the use of `Kernel#eval` and `Binding#eval` with dynamic arguments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Security/IoMethods",
+      "department": "Security",
+      "description": "Checks for the first argument to `IO.read`, `IO.binread`, `IO.write`, `IO.binwrite`, `IO.foreach`, and `IO.readlines`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Security/JSONLoad",
+      "department": "Security",
+      "description": "Prefer usage of `JSON.parse` over `JSON.load` due to potential security issues. See reference for more information.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Security/MarshalLoad",
+      "department": "Security",
+      "description": "Avoid using of `Marshal.load` or `Marshal.restore` due to potential security issues. See reference for more information.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Security/Open",
+      "department": "Security",
+      "description": "Checks for the use of `Kernel#open` and `URI.open` with dynamic data.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Security/YAMLLoad",
+      "department": "Security",
+      "description": "Prefer usage of `YAML.safe_load` over `YAML.load` due to potential security issues. See reference for more information.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/AccessModifierDeclarations",
+      "department": "Style",
+      "description": "Checks style of how access modifiers are used.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/AccessorGrouping",
+      "department": "Style",
+      "description": "Checks for grouping of accessors in `class` and `module` bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/Alias",
+      "department": "Style",
+      "description": "Use alias instead of alias_method.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#alias-method-lexically"
+    },
+    {
+      "cop": "Style/AmbiguousEndlessMethodDefinition",
+      "department": "Style",
+      "description": "Checks for endless methods inside operators of lower precedence.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#ambiguous-endless-method-definitions"
+    },
+    {
+      "cop": "Style/AndOr",
+      "department": "Style",
+      "description": "Use &&/|| instead of and/or.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#no-and-or-or"
+    },
+    {
+      "cop": "Style/ArgumentsForwarding",
+      "department": "Style",
+      "description": "Use arguments forwarding.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#arguments-forwarding"
+    },
+    {
+      "cop": "Style/ArrayCoercion",
+      "department": "Style",
+      "description": "Use Array() instead of explicit Array check or [*var], when dealing with a variable you want to treat as an Array, but you're not certain it's an array.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#array-coercion"
+    },
+    {
+      "cop": "Style/ArrayFirstLast",
+      "department": "Style",
+      "description": "Use `arr.first` and `arr.last` instead of `arr[0]` and `arr[-1]`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ArrayIntersect",
+      "department": "Style",
+      "description": "Use `array1.intersect?(array2)` instead of `(array1 & array2).any?`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ArrayIntersectWithSingleElement",
+      "department": "Style",
+      "description": "Use `include?(element)` instead of `intersect?([element])`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ArrayJoin",
+      "department": "Style",
+      "description": "Use Array#join instead of Array#*.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#array-join"
+    },
+    {
+      "cop": "Style/AsciiComments",
+      "department": "Style",
+      "description": "Use only ascii symbols in comments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#english-comments"
+    },
+    {
+      "cop": "Style/Attr",
+      "department": "Style",
+      "description": "Checks for uses of Module#attr.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#attr"
+    },
+    {
+      "cop": "Style/AutoResourceCleanup",
+      "department": "Style",
+      "description": "Suggests the usage of an auto resource cleanup version of a method (if available).",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/BarePercentLiterals",
+      "department": "Style",
+      "description": "Checks if usage of %() or %Q() matches configuration.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#percent-q-shorthand"
+    },
+    {
+      "cop": "Style/BeginBlock",
+      "department": "Style",
+      "description": "Avoid the use of BEGIN blocks.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-BEGIN-blocks"
+    },
+    {
+      "cop": "Style/BisectedAttrAccessor",
+      "department": "Style",
+      "description": "Checks for places where `attr_reader` and `attr_writer` for the same method can be combined into single `attr_accessor`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/BitwisePredicate",
+      "department": "Style",
+      "description": "Prefer bitwise predicate methods over direct comparison operations.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#bitwise-predicate-methods"
+    },
+    {
+      "cop": "Style/BlockComments",
+      "department": "Style",
+      "description": "Do not use block comments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-block-comments"
+    },
+    {
+      "cop": "Style/BlockDelimiters",
+      "department": "Style",
+      "description": "Avoid using {...} for multi-line blocks (multiline chaining is always ugly). Prefer {...} over do...end for single-line blocks.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#single-line-blocks"
+    },
+    {
+      "cop": "Style/CaseEquality",
+      "department": "Style",
+      "description": "Avoid explicit use of the case equality operator (`===`).",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-case-equality"
+    },
+    {
+      "cop": "Style/CaseLikeIf",
+      "department": "Style",
+      "description": "Identifies places where `if-elsif` constructions can be replaced with `case-when`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#case-vs-if-else"
+    },
+    {
+      "cop": "Style/CharacterLiteral",
+      "department": "Style",
+      "description": "Checks for uses of character literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-character-literals"
+    },
+    {
+      "cop": "Style/ClassAndModuleChildren",
+      "department": "Style",
+      "description": "Checks style of children classes and modules.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#namespace-definition"
+    },
+    {
+      "cop": "Style/ClassCheck",
+      "department": "Style",
+      "description": "Enforces consistent use of `Object#is_a?` or `Object#kind_of?`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#is-a-vs-kind-of"
+    },
+    {
+      "cop": "Style/ClassEqualityComparison",
+      "department": "Style",
+      "description": "Enforces the use of `Object#instance_of?` instead of class comparison for equality.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#instance-of-vs-class-comparison"
+    },
+    {
+      "cop": "Style/ClassMethods",
+      "department": "Style",
+      "description": "Use self when defining module/class methods.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#def-self-class-methods"
+    },
+    {
+      "cop": "Style/ClassMethodsDefinitions",
+      "department": "Style",
+      "description": "Enforces using `def self.method_name` or `class << self` to define class methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#def-self-class-methods"
+    },
+    {
+      "cop": "Style/ClassVars",
+      "department": "Style",
+      "description": "Avoid the use of class variables.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-class-vars"
+    },
+    {
+      "cop": "Style/CollectionCompact",
+      "department": "Style",
+      "description": "Use `{Array,Hash}#{compact,compact!}` instead of custom logic to reject nils.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/CollectionMethods",
+      "department": "Style",
+      "description": "Enforces the use of consistent method names from the `Enumerable` module.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#map-find-select-reduce-include-size"
+    },
+    {
+      "cop": "Style/CollectionQuerying",
+      "department": "Style",
+      "description": "Prefer `Enumerable` predicate methods over expressions with `count`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#collection-querying"
+    },
+    {
+      "cop": "Style/ColonMethodCall",
+      "department": "Style",
+      "description": "Do not use :: for method call.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#double-colons"
+    },
+    {
+      "cop": "Style/ColonMethodDefinition",
+      "department": "Style",
+      "description": "Do not use :: for defining class methods.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#colon-method-definition"
+    },
+    {
+      "cop": "Style/CombinableDefined",
+      "department": "Style",
+      "description": "Checks successive `defined?` calls that can be combined into a single call.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/CombinableLoops",
+      "department": "Style",
+      "description": "Checks for places where multiple consecutive loops over the same data can be combined into a single loop.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/CommandLiteral",
+      "department": "Style",
+      "description": "Use `` or %x around command literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#percent-x"
+    },
+    {
+      "cop": "Style/CommentAnnotation",
+      "department": "Style",
+      "description": "Checks formatting of special comments (TODO, FIXME, OPTIMIZE, HACK, REVIEW, NOTE).",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#annotate-keywords"
+    },
+    {
+      "cop": "Style/CommentedKeyword",
+      "department": "Style",
+      "description": "Do not place comments on the same line as certain keywords.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ComparableBetween",
+      "department": "Style",
+      "description": "Enforces the use of `Comparable#between?` instead of logical comparison.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#ranges-or-between"
+    },
+    {
+      "cop": "Style/ComparableClamp",
+      "department": "Style",
+      "description": "Enforces the use of `Comparable#clamp` instead of comparison by minimum and maximum.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ConcatArrayLiterals",
+      "department": "Style",
+      "description": "Enforces the use of `Array#push(item)` instead of `Array#concat([item])` to avoid redundant array literals.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ConditionalAssignment",
+      "department": "Style",
+      "description": "Use the return value of `if` and `case` statements for assignment to a variable and variable comparison instead of assigning that variable inside of each branch.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ConstantVisibility",
+      "department": "Style",
+      "description": "Check that class- and module constants have visibility declarations.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/Copyright",
+      "department": "Style",
+      "description": "Include a copyright notice in each file before any code.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/DataInheritance",
+      "department": "Style",
+      "description": "Checks for inheritance from Data.define.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": "#no-extend-data-define"
+    },
+    {
+      "cop": "Style/DateTime",
+      "department": "Style",
+      "description": "Use Time over DateTime.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": "#date-time"
+    },
+    {
+      "cop": "Style/DefWithParentheses",
+      "department": "Style",
+      "description": "Use def with parentheses when there are arguments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#method-parens"
+    },
+    {
+      "cop": "Style/DigChain",
+      "department": "Style",
+      "description": "Use `dig` with multiple parameters instead of chaining multiple calls.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/Dir",
+      "department": "Style",
+      "description": "Use the `__dir__` method to retrieve the canonicalized absolute path to the current file.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/DirEmpty",
+      "department": "Style",
+      "description": "Prefer to use `Dir.empty?('path/to/dir')` when checking if a directory is empty.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/DisableCopsWithinSourceCodeDirective",
+      "department": "Style",
+      "description": "Forbids disabling/enabling cops within source code.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/DocumentDynamicEvalDefinition",
+      "department": "Style",
+      "description": "When using `class_eval` (or other `eval`) with string interpolation, add a comment block showing its appearance if interpolated.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#eval-comment-docs"
+    },
+    {
+      "cop": "Style/Documentation",
+      "department": "Style",
+      "description": "Document classes and non-namespace modules.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/DocumentationMethod",
+      "department": "Style",
+      "description": "Checks for missing documentation comment for public methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/DoubleCopDisableDirective",
+      "department": "Style",
+      "description": "Checks for double rubocop:disable comments on a single line.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/DoubleNegation",
+      "department": "Style",
+      "description": "Checks for uses of double negation (!!).",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#no-bang-bang"
+    },
+    {
+      "cop": "Style/EachForSimpleLoop",
+      "department": "Style",
+      "description": "Use `Integer#times` for a simple loop which iterates a fixed number of times.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EachWithObject",
+      "department": "Style",
+      "description": "Prefer `each_with_object` over `inject` or `reduce`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EmptyBlockParameter",
+      "department": "Style",
+      "description": "Omit pipes for empty block parameters.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EmptyCaseCondition",
+      "department": "Style",
+      "description": "Avoid empty condition in case statements.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EmptyClassDefinition",
+      "department": "Style",
+      "description": "Enforces consistent style for empty class definitions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EmptyElse",
+      "department": "Style",
+      "description": "Avoid empty else-clauses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EmptyHeredoc",
+      "department": "Style",
+      "description": "Checks for using empty heredoc to reduce redundancy.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EmptyLambdaParameter",
+      "department": "Style",
+      "description": "Omit parens for empty lambda parameters.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EmptyLiteral",
+      "department": "Style",
+      "description": "Prefer literals to Array.new/Hash.new/String.new.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#literal-array-hash"
+    },
+    {
+      "cop": "Style/EmptyMethod",
+      "department": "Style",
+      "description": "Checks the formatting of empty method definitions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-single-line-methods"
+    },
+    {
+      "cop": "Style/EmptyStringInsideInterpolation",
+      "department": "Style",
+      "description": "Checks for empty strings being assigned inside string interpolation.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#empty-strings-in-interpolation"
+    },
+    {
+      "cop": "Style/Encoding",
+      "department": "Style",
+      "description": "Use UTF-8 as the source file encoding.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#utf-8"
+    },
+    {
+      "cop": "Style/EndBlock",
+      "department": "Style",
+      "description": "Avoid the use of END blocks.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-END-blocks"
+    },
+    {
+      "cop": "Style/EndlessMethod",
+      "department": "Style",
+      "description": "Avoid the use of multi-lined endless method definitions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#endless-methods"
+    },
+    {
+      "cop": "Style/EnvHome",
+      "department": "Style",
+      "description": "Checks for consistent usage of `ENV['HOME']`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EvalWithLocation",
+      "department": "Style",
+      "description": "Pass `__FILE__` and `__LINE__` to `eval` method, as they are used by backtraces.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/EvenOdd",
+      "department": "Style",
+      "description": "Favor the use of `Integer#even?` && `Integer#odd?`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#predicate-methods"
+    },
+    {
+      "cop": "Style/ExactRegexpMatch",
+      "department": "Style",
+      "description": "Checks for exact regexp match inside Regexp literals.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ExpandPathArguments",
+      "department": "Style",
+      "description": "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ExplicitBlockArgument",
+      "department": "Style",
+      "description": "Consider using explicit block argument to avoid writing block literal that just passes its arguments to another block.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#block-argument"
+    },
+    {
+      "cop": "Style/ExponentialNotation",
+      "department": "Style",
+      "description": "Enforces consistency in the use of exponential (scientific) notation.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#exponential-notation"
+    },
+    {
+      "cop": "Style/FetchEnvVar",
+      "department": "Style",
+      "description": "Suggests `ENV.fetch` for the replacement of `ENV[]`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/FileEmpty",
+      "department": "Style",
+      "description": "Prefer to use `File.empty?('path/to/file')` when checking if a file is empty.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/FileNull",
+      "department": "Style",
+      "description": "Use `File::NULL` instead of hardcoding \"dev/null\".",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/FileOpen",
+      "department": "Style",
+      "description": "Checks for `File.open` without a block, which can leak file descriptors.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/FileRead",
+      "department": "Style",
+      "description": "Favor `File.(bin)read` convenience methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#file-read"
+    },
+    {
+      "cop": "Style/FileTouch",
+      "department": "Style",
+      "description": "Favor `FileUtils.touch` for touching files.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/FileWrite",
+      "department": "Style",
+      "description": "Favor `File.(bin)write` convenience methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#file-write"
+    },
+    {
+      "cop": "Style/FloatDivision",
+      "department": "Style",
+      "description": "For performing float division, coerce one side only.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#float-division"
+    },
+    {
+      "cop": "Style/For",
+      "department": "Style",
+      "description": "Checks use of for or each in multiline loops.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#no-for-loops"
+    },
+    {
+      "cop": "Style/FormatString",
+      "department": "Style",
+      "description": "Enforce the use of Kernel#sprintf, Kernel#format or String#%.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#sprintf"
+    },
+    {
+      "cop": "Style/FormatStringToken",
+      "department": "Style",
+      "description": "Use a consistent style for format string tokens.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/FrozenStringLiteralComment",
+      "department": "Style",
+      "description": "Add the frozen_string_literal comment to the top of files to help transition to frozen string literals by default.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/GlobalStdStream",
+      "department": "Style",
+      "description": "Enforces the use of `$stdout/$stderr/$stdin` instead of `STDOUT/STDERR/STDIN`.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#global-stdout"
+    },
+    {
+      "cop": "Style/GlobalVars",
+      "department": "Style",
+      "description": "Do not introduce global variables.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#instance-vars"
+    },
+    {
+      "cop": "Style/GuardClause",
+      "department": "Style",
+      "description": "Checks for conditionals that can be replaced with guard clauses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-nested-conditionals"
+    },
+    {
+      "cop": "Style/HashAsLastArrayItem",
+      "department": "Style",
+      "description": "Checks for presence or absence of braces around hash literal as a last array item depending on configuration.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#hash-literal-as-last-array-item"
+    },
+    {
+      "cop": "Style/HashConversion",
+      "department": "Style",
+      "description": "Avoid Hash[] in favor of ary.to_h or literal hashes.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": "#avoid-hash-constructor"
+    },
+    {
+      "cop": "Style/HashEachMethods",
+      "department": "Style",
+      "description": "Use Hash#each_key and Hash#each_value.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#hash-each"
+    },
+    {
+      "cop": "Style/HashExcept",
+      "department": "Style",
+      "description": "Checks for usages of `Hash#reject`, `Hash#select`, and `Hash#filter` methods that can be replaced with `Hash#except` method.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/HashFetchChain",
+      "department": "Style",
+      "description": "Use `Hash#dig` instead of chained `fetch` calls.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/HashLikeCase",
+      "department": "Style",
+      "description": "Checks for places where `case-when` represents a simple 1:1 mapping and can be replaced with a hash lookup.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/HashLookupMethod",
+      "department": "Style",
+      "description": "Enforces the use of either `Hash#[]` or `Hash#fetch` for hash lookup.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/HashSlice",
+      "department": "Style",
+      "description": "Checks for usages of `Hash#reject`, `Hash#select`, and `Hash#filter` methods that can be replaced with `Hash#slice` method.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/HashSyntax",
+      "department": "Style",
+      "description": "Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax { :a => 1, :b => 2 }.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#hash-literals"
+    },
+    {
+      "cop": "Style/HashTransformKeys",
+      "department": "Style",
+      "description": "Prefer `transform_keys` over `each_with_object`, `map`, or `to_h`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/HashTransformValues",
+      "department": "Style",
+      "description": "Prefer `transform_values` over `each_with_object`, `map`, or `to_h`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/IdenticalConditionalBranches",
+      "department": "Style",
+      "description": "Checks that conditional statements do not have an identical line at the end of each branch, which can validly be moved out of the conditional.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/IfInsideElse",
+      "department": "Style",
+      "description": "Finds if nodes inside else, which can be converted to elsif.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/IfUnlessModifier",
+      "department": "Style",
+      "description": "Favor modifier if/unless usage when you have a single-line body.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#if-as-a-modifier"
+    },
+    {
+      "cop": "Style/IfUnlessModifierOfIfUnless",
+      "department": "Style",
+      "description": "Avoid modifier if/unless usage on conditionals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/IfWithBooleanLiteralBranches",
+      "department": "Style",
+      "description": "Checks for redundant `if` with boolean literal branches.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/IfWithSemicolon",
+      "department": "Style",
+      "description": "Do not use if x; .... Use the ternary operator instead.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-semicolon-ifs"
+    },
+    {
+      "cop": "Style/ImplicitRuntimeError",
+      "department": "Style",
+      "description": "Use `raise` or `fail` with an explicit exception class and message, rather than just a message.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/InPatternThen",
+      "department": "Style",
+      "description": "Checks for `in;` uses in `case` expressions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#no-in-pattern-semicolons"
+    },
+    {
+      "cop": "Style/InfiniteLoop",
+      "department": "Style",
+      "description": "Use Kernel#loop for infinite loops. This cop is unsafe if the body may raise a `StopIteration` exception.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#infinite-loop"
+    },
+    {
+      "cop": "Style/InlineComment",
+      "department": "Style",
+      "description": "Avoid trailing inline comments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/InverseMethods",
+      "department": "Style",
+      "description": "Use the inverse method instead of `!.method` if an inverse method is defined.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/InvertibleUnlessCondition",
+      "department": "Style",
+      "description": "Favor `if` with inverted condition over `unless`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/IpAddresses",
+      "department": "Style",
+      "description": "Don't include literal IP addresses in code.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ItAssignment",
+      "department": "Style",
+      "description": "Checks for local variables and method parameters named `it`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ItBlockParameter",
+      "department": "Style",
+      "description": "Checks for blocks with one argument where `it` block parameter can be used.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/KeywordArgumentsMerging",
+      "department": "Style",
+      "description": "When passing an existing hash as keyword arguments, provide additional arguments directly rather than using `merge`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#merging-keyword-arguments"
+    },
+    {
+      "cop": "Style/KeywordParametersOrder",
+      "department": "Style",
+      "description": "Enforces that optional keyword parameters are placed at the end of the parameters list.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#keyword-parameters-order"
+    },
+    {
+      "cop": "Style/Lambda",
+      "department": "Style",
+      "description": "Use the new lambda literal syntax for single-line blocks.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#lambda-multi-line"
+    },
+    {
+      "cop": "Style/LambdaCall",
+      "department": "Style",
+      "description": "Use lambda.call(...) instead of lambda.(...).",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#proc-call"
+    },
+    {
+      "cop": "Style/LineEndConcatenation",
+      "department": "Style",
+      "description": "Use \\ instead of + or << to concatenate two string literals at line end.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MagicCommentFormat",
+      "department": "Style",
+      "description": "Use a consistent style for magic comments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MapCompactWithConditionalBlock",
+      "department": "Style",
+      "description": "Prefer `select` or `reject` over `map { ... }.compact`.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MapIntoArray",
+      "department": "Style",
+      "description": "Checks for usages of `each` with `<<`, `push`, or `append` which can be replaced by `map`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#functional-code"
+    },
+    {
+      "cop": "Style/MapJoin",
+      "department": "Style",
+      "description": "Checks for redundant `map(&:to_s)` before `join`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MapToHash",
+      "department": "Style",
+      "description": "Prefer `to_h` with a block over `map.to_h`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MapToSet",
+      "department": "Style",
+      "description": "Prefer `to_set` with a block over `map.to_set`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MethodCallWithArgsParentheses",
+      "department": "Style",
+      "description": "Use parentheses for method calls with arguments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#method-invocation-parens"
+    },
+    {
+      "cop": "Style/MethodCallWithoutArgsParentheses",
+      "department": "Style",
+      "description": "Do not use parentheses for method calls with no arguments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#method-invocation-parens"
+    },
+    {
+      "cop": "Style/MethodCalledOnDoEndBlock",
+      "department": "Style",
+      "description": "Avoid chaining a method call on a do...end block.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#single-line-blocks"
+    },
+    {
+      "cop": "Style/MethodDefParentheses",
+      "department": "Style",
+      "description": "Checks if the method definitions have or don't have parentheses.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#method-parens"
+    },
+    {
+      "cop": "Style/MinMax",
+      "department": "Style",
+      "description": "Use `Enumerable#minmax` instead of `Enumerable#min` and `Enumerable#max` in conjunction.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MinMaxComparison",
+      "department": "Style",
+      "description": "Enforces the use of `max` or `min` instead of comparison for greater or less.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MissingElse",
+      "department": "Style",
+      "description": "Require if/case expressions to have an else branches. If enabled, it is recommended that Style/UnlessElse and Style/EmptyElse be enabled. This will conflict with Style/EmptyElse if Style/EmptyElse is configured to style \"both\".",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MissingRespondToMissing",
+      "department": "Style",
+      "description": "Checks if `method_missing` is implemented without implementing `respond_to_missing`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-method-missing"
+    },
+    {
+      "cop": "Style/MixinGrouping",
+      "department": "Style",
+      "description": "Checks for grouping of mixins in `class` and `module` bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#mixin-grouping"
+    },
+    {
+      "cop": "Style/MixinUsage",
+      "department": "Style",
+      "description": "Checks that `include`, `extend` and `prepend` exists at the top level.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ModuleFunction",
+      "department": "Style",
+      "description": "Checks for usage of `extend self` in modules.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#module-function"
+    },
+    {
+      "cop": "Style/ModuleMemberExistenceCheck",
+      "department": "Style",
+      "description": "Checks for usage of `Module` methods returning arrays that can be replaced with equivalent predicates.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MultilineBlockChain",
+      "department": "Style",
+      "description": "Avoid multi-line chains of blocks.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#single-line-blocks"
+    },
+    {
+      "cop": "Style/MultilineIfModifier",
+      "department": "Style",
+      "description": "Checks for uses of `if`/`unless` modifiers with multiline bodies.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-multiline-if-modifiers"
+    },
+    {
+      "cop": "Style/MultilineIfThen",
+      "department": "Style",
+      "description": "Do not use then for multi-line if/unless.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-then"
+    },
+    {
+      "cop": "Style/MultilineInPatternThen",
+      "department": "Style",
+      "description": "Do not use `then` for multi-line `in` statement.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#no-then"
+    },
+    {
+      "cop": "Style/MultilineMemoization",
+      "department": "Style",
+      "description": "Wrap multiline memoizations in a `begin` and `end` block.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MultilineMethodSignature",
+      "department": "Style",
+      "description": "Avoid multi-line method signatures.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MultilineTernaryOperator",
+      "department": "Style",
+      "description": "Avoid multi-line ?: (the ternary operator); use if/unless instead.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-multiline-ternary"
+    },
+    {
+      "cop": "Style/MultilineWhenThen",
+      "department": "Style",
+      "description": "Do not use then for multi-line when statement.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-then"
+    },
+    {
+      "cop": "Style/MultipleComparison",
+      "department": "Style",
+      "description": "Avoid comparing a variable with multiple items in a conditional, use Array#include? instead.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/MutableConstant",
+      "department": "Style",
+      "description": "Do not assign mutable objects to constants.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NegatedIf",
+      "department": "Style",
+      "description": "Favor unless over if for negative conditions (or control flow or).",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#unless-for-negatives"
+    },
+    {
+      "cop": "Style/NegatedIfElseCondition",
+      "department": "Style",
+      "description": "Checks for uses of `if-else` and ternary operators with a negated condition which can be simplified by inverting condition and swapping branches.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NegatedUnless",
+      "department": "Style",
+      "description": "Favor if over unless for negative conditions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#if-for-negatives"
+    },
+    {
+      "cop": "Style/NegatedWhile",
+      "department": "Style",
+      "description": "Favor until over while for negative conditions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#until-for-negatives"
+    },
+    {
+      "cop": "Style/NegativeArrayIndex",
+      "department": "Style",
+      "description": "Use negative array indices instead of calculating array length minus a value. Also handles range patterns with length calculations. Recognizes preserving methods and their combinations, allowing safe replacement when the receiver matches.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NestedFileDirname",
+      "department": "Style",
+      "description": "Checks for nested `File.dirname`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NestedModifier",
+      "department": "Style",
+      "description": "Avoid using nested modifiers.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-nested-modifiers"
+    },
+    {
+      "cop": "Style/NestedParenthesizedCalls",
+      "department": "Style",
+      "description": "Parenthesize method calls which are nested inside the argument list of another parenthesized method call.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NestedTernaryOperator",
+      "department": "Style",
+      "description": "Use one expression per branch in a ternary operator.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-nested-ternary"
+    },
+    {
+      "cop": "Style/Next",
+      "department": "Style",
+      "description": "Use `next` to skip iteration instead of a condition at the end.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-nested-conditionals"
+    },
+    {
+      "cop": "Style/NilComparison",
+      "department": "Style",
+      "description": "Prefer x.nil? to x == nil.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#predicate-methods"
+    },
+    {
+      "cop": "Style/NilLambda",
+      "department": "Style",
+      "description": "Prefer `-> {}` to `-> { nil }`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NonNilCheck",
+      "department": "Style",
+      "description": "Checks for redundant nil checks.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-non-nil-checks"
+    },
+    {
+      "cop": "Style/Not",
+      "department": "Style",
+      "description": "Use ! instead of not.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#bang-not-not"
+    },
+    {
+      "cop": "Style/NumberedParameters",
+      "department": "Style",
+      "description": "Restrict the usage of numbered parameters.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NumberedParametersLimit",
+      "department": "Style",
+      "description": "Avoid excessive numbered params in a single block.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/NumericLiteralPrefix",
+      "department": "Style",
+      "description": "Use smallcase prefixes for numeric literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#numeric-literal-prefixes"
+    },
+    {
+      "cop": "Style/NumericLiterals",
+      "department": "Style",
+      "description": "Add underscores to large numeric literals to improve their readability.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#underscores-in-numerics"
+    },
+    {
+      "cop": "Style/NumericPredicate",
+      "department": "Style",
+      "description": "Checks for the use of predicate- or comparison methods for numeric comparisons.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#predicate-methods"
+    },
+    {
+      "cop": "Style/ObjectThen",
+      "department": "Style",
+      "description": "Enforces the use of consistent method names `Object#yield_self` or `Object#then`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#object-yield-self-vs-object-then"
+    },
+    {
+      "cop": "Style/OneClassPerFile",
+      "department": "Style",
+      "description": "Checks that each source file defines at most one top-level class or module.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/OneLineConditional",
+      "department": "Style",
+      "description": "Favor the ternary operator (?:) or multi-line constructs over single-line if/then/else/end constructs.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#ternary-operator"
+    },
+    {
+      "cop": "Style/OpenStructUse",
+      "department": "Style",
+      "description": "Avoid using OpenStruct. As of Ruby 3.0, use is officially discouraged due to performance, version compatibility, and potential security issues.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/OperatorMethodCall",
+      "department": "Style",
+      "description": "Checks for redundant dot before operator method call.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#operator-method-call"
+    },
+    {
+      "cop": "Style/OptionHash",
+      "department": "Style",
+      "description": "Don't use option hashes when you can use keyword arguments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#keyword-arguments-vs-option-hashes"
+    },
+    {
+      "cop": "Style/OptionalArguments",
+      "department": "Style",
+      "description": "Checks for optional arguments that do not appear at the end of the argument list.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#optional-arguments"
+    },
+    {
+      "cop": "Style/OptionalBooleanParameter",
+      "department": "Style",
+      "description": "Use keyword arguments when defining method with boolean argument.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#boolean-keyword-arguments"
+    },
+    {
+      "cop": "Style/OrAssignment",
+      "department": "Style",
+      "description": "Recommend usage of double pipe equals (||=) where applicable.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#double-pipe-for-uninit"
+    },
+    {
+      "cop": "Style/ParallelAssignment",
+      "department": "Style",
+      "description": "Check for simple usages of parallel assignment. It will only warn when the number of variables matches on both sides of the assignment.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#parallel-assignment"
+    },
+    {
+      "cop": "Style/ParenthesesAroundCondition",
+      "department": "Style",
+      "description": "Don't use parentheses around the condition of an if/unless/while.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-parens-around-condition"
+    },
+    {
+      "cop": "Style/PartitionInsteadOfDoubleSelect",
+      "department": "Style",
+      "description": "Checks for consecutive `select`/`filter`/`find_all` and `reject` calls on the same receiver with the same block body.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/PercentLiteralDelimiters",
+      "department": "Style",
+      "description": "Use `%`-literal delimiters consistently.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#percent-literal-braces"
+    },
+    {
+      "cop": "Style/PercentQLiterals",
+      "department": "Style",
+      "description": "Checks if uses of %Q/%q match the configured preference.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/PerlBackrefs",
+      "department": "Style",
+      "description": "Avoid Perl-style regex back references.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-perl-regexp-last-matchers"
+    },
+    {
+      "cop": "Style/PredicateWithKind",
+      "department": "Style",
+      "description": "Prefer `any?(Klass)` to `any? { |x| x.is_a?(Klass) }`.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/PreferredHashMethods",
+      "department": "Style",
+      "description": "Checks use of `has_key?` and `has_value?` Hash methods.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#hash-key"
+    },
+    {
+      "cop": "Style/Proc",
+      "department": "Style",
+      "description": "Use proc instead of Proc.new.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#proc"
+    },
+    {
+      "cop": "Style/QuotedSymbols",
+      "department": "Style",
+      "description": "Use a consistent style for quoted symbols.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RaiseArgs",
+      "department": "Style",
+      "description": "Checks the arguments passed to raise/fail.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#exception-class-messages"
+    },
+    {
+      "cop": "Style/RandomWithOffset",
+      "department": "Style",
+      "description": "Prefer to use ranges when generating random numbers instead of integers with offsets.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#random-numbers"
+    },
+    {
+      "cop": "Style/ReduceToHash",
+      "department": "Style",
+      "description": "Use `to_h { ... }` instead of `each_with_object`, `inject`, or `reduce` to build a hash.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantArgument",
+      "department": "Style",
+      "description": "Checks for a redundant argument passed to certain methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantArrayConstructor",
+      "department": "Style",
+      "description": "Checks for the instantiation of array using redundant `Array` constructor.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantArrayFlatten",
+      "department": "Style",
+      "description": "Checks for redundant calls of `Array#flatten`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantAssignment",
+      "department": "Style",
+      "description": "Checks for redundant assignment before returning.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantBegin",
+      "department": "Style",
+      "description": "Don't use begin blocks when they are not needed.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#begin-implicit"
+    },
+    {
+      "cop": "Style/RedundantCapitalW",
+      "department": "Style",
+      "description": "Checks for %W when interpolation is not needed.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantCondition",
+      "department": "Style",
+      "description": "Checks for unnecessary conditional expressions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantConditional",
+      "department": "Style",
+      "description": "Don't return true/false from a conditional.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantConstantBase",
+      "department": "Style",
+      "description": "Avoid redundant `::` prefix on constant.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantCurrentDirectoryInPath",
+      "department": "Style",
+      "description": "Checks for a redundant current directory in a path given to `require_relative`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantDoubleSplatHashBraces",
+      "department": "Style",
+      "description": "Checks for redundant uses of double splat hash braces.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantEach",
+      "department": "Style",
+      "description": "Checks for redundant `each`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantException",
+      "department": "Style",
+      "description": "Checks for an obsolete RuntimeException argument in raise/fail.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-explicit-runtimeerror"
+    },
+    {
+      "cop": "Style/RedundantFetchBlock",
+      "department": "Style",
+      "description": "Use `fetch(key, value)` instead of `fetch(key) { value }` when value has Numeric, Rational, Complex, Symbol or String type, `false`, `true`, `nil` or is a constant.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantFileExtensionInRequire",
+      "department": "Style",
+      "description": "Checks for the presence of superfluous `.rb` extension in the filename provided to `require` and `require_relative`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-explicit-rb-to-require"
+    },
+    {
+      "cop": "Style/RedundantFilterChain",
+      "department": "Style",
+      "description": "Identifies usages of `any?`, `empty?`, `none?` or `one?` predicate methods chained to `select`/`filter`/`find_all` and change them to use predicate method instead.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantFormat",
+      "department": "Style",
+      "description": "Checks for usages of `Kernel#format` or `Kernel#sprintf` with only a single argument.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantFreeze",
+      "department": "Style",
+      "description": "Checks usages of Object#freeze on immutable objects.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantHeredocDelimiterQuotes",
+      "department": "Style",
+      "description": "Checks for redundant heredoc delimiter quotes.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantInitialize",
+      "department": "Style",
+      "description": "Checks for redundant `initialize` methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantInterpolation",
+      "department": "Style",
+      "description": "Checks for strings that are just an interpolated expression.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantInterpolationUnfreeze",
+      "department": "Style",
+      "description": "Checks for redundant unfreezing of interpolated strings.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantLineContinuation",
+      "department": "Style",
+      "description": "Checks for redundant line continuation.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantMinMaxBy",
+      "department": "Style",
+      "description": "Identifies places where `max_by`/`min_by` can be replaced by `max`/`min`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantParentheses",
+      "department": "Style",
+      "description": "Checks for parentheses that seem not to serve any purpose.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantPercentQ",
+      "department": "Style",
+      "description": "Checks for %q/%Q when single quotes or double quotes would do.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#percent-q"
+    },
+    {
+      "cop": "Style/RedundantRegexpArgument",
+      "department": "Style",
+      "description": "Identifies places where argument can be replaced from a deterministic regexp to a string.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantRegexpCharacterClass",
+      "department": "Style",
+      "description": "Checks for unnecessary single-element Regexp character classes.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantRegexpConstructor",
+      "department": "Style",
+      "description": "Checks for the instantiation of regexp using redundant `Regexp.new` or `Regexp.compile`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantRegexpEscape",
+      "department": "Style",
+      "description": "Checks for redundant escapes in Regexps.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantReturn",
+      "department": "Style",
+      "description": "Don't use return where it's not required.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-explicit-return"
+    },
+    {
+      "cop": "Style/RedundantSelf",
+      "department": "Style",
+      "description": "Don't use self where it's not needed.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-self-unless-required"
+    },
+    {
+      "cop": "Style/RedundantSelfAssignment",
+      "department": "Style",
+      "description": "Checks for places where redundant assignments are made for in place modification methods.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantSelfAssignmentBranch",
+      "department": "Style",
+      "description": "Checks for places where conditional branch makes redundant self-assignment.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantSort",
+      "department": "Style",
+      "description": "Use `min` instead of `sort.first`, `max_by` instead of `sort_by...last`, etc.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantSortBy",
+      "department": "Style",
+      "description": "Use `sort` instead of `sort_by { |x| x }`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantStringEscape",
+      "department": "Style",
+      "description": "Checks for redundant escapes in string literals.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RedundantStructKeywordInit",
+      "department": "Style",
+      "description": "Checks for redundant `keyword_init` option for `Struct.new`.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RegexpLiteral",
+      "department": "Style",
+      "description": "Use / or %r around regular expressions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#percent-r"
+    },
+    {
+      "cop": "Style/RequireOrder",
+      "department": "Style",
+      "description": "Sort `require` and `require_relative` in alphabetical order.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/RescueModifier",
+      "department": "Style",
+      "description": "Avoid using rescue in its modifier form.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-rescue-modifiers"
+    },
+    {
+      "cop": "Style/RescueStandardError",
+      "department": "Style",
+      "description": "Avoid rescuing without specifying an error class.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ReturnNil",
+      "department": "Style",
+      "description": "Use return instead of return nil.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ReturnNilInPredicateMethodDefinition",
+      "department": "Style",
+      "description": "Checks if uses of `return` or `return nil` in predicate method definition.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": "#bool-methods-qmark"
+    },
+    {
+      "cop": "Style/ReverseFind",
+      "department": "Style",
+      "description": "Use `array.rfind` instead of `array.reverse.find`.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SafeNavigation",
+      "department": "Style",
+      "description": "Transforms usages of a method call safeguarded by a check for the existence of the object to safe navigation (`&.`). Autocorrection is unsafe as it assumes the object will be `nil` or truthy, but never `false`.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SafeNavigationChainLength",
+      "department": "Style",
+      "description": "Enforces safe navigation chains length to not exceed the configured maximum.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#safe-navigation"
+    },
+    {
+      "cop": "Style/Sample",
+      "department": "Style",
+      "description": "Use `sample` instead of `shuffle.first`, `shuffle.last`, and `shuffle[Integer]`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SelectByKind",
+      "department": "Style",
+      "description": "Prefer grep/grep_v to select/reject/find/detect with a kind check.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SelectByRange",
+      "department": "Style",
+      "description": "Prefer grep/grep_v to select/reject/find/detect with a range check.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SelectByRegexp",
+      "department": "Style",
+      "description": "Prefer grep/grep_v to select/reject/find/detect with a regexp match.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SelfAssignment",
+      "department": "Style",
+      "description": "Checks for places where self-assignment shorthand should have been used.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#self-assignment"
+    },
+    {
+      "cop": "Style/Semicolon",
+      "department": "Style",
+      "description": "Don't use semicolons to terminate expressions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-semicolon"
+    },
+    {
+      "cop": "Style/Send",
+      "department": "Style",
+      "description": "Prefer `Object#__send__` or `Object#public_send` to `send`, as `send` may overlap with existing methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#prefer-public-send"
+    },
+    {
+      "cop": "Style/SendWithLiteralMethodName",
+      "department": "Style",
+      "description": "Detects the use of the `public_send` method with a static method name argument.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SignalException",
+      "department": "Style",
+      "description": "Checks for proper usage of fail and raise.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#prefer-raise-over-fail"
+    },
+    {
+      "cop": "Style/SingleArgumentDig",
+      "department": "Style",
+      "description": "Avoid using single argument dig method.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SingleLineBlockParams",
+      "department": "Style",
+      "description": "Enforces the names of some block params.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SingleLineDoEndBlock",
+      "department": "Style",
+      "description": "Checks for single-line `do`...`end` blocks.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#single-line-do-end-block"
+    },
+    {
+      "cop": "Style/SingleLineMethods",
+      "department": "Style",
+      "description": "Avoid single-line methods.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-single-line-methods"
+    },
+    {
+      "cop": "Style/SlicingWithRange",
+      "department": "Style",
+      "description": "Checks array slicing is done with redundant, endless, and beginless ranges when suitable.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#slicing-with-ranges"
+    },
+    {
+      "cop": "Style/SoleNestedConditional",
+      "department": "Style",
+      "description": "Finds sole nested conditional nodes which can be merged into outer conditional node.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SpecialGlobalVars",
+      "department": "Style",
+      "description": "Avoid Perl-style global variables.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#no-cryptic-perlisms"
+    },
+    {
+      "cop": "Style/StabbyLambdaParentheses",
+      "department": "Style",
+      "description": "Checks for the usage of parentheses around stabby lambda arguments.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#stabby-lambda-with-args"
+    },
+    {
+      "cop": "Style/StaticClass",
+      "department": "Style",
+      "description": "Prefer modules to classes with only class methods.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#modules-vs-classes"
+    },
+    {
+      "cop": "Style/StderrPuts",
+      "department": "Style",
+      "description": "Use `warn` instead of `$stderr.puts`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#warn"
+    },
+    {
+      "cop": "Style/StringChars",
+      "department": "Style",
+      "description": "Checks for uses of `String#split` with empty string or regexp literal argument.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#string-chars"
+    },
+    {
+      "cop": "Style/StringConcatenation",
+      "department": "Style",
+      "description": "Checks for places where string concatenation can be replaced with string interpolation.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#string-interpolation"
+    },
+    {
+      "cop": "Style/StringHashKeys",
+      "department": "Style",
+      "description": "Prefer symbols instead of strings as hash keys.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#symbols-as-keys"
+    },
+    {
+      "cop": "Style/StringLiterals",
+      "department": "Style",
+      "description": "Checks if uses of quotes match the configured preference.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#consistent-string-literals"
+    },
+    {
+      "cop": "Style/StringLiteralsInInterpolation",
+      "department": "Style",
+      "description": "Checks if uses of quotes inside expressions in interpolated strings match the configured preference.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/StringMethods",
+      "department": "Style",
+      "description": "Checks if configured preferred methods are used over non-preferred.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/Strip",
+      "department": "Style",
+      "description": "Use `strip` instead of `lstrip.rstrip`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/StructInheritance",
+      "department": "Style",
+      "description": "Checks for inheritance from Struct.new.",
+      "enabled": true,
+      "safe_autocorrect": false,
+      "style_guide": "#no-extend-struct-new"
+    },
+    {
+      "cop": "Style/SuperArguments",
+      "department": "Style",
+      "description": "Call `super` without arguments and parentheses when the signature is identical.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SuperWithArgsParentheses",
+      "department": "Style",
+      "description": "Use parentheses for `super` with arguments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#super-with-args"
+    },
+    {
+      "cop": "Style/SwapValues",
+      "department": "Style",
+      "description": "Enforces the use of shorthand-style swapping of 2 variables.",
+      "enabled": false,
+      "safe_autocorrect": false,
+      "style_guide": "#values-swapping"
+    },
+    {
+      "cop": "Style/SymbolArray",
+      "department": "Style",
+      "description": "Use %i or %I for arrays of symbols.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#percent-i"
+    },
+    {
+      "cop": "Style/SymbolLiteral",
+      "department": "Style",
+      "description": "Use plain symbols instead of string symbols when possible.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/SymbolProc",
+      "department": "Style",
+      "description": "Use symbols as procs instead of blocks when possible.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TallyMethod",
+      "department": "Style",
+      "description": "Prefer `Enumerable#tally` over manual counting patterns.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TernaryParentheses",
+      "department": "Style",
+      "description": "Checks for use of parentheses around ternary conditions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TopLevelMethodDefinition",
+      "department": "Style",
+      "description": "Looks for top-level method definitions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": "#top-level-methods"
+    },
+    {
+      "cop": "Style/TrailingBodyOnClass",
+      "department": "Style",
+      "description": "Class body goes below class statement.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TrailingBodyOnMethodDefinition",
+      "department": "Style",
+      "description": "Checks for trailing code after the method definition.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TrailingBodyOnModule",
+      "department": "Style",
+      "description": "Checks for trailing code after the module definition.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TrailingCommaInArguments",
+      "department": "Style",
+      "description": "Checks for trailing comma in argument lists.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-trailing-params-comma"
+    },
+    {
+      "cop": "Style/TrailingCommaInArrayLiteral",
+      "department": "Style",
+      "description": "Checks for trailing comma in array literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-trailing-array-commas"
+    },
+    {
+      "cop": "Style/TrailingCommaInBlockArgs",
+      "department": "Style",
+      "description": "Checks for useless trailing commas in block arguments.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TrailingCommaInHashLiteral",
+      "department": "Style",
+      "description": "Checks for trailing comma in hash literals.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TrailingMethodEndStatement",
+      "department": "Style",
+      "description": "Checks for trailing end statement on line of method body.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TrailingUnderscoreVariable",
+      "department": "Style",
+      "description": "Checks for the usage of unneeded trailing underscores at the end of parallel variable assignment.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/TrivialAccessors",
+      "department": "Style",
+      "description": "Prefer attr_* methods to trivial readers/writers.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#attr_family"
+    },
+    {
+      "cop": "Style/UnlessElse",
+      "department": "Style",
+      "description": "Do not use unless with else. Rewrite these with the positive case first.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-else-with-unless"
+    },
+    {
+      "cop": "Style/UnlessLogicalOperators",
+      "department": "Style",
+      "description": "Checks for use of logical operators in an unless condition.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/UnpackFirst",
+      "department": "Style",
+      "description": "Checks for accessing the first element of `String#unpack` instead of using `unpack1`.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/VariableInterpolation",
+      "department": "Style",
+      "description": "Don't interpolate global, instance and class variables directly in strings.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#curlies-interpolate"
+    },
+    {
+      "cop": "Style/WhenThen",
+      "department": "Style",
+      "description": "Use when x then ... for one-line cases.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-when-semicolons"
+    },
+    {
+      "cop": "Style/WhileUntilDo",
+      "department": "Style",
+      "description": "Checks for redundant do after while or until.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#no-multiline-while-do"
+    },
+    {
+      "cop": "Style/WhileUntilModifier",
+      "department": "Style",
+      "description": "Favor modifier while/until usage when you have a single-line body.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#while-as-a-modifier"
+    },
+    {
+      "cop": "Style/WordArray",
+      "department": "Style",
+      "description": "Use %w or %W for arrays of words.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": "#percent-w"
+    },
+    {
+      "cop": "Style/YAMLFileRead",
+      "department": "Style",
+      "description": "Checks for the use of `YAML.load`, `YAML.safe_load`, and `YAML.parse` with `File.read` argument.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/YodaCondition",
+      "department": "Style",
+      "description": "Forbid or enforce yoda conditions.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/YodaExpression",
+      "department": "Style",
+      "description": "Forbid the use of yoda expressions.",
+      "enabled": false,
+      "safe_autocorrect": true,
+      "style_guide": null
+    },
+    {
+      "cop": "Style/ZeroLengthPredicate",
+      "department": "Style",
+      "description": "Use #empty? when testing for objects of length 0.",
+      "enabled": true,
+      "safe_autocorrect": true,
+      "style_guide": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "corpus_size": 195399,
+  "sampled": 300,
+  "analyzed": 300,
+  "errors": [],
+  "intel_only_count": 0,
+  "intel_only_gems": [],
+  "platform_histogram": {
+    "ruby": 298,
+    "java": 2
+  }
+}
