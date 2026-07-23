@@ -1,0 +1,11 @@
+{
+  "corpus_size": 195399,
+  "sampled": 300,
+  "analyzed": 300,
+  "errors": [],
+  "native_count": 0,
+  "native_percent": 0.0,
+  "extension_kind_histogram": {},
+  "native_by_last_release_year": {},
+  "native_gems": []
+}
