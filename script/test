@@ -1,0 +1,5 @@
+#!/bin/sh
+# Run the test suite.
+set -e
+cd "$(dirname "$0")/.."
+bundle exec rspec --format progress

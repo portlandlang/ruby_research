@@ -1,0 +1,43 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Usage:
+#   script/report rubocop
+#   script/report ruby-requirements [--sample N]
+#   script/report platforms [--sample N]
+#   script/report gem-ages [--sample N]
+#   script/report all [--sample N]
+#
+# Reports are written to reports/<name>.md and reports/<name>.json.
+# Corpus reports cache all fetched data under data/, so interrupted or
+# repeated runs reuse previous fetches. Omit --sample for the full corpus.
+
+require_relative '../lib/ruby_research'
+
+report_name = ARGV.shift
+sample = nil
+if (index = ARGV.index('--sample'))
+  sample = Integer(ARGV[index + 1])
+end
+
+reports = {
+  'rubocop' => -> { RubyResearch::Reports::RubocopDiscouragements.new.run },
+  'ruby-requirements' => -> { RubyResearch::Reports::RubyRequirements.new(sample: sample).run },
+  'platforms' => -> { RubyResearch::Reports::Platforms.new(sample: sample).run },
+  'gem-ages' => -> { RubyResearch::Reports::GemAges.new(sample: sample).run }
+}
+
+selected =
+  case report_name
+  when 'all' then reports.values
+  when *reports.keys then [reports.fetch(report_name)]
+  else
+    warn "Unknown report: #{report_name.inspect}"
+    warn "Available: #{reports.keys.join(', ')}, all"
+    exit 1
+  end
+
+selected.each do |report|
+  paths = report.call
+  paths.each { puts "Wrote #{it}" }
+end

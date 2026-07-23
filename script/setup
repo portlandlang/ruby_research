@@ -1,0 +1,5 @@
+#!/bin/sh
+# Install dependencies.
+set -e
+cd "$(dirname "$0")/.."
+bundle install
