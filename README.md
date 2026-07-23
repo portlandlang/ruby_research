@@ -1,5 +1,26 @@
 # Ruby language research
 
+Systematic, re-runnable answers to the questions below, generated against the
+live RubyGems.org corpus. See METHODOLOGY.md for how each question maps to a
+report and its current status.
+
+## Usage
+
+```sh
+script/setup                                # install dependencies
+script/test                                 # run specs
+script/report rubocop                       # RuboCop-discouraged language
+script/report ruby-requirements --sample 500
+script/report platforms --sample 500
+script/report gem-ages --sample 500
+script/report all --sample 500
+```
+
+Reports land in `reports/<timestamp>/` (one folder per run, so answers are
+comparable over time) as both `.md` (human) and `.json` (machine), with the
+newest run mirrored to `reports/latest/`. Omit `--sample` for a full-corpus
+run; all fetches are cached under `data/` and resumable.
+
 ## Language
 
 - What parts of Ruby language are discouraged by the language itself?
