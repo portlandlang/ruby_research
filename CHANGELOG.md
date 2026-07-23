@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-07-22 (Portland)
+
+- `config/portland_removals.yml`: Ruby features Portland removes/changes, derived from the Portland docs, with static-detection metadata (Prism node types, method names, constants).
+- `portland-compatibility` report: scans sampled gem sources for those features, reports gems-affected-per-feature and Just Work™ candidates.
+
 ## 2026-07-22 (later)
 
 - `ruby-deprecations` report: deprecation/removal bullets extracted from ruby/ruby NEWS files, Ruby 2.0 through head.

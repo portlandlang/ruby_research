@@ -55,11 +55,22 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
 
 | Question | Report | Status |
 |---|---|---|
-| Gems using parts Portland removes/changes | `feature-usage` filtered by a Portland removal list | planned (needs the removal list as input data) |
-| Gems that could Just Work™ | complement of the above | planned |
-| Gems that could NOT easily migrate | `feature-usage` + `c-extensions` | planned |
+| Gems using parts Portland removes/changes | `script/report portland-compatibility` | working (sampled) |
+| Gems that could Just Work™ | `portland-compatibility` (candidates = no decided removal detected) | working (syntax-level; semantic changes like truthiness need type analysis) |
+| Gems that could NOT easily migrate | `portland-compatibility` + `c-extensions` | partial |
 | Gems using things unavailable on macOS | `c-extensions` (linked system libraries) | planned |
 | Intel-only gems | `script/report platforms` | working (platform-tag heuristic; source-only C extensions need build testing) |
+
+## Portland removal list
+
+`config/portland_removals.yml` encodes what Portland removes/changes, derived
+from the Portland docs (docs/ruby/*.md and docs/adr/*.md in
+portlandlang/portland). Each feature declares its static detection: Prism node
+types, method names, or constant references. Update that file as ADRs land;
+`portland-compatibility` picks it up on the next run. Known gaps: class
+variables and `alias` are not asserted as removed by the docs; `<<` counts are
+inflated by Array/IO append; tentative features (bitwise operators, thread
+model) are excluded from the Just Work™ headline.
 
 ## Sampling
 
