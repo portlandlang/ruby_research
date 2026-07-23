@@ -27,6 +27,14 @@ if (index = ARGV.index('--sample'))
   sample = Integer(ARGV[index + 1])
 end
 
+# --byte-budget 30GB (or 500MB / 123456789) aborts cleanly once that much
+# has come over the wire; caches make rerunning resume where it stopped.
+if (index = ARGV.index('--byte-budget'))
+  value = ARGV[index + 1]
+  multiplier = { 'kb' => 1024, 'mb' => 1024**2, 'gb' => 1024**3 }.fetch(value[/[a-z]+\z/i]&.downcase, 1)
+  RubyResearch::HttpClient.byte_budget = (value.to_f * multiplier).to_i
+end
+
 reports = {
   'rubocop' => -> { RubyResearch::Reports::RubocopDiscouragements.new.run },
   'ruby-requirements' => -> { RubyResearch::Reports::RubyRequirements.new(sample: sample).run },
@@ -55,3 +63,6 @@ selected.each do |report|
   paths = report.call
   paths.each { puts "Wrote #{it}" }
 end
+
+megabytes = (RubyResearch::HttpClient.bytes_fetched / 1024.0 / 1024).round(1)
+puts "Fetched #{megabytes} MB over the wire this run."
