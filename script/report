@@ -9,6 +9,7 @@
 #   script/report c-extensions [--sample N]
 #   script/report feature-usage [--sample N]   (defaults to 100; downloads gems)
 #   script/report ruby-deprecations
+#   script/report portland-compatibility [--sample N]   (defaults to 100; downloads gems)
 #   script/report all [--sample N]
 #
 # Reports are written to reports/<name>.md and reports/<name>.json.
@@ -30,7 +31,8 @@ reports = {
   'gem-ages' => -> { RubyResearch::Reports::GemAges.new(sample: sample).run },
   'c-extensions' => -> { RubyResearch::Reports::CExtensions.new(sample: sample).run },
   'feature-usage' => -> { RubyResearch::Reports::FeatureUsage.new(sample: sample || 100).run },
-  'ruby-deprecations' => -> { RubyResearch::Reports::RubyDeprecations.new.run }
+  'ruby-deprecations' => -> { RubyResearch::Reports::RubyDeprecations.new.run },
+  'portland-compatibility' => -> { RubyResearch::Reports::PortlandCompatibility.new(sample: sample || 100).run }
 }
 
 selected =

@@ -1,0 +1,132 @@
+# Ruby features Portland removes or changes, derived from the Portland docs
+# (https://github.com/portlandlang/portland — docs/ruby/*.md and docs/adr/*.md).
+#
+# Each feature declares how it can be detected statically in gem source:
+#   node_types:     Prism AST node types (snake_case, as Prism::Node#type)
+#   method_names:   method names on CallNode / DefNode
+#   constant_names: constant reads (Thread, Mutex, ...)
+# Features with no detection keys are semantic changes that affect code via
+# type checking, not via any single syntax form; they're listed for
+# completeness and reported as "not statically detectable".
+#
+# status: decided | tentative (tentative = ADR marks it undecided/leaning)
+
+features:
+  - name: for-in-loop
+    kind: removed
+    status: decided
+    description: "`for x in list` is deleted; `each` is the one way"
+    source: docs/ruby/removed-syntax.md
+    node_types: [for_node]
+
+  - name: global-variables
+    kind: removed
+    status: decided
+    description: "Global variables ($foo) and the perlish special-variable zoo are removed"
+    source: docs/ruby/removed-syntax.md
+    node_types:
+      - global_variable_and_write_node
+      - global_variable_operator_write_node
+      - global_variable_or_write_node
+      - global_variable_read_node
+      - global_variable_target_node
+      - global_variable_write_node
+      - back_reference_read_node
+      - numbered_reference_read_node
+
+  - name: begin-end-execution-blocks
+    kind: removed
+    status: decided
+    description: "BEGIN {} / END {} blocks are removed as perlisms"
+    source: docs/ruby/removed-syntax.md
+    node_types: [pre_execution_node, post_execution_node]
+
+  - name: flip-flops
+    kind: removed
+    status: decided
+    description: "Flip-flop range operators in conditions are removed"
+    source: docs/ruby/removed-syntax.md
+    node_types: [flip_flop_node]
+
+  - name: method-missing
+    kind: removed
+    status: decided
+    description: "method_missing / respond_to_missing? dynamic dispatch is removed"
+    source: docs/ruby/metaprogramming.md
+    method_names: [method_missing, respond_to_missing?]
+
+  - name: runtime-define-method
+    kind: removed
+    status: decided
+    description: "Runtime define_method / const_get dispatch is removed; replaced by compile-time macros"
+    source: docs/ruby/metaprogramming.md
+    method_names: [const_get, const_set, define_method]
+
+  - name: eval-family
+    kind: removed
+    status: decided
+    description: "eval / instance_eval / class_eval and runtime reflection are removed"
+    source: docs/ruby/metaprogramming.md
+    method_names:
+      - __send__
+      - class_eval
+      - class_exec
+      - eval
+      - instance_eval
+      - instance_exec
+      - instance_variable_get
+      - instance_variable_set
+      - module_eval
+      - public_send
+      - send
+
+  - name: fetch-retired
+    kind: removed
+    status: decided
+    description: "Hash/Array#fetch retires in favor of the or-guard"
+    source: docs/ruby/lookups.md
+    method_names: [fetch]
+
+  - name: thread-model
+    kind: removed
+    status: tentative
+    description: "Thread/Fiber/Ractor/Mutex/Queue model removed; concurrency is together/meanwhile"
+    source: docs/ruby/concurrency.md
+    constant_names: [Fiber, Mutex, Queue, Ractor, Thread]
+
+  - name: bitwise-operators
+    kind: removed
+    status: tentative
+    description: "Bitwise operators leave the grammar (named methods remain); `<<` counts here are inflated by Array/IO append"
+    source: docs/ruby/bitwise-operators.md
+    method_names: ["&", "|", "^", "~", "<<", ">>"]
+
+  - name: ambient-nil
+    kind: changed
+    status: decided
+    description: "nil becomes the empty case of a typed maybe; no NilClass, not falsy"
+    source: docs/ruby/nil-and-optionals.md
+
+  - name: truthiness
+    kind: changed
+    status: decided
+    description: "Conditions accept booleans only; `if maybe_value` is a compile error"
+    source: docs/ruby/truthiness.md
+
+  - name: mutable-by-default
+    kind: changed
+    status: decided
+    description: "Immutable by default; rebinding requires the `mutable` keyword"
+    source: docs/ruby/mutability.md
+
+  - name: monkeypatching-open-classes
+    kind: removed
+    status: decided
+    description: "Reopening core or any classes at runtime is removed"
+    source: docs/ruby/metaprogramming.md
+
+  - name: dynamic-typing
+    kind: changed
+    status: decided
+    description: "Static Hindley-Milner inferred typing; duck typing becomes structural typing"
+    source: docs/ruby/types.md
