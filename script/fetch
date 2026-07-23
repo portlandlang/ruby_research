@@ -1,0 +1,94 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Prefetches and caches corpus data without running any analysis, so the
+# network-heavy part can run on bandwidth you have now and the reports can
+# run offline from cache later.
+#
+# Usage:
+#   script/fetch index [--byte-budget X]                # names + every gem's version list
+#   script/fetch metadata [--sample N] [--byte-budget X] # full gemspecs (c-extensions needs these)
+#   script/fetch gems [--sample N] [--byte-budget X]     # .gem files (source-based reports need these)
+#   script/fetch all [--sample N] [--byte-budget X]
+#
+# Same seeded sampling as script/report: `--sample 25000` here caches
+# exactly the gems `script/report ... --sample 25000` will analyze.
+# Omit --sample for the full corpus. Already-cached files are skipped, so
+# interrupted runs resume and repeat runs are free.
+
+require_relative '../lib/ruby_research'
+
+stage = ARGV.shift
+sample = nil
+if (index = ARGV.index('--sample'))
+  sample = Integer(ARGV[index + 1])
+end
+if (index = ARGV.index('--byte-budget'))
+  value = ARGV[index + 1]
+  multiplier = { 'kb' => 1024, 'mb' => 1024**2, 'gb' => 1024**3 }.fetch(value[/[a-z]+\z/i]&.downcase, 1)
+  RubyResearch::HttpClient.byte_budget = (value.to_f * multiplier).to_i
+end
+
+compact_index = RubyResearch::CompactIndexClient.new
+sources = RubyResearch::GemSourceClient.new
+
+names = compact_index.names
+names = names.sample(sample, random: Random.new(42)) if sample
+errors = []
+
+fetch_index = lambda do
+  names.each_with_index do |name, position|
+    compact_index.versions_of(name)
+    warn "  index #{position + 1}/#{names.size}" if ((position + 1) % 1000).zero?
+  rescue StandardError => e
+    errors << { gem: name, stage: 'index', error: e.message }
+  end
+end
+
+latest_version_of = lambda do |name|
+  versions = compact_index.versions_of(name)
+  versions.rfind { it[:platform] == 'ruby' } || versions.last
+end
+
+fetch_metadata = lambda do
+  names.each_with_index do |name, position|
+    latest = latest_version_of.call(name)
+    sources.full_gemspec(name, latest[:version], platform: latest[:platform]) if latest
+    warn "  metadata #{position + 1}/#{names.size}" if ((position + 1) % 500).zero?
+  rescue StandardError => e
+    errors << { gem: name, stage: 'metadata', error: e.message }
+  end
+end
+
+fetch_gems = lambda do
+  names.each_with_index do |name, position|
+    latest = latest_version_of.call(name)
+    sources.download(name, latest[:version], platform: latest[:platform]) if latest
+    warn "  gems #{position + 1}/#{names.size}" if ((position + 1) % 100).zero?
+  rescue StandardError => e
+    errors << { gem: name, stage: 'gems', error: e.message }
+  end
+end
+
+stages = {
+  'index' => fetch_index,
+  'metadata' => fetch_metadata,
+  'gems' => fetch_gems
+}
+
+selected =
+  case stage
+  when 'all' then stages.values
+  when *stages.keys then [stages.fetch(stage)]
+  else
+    warn "Unknown stage: #{stage.inspect}"
+    warn "Available: #{stages.keys.join(', ')}, all"
+    exit 1
+  end
+
+selected.each(&:call)
+
+megabytes = (RubyResearch::HttpClient.bytes_fetched / 1024.0 / 1024).round(1)
+puts "Fetched #{megabytes} MB over the wire this run. Errors: #{errors.size}"
+errors.first(20).each { puts "  #{it[:stage]} #{it[:gem]}: #{it[:error]}" }
+puts "  (rerun the same command to retry errored gems)" if errors.any?
