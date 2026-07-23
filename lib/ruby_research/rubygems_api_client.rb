@@ -14,8 +14,9 @@ module RubyResearch
     HOST = 'https://rubygems.org'
     THROTTLE_SECONDS = 0.12
 
-    def initialize(cache_dir: File.join(DATA_DIR, 'api'))
+    def initialize(cache_dir: File.join(DATA_DIR, 'api'), http: HttpClient.new)
       @cache_dir = cache_dir
+      @http = http
     end
 
     attr_reader :cache_dir
@@ -38,19 +39,11 @@ module RubyResearch
       full_path = File.join(cache_dir, cache_file)
       return JSON.parse(File.read(full_path), symbolize_names: true) if File.exist?(full_path)
 
-      body = http_get(path)
+      body = @http.get("#{HOST}#{path}")
       FileUtils.mkdir_p(File.dirname(full_path))
       File.write(full_path, body)
       sleep(THROTTLE_SECONDS)
       JSON.parse(body, symbolize_names: true)
-    end
-
-    def http_get(path)
-      uri = URI.join(HOST, path)
-      response = Net::HTTP.get_response(uri)
-      raise "GET #{uri} failed: #{response.code}" unless response.is_a?(Net::HTTPSuccess)
-
-      response.body
     end
   end
 end

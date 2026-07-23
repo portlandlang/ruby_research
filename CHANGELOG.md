@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-07-22 (bandwidth + resilience)
+
+- Shared `HttpClient` for all fetchers: 10s/30s timeouts, 4 attempts with exponential backoff on transient failures (timeouts, resets, 5xx, 429), bounded redirect following.
+- Metadata probe for the C-extension census shrunk from 256KB to 16KB per gem (exact-range fallback when metadata.gz is bigger) — cuts the full-corpus stage-2 transfer by roughly an order of magnitude.
+
 ## 2026-07-22 (design-decision censuses)
 
 - `mutation-shapes` report: classifies receiver-mutation sites as accumulator / escaped / aliased / shared, feeding the `<<`-as-rebinding decision.

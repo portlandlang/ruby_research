@@ -35,9 +35,10 @@ module RubyResearch
 
       PATTERN = /deprecat|removed|no longer|obsolete/i
 
-      def initialize(reports_dir: REPORTS_DIR, cache_dir: File.join(DATA_DIR, 'ruby_news'))
-        @reports_dir = reports_dir
+      def initialize(cache_dir: File.join(DATA_DIR, 'ruby_news'), http: HttpClient.new, reports_dir: REPORTS_DIR)
         @cache_dir = cache_dir
+        @http = http
+        @reports_dir = reports_dir
       end
 
       def run
@@ -61,17 +62,10 @@ module RubyResearch
         full_path = File.join(@cache_dir, "NEWS-#{version}.md")
         return File.read(full_path) if File.exist?(full_path)
 
-        body = http_get("https://raw.githubusercontent.com/ruby/ruby/master/#{path}")
+        body = @http.get("https://raw.githubusercontent.com/ruby/ruby/master/#{path}")
         FileUtils.mkdir_p(@cache_dir)
         File.write(full_path, body)
         body
-      end
-
-      def http_get(url)
-        response = Net::HTTP.get_response(URI(url))
-        raise "GET #{url} failed: #{response.code}" unless response.is_a?(Net::HTTPSuccess)
-
-        response.body
       end
 
       # Collects full bullet items (bullet line plus indented continuation

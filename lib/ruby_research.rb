@@ -9,6 +9,7 @@ module RubyResearch
   REPORTS_DIR = File.join(ROOT, 'reports')
 end
 
+require_relative 'ruby_research/http_client'
 require_relative 'ruby_research/report_writer'
 require_relative 'ruby_research/compact_index_client'
 require_relative 'ruby_research/rubygems_api_client'

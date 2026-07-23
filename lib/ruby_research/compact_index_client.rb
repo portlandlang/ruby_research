@@ -16,8 +16,9 @@ module RubyResearch
   class CompactIndexClient
     HOST = 'https://rubygems.org'
 
-    def initialize(cache_dir: File.join(DATA_DIR, 'compact_index'))
+    def initialize(cache_dir: File.join(DATA_DIR, 'compact_index'), http: HttpClient.new)
       @cache_dir = cache_dir
+      @http = http
     end
 
     attr_reader :cache_dir
@@ -44,18 +45,10 @@ module RubyResearch
       full_path = File.join(cache_dir, cache_file)
       return File.read(full_path) if File.exist?(full_path)
 
-      body = http_get(path)
+      body = @http.get("#{HOST}#{path}")
       FileUtils.mkdir_p(File.dirname(full_path))
       File.write(full_path, body)
       body
-    end
-
-    def http_get(path)
-      uri = URI.join(HOST, path)
-      response = Net::HTTP.get_response(uri)
-      raise "GET #{uri} failed: #{response.code}" unless response.is_a?(Net::HTTPSuccess)
-
-      response.body
     end
 
     def parse_info(body)

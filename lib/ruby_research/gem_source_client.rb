@@ -15,8 +15,16 @@ module RubyResearch
   class GemSourceClient
     HOST = 'https://rubygems.org'
 
-    def initialize(cache_dir: File.join(DATA_DIR, 'gems'), metadata_cache_dir: File.join(DATA_DIR, 'gem_metadata'))
+    # metadata.gz is the first tar entry and usually only a few KB; 16KB
+    # covers the common case and the fallback fetches exactly the missing
+    # bytes when it doesn't.
+    METADATA_PROBE_BYTES = 16_384
+
+    def initialize(cache_dir: File.join(DATA_DIR, 'gems'),
+                   http: HttpClient.new,
+                   metadata_cache_dir: File.join(DATA_DIR, 'gem_metadata'))
       @cache_dir = cache_dir
+      @http = http
       @metadata_cache_dir = metadata_cache_dir
     end
 
@@ -60,7 +68,7 @@ module RubyResearch
       full_path = File.join(cache_dir, "#{name}-#{suffix}.gem")
       return full_path if File.exist?(full_path)
 
-      body = http_get("/gems/#{name}-#{suffix}.gem")
+      body = @http.get("#{HOST}/gems/#{name}-#{suffix}.gem")
       FileUtils.mkdir_p(cache_dir)
       File.binwrite(full_path, body)
       full_path
@@ -71,7 +79,12 @@ module RubyResearch
     def metadata_yaml(name, version, platform:)
       suffix = platform == 'ruby' ? version : "#{version}-#{platform}"
       local_gem = File.join(cache_dir, "#{name}-#{suffix}.gem")
-      head = File.exist?(local_gem) ? File.binread(local_gem, 262_144) : http_get_range("/gems/#{name}-#{suffix}.gem", 0, 262_143)
+      head =
+        if File.exist?(local_gem)
+          File.binread(local_gem, METADATA_PROBE_BYTES)
+        else
+          @http.get("#{HOST}/gems/#{name}-#{suffix}.gem", range: [0, METADATA_PROBE_BYTES - 1])
+        end
       yaml = metadata_from_tar_head(head, path: "/gems/#{name}-#{suffix}.gem")
       return yaml if yaml
 
@@ -93,7 +106,7 @@ module RubyResearch
         size = header[124, 12].delete("\0").strip.to_i(8)
         if entry_name == 'metadata.gz'
           data = bytes.byteslice(offset + 512, size)
-          data = http_get_range(path, offset + 512, offset + 511 + size) if data.bytesize < size && path
+          data = @http.get("#{HOST}#{path}", range: [offset + 512, offset + 511 + size]) if data.bytesize < size && path
           return Zlib.gunzip(data) if data.bytesize == size
 
           return nil
@@ -101,22 +114,6 @@ module RubyResearch
         offset += 512 + (((size + 511) / 512) * 512)
       end
       nil
-    end
-
-    def http_get_range(path, first_byte, last_byte)
-      uri = URI.join(HOST, path)
-      request = Net::HTTP::Get.new(uri)
-      request['Range'] = "bytes=#{first_byte}-#{last_byte}"
-      response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { it.request(request) }
-      if response.is_a?(Net::HTTPRedirection)
-        uri = URI(response['location'])
-        request = Net::HTTP::Get.new(uri)
-        request['Range'] = "bytes=#{first_byte}-#{last_byte}"
-        response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { it.request(request) }
-      end
-      raise "GET #{uri} (range) failed: #{response.code}" unless response.is_a?(Net::HTTPSuccess)
-
-      response.body
     end
 
     def each_ruby_entry(data_tar_entry)
@@ -129,15 +126,6 @@ module RubyResearch
           end
         end
       end
-    end
-
-    def http_get(path)
-      uri = URI.join(HOST, path)
-      response = Net::HTTP.get_response(uri)
-      response = Net::HTTP.get_response(URI(response['location'])) if response.is_a?(Net::HTTPRedirection)
-      raise "GET #{uri} failed: #{response.code}" unless response.is_a?(Net::HTTPSuccess)
-
-      response.body
     end
   end
 end
