@@ -60,7 +60,7 @@ module RubyResearch
         File.write(cache_path, yaml)
       end
 
-      Gem::Specification.from_yaml(File.read(cache_path))
+      spec_from(File.read(cache_path))
     end
 
     def download(name, version, platform: 'ruby')
@@ -75,6 +75,21 @@ module RubyResearch
     end
 
     private
+
+    # Gemspecs published by ancient RubyGems versions serialize
+    # require_paths as [["lib"]] instead of ["lib"]. Gem::Specification
+    # .from_yaml loads those fine but warns to stderr about every one,
+    # which smears the fetch progress ticker. Use the same safe loader
+    # from_yaml uses and normalize the field ourselves, quietly.
+    def spec_from(yaml)
+      Gem.load_yaml
+      spec = Gem::SafeYAML.safe_load(Gem::Specification.normalize_yaml_input(yaml))
+      raise "gemspec YAML did not load as a specification (got #{spec.class})" unless spec.is_a?(Gem::Specification)
+
+      require_paths = spec.instance_variable_get(:@require_paths)
+      spec.instance_variable_set(:@require_paths, require_paths.flatten) if require_paths.is_a?(Array)
+      spec
+    end
 
     def metadata_yaml(name, version, platform:)
       suffix = platform == 'ruby' ? version : "#{version}-#{platform}"

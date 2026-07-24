@@ -1,4 +1,9 @@
+
 # Changelog
+
+## 2026-07-23 (later)
+
+- Load gemspecs with RubyGems' safe loader and normalize `require_paths` ourselves, so the ~0.03% of gems whose ancient gemspecs store `require_paths` as `[["lib"]]` no longer warn to stderr and smear the fetch progress ticker. These were always warnings, not failures — the gems fetched and parsed fine.
 
 ## 2026-07-23
 

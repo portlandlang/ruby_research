@@ -1,0 +1,140 @@
+--- !ruby/object:Gem::Specification
+name: booru
+version: !ruby/object:Gem::Version
+  version: 0.0.1
+  prerelease: 
+platform: ruby
+authors:
+- David Palma
+autorequire: 
+bindir: bin
+cert_chain: []
+date: 2012-09-03 00:00:00.000000000 Z
+dependencies:
+- !ruby/object:Gem::Dependency
+  name: rake
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :development
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: trollop
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: nori
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+- !ruby/object:Gem::Dependency
+  name: rest-client
+  requirement: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+  type: :runtime
+  prerelease: false
+  version_requirements: !ruby/object:Gem::Requirement
+    none: false
+    requirements:
+    - - ! '>='
+      - !ruby/object:Gem::Version
+        version: '0'
+description: A Moebooru API client and image downloader for Danbooru style image boards.
+email: requiem.der.seele@gmail.com
+executables:
+- booru.rb
+extensions: []
+extra_rdoc_files: []
+files:
+- .gitignore
+- Gemfile
+- LICENSE
+- README.md
+- Rakefile
+- bin/booru.rb
+- booru.gemspec
+- fixtures/konachan/post_index.json
+- fixtures/yandere/post_index.json
+- lib/booru.rb
+- lib/booru/api.rb
+- lib/booru/api/artist.rb
+- lib/booru/api/comment.rb
+- lib/booru/api/favorite.rb
+- lib/booru/api/forum.rb
+- lib/booru/api/note.rb
+- lib/booru/api/pool.rb
+- lib/booru/api/post.rb
+- lib/booru/api/tag.rb
+- lib/booru/api/user.rb
+- lib/booru/api/wiki.rb
+- lib/booru/client.rb
+- lib/booru/client/behoimi.rb
+- lib/booru/client/danbooru.rb
+- lib/booru/client/konachan.rb
+- lib/booru/client/yandere.rb
+- lib/booru/downloader.rb
+- lib/booru/error.rb
+- lib/booru/request.rb
+- lib/booru/utils.rb
+- lib/booru/version.rb
+homepage: https://github.com/mistofvongola/booru
+licenses: []
+post_install_message: 
+rdoc_options: []
+require_paths:
+- - lib
+required_ruby_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+required_rubygems_version: !ruby/object:Gem::Requirement
+  none: false
+  requirements:
+  - - ! '>='
+    - !ruby/object:Gem::Version
+      version: '0'
+requirements: []
+rubyforge_project: 
+rubygems_version: 1.8.23
+signing_key: 
+specification_version: 3
+summary: A Ruby client for the Moebooru API.
+test_files: []
