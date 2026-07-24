@@ -37,6 +37,7 @@ module RubyResearch
 
       def run
         totals = new_tally
+        gems_by_casing = Hash.new(0)
         gems_by_indentation = Hash.new(0)
         gems_by_quoting = Hash.new(0)
         heredocs_per_gem = {}
@@ -51,6 +52,7 @@ module RubyResearch
 
           analyzed += 1
           heredocs_per_gem[name] = gem_tally[:total] if gem_tally[:total].positive?
+          gem_tally[:casing].each_key { gems_by_casing[it] += 1 }
           gem_tally[:indentation].each_key { gems_by_indentation[it] += 1 }
           gem_tally[:quoting].each_key { gems_by_quoting[it] += 1 }
           merge_tally(totals, gem_tally)
@@ -68,8 +70,11 @@ module RubyResearch
           total_heredocs: totals[:total],
           top_gems_by_heredoc_count: ranked.first(10).to_h,
           top_5_gems_share_of_sites: share(ranked.first(5).sum { it[1] }, totals[:total]),
+          casing: sort_by_count(totals[:casing]),
+          gems_by_casing: sort_by_count(gems_by_casing),
           gems_by_indentation: sort_by_count(gems_by_indentation),
           gems_by_quoting: sort_by_count(gems_by_quoting),
+          non_uppercase_terminators: totals[:terminators].keys.reject { casing_of(it) == 'UPPERCASE' }.sort,
           indentation: sort_by_count(totals[:indentation]),
           quoting: sort_by_count(totals[:quoting]),
           interpolating: totals[:interpolating],
@@ -89,6 +94,7 @@ module RubyResearch
         {
           as_call_argument: 0,
           body_size: Hash.new(0),
+          casing: Hash.new(0),
           indentation: Hash.new(0),
           interpolating: 0,
           quoting: Hash.new(0),
@@ -98,12 +104,21 @@ module RubyResearch
         }
       end
 
+      # UPPERCASE is the convention, but the grammar allows any identifier.
+      def casing_of(terminator)
+        case terminator
+        when /\A[A-Z][A-Z0-9_]*\z/ then 'UPPERCASE'
+        when /\A[a-z][a-z0-9_]*\z/ then 'lowercase'
+        else 'MixedCase'
+        end
+      end
+
       def merge_tally(totals, gem_tally)
         totals[:total] += gem_tally[:total]
         totals[:interpolating] += gem_tally[:interpolating]
         totals[:stacked] += gem_tally[:stacked]
         totals[:as_call_argument] += gem_tally[:as_call_argument]
-        %i[body_size indentation quoting terminators].each do |key|
+        %i[body_size casing indentation quoting terminators].each do |key|
           gem_tally[key].each { |bucket, count| totals[key][bucket] += count }
         end
       end
@@ -181,9 +196,11 @@ module RubyResearch
           else 'bare'
           end
 
+        terminator = rest.delete("'\"`")
         tally[:indentation][indentation] += 1
         tally[:quoting][quoting] += 1
-        tally[:terminators][rest.delete("'\"`")] += 1
+        tally[:terminators][terminator] += 1
+        tally[:casing][casing_of(terminator)] += 1
       end
 
       def size_bucket_for(node)
@@ -228,6 +245,20 @@ module RubyResearch
           lines << "| #{quoting} | #{count} | #{share(count,
                                                       data[:total_heredocs])} | #{gems} | #{share(gems, data[:gems_with_heredocs])} |"
         end
+        lines << ''
+        lines << '## Terminator casing'
+        lines << ''
+        lines << 'UPPERCASE is convention, not grammar — any identifier is legal.'
+        lines << ''
+        lines << '| Casing | Heredocs | % of sites | Gems | % of heredoc-using gems |'
+        lines << '|---|---|---|---|---|'
+        data[:casing].each do |casing, count|
+          gems = data[:gems_by_casing][casing].to_i
+          lines << "| #{casing} | #{count} | #{share(count, data[:total_heredocs])} | #{gems} | " \
+                   "#{share(gems, data[:gems_with_heredocs])} |"
+        end
+        lines << ''
+        lines << "Non-uppercase terminators seen: #{data[:non_uppercase_terminators].map { "`#{it}`" }.join(', ')}"
         lines << ''
         lines << '## Interpolation, position, stacking'
         lines << ''

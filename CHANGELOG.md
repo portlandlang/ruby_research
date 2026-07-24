@@ -3,7 +3,7 @@
 ## 2026-07-23
 
 - Full-corpus runs of `ruby-requirements`, `platforms`, and `gem-ages` (all 195,399 gems) from the cached compact index.
-- `heredocs` report: indentation flavor (`<<` / `<<-` / `<<~`), quoting (bare / single / double / backtick), interpolation, terminator names, body size, call-argument position, and same-line stacking. Reports per-gem coverage alongside raw site counts because heredoc counts are heavily concentrated in a few generated-SDK gems.
+- `heredocs` report: indentation flavor (`<<` / `<<-` / `<<~`), quoting (bare / single / double / backtick), interpolation, terminator names and casing, body size, call-argument position, and same-line stacking. Reports per-gem coverage alongside raw site counts because heredoc counts are heavily concentrated in a few generated-SDK gems.
 
 ## 2026-07-22 (bandwidth + resilience)
 
