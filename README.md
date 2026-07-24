@@ -20,6 +20,7 @@ script/report portland-compatibility --sample 100
 script/report error-handling --sample 100
 script/report nil-idioms --sample 100
 script/report mutation-shapes --sample 100
+script/report heredocs --sample 100
 script/report all --sample 500
 ```
 

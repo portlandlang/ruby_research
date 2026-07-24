@@ -71,6 +71,7 @@ PORTLAND_DECISION_CANDIDATES.md):
 | Mutable values / `<<` as rebinding | `script/report mutation-shapes` (accumulator vs aliased vs shared mutation sites) | working (heuristic) |
 | Exceptions vs results | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes) | working |
 | Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `||` defaults, fetch arity) | working |
+| Heredocs (`<<` / `<<-` / `<<~`) | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working |
 
 ## Portland removal list
 

@@ -13,6 +13,7 @@
 #   script/report error-handling [--sample N]           (defaults to 100; downloads gems)
 #   script/report nil-idioms [--sample N]               (defaults to 100; downloads gems)
 #   script/report mutation-shapes [--sample N]          (defaults to 100; downloads gems)
+#   script/report heredocs [--sample N]                 (defaults to 100; downloads gems)
 #   script/report all [--sample N]
 #
 # Reports are written to reports/<name>.md and reports/<name>.json.
@@ -46,7 +47,8 @@ reports = {
   'portland-compatibility' => -> { RubyResearch::Reports::PortlandCompatibility.new(sample: sample || 100).run },
   'error-handling' => -> { RubyResearch::Reports::ErrorHandling.new(sample: sample || 100).run },
   'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample || 100).run },
-  'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample || 100).run }
+  'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample || 100).run },
+  'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample || 100).run }
 }
 
 selected =
