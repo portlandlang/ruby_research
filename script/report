@@ -7,8 +7,8 @@
 #   script/report platforms [--sample N]
 #   script/report gem-ages [--sample N]
 #   script/report c-extensions [--sample N]
-#   script/report feature-usage [--sample N]   (defaults to 100; downloads gems)
 #   script/report ruby-deprecations
+#   script/report feature-usage [--sample N]            (defaults to 100; downloads gems)
 #   script/report portland-compatibility [--sample N]   (defaults to 100; downloads gems)
 #   script/report error-handling [--sample N]           (defaults to 100; downloads gems)
 #   script/report nil-idioms [--sample N]               (defaults to 100; downloads gems)

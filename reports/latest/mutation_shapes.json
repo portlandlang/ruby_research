@@ -1,28 +1,28 @@
 {
   "corpus_size": 195399,
-  "sampled": 50,
-  "analyzed": 50,
+  "sampled": 500,
+  "analyzed": 500,
   "errors": [],
-  "total_mutation_sites": 1713,
+  "total_mutation_sites": 29035,
   "site_counts": {
-    "accumulator": 280,
-    "escaped_local": 83,
-    "aliased_local": 536,
-    "shared_receiver": 788,
-    "implicit_self": 26
+    "accumulator": 4421,
+    "escaped_local": 4479,
+    "aliased_local": 8353,
+    "shared_receiver": 11503,
+    "implicit_self": 279
   },
   "site_percentages": {
-    "accumulator": 16.3,
-    "escaped_local": 4.8,
-    "aliased_local": 31.3,
-    "shared_receiver": 46.0,
-    "implicit_self": 1.5
+    "accumulator": 15.2,
+    "escaped_local": 15.4,
+    "aliased_local": 28.8,
+    "shared_receiver": 39.6,
+    "implicit_self": 1.0
   },
   "gem_coverage": {
-    "accumulator": 24,
-    "escaped_local": 12,
-    "aliased_local": 26,
-    "shared_receiver": 32,
-    "implicit_self": 4
+    "accumulator": 144,
+    "escaped_local": 85,
+    "aliased_local": 201,
+    "shared_receiver": 250,
+    "implicit_self": 24
   }
 }

@@ -1,30 +1,30 @@
 {
   "corpus_size": 195399,
-  "sampled": 50,
-  "analyzed": 50,
+  "sampled": 500,
+  "analyzed": 500,
   "errors": [],
   "site_counts": {
-    "raise_site": 628,
-    "rescue_clause": 241,
-    "rescue_specific_class": 197,
-    "rescue_bare": 44,
-    "rescue_reraises": 98,
-    "rescue_swallows": 143,
-    "rescue_modifier": 27,
-    "ensure_block": 29,
-    "retry_site": 2,
-    "custom_error_class": 41
+    "raise_site": 7953,
+    "rescue_clause": 1728,
+    "rescue_specific_class": 1330,
+    "rescue_bare": 398,
+    "rescue_reraises": 556,
+    "rescue_swallows": 1172,
+    "rescue_modifier": 136,
+    "ensure_block": 365,
+    "retry_site": 36,
+    "custom_error_class": 470
   },
   "gem_coverage": {
-    "raise_site": 33,
-    "rescue_clause": 22,
-    "rescue_specific_class": 21,
-    "rescue_bare": 8,
-    "rescue_reraises": 12,
-    "rescue_swallows": 18,
-    "rescue_modifier": 8,
-    "ensure_block": 5,
-    "retry_site": 1,
-    "custom_error_class": 17
+    "raise_site": 229,
+    "rescue_clause": 168,
+    "rescue_specific_class": 145,
+    "rescue_bare": 69,
+    "rescue_reraises": 81,
+    "rescue_swallows": 144,
+    "rescue_modifier": 39,
+    "ensure_block": 53,
+    "retry_site": 16,
+    "custom_error_class": 117
   }
 }

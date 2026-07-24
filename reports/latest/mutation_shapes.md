@@ -1,14 +1,14 @@
 # Mutation-site shapes across RubyGems.org
 
-Sampled 50 gems (seeded, reproducible) out of 195399 on RubyGems.org; 1713 receiver-mutation sites classified inside method bodies.
+Sampled 500 gems (seeded, reproducible) out of 195399 on RubyGems.org; 29035 receiver-mutation sites classified inside method bodies.
 
 | Shape | Sites | % of sites | Gems |
 |---|---|---|---|
-| accumulator | 280 | 16.3% | 24 |
-| escaped_local | 83 | 4.8% | 12 |
-| aliased_local | 536 | 31.3% | 26 |
-| shared_receiver | 788 | 46.0% | 32 |
-| implicit_self | 26 | 1.5% | 4 |
+| accumulator | 4421 | 15.2% | 144 |
+| escaped_local | 4479 | 15.4% | 85 |
+| aliased_local | 8353 | 28.8% | 201 |
+| shared_receiver | 11503 | 39.6% | 250 |
+| implicit_self | 279 | 1.0% | 24 |
 
 accumulator sites (fresh local container, never escapes its method mid-build) migrate to
 rebinding `<<` verbatim. escaped_local and shared_receiver sites are the aliasing population
