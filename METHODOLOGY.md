@@ -32,6 +32,9 @@ carrying uppercase a digest suffix (`Abundance@2f1c8e3d`). `script/fetch repair`
 migrates pre-existing entries to the new key by renaming on disk — no refetch —
 and refills any group whose cached data was poisoned.
 
+`script/report case-collisions` lists the colliding pairs themselves, which is a
+corpus finding in its own right rather than a Portland question.
+
 ## Question → report mapping
 
 ### Language

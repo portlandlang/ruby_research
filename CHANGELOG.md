@@ -1,6 +1,10 @@
 
 # Changelog
 
+## 2026-07-25 (later)
+
+- `case-collisions` report: every set of gems whose names differ only in letter case (178 pairs, 356 gems), with version counts, release dates, and the date each collision came into existence. All 178 were created 2009–2013 — none since — so the registry appears to validate this now and the remaining pairs are legacy index data.
+
 ## 2026-07-25
 
 - Case-safe cache keys (`RubyResearch::CacheKey`): macOS folds filename case, so the 178 pairs of gems whose names differ only in case (`Abundance`/`abundance`) shared one cache file and one silently served the other's data. Lowercase names keep their plain filename; names carrying uppercase get a digest suffix.
