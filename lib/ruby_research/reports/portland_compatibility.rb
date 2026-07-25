@@ -17,6 +17,12 @@ module RubyResearch
     class PortlandCompatibility
       REMOVALS_FILE = File.join(ROOT, 'config', 'portland_removals.yml')
 
+      # At full corpus the candidate list runs to tens of thousands of gem
+      # names. Listing them all made a 16MB report that no human could read
+      # and that git had to store afresh every run, so record the count plus
+      # a sample; the full list is reproducible by rerunning.
+      CANDIDATE_SAMPLE_SIZE = 100
+
       def initialize(compact_index: CompactIndexClient.new,
                      sources: GemSourceClient.new,
                      reports_dir: REPORTS_DIR,
@@ -58,10 +64,9 @@ module RubyResearch
           errors: errors,
           removals_file: 'config/portland_removals.yml',
           just_work_candidates_count: clean_gems.size,
-          just_work_candidates: clean_gems,
+          just_work_candidates_sample: clean_gems.first(CANDIDATE_SAMPLE_SIZE),
           gems_affected_by_feature: gems_by_feature.transform_values(&:size).sort_by { |_feature, count| -count }.to_h,
-          undetectable_semantic_changes: undetectable_features.map { it['name'] },
-          features_by_gem: features_by_gem.sort.to_h
+          undetectable_semantic_changes: undetectable_features.map { it['name'] }
         }
         writer = ReportWriter.new(name: 'portland_compatibility', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -149,7 +154,10 @@ module RubyResearch
         lines << ''
         lines << '## Just Work™ candidates'
         lines << ''
-        data[:just_work_candidates].each { lines << "- #{it}" }
+        lines << "#{data[:just_work_candidates_count]} gems touch no decided removal. First " \
+                 "#{data[:just_work_candidates_sample].size}, alphabetically:"
+        lines << ''
+        data[:just_work_candidates_sample].each { lines << "- #{it}" }
         lines << ''
         lines << "Errors: #{data[:errors].size}"
 
