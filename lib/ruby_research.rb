@@ -11,7 +11,9 @@ end
 
 require_relative 'ruby_research/cache_key'
 require_relative 'ruby_research/http_client'
+require_relative 'ruby_research/progress'
 require_relative 'ruby_research/report_writer'
+require_relative 'ruby_research/reports/scope'
 require_relative 'ruby_research/compact_index_client'
 require_relative 'ruby_research/rubygems_api_client'
 require_relative 'ruby_research/gem_source_client'
