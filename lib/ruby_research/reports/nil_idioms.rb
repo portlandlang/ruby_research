@@ -30,7 +30,7 @@ module RubyResearch
       def initialize(compact_index: CompactIndexClient.new,
                      sources: GemSourceClient.new,
                      reports_dir: REPORTS_DIR,
-                     sample: 100,
+                     sample: nil,
                      seed: 42)
         @compact_index = compact_index
         @sources = sources
@@ -46,8 +46,9 @@ module RubyResearch
         analyzed = 0
         names = selected_names
 
+        progress = Progress.new(label: 'nil-idioms')
         names.each_with_index do |name, index|
-          warn "  #{index + 1}/#{names.size} gems (#{name})" if ((index + 1) % 10).zero?
+          progress.tick(index + 1, names.size)
           gem_sites = sites_for(name)
           next if gem_sites.nil?
 
@@ -59,6 +60,7 @@ module RubyResearch
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         data = {
           corpus_size: @compact_index.names.size,
@@ -145,7 +147,8 @@ module RubyResearch
         lines = []
         lines << '# nil-idiom census across RubyGems.org'
         lines << ''
-        lines << "Sampled #{data[:analyzed]} gems (seeded, reproducible) out of #{data[:corpus_size]} on RubyGems.org."
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
+        lines << "Based on #{scope}, out of #{data[:corpus_size]} on RubyGems.org."
         lines << ''
         lines << '| Idiom | Sites | Gems using it | % of gems |'
         lines << '|---|---|---|---|'

@@ -26,7 +26,9 @@ module RubyResearch
         intel_only_gems = []
         errors = []
 
+        progress = Progress.new(label: 'platforms')
         names.each_with_index do |name, index|
+          progress.tick(index + 1, names.size)
           versions = @client.versions_of(name)
           next if versions.empty?
 
@@ -34,10 +36,10 @@ module RubyResearch
           platforms = versions.select { it[:version] == latest_number }.map { it[:platform] }.uniq
           platforms.each { platform_tally[it] += 1 }
           intel_only_gems << name if intel_only?(platforms)
-          warn "  #{index + 1}/#{names.size} gems" if ((index + 1) % 100).zero?
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         data = {
           corpus_size: total_names_count,
@@ -74,7 +76,7 @@ module RubyResearch
         lines = []
         lines << '# Gem platforms across RubyGems.org'
         lines << ''
-        scope = data[:sampled] ? "a random sample of #{data[:analyzed]} gems (seeded, reproducible)" : "all #{data[:analyzed]} gems"
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
         lines << "Based on the latest release of #{scope}, out of #{data[:corpus_size]} gems on RubyGems.org."
         lines << ''
         lines << '## Platform histogram (latest release, all variants)'

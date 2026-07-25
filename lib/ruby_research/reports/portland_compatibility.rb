@@ -20,7 +20,7 @@ module RubyResearch
       def initialize(compact_index: CompactIndexClient.new,
                      sources: GemSourceClient.new,
                      reports_dir: REPORTS_DIR,
-                     sample: 100,
+                     sample: nil,
                      seed: 42)
         @compact_index = compact_index
         @sources = sources
@@ -35,8 +35,9 @@ module RubyResearch
         errors = []
         names = selected_names
 
+        progress = Progress.new(label: 'portland-compatibility')
         names.each_with_index do |name, index|
-          warn "  #{index + 1}/#{names.size} gems (#{name})" if ((index + 1) % 10).zero?
+          progress.tick(index + 1, names.size)
           usage = usage_for(name)
           next if usage.nil?
 
@@ -46,6 +47,7 @@ module RubyResearch
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         decided = detectable_features.select { it['status'] == 'decided' }.map { it['name'] }
         clean_gems = features_by_gem.reject { |_gem, used| used.intersect?(decided) }.keys.sort
@@ -123,7 +125,8 @@ module RubyResearch
         lines = []
         lines << '# Portland compatibility across RubyGems.org'
         lines << ''
-        lines << "Sampled #{data[:analyzed]} gems (seeded, reproducible) out of #{data[:corpus_size]} on RubyGems.org, " \
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
+        lines << "Based on #{scope}, out of #{data[:corpus_size]} on RubyGems.org, " \
                  "scanned for the Ruby features Portland removes or changes (#{data[:removals_file]})."
         lines << ''
         percent = data[:analyzed].zero? ? 0 : (data[:just_work_candidates_count] * 100.0 / data[:analyzed]).round(1)

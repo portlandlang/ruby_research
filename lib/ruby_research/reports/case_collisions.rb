@@ -92,12 +92,14 @@ module RubyResearch
         lines << ''
         lines << "Report generated at #{Time.now}."
         lines << ''
-        lines << "**#{data[:group_count]}** name collisions covering **#{data[:gems_involved]}** distinct gems, out of #{data[:corpus_size]} on RubyGems.org."
+        lines << "**#{data[:group_count]}** name collisions covering **#{data[:gems_involved]}** distinct gems, " \
+                 "out of #{data[:corpus_size]} on RubyGems.org."
         lines << ''
         lines << 'These are separate gems that fold to the same name, so any tool storing one gem per file'
         lines << 'on a case-insensitive filesystem (macOS APFS, Windows) will have them overwrite each other.'
         lines << ''
-        lines << "Newest release among any colliding gem: **#{data[:newest_release_among_collisions]}** — several of these gems are still actively maintained."
+        lines << "Newest release among any colliding gem: **#{data[:newest_release_among_collisions]}** — " \
+                 'several of these gems are still actively maintained.'
         lines << ''
         lines << '## When each collision was created'
         lines << ''
@@ -106,7 +108,8 @@ module RubyResearch
         lines << "the most recent collision was created **#{data[:newest_collision_created]}**, and none since."
         lines << 'So this is legacy data in the index rather than an open validation hole.'
         lines << ''
-        lines << 'All collisions are only pairs, no triples or more.(`FooBarBaz` and `foobarbaz`. No `FooBarBaz` and `foobarbaz` AND ALSO `fooBARbaz`)'
+        lines << 'All collisions are only pairs, no triples or more.(`FooBarBaz` and `foobarbaz`. ' \
+                 'No `FooBarBaz` and `foobarbaz` AND ALSO `fooBARbaz`)'
         lines << ''
 
         lines << '| Year created | Collisions |'
@@ -142,7 +145,7 @@ module RubyResearch
           end
         end
         lines << ''
-        lines << "Errors: #{data[:errors].size}" unless data[:errors].size.zero?
+        lines << "Errors: #{data[:errors].size}" unless data[:errors].empty?
 
         lines.join("\n")
       end

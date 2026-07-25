@@ -21,14 +21,16 @@ module RubyResearch
         results = {}
         errors = []
 
+        progress = Progress.new(label: 'ruby-requirements')
         names.each_with_index do |name, index|
+          progress.tick(index + 1, names.size)
           versions = @client.versions_of(name)
           latest = versions.last
           results[name] = latest && latest[:ruby]
-          warn "  #{index + 1}/#{names.size} gems" if ((index + 1) % 100).zero?
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         histogram = results.values.tally.sort_by { |_requirement, count| -count }.to_h
         minimum_versions = minimum_version_histogram(results)
@@ -90,7 +92,7 @@ module RubyResearch
         lines = []
         lines << '# Minimum Ruby versions across RubyGems.org'
         lines << ''
-        scope = data[:sampled] ? "a random sample of #{data[:analyzed]} gems (seeded, reproducible)" : "all #{data[:analyzed]} gems"
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
         lines << "Based on the latest published version of #{scope}, out of #{data[:corpus_size]} gems on RubyGems.org."
         lines << ''
         lines << '## Minimum Ruby version (latest release of each gem)'

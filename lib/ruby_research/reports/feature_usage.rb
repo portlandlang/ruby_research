@@ -19,7 +19,7 @@ module RubyResearch
       def initialize(compact_index: CompactIndexClient.new,
                      sources: GemSourceClient.new,
                      reports_dir: REPORTS_DIR,
-                     sample: 100,
+                     sample: nil,
                      seed: 42)
         @compact_index = compact_index
         @sources = sources
@@ -36,8 +36,9 @@ module RubyResearch
         errors = []
         analyzed = []
 
+        progress = Progress.new(label: 'feature-usage')
         names.each_with_index do |name, index|
-          warn "  #{index + 1}/#{names.size} gems (#{name})" if ((index + 1) % 10).zero?
+          progress.tick(index + 1, names.size)
           node_types = node_types_for(name, parse_errors: parse_errors)
           next if node_types.nil?
 
@@ -49,6 +50,7 @@ module RubyResearch
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         all_node_types = Prism.constants.grep(/Node\z/).map { prism_node_type(it) }.compact.sort
         used_types = occurrences.keys.map(&:to_s).sort
@@ -120,8 +122,9 @@ module RubyResearch
         lines = []
         lines << '# Ruby language feature usage across RubyGems.org'
         lines << ''
-        lines << "Prism AST node tally for the latest release of a random sample of #{data[:analyzed]} gems " \
-                 "(seeded, reproducible), out of #{data[:corpus_size]} gems on RubyGems.org."
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
+        lines << "Prism AST node tally for the latest release of #{scope}, " \
+                 "out of #{data[:corpus_size]} gems on RubyGems.org."
         lines << ''
         lines << "Prism defines #{data[:prism_node_type_count]} node types; #{data[:used_node_type_count]} appear in the sample."
         lines << "Files that no longer parse under current Ruby: #{data[:parse_error_count]}."

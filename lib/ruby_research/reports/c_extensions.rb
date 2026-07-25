@@ -30,8 +30,9 @@ module RubyResearch
         pure_count = 0
         errors = []
 
+        progress = Progress.new(label: 'c-extensions')
         names.each_with_index do |name, index|
-          warn "  #{index + 1}/#{names.size} gems" if ((index + 1) % 100).zero?
+          progress.tick(index + 1, names.size)
           record = native_record_for(name)
           next if record == :skipped
 
@@ -43,6 +44,7 @@ module RubyResearch
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         analyzed = pure_count + native_gems.size
         data = {
@@ -104,7 +106,7 @@ module RubyResearch
         lines = []
         lines << '# Native (C extension) gems on RubyGems.org'
         lines << ''
-        scope = data[:sampled] ? "a random sample of #{data[:analyzed]} gems (seeded, reproducible)" : "all #{data[:analyzed]} gems"
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
         lines << "Based on the latest release of #{scope}, out of #{data[:corpus_size]} gems on RubyGems.org."
         lines << ''
         lines << "Gems with native extensions: **#{data[:native_count]}** (#{data[:native_percent]}% of analyzed)."

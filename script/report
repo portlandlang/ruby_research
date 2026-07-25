@@ -9,17 +9,20 @@
 #   script/report c-extensions [--sample N]
 #   script/report ruby-deprecations
 #   script/report case-collisions                       (full corpus, cache only)
-#   script/report feature-usage [--sample N]            (defaults to 100; downloads gems)
-#   script/report portland-compatibility [--sample N]   (defaults to 100; downloads gems)
-#   script/report error-handling [--sample N]           (defaults to 100; downloads gems)
-#   script/report nil-idioms [--sample N]               (defaults to 100; downloads gems)
-#   script/report mutation-shapes [--sample N]          (defaults to 100; downloads gems)
-#   script/report heredocs [--sample N]                 (defaults to 100; downloads gems)
+#   script/report feature-usage [--sample N]
+#   script/report portland-compatibility [--sample N]
+#   script/report error-handling [--sample N]
+#   script/report nil-idioms [--sample N]
+#   script/report mutation-shapes [--sample N]
+#   script/report heredocs [--sample N]
 #   script/report all [--sample N]
 #
-# Reports are written to reports/<name>.md and reports/<name>.json.
-# Corpus reports cache all fetched data under data/, so interrupted or
-# repeated runs reuse previous fetches. Omit --sample for the full corpus.
+# Every report runs against the full corpus unless --sample is given.
+# Reports are written to reports/<timestamp>/<name>.{md,json} and mirrored
+# to reports/latest/. All fetched data is cached under data/, so runs are
+# resumable and repeat runs are free. The source-based reports (everything
+# below ruby-deprecations) read .gem files from that cache; at full corpus
+# each takes roughly 20 minutes of CPU and no network.
 
 require_relative '../lib/ruby_research'
 
@@ -43,13 +46,13 @@ reports = {
   'platforms' => -> { RubyResearch::Reports::Platforms.new(sample: sample).run },
   'gem-ages' => -> { RubyResearch::Reports::GemAges.new(sample: sample).run },
   'c-extensions' => -> { RubyResearch::Reports::CExtensions.new(sample: sample).run },
-  'feature-usage' => -> { RubyResearch::Reports::FeatureUsage.new(sample: sample || 100).run },
+  'feature-usage' => -> { RubyResearch::Reports::FeatureUsage.new(sample: sample).run },
   'ruby-deprecations' => -> { RubyResearch::Reports::RubyDeprecations.new.run },
-  'portland-compatibility' => -> { RubyResearch::Reports::PortlandCompatibility.new(sample: sample || 100).run },
-  'error-handling' => -> { RubyResearch::Reports::ErrorHandling.new(sample: sample || 100).run },
-  'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample || 100).run },
-  'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample || 100).run },
-  'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample || 100).run },
+  'portland-compatibility' => -> { RubyResearch::Reports::PortlandCompatibility.new(sample: sample).run },
+  'error-handling' => -> { RubyResearch::Reports::ErrorHandling.new(sample: sample).run },
+  'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample).run },
+  'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample).run },
+  'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample).run },
   'case-collisions' => -> { RubyResearch::Reports::CaseCollisions.new.run }
 }
 

@@ -26,7 +26,7 @@ module RubyResearch
       def initialize(compact_index: CompactIndexClient.new,
                      sources: GemSourceClient.new,
                      reports_dir: REPORTS_DIR,
-                     sample: 100,
+                     sample: nil,
                      seed: 42)
         @compact_index = compact_index
         @sources = sources
@@ -45,8 +45,9 @@ module RubyResearch
         errors = []
         names = selected_names
 
+        progress = Progress.new(label: 'heredocs')
         names.each_with_index do |name, index|
-          warn "  #{index + 1}/#{names.size} gems (#{name})" if ((index + 1) % 10).zero?
+          progress.tick(index + 1, names.size)
           gem_tally = tally_for(name)
           next if gem_tally.nil?
 
@@ -59,6 +60,7 @@ module RubyResearch
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         ranked = heredocs_per_gem.sort_by { |_name, count| -count }
         data = {
@@ -217,7 +219,8 @@ module RubyResearch
         lines = []
         lines << '# Heredoc census across RubyGems.org'
         lines << ''
-        lines << "Sampled #{data[:analyzed]} gems (seeded, reproducible) out of #{data[:corpus_size]} on RubyGems.org."
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
+        lines << "Based on #{scope}, out of #{data[:corpus_size]} on RubyGems.org."
         lines << ''
         percent = data[:analyzed].zero? ? 0 : (data[:gems_with_heredocs] * 100.0 / data[:analyzed]).round(1)
         lines << "**#{data[:total_heredocs]}** heredocs across **#{data[:gems_with_heredocs]}** gems " \

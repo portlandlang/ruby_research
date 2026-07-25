@@ -21,14 +21,16 @@ module RubyResearch
         last_release_years = {}
         errors = []
 
+        progress = Progress.new(label: 'gem-ages')
         names.each_with_index do |name, index|
+          progress.tick(index + 1, names.size)
           versions = @client.versions_of(name)
           created_at = versions.last&.dig(:created_at)
           last_release_years[name] = created_at && created_at[0, 4]
-          warn "  #{index + 1}/#{names.size} gems" if ((index + 1) % 100).zero?
         rescue StandardError => e
           errors << { gem: name, error: e.message }
         end
+        progress.finish
 
         histogram = last_release_years.values.tally.sort_by { |year, _count| year.to_s }.to_h
 
@@ -58,7 +60,7 @@ module RubyResearch
         lines = []
         lines << '# Last release year across RubyGems.org'
         lines << ''
-        scope = data[:sampled] ? "a random sample of #{data[:analyzed]} gems (seeded, reproducible)" : "all #{data[:analyzed]} gems"
+        scope = Scope.describe(sampled: data[:sampled], analyzed: data[:analyzed])
         lines << "Year of most recent release for #{scope}, out of #{data[:corpus_size]} gems on RubyGems.org."
         lines << ''
         lines << '| Last release year | Gems | % |'
