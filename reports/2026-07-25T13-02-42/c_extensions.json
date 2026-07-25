@@ -77,7 +77,7 @@
     },
     {
       "gem": "redmine_client_user",
-      "error": "no metadata.gz found in redmine_client_user-0.0.3.gem"
+      "error": "no metadata.gz found in /gems/redmine_client_user-0.0.3.gem"
     },
     {
       "gem": "ruby_ex",
@@ -108,10 +108,10 @@
       "error": "Tried to load unspecified class: Symbol"
     }
   ],
-  "native_count": 4462,
+  "native_count": 4463,
   "native_percent": 2.28,
   "extension_kind_histogram": {
-    "c (extconf.rb)": 4058,
+    "c (extconf.rb)": 4059,
     "rake": 274,
     "other (ext/mkrf_conf.rb)": 67,
     "rust (Cargo.toml)": 40,
@@ -141,13 +141,13 @@
   },
   "native_by_last_release_year": {
     "2009": 253,
-    "2010": 238,
-    "2011": 238,
-    "2012": 275,
-    "2013": 242,
+    "2010": 239,
+    "2011": 237,
+    "2012": 274,
+    "2013": 243,
     "2014": 567,
     "2015": 237,
-    "2016": 205,
+    "2016": 206,
     "2017": 163,
     "2018": 204,
     "2019": 121,
@@ -236,17 +236,6 @@
         "c (extconf.rb)"
       ],
       "last_release_year": "2014"
-    },
-    {
-      "gem": "BlueCloth",
-      "version": "2.2.0",
-      "extensions": [
-        "ext/extconf.rb"
-      ],
-      "kinds": [
-        "c (extconf.rb)"
-      ],
-      "last_release_year": "2011"
     },
     {
       "gem": "CUTM",
@@ -426,6 +415,17 @@
       "last_release_year": "2018"
     },
     {
+      "gem": "Magic",
+      "version": "1.1.2",
+      "extensions": [
+        "module/extconf.rb"
+      ],
+      "kinds": [
+        "c (extconf.rb)"
+      ],
+      "last_release_year": "2013"
+    },
+    {
       "gem": "MattHulse-eventmachine",
       "version": "0.0.1",
       "extensions": [
@@ -447,17 +447,6 @@
         "c (extconf.rb)"
       ],
       "last_release_year": "2015"
-    },
-    {
-      "gem": "Nilsimsa",
-      "version": "1.1.1",
-      "extensions": [
-        "ext/extconf.rb"
-      ],
-      "kinds": [
-        "c (extconf.rb)"
-      ],
-      "last_release_year": "2012"
     },
     {
       "gem": "Nokogiri_precompiled_aarch64_dedshit",
@@ -593,9 +582,9 @@
     },
     {
       "gem": "RSRuby",
-      "version": "0.5.1.1",
+      "version": "0.4.0",
       "extensions": [
-        "ext/extconf.rb"
+        "ext/rsruby/extconf.rb"
       ],
       "kinds": [
         "c (extconf.rb)"
@@ -702,6 +691,17 @@
       "last_release_year": "2011"
     },
     {
+      "gem": "Rug",
+      "version": "0.0.2",
+      "extensions": [
+        "ext/extconf.rb"
+      ],
+      "kinds": [
+        "c (extconf.rb)"
+      ],
+      "last_release_year": "2010"
+    },
+    {
       "gem": "StrIdx",
       "version": "0.1.7",
       "extensions": [
@@ -711,6 +711,17 @@
         "c (extconf.rb)"
       ],
       "last_release_year": "2025"
+    },
+    {
+      "gem": "SysVIPC",
+      "version": "0.10.0",
+      "extensions": [
+        "ext/SysVIPC/extconf.rb"
+      ],
+      "kinds": [
+        "c (extconf.rb)"
+      ],
+      "last_release_year": "2016"
     },
     {
       "gem": "SystemTimer",

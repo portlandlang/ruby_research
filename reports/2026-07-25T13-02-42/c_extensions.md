@@ -2,13 +2,13 @@
 
 Based on the latest release of all 195373 gems, out of 195399 gems on RubyGems.org.
 
-Gems with native extensions: **4462** (2.28% of analyzed).
+Gems with native extensions: **4463** (2.28% of analyzed).
 
 ## Extension kinds
 
 | Kind | Gems |
 |---|---|
-| c (extconf.rb) | 4058 |
+| c (extconf.rb) | 4059 |
 | rake | 274 |
 | other (ext/mkrf_conf.rb) | 67 |
 | rust (Cargo.toml) | 40 |
@@ -41,13 +41,13 @@ Gems with native extensions: **4462** (2.28% of analyzed).
 | Year | Gems |
 |---|---|
 | 2009 | 253 |
-| 2010 | 238 |
-| 2011 | 238 |
-| 2012 | 275 |
-| 2013 | 242 |
+| 2010 | 239 |
+| 2011 | 237 |
+| 2012 | 274 |
+| 2013 | 243 |
 | 2014 | 567 |
 | 2015 | 237 |
-| 2016 | 205 |
+| 2016 | 206 |
 | 2017 | 163 |
 | 2018 | 204 |
 | 2019 | 121 |
@@ -68,7 +68,6 @@ Gems with native extensions: **4462** (2.28% of analyzed).
 - **BBRedCloth** 0.9.0.alpha1 (last release 2021): ext/redcloth_scan/extconf.rb
 - **BFD** 1.3.6 (last release 2013): module/extconf.rb
 - **BMorearty-looksee** 0.1.1 (last release 2014): ext/looksee/extconf.rb
-- **BlueCloth** 2.2.0 (last release 2011): ext/extconf.rb
 - **CUTM** 0.1.0 (last release 2019): ext/cutm/extconf.rb
 - **CodeMonkeySteve-fast_xor** 1.0.1 (last release 2014): Rakefile
 - **Constellation-cmigemo** 1.0.0 (last release 2014): ext/extconf.rb
@@ -85,9 +84,9 @@ Gems with native extensions: **4462** (2.28% of analyzed).
 - **Imlib2-Ruby** 0.5.2 (last release 2014): extconf.rb
 - **KappaCUDA** 1.5.0 (last release 2010): extconf.rb
 - **LiteRGSS** 0.1.3 (last release 2018): ext/LiteRGSS/extconf.rb
+- **Magic** 1.1.2 (last release 2013): module/extconf.rb
 - **MattHulse-eventmachine** 0.0.1 (last release 2014): ext/extconf.rb, ext/fastfilereader/extconf.rb
 - **NMath** 0.3.0 (last release 2015): ext/NMath/extconf.rb
-- **Nilsimsa** 1.1.1 (last release 2012): ext/extconf.rb
 - **Nokogiri_precompiled_aarch64_dedshit** 1.14.5 (last release 2023): ext/nokogiri/extconf.rb
 - **OpalKelly** 6.0.0 (last release 2026): ext/OpalKelly/extconf.rb
 - **Opcodes** 1.3.2 (last release 2013): module/extconf.rb
@@ -100,7 +99,7 @@ Gems with native extensions: **4462** (2.28% of analyzed).
 - **R4rb** 1.1.4 (last release 2023): ext/R4rb/extconf.rb
 - **RAliasFile** 0.1.0 (last release 2009): ext/extconf.rb
 - **RInotify** 0.9 (last release 2009): extconf.rb
-- **RSRuby** 0.5.1.1 (last release 2009): ext/extconf.rb
+- **RSRuby** 0.4.0 (last release 2009): ext/rsruby/extconf.rb
 - **RbGps** 0.3 (last release 2009): ./extconf.rb
 - **Rdmtx** 0.5.0 (last release 2023): ext/rdmtx/extconf.rb
 - **RedCloth** 4.3.4 (last release 2024): ext/redcloth_scan/extconf.rb
@@ -110,7 +109,9 @@ Gems with native extensions: **4462** (2.28% of analyzed).
 - **RubyRRDtool** 0.6.0 (last release 2009): extconf.rb
 - **RubyRun_CE** 0.9.0 (last release 2009): ext/extconf.rb
 - **RubyTrie** 2.2 (last release 2011): ext/trie/extconf.rb
+- **Rug** 0.0.2 (last release 2010): ext/extconf.rb
 - **StrIdx** 0.1.7 (last release 2025): rubyext/extconf.rb
+- **SysVIPC** 0.10.0 (last release 2016): ext/SysVIPC/extconf.rb
 - **SystemTimer** 1.2.3 (last release 2011): ext/system_timer/extconf.rb
 - **Tamar** 0.7.18 (last release 2011): extconf.rb
 - **UEL** 0.1.1 (last release 2020): ext/uel/extconf.rb

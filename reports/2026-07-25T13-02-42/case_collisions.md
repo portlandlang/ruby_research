@@ -1,6 +1,6 @@
 # Gems whose names differ only in case
 
-Report generated at 2026-07-25 12:56:36 -0700.
+Report generated at 2026-07-25 13:06:37 -0700.
 
 **178** name collisions covering **356** distinct gems, out of 195399 on RubyGems.org.
 
