@@ -1,0 +1,428 @@
+{
+  "corpus_size": 195399,
+  "sampled": 100,
+  "analyzed": 100,
+  "errors": [],
+  "removals_file": "config/portland_removals.yml",
+  "just_work_candidates_count": 38,
+  "just_work_candidates": [
+    "ai_stream",
+    "archive-pecan",
+    "automation-shared-support",
+    "capistrano3-drupal",
+    "captive-sdk",
+    "cucumber-js_console_errors",
+    "datatablesassets-rails",
+    "devise-pbkdf2-encryptable",
+    "enerbot-slack",
+    "fanforce-internal-validations",
+    "fleece",
+    "formadmin",
+    "github-pulse",
+    "google-apis-cloudsupport_v2",
+    "google-apis-vmmigration_v1alpha1",
+    "goosi",
+    "jektop",
+    "job_hunter_cli",
+    "justpics",
+    "n_able_rails",
+    "organize_files",
+    "ota",
+    "pathspec",
+    "pg-enum",
+    "psq-dm-xapian",
+    "puppet-lint-classes_and_types_beginning_with_digits--check",
+    "queue_sync",
+    "rack_session_mongo",
+    "ruby-psd",
+    "seedream_4",
+    "semgit",
+    "sgfa",
+    "test_changes",
+    "tiny_xpath_helper",
+    "valuevaluevalue",
+    "wirecard-rails",
+    "yo-api",
+    "zillow_ruby"
+  ],
+  "gems_affected_by_feature": {
+    "shift-operators": 46,
+    "eval-family": 40,
+    "global-variables": 37,
+    "runtime-define-method": 21,
+    "fetch-retired": 16,
+    "thread-model": 13,
+    "bitwise-operators": 6,
+    "method-missing": 4,
+    "for-in-loop": 4
+  },
+  "undetectable_semantic_changes": [
+    "ambient-nil",
+    "truthiness",
+    "mutable-by-default",
+    "monkeypatching-open-classes",
+    "dynamic-typing"
+  ],
+  "features_by_gem": {
+    "aclize": [
+      "eval-family",
+      "bitwise-operators"
+    ],
+    "actionpack-2.3.17-rack-upgrade": [
+      "for-in-loop",
+      "global-variables",
+      "method-missing",
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired",
+      "thread-model",
+      "bitwise-operators",
+      "shift-operators"
+    ],
+    "active_record-pool": [
+      "eval-family",
+      "thread-model"
+    ],
+    "active_record-serializable": [
+      "runtime-define-method",
+      "eval-family",
+      "shift-operators"
+    ],
+    "adapter-simpledb": [
+      "global-variables"
+    ],
+    "ai_stream": [
+      "shift-operators"
+    ],
+    "applog": [
+      "for-in-loop"
+    ],
+    "archive-pecan": [
+      "shift-operators"
+    ],
+    "arolitec_sms": [
+      "eval-family"
+    ],
+    "attic-path": [
+      "global-variables",
+      "eval-family",
+      "shift-operators"
+    ],
+    "attr_typecastable": [
+      "global-variables",
+      "eval-family",
+      "fetch-retired"
+    ],
+    "automation-shared-support": [],
+    "benaldred-clearance": [
+      "global-variables",
+      "eval-family",
+      "shift-operators"
+    ],
+    "bio-gadget": [
+      "for-in-loop",
+      "global-variables",
+      "thread-model",
+      "shift-operators"
+    ],
+    "boring_presenters": [
+      "runtime-define-method",
+      "eval-family"
+    ],
+    "capistrano3-drupal": [],
+    "captive-sdk": [],
+    "combination_hash": [
+      "global-variables"
+    ],
+    "cucumber-js_console_errors": [],
+    "dance": [
+      "global-variables"
+    ],
+    "datatablesassets-rails": [],
+    "deta": [
+      "fetch-retired"
+    ],
+    "devise-pbkdf2-encryptable": [],
+    "dferranti-twitter4r": [
+      "global-variables",
+      "eval-family",
+      "shift-operators"
+    ],
+    "digu": [
+      "global-variables"
+    ],
+    "em-midori": [
+      "runtime-define-method",
+      "eval-family",
+      "thread-model",
+      "bitwise-operators",
+      "shift-operators"
+    ],
+    "enerbot-slack": [
+      "shift-operators"
+    ],
+    "exam1": [
+      "for-in-loop"
+    ],
+    "fanforce-internal-validations": [
+      "shift-operators"
+    ],
+    "feed-the-zettelkasten": [
+      "global-variables"
+    ],
+    "filepreviews": [
+      "global-variables",
+      "eval-family",
+      "fetch-retired"
+    ],
+    "fleece": [],
+    "formadmin": [],
+    "github-pulse": [
+      "shift-operators"
+    ],
+    "github_commenter": [
+      "global-variables"
+    ],
+    "gli": [
+      "global-variables",
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired",
+      "shift-operators"
+    ],
+    "google-apis-cloudsupport_v2": [],
+    "google-apis-vmmigration_v1alpha1": [],
+    "google-cloud-data_catalog-lineage-v1": [
+      "runtime-define-method"
+    ],
+    "goosi": [],
+    "gravis-acts_as_archive": [
+      "global-variables",
+      "eval-family",
+      "shift-operators"
+    ],
+    "inclusive": [
+      "runtime-define-method",
+      "eval-family",
+      "shift-operators"
+    ],
+    "interfacelift": [
+      "global-variables",
+      "eval-family",
+      "shift-operators"
+    ],
+    "jektop": [],
+    "jekyll-webmention_io": [
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired",
+      "shift-operators"
+    ],
+    "jeremyw-paper_trail": [
+      "eval-family",
+      "shift-operators"
+    ],
+    "job_hunter_cli": [
+      "shift-operators"
+    ],
+    "json_routes": [
+      "global-variables",
+      "shift-operators"
+    ],
+    "jumpstart_auth": [
+      "global-variables",
+      "shift-operators"
+    ],
+    "justpics": [],
+    "langis": [
+      "global-variables",
+      "eval-family",
+      "shift-operators"
+    ],
+    "malvestuto_factory_girl": [
+      "global-variables",
+      "method-missing",
+      "runtime-define-method",
+      "eval-family",
+      "shift-operators"
+    ],
+    "micro-lite-lib": [
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired",
+      "thread-model"
+    ],
+    "middleman-presentation-core": [
+      "global-variables",
+      "eval-family",
+      "fetch-retired",
+      "shift-operators"
+    ],
+    "moneypools-capistrano-ext": [
+      "global-variables",
+      "eval-family",
+      "fetch-retired",
+      "thread-model",
+      "bitwise-operators",
+      "shift-operators"
+    ],
+    "mysql_replicator": [
+      "global-variables",
+      "fetch-retired",
+      "bitwise-operators",
+      "shift-operators"
+    ],
+    "n_able_rails": [],
+    "nexus_mods": [
+      "global-variables",
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired",
+      "shift-operators"
+    ],
+    "nutanix_vmm": [
+      "global-variables",
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired"
+    ],
+    "oldmoe-reactor": [
+      "global-variables",
+      "shift-operators"
+    ],
+    "opera-mobile-store-sdk": [
+      "global-variables",
+      "eval-family",
+      "fetch-retired",
+      "shift-operators"
+    ],
+    "organize_files": [
+      "shift-operators"
+    ],
+    "osxhotkey": [
+      "global-variables",
+      "runtime-define-method",
+      "thread-model",
+      "shift-operators"
+    ],
+    "ota": [],
+    "paraxial": [
+      "global-variables",
+      "thread-model",
+      "shift-operators"
+    ],
+    "pathspec": [
+      "shift-operators"
+    ],
+    "peritus_private_pub": [
+      "global-variables",
+      "eval-family",
+      "shift-operators"
+    ],
+    "pg-enum": [],
+    "pg_reconnect": [
+      "eval-family"
+    ],
+    "pg_utils": [
+      "eval-family"
+    ],
+    "plog-ruby": [
+      "eval-family",
+      "thread-model",
+      "shift-operators"
+    ],
+    "psq-dm-xapian": [],
+    "puppet-lint-classes_and_types_beginning_with_digits--check": [],
+    "puppet_local": [
+      "global-variables",
+      "fetch-retired"
+    ],
+    "queue_sync": [],
+    "rack_session_mongo": [
+      "thread-model"
+    ],
+    "ratchetio": [
+      "global-variables",
+      "eval-family",
+      "thread-model",
+      "shift-operators"
+    ],
+    "redistry": [
+      "runtime-define-method",
+      "eval-family",
+      "shift-operators"
+    ],
+    "resque-cluster": [
+      "global-variables",
+      "runtime-define-method",
+      "eval-family",
+      "shift-operators"
+    ],
+    "rtm-tinytim": [
+      "global-variables"
+    ],
+    "ruby-psd": [
+      "shift-operators"
+    ],
+    "seedream_4": [],
+    "semgit": [],
+    "sgfa": [
+      "shift-operators"
+    ],
+    "simple_tags": [
+      "eval-family"
+    ],
+    "songkick-oauth2-provider": [
+      "global-variables",
+      "runtime-define-method",
+      "eval-family",
+      "thread-model",
+      "shift-operators"
+    ],
+    "staccato-rails": [
+      "eval-family"
+    ],
+    "storext": [
+      "method-missing",
+      "runtime-define-method",
+      "eval-family",
+      "shift-operators"
+    ],
+    "supremo": [
+      "global-variables",
+      "shift-operators"
+    ],
+    "tainted_love": [
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired",
+      "thread-model",
+      "shift-operators"
+    ],
+    "test_changes": [],
+    "themockerpush": [
+      "runtime-define-method",
+      "eval-family"
+    ],
+    "tiny_xpath_helper": [],
+    "valuevaluevalue": [],
+    "wirecard-rails": [],
+    "wrappix": [
+      "runtime-define-method",
+      "shift-operators"
+    ],
+    "xmp-fixed_prefix": [
+      "global-variables",
+      "method-missing"
+    ],
+    "y_petri": [
+      "runtime-define-method",
+      "eval-family",
+      "fetch-retired",
+      "bitwise-operators",
+      "shift-operators"
+    ],
+    "yo-api": [],
+    "zillow_ruby": []
+  }
+}

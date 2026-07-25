@@ -1,0 +1,93 @@
+{
+  "corpus_size": 195399,
+  "sampled": 100,
+  "analyzed": 100,
+  "errors": [],
+  "gems_with_heredocs": 24,
+  "total_heredocs": 199,
+  "top_gems_by_heredoc_count": {
+    "wrappix": 54,
+    "actionpack-2.3.17-rack-upgrade": 47,
+    "github-pulse": 21,
+    "gli": 16,
+    "bio-gadget": 14,
+    "middleman-presentation-core": 12,
+    "puppet-lint-classes_and_types_beginning_with_digits--check": 5,
+    "moneypools-capistrano-ext": 4,
+    "paraxial": 3,
+    "nexus_mods": 3
+  },
+  "top_5_gems_share_of_sites": "76.4%",
+  "casing": {
+    "UPPERCASE": 191,
+    "lowercase": 8
+  },
+  "gems_by_casing": {
+    "UPPERCASE": 24,
+    "lowercase": 2
+  },
+  "gems_by_indentation": {
+    "<<- (dash)": 17,
+    "<<~ (squiggly)": 6,
+    "<< (plain)": 5
+  },
+  "gems_by_quoting": {
+    "bare": 24,
+    "single-quoted (no interpolation)": 2
+  },
+  "non_uppercase_terminators": [
+    "end_body",
+    "end_eval",
+    "end_src"
+  ],
+  "indentation": {
+    "<<- (dash)": 94,
+    "<<~ (squiggly)": 83,
+    "<< (plain)": 22
+  },
+  "quoting": {
+    "bare": 195,
+    "single-quoted (no interpolation)": 4
+  },
+  "interpolating": 118,
+  "non_interpolating": 81,
+  "stacked_on_one_line": 0,
+  "as_call_argument": 77,
+  "body_size": {
+    "1 line": 20,
+    "2-5 lines": 88,
+    "6-20 lines": 70,
+    "21+ lines": 21
+  },
+  "terminators": {
+    "EOS": 46,
+    "RUBY": 45,
+    "HTML": 19,
+    "MARKDOWN": 14,
+    "DESC": 13,
+    "EOT": 10,
+    "JS": 8,
+    "EOF": 6,
+    "end_eval": 5,
+    "PATTERN": 3,
+    "SQL": 3,
+    "XML": 3,
+    "STR": 3,
+    "end_src": 2,
+    "CONTENT": 2,
+    "LAMBDA": 2,
+    "END_SRC": 2,
+    "EO_OUTPUT": 2,
+    "CONFIG_JS": 1,
+    "TYPES_JS": 1,
+    "CMD": 1,
+    "ROW": 1,
+    "EOM": 1,
+    "EO_ERROR": 1,
+    "CACHED": 1,
+    "EVAL": 1,
+    "end_body": 1,
+    "YAML": 1,
+    "MSG": 1
+  }
+}

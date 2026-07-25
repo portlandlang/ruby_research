@@ -1,0 +1,32 @@
+{
+  "corpus_size": 195399,
+  "sampled": 500,
+  "analyzed": 500,
+  "errors": [],
+  "site_counts": {
+    "nil_predicate": 11066,
+    "nil_equality": 282,
+    "safe_navigation": 1277,
+    "or_default": 7736,
+    "or_assign": 2374,
+    "rescue_nil": 81,
+    "truthiness_on_variable": 4809,
+    "nil_literal": 520538,
+    "fetch_bare": 423,
+    "fetch_with_default": 367,
+    "fetch_with_block": 79
+  },
+  "gem_coverage": {
+    "nil_predicate": 179,
+    "nil_equality": 40,
+    "safe_navigation": 36,
+    "or_default": 245,
+    "or_assign": 214,
+    "rescue_nil": 28,
+    "truthiness_on_variable": 208,
+    "nil_literal": 277,
+    "fetch_bare": 32,
+    "fetch_with_default": 42,
+    "fetch_with_block": 18
+  }
+}
