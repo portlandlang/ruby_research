@@ -10,11 +10,14 @@
 #   script/fetch metadata [--sample N] [--byte-budget X] # full gemspecs (c-extensions needs these)
 #   script/fetch gems [--sample N] [--byte-budget X]     # .gem files (source-based reports need these)
 #   script/fetch all [--sample N] [--byte-budget X]
+#   script/fetch repair                                  # refetch gems whose cache key collided
 #
 # Same seeded sampling as script/report: `--sample 25000` here caches
 # exactly the gems `script/report ... --sample 25000` will analyze.
 # Omit --sample for the full corpus. Already-cached files are skipped, so
 # interrupted runs resume and repeat runs are free.
+
+require 'fileutils'
 
 require_relative '../lib/ruby_research'
 
@@ -40,21 +43,21 @@ started_at = Time.now
 # Live single-line ticker on stderr, updated at most once a second so slow
 # hotspot runs visibly move without scrolling 195k lines.
 last_tick = Time.now - 2
-progress = lambda do |stage_name, position|
+progress = lambda do |stage_name, position, total|
   now = Time.now
-  return if now - last_tick < 1 && position != names.size
+  return if now - last_tick < 1 && position != total
 
   last_tick = now
   megabytes = (RubyResearch::HttpClient.bytes_fetched / 1024.0 / 1024).round(1)
   elapsed_minutes = ((now - started_at) / 60).round(1)
-  $stderr.print "\r  #{stage_name}: #{position}/#{names.size} gems · #{megabytes} MB fetched · " \
+  $stderr.print "\r  #{stage_name}: #{position}/#{total} gems · #{megabytes} MB fetched · " \
                 "#{errors.size} errors · #{elapsed_minutes} min elapsed   "
 end
 
 fetch_index = lambda do
   names.each_with_index do |name, position|
     compact_index.versions_of(name)
-    progress.call('index', position + 1)
+    progress.call('index', position + 1, names.size)
   rescue StandardError => e
     errors << { gem: name, stage: 'index', error: e.message }
   end
@@ -70,7 +73,7 @@ fetch_metadata = lambda do
   names.each_with_index do |name, position|
     latest = latest_version_of.call(name)
     sources.full_gemspec(name, latest[:version], platform: latest[:platform]) if latest
-    progress.call('metadata', position + 1)
+    progress.call('metadata', position + 1, names.size)
   rescue StandardError => e
     errors << { gem: name, stage: 'metadata', error: e.message }
   end
@@ -81,9 +84,80 @@ fetch_gems = lambda do
   names.each_with_index do |name, position|
     latest = latest_version_of.call(name)
     sources.download(name, latest[:version], platform: latest[:platform]) if latest
-    progress.call('gems', position + 1)
+    progress.call('gems', position + 1, names.size)
   rescue StandardError => e
     errors << { gem: name, stage: 'gems', error: e.message }
+  end
+  warn ''
+end
+
+info_path = ->(name) { File.join(compact_index.cache_dir, 'info', name) }
+
+version_suffix = lambda do |latest|
+  latest[:platform] == 'ruby' ? latest[:version] : "#{latest[:version]}-#{latest[:platform]}"
+end
+
+rename_if_needed = lambda do |old_path, new_path|
+  next false unless File.exist?(old_path) && !File.exist?(new_path)
+
+  File.rename(old_path, new_path)
+  true
+end
+
+# Entries cached before the case-safe key existed are stored under the
+# gem's plain name. Rename them in place rather than refetching — the key
+# change affects every uppercase-named gem, which is gigabytes of cache.
+migrate_keys = lambda do
+  renamed = 0
+  affected = compact_index.names.reject { RubyResearch::CacheKey.for(it) == it }
+
+  affected.each_with_index do |name, position|
+    key = RubyResearch::CacheKey.for(name)
+    renamed += 1 if rename_if_needed.call(info_path.call(name), info_path.call(key))
+
+    latest = latest_version_of.call(name)
+    if latest
+      suffix = version_suffix.call(latest)
+      renamed += 1 if rename_if_needed.call(File.join(sources.metadata_cache_dir, "#{name}-#{suffix}.yaml"),
+                                            File.join(sources.metadata_cache_dir, "#{key}-#{suffix}.yaml"))
+      renamed += 1 if rename_if_needed.call(File.join(sources.cache_dir, "#{name}-#{suffix}.gem"),
+                                            File.join(sources.cache_dir, "#{key}-#{suffix}.gem"))
+    end
+    progress.call('migrate', position + 1, affected.size)
+  rescue StandardError => e
+    errors << { gem: name, stage: 'migrate', error: e.message }
+  end
+  warn "\n  migrate: renamed #{renamed} cache entries under the case-safe key"
+end
+
+# Gems whose names differ only in case shared one cache file on macOS's
+# case-insensitive filesystem, so one gem's data was silently served for
+# the other. Purge those entries and refetch them under the case-safe key.
+# Always operates on the full corpus, never a sample.
+fetch_repair = lambda do
+  migrate_keys.call
+
+  groups = compact_index.names.group_by(&:downcase).select { |_folded, group| group.size > 1 }
+  # A group is already repaired once its uppercase variants have their own
+  # keyed info file; skip those so reruns don't re-purge good data.
+  stale = groups.values.reject do |group|
+    group.reject { RubyResearch::CacheKey.for(it) == it }
+         .all? { File.exist?(info_path.call(RubyResearch::CacheKey.for(it))) }
+  end
+  affected = stale.flatten
+  warn "  repair: #{groups.size} case-collision groups, #{stale.size} still stale (#{affected.size} gems to refetch)"
+
+  stale.each { |group| group.each { FileUtils.rm_f(info_path.call(it)) } }
+
+  affected.each_with_index do |name, position|
+    latest = latest_version_of.call(name)
+    if latest
+      sources.full_gemspec(name, latest[:version], platform: latest[:platform])
+      sources.download(name, latest[:version], platform: latest[:platform])
+    end
+    progress.call('repair', position + 1, affected.size)
+  rescue StandardError => e
+    errors << { gem: name, stage: 'repair', error: e.message }
   end
   warn ''
 end
@@ -91,7 +165,8 @@ end
 stages = {
   'index' => fetch_index,
   'metadata' => fetch_metadata,
-  'gems' => fetch_gems
+  'gems' => fetch_gems,
+  'repair' => fetch_repair
 }
 
 selected =

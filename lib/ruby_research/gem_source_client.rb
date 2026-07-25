@@ -51,8 +51,7 @@ module RubyResearch
     # Range request usually suffices instead of downloading the gem.
     # Parsed YAML specs are cached under data/gem_metadata/.
     def full_gemspec(name, version, platform: 'ruby')
-      suffix = platform == 'ruby' ? version : "#{version}-#{platform}"
-      cache_path = File.join(metadata_cache_dir, "#{name}-#{suffix}.yaml")
+      cache_path = File.join(metadata_cache_dir, "#{cache_basename(name, version, platform)}.yaml")
 
       unless File.exist?(cache_path)
         yaml = metadata_yaml(name, version, platform: platform)
@@ -64,17 +63,24 @@ module RubyResearch
     end
 
     def download(name, version, platform: 'ruby')
-      suffix = platform == 'ruby' ? version : "#{version}-#{platform}"
-      full_path = File.join(cache_dir, "#{name}-#{suffix}.gem")
+      full_path = File.join(cache_dir, "#{cache_basename(name, version, platform)}.gem")
       return full_path if File.exist?(full_path)
 
-      body = @http.get("#{HOST}/gems/#{name}-#{suffix}.gem")
+      body = @http.get("#{HOST}#{remote_path(name, version, platform)}")
       FileUtils.mkdir_p(cache_dir)
       File.binwrite(full_path, body)
       full_path
     end
 
     private
+
+    # Cache filenames use a case-safe key; the remote path must use the
+    # gem's real name.
+    def cache_basename(name, version, platform) = "#{CacheKey.for(name)}-#{version_suffix(version, platform)}"
+
+    def remote_path(name, version, platform) = "/gems/#{name}-#{version_suffix(version, platform)}.gem"
+
+    def version_suffix(version, platform) = platform == 'ruby' ? version : "#{version}-#{platform}"
 
     # Gemspecs published by ancient RubyGems versions serialize
     # require_paths as [["lib"]] instead of ["lib"]. Gem::Specification
@@ -92,20 +98,20 @@ module RubyResearch
     end
 
     def metadata_yaml(name, version, platform:)
-      suffix = platform == 'ruby' ? version : "#{version}-#{platform}"
-      local_gem = File.join(cache_dir, "#{name}-#{suffix}.gem")
+      path = remote_path(name, version, platform)
+      local_gem = File.join(cache_dir, "#{cache_basename(name, version, platform)}.gem")
       head =
         if File.exist?(local_gem)
           File.binread(local_gem, METADATA_PROBE_BYTES)
         else
-          @http.get("#{HOST}/gems/#{name}-#{suffix}.gem", range: [0, METADATA_PROBE_BYTES - 1])
+          @http.get("#{HOST}#{path}", range: [0, METADATA_PROBE_BYTES - 1])
         end
-      yaml = metadata_from_tar_head(head, path: "/gems/#{name}-#{suffix}.gem")
+      yaml = metadata_from_tar_head(head, path: path)
       return yaml if yaml
 
       # metadata.gz didn't fit in the ranged fetch; fall back to the full gem.
       gem_path = download(name, version, platform: platform)
-      metadata_from_tar_head(File.binread(gem_path)) or raise "no metadata.gz found in #{name}-#{suffix}.gem"
+      metadata_from_tar_head(File.binread(gem_path)) or raise "no metadata.gz found in #{path}"
     end
 
     # A .gem is a plain tar; walks entries in the given bytes looking for

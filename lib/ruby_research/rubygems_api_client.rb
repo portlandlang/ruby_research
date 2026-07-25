@@ -23,15 +23,15 @@ module RubyResearch
 
     # All versions of a gem with created_at timestamps.
     def versions_of(gem_name)
-      fetch_json(path: "/api/v1/versions/#{gem_name}.json", cache_file: File.join('versions', "#{gem_name}.json"))
+      fetch_json(path: "/api/v1/versions/#{gem_name}.json", cache_file: File.join('versions', "#{CacheKey.for(gem_name)}.json"))
     end
 
     # Gem-level metadata: downloads, latest version, source URIs, etc.
     def gem_info(gem_name)
-      fetch_json(path: "/api/v1/gems/#{gem_name}.json", cache_file: File.join('gems', "#{gem_name}.json"))
+      fetch_json(path: "/api/v1/gems/#{gem_name}.json", cache_file: File.join('gems', "#{CacheKey.for(gem_name)}.json"))
     end
 
-    def cached?(gem_name) = File.exist?(File.join(cache_dir, 'versions', "#{gem_name}.json"))
+    def cached?(gem_name) = File.exist?(File.join(cache_dir, 'versions', "#{CacheKey.for(gem_name)}.json"))
 
     private
 

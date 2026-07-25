@@ -33,11 +33,13 @@ module RubyResearch
     # Returns an array of version hashes for a gem:
     #   { version:, platform:, ruby:, rubygems:, created_at: }
     def versions_of(gem_name)
-      body = cached_fetch(path: "/info/#{gem_name}", cache_file: File.join('info', gem_name))
+      body = cached_fetch(path: "/info/#{gem_name}", cache_file: info_cache_file(gem_name))
       parse_info(body)
     end
 
-    def cached?(gem_name) = File.exist?(File.join(cache_dir, 'info', gem_name))
+    def cached?(gem_name) = File.exist?(File.join(cache_dir, info_cache_file(gem_name)))
+
+    def info_cache_file(gem_name) = File.join('info', CacheKey.for(gem_name))
 
     private
 
