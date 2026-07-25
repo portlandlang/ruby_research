@@ -1,6 +1,12 @@
 
 # Changelog
 
+## 2026-07-25
+
+- Case-safe cache keys (`RubyResearch::CacheKey`): macOS folds filename case, so the 178 pairs of gems whose names differ only in case (`Abundance`/`abundance`) shared one cache file and one silently served the other's data. Lowercase names keep their plain filename; names carrying uppercase get a digest suffix.
+- `script/fetch repair`: migrates pre-existing cache entries to the case-safe key by renaming on disk (9,402 entries, no refetch) and refills the poisoned collision groups. Idempotent.
+- Regenerated the full-corpus reports with corrected data (intel-only gems 152 → 153).
+
 ## 2026-07-23 (later)
 
 - Load gemspecs with RubyGems' safe loader and normalize `require_paths` ourselves, so the ~0.03% of gems whose ancient gemspecs store `require_paths` as `[["lib"]]` no longer warn to stderr and smear the fetch progress ticker. These were always warnings, not failures — the gems fetched and parsed fine.

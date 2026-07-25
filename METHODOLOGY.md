@@ -22,6 +22,16 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
   strip `extensions`) come from each gem's `metadata.gz` via a ranged HTTP
   read of the tar head — no full download needed for the C-extension census.
 
+## Cache keys
+
+Cache filenames are derived from gem names, but macOS folds filename case,
+so distinct gems like `Abundance` and `abundance` (178 such collisions in the
+corpus) would share one file and silently serve one gem's data for the other.
+`RubyResearch::CacheKey` leaves all-lowercase names alone and gives any name
+carrying uppercase a digest suffix (`Abundance@2f1c8e3d`). `script/fetch repair`
+migrates pre-existing entries to the new key by renaming on disk — no refetch —
+and refills any group whose cached data was poisoned.
+
 ## Question → report mapping
 
 ### Language
