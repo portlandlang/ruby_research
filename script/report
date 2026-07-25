@@ -8,6 +8,7 @@
 #   script/report gem-ages [--sample N]
 #   script/report c-extensions [--sample N]
 #   script/report ruby-deprecations
+#   script/report case-collisions                       (full corpus, cache only)
 #   script/report feature-usage [--sample N]            (defaults to 100; downloads gems)
 #   script/report portland-compatibility [--sample N]   (defaults to 100; downloads gems)
 #   script/report error-handling [--sample N]           (defaults to 100; downloads gems)
@@ -48,7 +49,8 @@ reports = {
   'error-handling' => -> { RubyResearch::Reports::ErrorHandling.new(sample: sample || 100).run },
   'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample || 100).run },
   'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample || 100).run },
-  'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample || 100).run }
+  'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample || 100).run },
+  'case-collisions' => -> { RubyResearch::Reports::CaseCollisions.new.run }
 }
 
 selected =
