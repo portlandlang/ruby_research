@@ -82,12 +82,14 @@ module RubyResearch
         names.sample(@sample, random: Random.new(@seed))
       end
 
-      # DefNode -> "def_node", matching what Prism::Node#type returns.
+      # Ask Prism for the node's own type symbol rather than deriving it
+      # from the class name: acronyms don't survive naive snake-casing
+      # (XStringNode is :x_string_node, not :xstring_node).
       def prism_node_type(constant_name)
         constant = Prism.const_get(constant_name)
-        return nil unless constant.is_a?(Class) && constant < Prism::Node
+        return nil unless constant.is_a?(Class) && constant < Prism::Node && constant.respond_to?(:type)
 
-        constant_name.to_s.gsub(/([a-z])([A-Z])/, '\1_\2').downcase
+        constant.type.to_s
       end
 
       # Returns a tally of node types across the gem's Ruby files, or nil
