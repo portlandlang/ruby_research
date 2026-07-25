@@ -90,14 +90,14 @@ module RubyResearch
         lines = []
         lines << '# Gems whose names differ only in case'
         lines << ''
-        lines << "**#{data[:group_count]}** name collisions covering **#{data[:gems_involved]}** distinct gems, " \
-                 "out of #{data[:corpus_size]} on RubyGems.org."
+        lines << "Report generated at #{Time.now}."
+        lines << ''
+        lines << "**#{data[:group_count]}** name collisions covering **#{data[:gems_involved]}** distinct gems, out of #{data[:corpus_size]} on RubyGems.org."
         lines << ''
         lines << 'These are separate gems that fold to the same name, so any tool storing one gem per file'
         lines << 'on a case-insensitive filesystem (macOS APFS, Windows) will have them overwrite each other.'
         lines << ''
-        lines << "Newest release among any colliding gem: **#{data[:newest_release_among_collisions]}** — " \
-                 'several of these gems are still actively maintained.'
+        lines << "Newest release among any colliding gem: **#{data[:newest_release_among_collisions]}** — several of these gems are still actively maintained."
         lines << ''
         lines << '## When each collision was created'
         lines << ''
@@ -106,35 +106,43 @@ module RubyResearch
         lines << "the most recent collision was created **#{data[:newest_collision_created]}**, and none since."
         lines << 'So this is legacy data in the index rather than an open validation hole.'
         lines << ''
+        lines << 'All collisions are only pairs, no triples or more.(`FooBarBaz` and `foobarbaz`. No `FooBarBaz` and `foobarbaz` AND ALSO `fooBARbaz`)'
+        lines << ''
+
         lines << '| Year created | Collisions |'
-        lines << '|---|---|'
+        lines << '| ------------ | ---------- |'
+
         data[:collision_created_year_histogram].each { |year, count| lines << "| #{year} | #{count} |" }
         lines << ''
-        lines << '## Group sizes'
-        lines << ''
-        lines << '| Gems in group | Groups |'
-        lines << '|---|---|'
-        data[:group_size_histogram].each { |size, count| lines << "| #{size} | #{count} |" }
-        lines << ''
+
         lines << '## Groups with a release on or after'
         lines << ''
         lines << '| Year | Groups |'
-        lines << '|---|---|'
+        lines << '| ---- | ------ |'
         data[:groups_with_a_release_since].each { |year, count| lines << "| #{year} | #{count} |" }
         lines << ''
         lines << '## Every collision'
         lines << ''
         lines << '| Folded name | Gem | Versions | Latest | First release | Last release | Collision since |'
-        lines << '|---|---|---|---|---|---|---|'
+        lines << '| ----------- | --- | -------- | ------ | ------------- | ------------ | --------------- |'
+
         data[:groups].each do |group|
           group[:variants].each do |variant|
-            lines << "| `#{group[:folded]}` | `#{variant[:name]}` | #{variant[:version_count]} | " \
-                     "#{variant[:latest_version]} | #{variant[:first_release]} | #{variant[:last_release]} | " \
-                     "#{group[:collision_created]} |"
+            line = [
+              "| `#{group[:folded]}`",
+              "| `#{variant[:name]}`",
+              "| `#{variant[:version_count]}`",
+              "| `#{variant[:latest_version]}`",
+              "| `#{variant[:first_release]}`",
+              "| `#{variant[:last_release]}`",
+              "| `#{group[:collision_created]}` |"
+            ].join
+
+            lines << line
           end
         end
         lines << ''
-        lines << "Errors: #{data[:errors].size}"
+        lines << "Errors: #{data[:errors].size}" unless data[:errors].size.zero?
 
         lines.join("\n")
       end

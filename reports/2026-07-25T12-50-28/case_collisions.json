@@ -7,6 +7,14 @@
     "2": 178
   },
   "newest_release_among_collisions": "2026-07-20",
+  "collision_created_year_histogram": {
+    "2009": 49,
+    "2010": 21,
+    "2011": 32,
+    "2012": 46,
+    "2013": 30
+  },
+  "newest_collision_created": "2013-10-04",
   "groups_with_a_release_since": {
     "2015": 40,
     "2018": 21,
@@ -18,6 +26,7 @@
   "groups": [
     {
       "folded": "abundance",
+      "collision_created": "2009-08-12",
       "variants": [
         {
           "name": "Abundance",
@@ -37,6 +46,7 @@
     },
     {
       "folded": "actionpool",
+      "collision_created": "2010-01-06",
       "variants": [
         {
           "name": "ActionPool",
@@ -56,6 +66,7 @@
     },
     {
       "folded": "actiontimer",
+      "collision_created": "2010-01-06",
       "variants": [
         {
           "name": "ActionTimer",
@@ -75,6 +86,7 @@
     },
     {
       "folded": "activesambaldap",
+      "collision_created": "2009-08-12",
       "variants": [
         {
           "name": "ActiveSambaLdap",
@@ -94,6 +106,7 @@
     },
     {
       "folded": "apfel",
+      "collision_created": "2012-12-01",
       "variants": [
         {
           "name": "Apfel",
@@ -113,6 +126,7 @@
     },
     {
       "folded": "appjob",
+      "collision_created": "2011-10-24",
       "variants": [
         {
           "name": "Appjob",
@@ -132,6 +146,7 @@
     },
     {
       "folded": "ass",
+      "collision_created": "2012-09-12",
       "variants": [
         {
           "name": "ASS",
@@ -151,6 +166,7 @@
     },
     {
       "folded": "auto",
+      "collision_created": "2013-01-13",
       "variants": [
         {
           "name": "Auto",
@@ -170,6 +186,7 @@
     },
     {
       "folded": "autonzb",
+      "collision_created": "2009-11-01",
       "variants": [
         {
           "name": "AutoNZB",
@@ -189,6 +206,7 @@
     },
     {
       "folded": "babelfish",
+      "collision_created": "2009-08-12",
       "variants": [
         {
           "name": "Babelfish",
@@ -208,6 +226,7 @@
     },
     {
       "folded": "banana",
+      "collision_created": "2012-11-14",
       "variants": [
         {
           "name": "Banana",
@@ -227,6 +246,7 @@
     },
     {
       "folded": "base62",
+      "collision_created": "2013-01-19",
       "variants": [
         {
           "name": "Base62",
@@ -246,6 +266,7 @@
     },
     {
       "folded": "bashy",
+      "collision_created": "2012-04-21",
       "variants": [
         {
           "name": "Bashy",
@@ -265,6 +286,7 @@
     },
     {
       "folded": "basil",
+      "collision_created": "2012-09-18",
       "variants": [
         {
           "name": "Basil",
@@ -284,6 +306,7 @@
     },
     {
       "folded": "bigcat",
+      "collision_created": "2011-09-01",
       "variants": [
         {
           "name": "BigCat",
@@ -303,6 +326,7 @@
     },
     {
       "folded": "bluecloth",
+      "collision_created": "2009-10-27",
       "variants": [
         {
           "name": "BlueCloth",
@@ -322,6 +346,7 @@
     },
     {
       "folded": "box2d",
+      "collision_created": "2009-09-08",
       "variants": [
         {
           "name": "Box2d",
@@ -341,6 +366,7 @@
     },
     {
       "folded": "buildr",
+      "collision_created": "2009-08-12",
       "variants": [
         {
           "name": "Buildr",
@@ -360,6 +386,7 @@
     },
     {
       "folded": "cachebar",
+      "collision_created": "2012-04-23",
       "variants": [
         {
           "name": "CacheBar",
@@ -379,6 +406,7 @@
     },
     {
       "folded": "cartesian",
+      "collision_created": "2011-01-04",
       "variants": [
         {
           "name": "Cartesian",
@@ -398,6 +426,7 @@
     },
     {
       "folded": "classiccms",
+      "collision_created": "2012-05-16",
       "variants": [
         {
           "name": "classicCMS",
@@ -417,6 +446,7 @@
     },
     {
       "folded": "collegiatelink",
+      "collision_created": "2013-01-25",
       "variants": [
         {
           "name": "CollegiateLink",
@@ -436,6 +466,7 @@
     },
     {
       "folded": "commandline",
+      "collision_created": "2009-08-12",
       "variants": [
         {
           "name": "CommandLine",
@@ -455,6 +486,7 @@
     },
     {
       "folded": "crudtree",
+      "collision_created": "2010-02-15",
       "variants": [
         {
           "name": "CRUDtree",
@@ -474,6 +506,7 @@
     },
     {
       "folded": "csi",
+      "collision_created": "2013-02-16",
       "variants": [
         {
           "name": "CSI",
@@ -493,6 +526,7 @@
     },
     {
       "folded": "currency_converter_cis",
+      "collision_created": "2013-10-04",
       "variants": [
         {
           "name": "currency_converter_CIS",
@@ -512,6 +546,7 @@
     },
     {
       "folded": "cyrillizer",
+      "collision_created": "2009-11-08",
       "variants": [
         {
           "name": "Cyrillizer",
@@ -531,6 +566,7 @@
     },
     {
       "folded": "depgraph",
+      "collision_created": "2012-07-05",
       "variants": [
         {
           "name": "DepGraph",
@@ -550,6 +586,7 @@
     },
     {
       "folded": "devops",
+      "collision_created": "2013-05-06",
       "variants": [
         {
           "name": "Devops",
@@ -569,6 +606,7 @@
     },
     {
       "folded": "dnsruby",
+      "collision_created": "2009-08-12",
       "variants": [
         {
           "name": "Dnsruby",
@@ -588,6 +626,7 @@
     },
     {
       "folded": "domainr",
+      "collision_created": "2012-05-19",
       "variants": [
         {
           "name": "Domainr",
@@ -607,6 +646,7 @@
     },
     {
       "folded": "dtr",
+      "collision_created": "2009-08-16",
       "variants": [
         {
           "name": "DTR",
@@ -626,6 +666,7 @@
     },
     {
       "folded": "dynamoid",
+      "collision_created": "2012-02-26",
       "variants": [
         {
           "name": "Dynamoid",
@@ -645,6 +686,7 @@
     },
     {
       "folded": "ec2ssh",
+      "collision_created": "2011-09-21",
       "variants": [
         {
           "name": "EC2ssh",
@@ -664,6 +706,7 @@
     },
     {
       "folded": "eric",
+      "collision_created": "2013-02-03",
       "variants": [
         {
           "name": "Eric",
@@ -683,6 +726,7 @@
     },
     {
       "folded": "etch",
+      "collision_created": "2009-11-14",
       "variants": [
         {
           "name": "Etch",
@@ -702,6 +746,7 @@
     },
     {
       "folded": "etl",
+      "collision_created": "2012-12-27",
       "variants": [
         {
           "name": "ETL",
@@ -721,6 +766,7 @@
     },
     {
       "folded": "fakeweb",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "FakeWeb",
@@ -740,6 +786,7 @@
     },
     {
       "folded": "farsifu",
+      "collision_created": "2010-03-03",
       "variants": [
         {
           "name": "FarsiFu",
@@ -759,6 +806,7 @@
     },
     {
       "folded": "fboauth2",
+      "collision_created": "2011-07-06",
       "variants": [
         {
           "name": "Fboauth2",
@@ -778,6 +826,7 @@
     },
     {
       "folded": "firstgem",
+      "collision_created": "2012-11-17",
       "variants": [
         {
           "name": "firstGem",
@@ -797,6 +846,7 @@
     },
     {
       "folded": "flashatron",
+      "collision_created": "2010-02-27",
       "variants": [
         {
           "name": "Flashatron",
@@ -816,6 +866,7 @@
     },
     {
       "folded": "flipper",
+      "collision_created": "2012-08-03",
       "variants": [
         {
           "name": "Flipper",
@@ -835,6 +886,7 @@
     },
     {
       "folded": "freeswitcher",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "FreeSWITCHeR",
@@ -854,6 +906,7 @@
     },
     {
       "folded": "funit",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "fUnit",
@@ -873,6 +926,7 @@
     },
     {
       "folded": "gdata",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "GData",
@@ -892,6 +946,7 @@
     },
     {
       "folded": "gemfiler",
+      "collision_created": "2012-08-22",
       "variants": [
         {
           "name": "Gemfiler",
@@ -911,6 +966,7 @@
     },
     {
       "folded": "generator",
+      "collision_created": "2013-05-07",
       "variants": [
         {
           "name": "Generator",
@@ -930,6 +986,7 @@
     },
     {
       "folded": "georuby",
+      "collision_created": "2011-06-30",
       "variants": [
         {
           "name": "GeoRuby",
@@ -949,6 +1006,7 @@
     },
     {
       "folded": "gitgo",
+      "collision_created": "2012-11-16",
       "variants": [
         {
           "name": "GitGo",
@@ -968,6 +1026,7 @@
     },
     {
       "folded": "gitspotter",
+      "collision_created": "2013-01-11",
       "variants": [
         {
           "name": "Gitspotter",
@@ -987,6 +1046,7 @@
     },
     {
       "folded": "gooby",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Gooby",
@@ -1006,6 +1066,7 @@
     },
     {
       "folded": "googleplus",
+      "collision_created": "2011-10-25",
       "variants": [
         {
           "name": "GooglePlus",
@@ -1025,6 +1086,7 @@
     },
     {
       "folded": "grada",
+      "collision_created": "2013-07-02",
       "variants": [
         {
           "name": "GraDA",
@@ -1044,6 +1106,7 @@
     },
     {
       "folded": "harry",
+      "collision_created": "2013-04-03",
       "variants": [
         {
           "name": "Harry",
@@ -1063,6 +1126,7 @@
     },
     {
       "folded": "hebruby",
+      "collision_created": "2009-09-24",
       "variants": [
         {
           "name": "Hebruby",
@@ -1082,6 +1146,7 @@
     },
     {
       "folded": "hello",
+      "collision_created": "2012-06-26",
       "variants": [
         {
           "name": "Hello",
@@ -1101,6 +1166,7 @@
     },
     {
       "folded": "hellogem",
+      "collision_created": "2013-01-17",
       "variants": [
         {
           "name": "HelloGem",
@@ -1120,6 +1186,7 @@
     },
     {
       "folded": "impatient",
+      "collision_created": "2012-08-08",
       "variants": [
         {
           "name": "Impatient",
@@ -1139,6 +1206,7 @@
     },
     {
       "folded": "informer",
+      "collision_created": "2009-10-29",
       "variants": [
         {
           "name": "Informer",
@@ -1158,6 +1226,7 @@
     },
     {
       "folded": "jalalidate",
+      "collision_created": "2010-03-03",
       "variants": [
         {
           "name": "JalaliDate",
@@ -1177,6 +1246,7 @@
     },
     {
       "folded": "jazz",
+      "collision_created": "2011-11-10",
       "variants": [
         {
           "name": "Jazz",
@@ -1196,6 +1266,7 @@
     },
     {
       "folded": "jazzez",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Jazzez",
@@ -1215,6 +1286,7 @@
     },
     {
       "folded": "jbootstrap",
+      "collision_created": "2012-11-13",
       "variants": [
         {
           "name": "jBootstrap",
@@ -1234,6 +1306,7 @@
     },
     {
       "folded": "jruby-openssl",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "JRuby-OpenSSL",
@@ -1253,6 +1326,7 @@
     },
     {
       "folded": "jsrender-rails",
+      "collision_created": "2013-03-08",
       "variants": [
         {
           "name": "jsRender-rails",
@@ -1272,6 +1346,7 @@
     },
     {
       "folded": "kanocc",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Kanocc",
@@ -1291,6 +1366,7 @@
     },
     {
       "folded": "krakken",
+      "collision_created": "2013-06-08",
       "variants": [
         {
           "name": "Krakken",
@@ -1310,6 +1386,7 @@
     },
     {
       "folded": "labrador",
+      "collision_created": "2012-07-06",
       "variants": [
         {
           "name": "Labrador",
@@ -1329,6 +1406,7 @@
     },
     {
       "folded": "langrove",
+      "collision_created": "2012-04-23",
       "variants": [
         {
           "name": "LanGrove",
@@ -1348,6 +1426,7 @@
     },
     {
       "folded": "ledelay",
+      "collision_created": "2011-06-30",
       "variants": [
         {
           "name": "LeDelay",
@@ -1367,6 +1446,7 @@
     },
     {
       "folded": "legit-the-git",
+      "collision_created": "2011-02-07",
       "variants": [
         {
           "name": "Legit-the-Git",
@@ -1386,6 +1466,7 @@
     },
     {
       "folded": "letter",
+      "collision_created": "2012-11-14",
       "variants": [
         {
           "name": "Letter",
@@ -1405,6 +1486,7 @@
     },
     {
       "folded": "linguistics",
+      "collision_created": "2009-11-18",
       "variants": [
         {
           "name": "Linguistics",
@@ -1424,6 +1506,7 @@
     },
     {
       "folded": "locksmith",
+      "collision_created": "2012-07-03",
       "variants": [
         {
           "name": "Locksmith",
@@ -1443,6 +1526,7 @@
     },
     {
       "folded": "macaddr",
+      "collision_created": "2011-05-24",
       "variants": [
         {
           "name": "MACAddr",
@@ -1462,6 +1546,7 @@
     },
     {
       "folded": "magic",
+      "collision_created": "2011-04-01",
       "variants": [
         {
           "name": "Magic",
@@ -1481,6 +1566,7 @@
     },
     {
       "folded": "markaby",
+      "collision_created": "2009-10-10",
       "variants": [
         {
           "name": "Markaby",
@@ -1500,6 +1586,7 @@
     },
     {
       "folded": "medea",
+      "collision_created": "2011-01-04",
       "variants": [
         {
           "name": "Medea",
@@ -1519,6 +1606,7 @@
     },
     {
       "folded": "memoize",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Memoize",
@@ -1538,6 +1626,7 @@
     },
     {
       "folded": "midna",
+      "collision_created": "2012-05-31",
       "variants": [
         {
           "name": "Midna",
@@ -1557,6 +1646,7 @@
     },
     {
       "folded": "missionhub",
+      "collision_created": "2012-10-10",
       "variants": [
         {
           "name": "MissionHub",
@@ -1576,6 +1666,7 @@
     },
     {
       "folded": "moby",
+      "collision_created": "2013-02-13",
       "variants": [
         {
           "name": "Moby",
@@ -1595,6 +1686,7 @@
     },
     {
       "folded": "modelmaker",
+      "collision_created": "2012-10-16",
       "variants": [
         {
           "name": "ModelMaker",
@@ -1614,6 +1706,7 @@
     },
     {
       "folded": "mp4info",
+      "collision_created": "2010-03-15",
       "variants": [
         {
           "name": "MP4Info",
@@ -1633,6 +1726,7 @@
     },
     {
       "folded": "nabaztag",
+      "collision_created": "2010-02-12",
       "variants": [
         {
           "name": "Nabaztag",
@@ -1652,6 +1746,7 @@
     },
     {
       "folded": "nilsimsa",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Nilsimsa",
@@ -1671,6 +1766,7 @@
     },
     {
       "folded": "nodevent",
+      "collision_created": "2012-05-07",
       "variants": [
         {
           "name": "NoDevent",
@@ -1690,6 +1786,7 @@
     },
     {
       "folded": "o_o",
+      "collision_created": "2012-05-11",
       "variants": [
         {
           "name": "O_O",
@@ -1709,6 +1806,7 @@
     },
     {
       "folded": "oasis",
+      "collision_created": "2009-12-20",
       "variants": [
         {
           "name": "Oasis",
@@ -1728,6 +1826,7 @@
     },
     {
       "folded": "onion",
+      "collision_created": "2010-10-02",
       "variants": [
         {
           "name": "Onion",
@@ -1747,6 +1846,7 @@
     },
     {
       "folded": "onlooker",
+      "collision_created": "2010-01-24",
       "variants": [
         {
           "name": "Onlooker",
@@ -1766,6 +1866,7 @@
     },
     {
       "folded": "opal",
+      "collision_created": "2010-01-22",
       "variants": [
         {
           "name": "Opal",
@@ -1785,6 +1886,7 @@
     },
     {
       "folded": "pablo",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Pablo",
@@ -1804,6 +1906,7 @@
     },
     {
       "folded": "pbyf",
+      "collision_created": "2012-08-23",
       "variants": [
         {
           "name": "PBYF",
@@ -1823,6 +1926,7 @@
     },
     {
       "folded": "pd_x12",
+      "collision_created": "2013-03-19",
       "variants": [
         {
           "name": "PD_x12",
@@ -1842,6 +1946,7 @@
     },
     {
       "folded": "pickaxe",
+      "collision_created": "2013-07-11",
       "variants": [
         {
           "name": "Pickaxe",
@@ -1861,6 +1966,7 @@
     },
     {
       "folded": "piggy",
+      "collision_created": "2010-09-07",
       "variants": [
         {
           "name": "Piggy",
@@ -1880,6 +1986,7 @@
     },
     {
       "folded": "platform",
+      "collision_created": "2011-10-13",
       "variants": [
         {
           "name": "Platform",
@@ -1899,6 +2006,7 @@
     },
     {
       "folded": "polar",
+      "collision_created": "2010-07-29",
       "variants": [
         {
           "name": "Polar",
@@ -1918,6 +2026,7 @@
     },
     {
       "folded": "popen4",
+      "collision_created": "2009-11-13",
       "variants": [
         {
           "name": "POpen4",
@@ -1937,6 +2046,7 @@
     },
     {
       "folded": "promotion",
+      "collision_created": "2012-09-19",
       "variants": [
         {
           "name": "ProMotion",
@@ -1956,6 +2066,7 @@
     },
     {
       "folded": "protoncouch",
+      "collision_created": "2011-02-02",
       "variants": [
         {
           "name": "ProtonCouch",
@@ -1975,6 +2086,7 @@
     },
     {
       "folded": "puke",
+      "collision_created": "2011-10-15",
       "variants": [
         {
           "name": "Puke",
@@ -1994,6 +2106,7 @@
     },
     {
       "folded": "pulse",
+      "collision_created": "2010-11-25",
       "variants": [
         {
           "name": "Pulse",
@@ -2013,6 +2126,7 @@
     },
     {
       "folded": "pushit",
+      "collision_created": "2013-06-13",
       "variants": [
         {
           "name": "PushIt",
@@ -2032,6 +2146,7 @@
     },
     {
       "folded": "q",
+      "collision_created": "2011-07-06",
       "variants": [
         {
           "name": "Q",
@@ -2051,6 +2166,7 @@
     },
     {
       "folded": "rack",
+      "collision_created": "2010-03-26",
       "variants": [
         {
           "name": "Rack",
@@ -2070,6 +2186,7 @@
     },
     {
       "folded": "rangehash",
+      "collision_created": "2011-08-14",
       "variants": [
         {
           "name": "RangeHash",
@@ -2089,6 +2206,7 @@
     },
     {
       "folded": "realiaser",
+      "collision_created": "2012-11-30",
       "variants": [
         {
           "name": "Realiaser",
@@ -2108,6 +2226,7 @@
     },
     {
       "folded": "recalls",
+      "collision_created": "2011-05-19",
       "variants": [
         {
           "name": "Recalls",
@@ -2127,6 +2246,7 @@
     },
     {
       "folded": "redir",
+      "collision_created": "2012-10-24",
       "variants": [
         {
           "name": "Redir",
@@ -2146,6 +2266,7 @@
     },
     {
       "folded": "relata",
+      "collision_created": "2010-10-22",
       "variants": [
         {
           "name": "Relata",
@@ -2165,6 +2286,7 @@
     },
     {
       "folded": "reposh",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Reposh",
@@ -2184,6 +2306,7 @@
     },
     {
       "folded": "rmeetup",
+      "collision_created": "2011-01-21",
       "variants": [
         {
           "name": "rMeetup",
@@ -2203,6 +2326,7 @@
     },
     {
       "folded": "roadrunner",
+      "collision_created": "2010-04-22",
       "variants": [
         {
           "name": "RoadRunner",
@@ -2222,6 +2346,7 @@
     },
     {
       "folded": "robin",
+      "collision_created": "2013-02-18",
       "variants": [
         {
           "name": "Robin",
@@ -2241,6 +2366,7 @@
     },
     {
       "folded": "ron",
+      "collision_created": "2009-11-05",
       "variants": [
         {
           "name": "Ron",
@@ -2260,6 +2386,7 @@
     },
     {
       "folded": "roxml",
+      "collision_created": "2009-10-17",
       "variants": [
         {
           "name": "ROXML",
@@ -2279,6 +2406,7 @@
     },
     {
       "folded": "rsokoban",
+      "collision_created": "2012-05-18",
       "variants": [
         {
           "name": "RSokoban",
@@ -2298,6 +2426,7 @@
     },
     {
       "folded": "rspec-steps",
+      "collision_created": "2011-07-26",
       "variants": [
         {
           "name": "RSpec-Steps",
@@ -2317,6 +2446,7 @@
     },
     {
       "folded": "rsruby",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "RSRuby",
@@ -2336,6 +2466,7 @@
     },
     {
       "folded": "rtalib",
+      "collision_created": "2012-12-28",
       "variants": [
         {
           "name": "RTALib",
@@ -2355,6 +2486,7 @@
     },
     {
       "folded": "rtfmd",
+      "collision_created": "2011-12-28",
       "variants": [
         {
           "name": "RTFMd",
@@ -2374,6 +2506,7 @@
     },
     {
       "folded": "rubernate",
+      "collision_created": "2011-08-04",
       "variants": [
         {
           "name": "Rubernate",
@@ -2393,6 +2526,7 @@
     },
     {
       "folded": "ruby-hl7",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Ruby-HL7",
@@ -2412,6 +2546,7 @@
     },
     {
       "folded": "rubyapp",
+      "collision_created": "2011-10-27",
       "variants": [
         {
           "name": "RubyApp",
@@ -2431,6 +2566,7 @@
     },
     {
       "folded": "rubysh",
+      "collision_created": "2012-09-12",
       "variants": [
         {
           "name": "RubySH",
@@ -2450,6 +2586,7 @@
     },
     {
       "folded": "rug",
+      "collision_created": "2011-09-22",
       "variants": [
         {
           "name": "Rug",
@@ -2469,6 +2606,7 @@
     },
     {
       "folded": "rvm",
+      "collision_created": "2009-08-26",
       "variants": [
         {
           "name": "rVM",
@@ -2488,6 +2626,7 @@
     },
     {
       "folded": "sac",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Sac",
@@ -2507,6 +2646,7 @@
     },
     {
       "folded": "saikuro",
+      "collision_created": "2011-09-27",
       "variants": [
         {
           "name": "Saikuro",
@@ -2526,6 +2666,7 @@
     },
     {
       "folded": "samplegem",
+      "collision_created": "2013-04-25",
       "variants": [
         {
           "name": "SampleGem",
@@ -2545,6 +2686,7 @@
     },
     {
       "folded": "sandrbox",
+      "collision_created": "2012-03-30",
       "variants": [
         {
           "name": "Sandrbox",
@@ -2564,6 +2706,7 @@
     },
     {
       "folded": "savage",
+      "collision_created": "2013-06-18",
       "variants": [
         {
           "name": "SAVAGE",
@@ -2583,6 +2726,7 @@
     },
     {
       "folded": "selenium",
+      "collision_created": "2010-11-08",
       "variants": [
         {
           "name": "Selenium",
@@ -2602,6 +2746,7 @@
     },
     {
       "folded": "selenium-client",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Selenium-Client",
@@ -2621,6 +2766,7 @@
     },
     {
       "folded": "sgfparser",
+      "collision_created": "2010-10-22",
       "variants": [
         {
           "name": "SgfParser",
@@ -2640,6 +2786,7 @@
     },
     {
       "folded": "shorty",
+      "collision_created": "2012-04-20",
       "variants": [
         {
           "name": "Shorty",
@@ -2659,6 +2806,7 @@
     },
     {
       "folded": "shunt",
+      "collision_created": "2011-05-17",
       "variants": [
         {
           "name": "Shunt",
@@ -2678,6 +2826,7 @@
     },
     {
       "folded": "si",
+      "collision_created": "2012-09-11",
       "variants": [
         {
           "name": "SI",
@@ -2697,6 +2846,7 @@
     },
     {
       "folded": "simplemailer",
+      "collision_created": "2013-05-27",
       "variants": [
         {
           "name": "simpleMailer",
@@ -2716,6 +2866,7 @@
     },
     {
       "folded": "siriproxy-samsungremote",
+      "collision_created": "2011-12-06",
       "variants": [
         {
           "name": "SiriProxy-SamsungRemote",
@@ -2735,6 +2886,7 @@
     },
     {
       "folded": "sitemap",
+      "collision_created": "2011-09-03",
       "variants": [
         {
           "name": "SiteMap",
@@ -2754,6 +2906,7 @@
     },
     {
       "folded": "skyper",
+      "collision_created": "2012-05-07",
       "variants": [
         {
           "name": "SkypeR",
@@ -2773,6 +2926,7 @@
     },
     {
       "folded": "sms",
+      "collision_created": "2012-02-16",
       "variants": [
         {
           "name": "SMS",
@@ -2792,6 +2946,7 @@
     },
     {
       "folded": "soroban",
+      "collision_created": "2012-04-23",
       "variants": [
         {
           "name": "Soroban",
@@ -2811,6 +2966,7 @@
     },
     {
       "folded": "splice",
+      "collision_created": "2012-07-03",
       "variants": [
         {
           "name": "Splice",
@@ -2830,6 +2986,7 @@
     },
     {
       "folded": "spy-vs-spy",
+      "collision_created": "2009-11-24",
       "variants": [
         {
           "name": "Spy-Vs-Spy",
@@ -2849,6 +3006,7 @@
     },
     {
       "folded": "sqs",
+      "collision_created": "2009-10-09",
       "variants": [
         {
           "name": "SQS",
@@ -2868,6 +3026,7 @@
     },
     {
       "folded": "stencil",
+      "collision_created": "2009-12-27",
       "variants": [
         {
           "name": "Stencil",
@@ -2887,6 +3046,7 @@
     },
     {
       "folded": "stompmq",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "StompMq",
@@ -2906,6 +3066,7 @@
     },
     {
       "folded": "stormrets",
+      "collision_created": "2012-07-01",
       "variants": [
         {
           "name": "StormRETS",
@@ -2925,6 +3086,7 @@
     },
     {
       "folded": "stream",
+      "collision_created": "2011-06-23",
       "variants": [
         {
           "name": "Stream",
@@ -2944,6 +3106,7 @@
     },
     {
       "folded": "support",
+      "collision_created": "2013-03-11",
       "variants": [
         {
           "name": "SUPPORT",
@@ -2963,6 +3126,7 @@
     },
     {
       "folded": "surgicalstrike",
+      "collision_created": "2012-04-16",
       "variants": [
         {
           "name": "SurgicalStrike",
@@ -2982,6 +3146,7 @@
     },
     {
       "folded": "svy21",
+      "collision_created": "2013-04-08",
       "variants": [
         {
           "name": "SVY21",
@@ -3001,6 +3166,7 @@
     },
     {
       "folded": "sysvipc",
+      "collision_created": "2009-09-26",
       "variants": [
         {
           "name": "SysVIPC",
@@ -3020,6 +3186,7 @@
     },
     {
       "folded": "test",
+      "collision_created": "2013-03-28",
       "variants": [
         {
           "name": "Test",
@@ -3039,6 +3206,7 @@
     },
     {
       "folded": "testgem",
+      "collision_created": "2013-02-08",
       "variants": [
         {
           "name": "TestGem",
@@ -3058,6 +3226,7 @@
     },
     {
       "folded": "text",
+      "collision_created": "2009-10-12",
       "variants": [
         {
           "name": "Text",
@@ -3077,6 +3246,7 @@
     },
     {
       "folded": "tictactoe",
+      "collision_created": "2013-07-03",
       "variants": [
         {
           "name": "TicTacToe",
@@ -3096,6 +3266,7 @@
     },
     {
       "folded": "todo",
+      "collision_created": "2012-09-01",
       "variants": [
         {
           "name": "Todo",
@@ -3115,6 +3286,7 @@
     },
     {
       "folded": "tracker",
+      "collision_created": "2012-12-27",
       "variants": [
         {
           "name": "Tracker",
@@ -3134,6 +3306,7 @@
     },
     {
       "folded": "tyler",
+      "collision_created": "2013-02-21",
       "variants": [
         {
           "name": "TYLER",
@@ -3153,6 +3326,7 @@
     },
     {
       "folded": "udjrb",
+      "collision_created": "2011-05-13",
       "variants": [
         {
           "name": "UDJrb",
@@ -3172,6 +3346,7 @@
     },
     {
       "folded": "urbanesia",
+      "collision_created": "2012-12-09",
       "variants": [
         {
           "name": "Urbanesia",
@@ -3191,6 +3366,7 @@
     },
     {
       "folded": "usage",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Usage",
@@ -3210,6 +3386,7 @@
     },
     {
       "folded": "valuable",
+      "collision_created": "2009-12-10",
       "variants": [
         {
           "name": "Valuable",
@@ -3229,6 +3406,7 @@
     },
     {
       "folded": "vimmate",
+      "collision_created": "2009-11-14",
       "variants": [
         {
           "name": "VimMate",
@@ -3248,6 +3426,7 @@
     },
     {
       "folded": "walt",
+      "collision_created": "2013-01-05",
       "variants": [
         {
           "name": "Walt",
@@ -3267,6 +3446,7 @@
     },
     {
       "folded": "websocket",
+      "collision_created": "2013-01-09",
       "variants": [
         {
           "name": "WEBSocket",
@@ -3286,6 +3466,7 @@
     },
     {
       "folded": "writeexcel",
+      "collision_created": "2010-01-21",
       "variants": [
         {
           "name": "WriteExcel",
@@ -3305,6 +3486,7 @@
     },
     {
       "folded": "x12",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "X12",
@@ -3324,6 +3506,7 @@
     },
     {
       "folded": "xmlcanonicalizer",
+      "collision_created": "2010-09-12",
       "variants": [
         {
           "name": "XMLCanonicalizer",
@@ -3343,6 +3526,7 @@
     },
     {
       "folded": "xray",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "XRay",
@@ -3362,6 +3546,7 @@
     },
     {
       "folded": "zliby",
+      "collision_created": "2009-08-18",
       "variants": [
         {
           "name": "Zliby",
@@ -3381,6 +3566,7 @@
     },
     {
       "folded": "zurb-foundation",
+      "collision_created": "2011-12-18",
       "variants": [
         {
           "name": "ZURB-foundation",

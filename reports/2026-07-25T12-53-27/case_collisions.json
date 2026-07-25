@@ -1,0 +1,3588 @@
+{
+  "corpus_size": 195399,
+  "errors": [],
+  "group_count": 178,
+  "gems_involved": 356,
+  "group_size_histogram": {
+    "2": 178
+  },
+  "newest_release_among_collisions": "2026-07-20",
+  "collision_created_year_histogram": {
+    "2009": 49,
+    "2010": 21,
+    "2011": 32,
+    "2012": 46,
+    "2013": 30
+  },
+  "newest_collision_created": "2013-10-04",
+  "groups_with_a_release_since": {
+    "2015": 40,
+    "2018": 21,
+    "2020": 16,
+    "2022": 14,
+    "2024": 12,
+    "2026": 7
+  },
+  "groups": [
+    {
+      "folded": "abundance",
+      "collision_created": "2009-08-12",
+      "variants": [
+        {
+          "name": "Abundance",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2009-08-12",
+          "last_release": "2009-08-12"
+        },
+        {
+          "name": "abundance",
+          "version_count": 25,
+          "latest_version": "1.0.3",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "actionpool",
+      "collision_created": "2010-01-06",
+      "variants": [
+        {
+          "name": "ActionPool",
+          "version_count": 6,
+          "latest_version": "0.2.3",
+          "first_release": "2009-07-25",
+          "last_release": "2010-01-13"
+        },
+        {
+          "name": "actionpool",
+          "version_count": 2,
+          "latest_version": "0.2.3",
+          "first_release": "2010-01-06",
+          "last_release": "2010-01-13"
+        }
+      ]
+    },
+    {
+      "folded": "actiontimer",
+      "collision_created": "2010-01-06",
+      "variants": [
+        {
+          "name": "ActionTimer",
+          "version_count": 5,
+          "latest_version": "0.2.1",
+          "first_release": "2009-07-25",
+          "last_release": "2010-01-13"
+        },
+        {
+          "name": "actiontimer",
+          "version_count": 2,
+          "latest_version": "0.2.1",
+          "first_release": "2010-01-06",
+          "last_release": "2010-01-13"
+        }
+      ]
+    },
+    {
+      "folded": "activesambaldap",
+      "collision_created": "2009-08-12",
+      "variants": [
+        {
+          "name": "ActiveSambaLdap",
+          "version_count": 1,
+          "latest_version": "0.0.7",
+          "first_release": "2009-08-12",
+          "last_release": "2009-08-12"
+        },
+        {
+          "name": "activesambaldap",
+          "version_count": 10,
+          "latest_version": "0.1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2012-07-08"
+        }
+      ]
+    },
+    {
+      "folded": "apfel",
+      "collision_created": "2012-12-01",
+      "variants": [
+        {
+          "name": "Apfel",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-12-01",
+          "last_release": "2012-12-01"
+        },
+        {
+          "name": "apfel",
+          "version_count": 4,
+          "latest_version": "0.0.5",
+          "first_release": "2012-12-01",
+          "last_release": "2013-04-16"
+        }
+      ]
+    },
+    {
+      "folded": "appjob",
+      "collision_created": "2011-10-24",
+      "variants": [
+        {
+          "name": "Appjob",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2011-10-24",
+          "last_release": "2011-10-24"
+        },
+        {
+          "name": "appjob",
+          "version_count": 12,
+          "latest_version": "0.0.14",
+          "first_release": "2011-10-24",
+          "last_release": "2011-11-07"
+        }
+      ]
+    },
+    {
+      "folded": "ass",
+      "collision_created": "2012-09-12",
+      "variants": [
+        {
+          "name": "ASS",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-11-30",
+          "last_release": "2009-11-30"
+        },
+        {
+          "name": "ass",
+          "version_count": 12,
+          "latest_version": "0.0.25",
+          "first_release": "2012-09-12",
+          "last_release": "2013-10-23"
+        }
+      ]
+    },
+    {
+      "folded": "auto",
+      "collision_created": "2013-01-13",
+      "variants": [
+        {
+          "name": "Auto",
+          "version_count": 1,
+          "latest_version": "4.0.0.alpha.1",
+          "first_release": "2013-01-13",
+          "last_release": "2013-01-13"
+        },
+        {
+          "name": "auto",
+          "version_count": 5,
+          "latest_version": "0.1.4",
+          "first_release": "2009-11-06",
+          "last_release": "2009-11-16"
+        }
+      ]
+    },
+    {
+      "folded": "autonzb",
+      "collision_created": "2009-11-01",
+      "variants": [
+        {
+          "name": "AutoNZB",
+          "version_count": 1,
+          "latest_version": "0.5.4",
+          "first_release": "2009-11-01",
+          "last_release": "2009-11-01"
+        },
+        {
+          "name": "autonzb",
+          "version_count": 2,
+          "latest_version": "0.5.5",
+          "first_release": "2009-11-01",
+          "last_release": "2009-11-02"
+        }
+      ]
+    },
+    {
+      "folded": "babelfish",
+      "collision_created": "2009-08-12",
+      "variants": [
+        {
+          "name": "Babelfish",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-12",
+          "last_release": "2009-08-12"
+        },
+        {
+          "name": "babelfish",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-04",
+          "last_release": "2009-08-04"
+        }
+      ]
+    },
+    {
+      "folded": "banana",
+      "collision_created": "2012-11-14",
+      "variants": [
+        {
+          "name": "Banana",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-11-14",
+          "last_release": "2012-11-14"
+        },
+        {
+          "name": "banana",
+          "version_count": 6,
+          "latest_version": "0.3.1",
+          "first_release": "2012-07-28",
+          "last_release": "2015-12-10"
+        }
+      ]
+    },
+    {
+      "folded": "base62",
+      "collision_created": "2013-01-19",
+      "variants": [
+        {
+          "name": "Base62",
+          "version_count": 3,
+          "latest_version": "0.0.3",
+          "first_release": "2013-01-19",
+          "last_release": "2013-01-19"
+        },
+        {
+          "name": "base62",
+          "version_count": 4,
+          "latest_version": "1.0.0",
+          "first_release": "2009-07-25",
+          "last_release": "2014-01-16"
+        }
+      ]
+    },
+    {
+      "folded": "bashy",
+      "collision_created": "2012-04-21",
+      "variants": [
+        {
+          "name": "Bashy",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2012-04-21",
+          "last_release": "2012-04-21"
+        },
+        {
+          "name": "bashy",
+          "version_count": 4,
+          "latest_version": "0.1.2",
+          "first_release": "2010-08-17",
+          "last_release": "2010-08-24"
+        }
+      ]
+    },
+    {
+      "folded": "basil",
+      "collision_created": "2012-09-18",
+      "variants": [
+        {
+          "name": "Basil",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2012-09-18",
+          "last_release": "2012-09-18"
+        },
+        {
+          "name": "basil",
+          "version_count": 7,
+          "latest_version": "0.1.3",
+          "first_release": "2012-02-10",
+          "last_release": "2012-12-18"
+        }
+      ]
+    },
+    {
+      "folded": "bigcat",
+      "collision_created": "2011-09-01",
+      "variants": [
+        {
+          "name": "BigCat",
+          "version_count": 4,
+          "latest_version": "1.0.2",
+          "first_release": "2011-08-28",
+          "last_release": "2011-09-01"
+        },
+        {
+          "name": "bigcat",
+          "version_count": 2,
+          "latest_version": "1.0.3",
+          "first_release": "2011-09-01",
+          "last_release": "2011-09-01"
+        }
+      ]
+    },
+    {
+      "folded": "bluecloth",
+      "collision_created": "2009-10-27",
+      "variants": [
+        {
+          "name": "BlueCloth",
+          "version_count": 1,
+          "latest_version": "1.0.1",
+          "first_release": "2009-10-27",
+          "last_release": "2009-10-27"
+        },
+        {
+          "name": "bluecloth",
+          "version_count": 34,
+          "latest_version": "2.2.0",
+          "first_release": "2009-08-12",
+          "last_release": "2011-11-01"
+        }
+      ]
+    },
+    {
+      "folded": "box2d",
+      "collision_created": "2009-09-08",
+      "variants": [
+        {
+          "name": "Box2d",
+          "version_count": 2,
+          "latest_version": "1.4.3",
+          "first_release": "2009-09-08",
+          "last_release": "2009-09-08"
+        },
+        {
+          "name": "box2d",
+          "version_count": 2,
+          "latest_version": "1.4.3",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "buildr",
+      "collision_created": "2009-08-12",
+      "variants": [
+        {
+          "name": "Buildr",
+          "version_count": 1,
+          "latest_version": "0.17.0",
+          "first_release": "2009-08-12",
+          "last_release": "2009-08-12"
+        },
+        {
+          "name": "buildr",
+          "version_count": 152,
+          "latest_version": "1.5.8",
+          "first_release": "2009-07-25",
+          "last_release": "2019-07-14"
+        }
+      ]
+    },
+    {
+      "folded": "cachebar",
+      "collision_created": "2012-04-23",
+      "variants": [
+        {
+          "name": "CacheBar",
+          "version_count": 3,
+          "latest_version": "1.0.2",
+          "first_release": "2011-06-01",
+          "last_release": "2011-11-18"
+        },
+        {
+          "name": "cachebar",
+          "version_count": 2,
+          "latest_version": "1.1.1",
+          "first_release": "2012-04-23",
+          "last_release": "2014-10-24"
+        }
+      ]
+    },
+    {
+      "folded": "cartesian",
+      "collision_created": "2011-01-04",
+      "variants": [
+        {
+          "name": "Cartesian",
+          "version_count": 6,
+          "latest_version": "0.4.2",
+          "first_release": "2009-07-25",
+          "last_release": "2011-01-12"
+        },
+        {
+          "name": "cartesian",
+          "version_count": 10,
+          "latest_version": "0.6.7",
+          "first_release": "2011-01-04",
+          "last_release": "2013-01-06"
+        }
+      ]
+    },
+    {
+      "folded": "classiccms",
+      "collision_created": "2012-05-16",
+      "variants": [
+        {
+          "name": "classicCMS",
+          "version_count": 5,
+          "latest_version": "0.2.3",
+          "first_release": "2012-04-01",
+          "last_release": "2012-04-01"
+        },
+        {
+          "name": "classiccms",
+          "version_count": 46,
+          "latest_version": "0.7.5",
+          "first_release": "2012-05-16",
+          "last_release": "2015-09-25"
+        }
+      ]
+    },
+    {
+      "folded": "collegiatelink",
+      "collision_created": "2013-01-25",
+      "variants": [
+        {
+          "name": "CollegiateLink",
+          "version_count": 2,
+          "latest_version": "0.0.3",
+          "first_release": "2012-11-13",
+          "last_release": "2013-02-28"
+        },
+        {
+          "name": "collegiatelink",
+          "version_count": 7,
+          "latest_version": "0.3.0",
+          "first_release": "2013-01-25",
+          "last_release": "2014-02-02"
+        }
+      ]
+    },
+    {
+      "folded": "commandline",
+      "collision_created": "2009-08-12",
+      "variants": [
+        {
+          "name": "CommandLine",
+          "version_count": 3,
+          "latest_version": "0.6.0",
+          "first_release": "2009-08-12",
+          "last_release": "2009-08-12"
+        },
+        {
+          "name": "commandline",
+          "version_count": 2,
+          "latest_version": "0.7.9",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "crudtree",
+      "collision_created": "2010-02-15",
+      "variants": [
+        {
+          "name": "CRUDtree",
+          "version_count": 2,
+          "latest_version": "0.1.1",
+          "first_release": "2010-01-25",
+          "last_release": "2010-01-30"
+        },
+        {
+          "name": "crudtree",
+          "version_count": 1,
+          "latest_version": "0.1.2",
+          "first_release": "2010-02-15",
+          "last_release": "2010-02-15"
+        }
+      ]
+    },
+    {
+      "folded": "csi",
+      "collision_created": "2013-02-16",
+      "variants": [
+        {
+          "name": "CSI",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2013-02-16",
+          "last_release": "2013-02-16"
+        },
+        {
+          "name": "csi",
+          "version_count": 3,
+          "latest_version": "0.3.3",
+          "first_release": "2013-02-16",
+          "last_release": "2015-06-24"
+        }
+      ]
+    },
+    {
+      "folded": "currency_converter_cis",
+      "collision_created": "2013-10-04",
+      "variants": [
+        {
+          "name": "currency_converter_CIS",
+          "version_count": 2,
+          "latest_version": "0.0.1",
+          "first_release": "2012-10-25",
+          "last_release": "2012-10-25"
+        },
+        {
+          "name": "currency_converter_cis",
+          "version_count": 1,
+          "latest_version": "0.0.6",
+          "first_release": "2013-10-04",
+          "last_release": "2013-10-04"
+        }
+      ]
+    },
+    {
+      "folded": "cyrillizer",
+      "collision_created": "2009-11-08",
+      "variants": [
+        {
+          "name": "Cyrillizer",
+          "version_count": 1,
+          "latest_version": "0.1.1",
+          "first_release": "2009-10-26",
+          "last_release": "2009-10-26"
+        },
+        {
+          "name": "cyrillizer",
+          "version_count": 9,
+          "latest_version": "0.3.2",
+          "first_release": "2009-11-08",
+          "last_release": "2022-11-15"
+        }
+      ]
+    },
+    {
+      "folded": "depgraph",
+      "collision_created": "2012-07-05",
+      "variants": [
+        {
+          "name": "DepGraph",
+          "version_count": 3,
+          "latest_version": "0.8.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "depgraph",
+          "version_count": 1,
+          "latest_version": "0.11.0",
+          "first_release": "2012-07-05",
+          "last_release": "2012-07-05"
+        }
+      ]
+    },
+    {
+      "folded": "devops",
+      "collision_created": "2013-05-06",
+      "variants": [
+        {
+          "name": "Devops",
+          "version_count": 5,
+          "latest_version": "0.0.7",
+          "first_release": "2013-03-25",
+          "last_release": "2013-05-03"
+        },
+        {
+          "name": "devops",
+          "version_count": 8,
+          "latest_version": "0.1.6",
+          "first_release": "2013-05-06",
+          "last_release": "2015-08-27"
+        }
+      ]
+    },
+    {
+      "folded": "dnsruby",
+      "collision_created": "2009-08-12",
+      "variants": [
+        {
+          "name": "Dnsruby",
+          "version_count": 3,
+          "latest_version": "0.5.0",
+          "first_release": "2009-08-12",
+          "last_release": "2009-08-12"
+        },
+        {
+          "name": "dnsruby",
+          "version_count": 58,
+          "latest_version": "1.74.0",
+          "first_release": "2009-07-25",
+          "last_release": "2026-07-04"
+        }
+      ]
+    },
+    {
+      "folded": "domainr",
+      "collision_created": "2012-05-19",
+      "variants": [
+        {
+          "name": "Domainr",
+          "version_count": 1,
+          "latest_version": "1.1",
+          "first_release": "2012-05-19",
+          "last_release": "2012-05-19"
+        },
+        {
+          "name": "domainr",
+          "version_count": 4,
+          "latest_version": "1.0.0",
+          "first_release": "2010-07-07",
+          "last_release": "2016-02-29"
+        }
+      ]
+    },
+    {
+      "folded": "dtr",
+      "collision_created": "2009-08-16",
+      "variants": [
+        {
+          "name": "DTR",
+          "version_count": 2,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-16",
+          "last_release": "2009-08-17"
+        },
+        {
+          "name": "dtr",
+          "version_count": 4,
+          "latest_version": "1.1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "dynamoid",
+      "collision_created": "2012-02-26",
+      "variants": [
+        {
+          "name": "Dynamoid",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-02-24",
+          "last_release": "2012-02-24"
+        },
+        {
+          "name": "dynamoid",
+          "version_count": 49,
+          "latest_version": "3.13.1",
+          "first_release": "2012-02-26",
+          "last_release": "2026-05-05"
+        }
+      ]
+    },
+    {
+      "folded": "ec2ssh",
+      "collision_created": "2011-09-21",
+      "variants": [
+        {
+          "name": "EC2ssh",
+          "version_count": 4,
+          "latest_version": "0.1.6",
+          "first_release": "2011-09-21",
+          "last_release": "2011-09-21"
+        },
+        {
+          "name": "ec2ssh",
+          "version_count": 24,
+          "latest_version": "5.1.0",
+          "first_release": "2010-12-05",
+          "last_release": "2022-04-28"
+        }
+      ]
+    },
+    {
+      "folded": "eric",
+      "collision_created": "2013-02-03",
+      "variants": [
+        {
+          "name": "Eric",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2013-02-03",
+          "last_release": "2013-02-03"
+        },
+        {
+          "name": "eric",
+          "version_count": 3,
+          "latest_version": "0.0.3",
+          "first_release": "2012-12-06",
+          "last_release": "2013-08-31"
+        }
+      ]
+    },
+    {
+      "folded": "etch",
+      "collision_created": "2009-11-14",
+      "variants": [
+        {
+          "name": "Etch",
+          "version_count": 3,
+          "latest_version": "0.1.3",
+          "first_release": "2009-09-08",
+          "last_release": "2009-09-08"
+        },
+        {
+          "name": "etch",
+          "version_count": 11,
+          "latest_version": "5.0.0",
+          "first_release": "2009-11-14",
+          "last_release": "2014-10-07"
+        }
+      ]
+    },
+    {
+      "folded": "etl",
+      "collision_created": "2012-12-27",
+      "variants": [
+        {
+          "name": "ETL",
+          "version_count": 5,
+          "latest_version": "1.1.1",
+          "first_release": "2012-12-27",
+          "last_release": "2013-06-13"
+        },
+        {
+          "name": "etl",
+          "version_count": 1,
+          "latest_version": "0.9.5.rc1",
+          "first_release": "2011-10-02",
+          "last_release": "2011-10-02"
+        }
+      ]
+    },
+    {
+      "folded": "fakeweb",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "FakeWeb",
+          "version_count": 4,
+          "latest_version": "1.0.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "fakeweb",
+          "version_count": 14,
+          "latest_version": "1.3.0",
+          "first_release": "2009-07-25",
+          "last_release": "2010-08-23"
+        }
+      ]
+    },
+    {
+      "folded": "farsifu",
+      "collision_created": "2010-03-03",
+      "variants": [
+        {
+          "name": "FarsiFu",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "farsifu",
+          "version_count": 8,
+          "latest_version": "0.5.1",
+          "first_release": "2010-03-03",
+          "last_release": "2015-09-03"
+        }
+      ]
+    },
+    {
+      "folded": "fboauth2",
+      "collision_created": "2011-07-06",
+      "variants": [
+        {
+          "name": "Fboauth2",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2011-07-05",
+          "last_release": "2011-07-05"
+        },
+        {
+          "name": "fboauth2",
+          "version_count": 5,
+          "latest_version": "0.1.4",
+          "first_release": "2011-07-06",
+          "last_release": "2011-07-07"
+        }
+      ]
+    },
+    {
+      "folded": "firstgem",
+      "collision_created": "2012-11-17",
+      "variants": [
+        {
+          "name": "firstGem",
+          "version_count": 3,
+          "latest_version": "0.0.3",
+          "first_release": "2012-11-17",
+          "last_release": "2012-11-17"
+        },
+        {
+          "name": "firstgem",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2011-08-09",
+          "last_release": "2011-08-09"
+        }
+      ]
+    },
+    {
+      "folded": "flashatron",
+      "collision_created": "2010-02-27",
+      "variants": [
+        {
+          "name": "Flashatron",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2010-02-27",
+          "last_release": "2010-02-27"
+        },
+        {
+          "name": "flashatron",
+          "version_count": 8,
+          "latest_version": "0.4.3",
+          "first_release": "2010-02-27",
+          "last_release": "2010-08-06"
+        }
+      ]
+    },
+    {
+      "folded": "flipper",
+      "collision_created": "2012-08-03",
+      "variants": [
+        {
+          "name": "Flipper",
+          "version_count": 2,
+          "latest_version": "1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "flipper",
+          "version_count": 109,
+          "latest_version": "1.4.2",
+          "first_release": "2012-08-03",
+          "last_release": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "folded": "freeswitcher",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "FreeSWITCHeR",
+          "version_count": 1,
+          "latest_version": "0.0.8",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "freeswitcher",
+          "version_count": 53,
+          "latest_version": "0.8.0",
+          "first_release": "2009-07-25",
+          "last_release": "2012-11-26"
+        }
+      ]
+    },
+    {
+      "folded": "funit",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "fUnit",
+          "version_count": 7,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "funit",
+          "version_count": 13,
+          "latest_version": "0.12.4",
+          "first_release": "2009-07-25",
+          "last_release": "2016-02-11"
+        }
+      ]
+    },
+    {
+      "folded": "gdata",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "GData",
+          "version_count": 3,
+          "latest_version": "0.0.4",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "gdata",
+          "version_count": 6,
+          "latest_version": "1.1.2",
+          "first_release": "2009-08-18",
+          "last_release": "2011-03-28"
+        }
+      ]
+    },
+    {
+      "folded": "gemfiler",
+      "collision_created": "2012-08-22",
+      "variants": [
+        {
+          "name": "Gemfiler",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-08-22",
+          "last_release": "2012-08-22"
+        },
+        {
+          "name": "gemfiler",
+          "version_count": 9,
+          "latest_version": "0.1.7",
+          "first_release": "2012-08-22",
+          "last_release": "2015-04-01"
+        }
+      ]
+    },
+    {
+      "folded": "generator",
+      "collision_created": "2013-05-07",
+      "variants": [
+        {
+          "name": "Generator",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2013-05-07",
+          "last_release": "2013-05-07"
+        },
+        {
+          "name": "generator",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-05-03",
+          "last_release": "2012-05-03"
+        }
+      ]
+    },
+    {
+      "folded": "georuby",
+      "collision_created": "2011-06-30",
+      "variants": [
+        {
+          "name": "GeoRuby",
+          "version_count": 20,
+          "latest_version": "0.0.3",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "georuby",
+          "version_count": 12,
+          "latest_version": "2.5.2",
+          "first_release": "2011-06-30",
+          "last_release": "2015-02-06"
+        }
+      ]
+    },
+    {
+      "folded": "gitgo",
+      "collision_created": "2012-11-16",
+      "variants": [
+        {
+          "name": "GitGo",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-11-16",
+          "last_release": "2012-11-16"
+        },
+        {
+          "name": "gitgo",
+          "version_count": 1,
+          "latest_version": "0.3.3",
+          "first_release": "2010-08-14",
+          "last_release": "2010-08-14"
+        }
+      ]
+    },
+    {
+      "folded": "gitspotter",
+      "collision_created": "2013-01-11",
+      "variants": [
+        {
+          "name": "Gitspotter",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2013-01-11",
+          "last_release": "2013-01-11"
+        },
+        {
+          "name": "gitspotter",
+          "version_count": 2,
+          "latest_version": "0.0.3",
+          "first_release": "2013-01-11",
+          "last_release": "2013-01-11"
+        }
+      ]
+    },
+    {
+      "folded": "gooby",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Gooby",
+          "version_count": 2,
+          "latest_version": "0.9.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "gooby",
+          "version_count": 7,
+          "latest_version": "1.0.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "googleplus",
+      "collision_created": "2011-10-25",
+      "variants": [
+        {
+          "name": "GooglePlus",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2011-10-25",
+          "last_release": "2011-10-25"
+        },
+        {
+          "name": "googleplus",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2011-09-15",
+          "last_release": "2011-09-15"
+        }
+      ]
+    },
+    {
+      "folded": "grada",
+      "collision_created": "2013-07-02",
+      "variants": [
+        {
+          "name": "GraDA",
+          "version_count": 3,
+          "latest_version": "1.1.0",
+          "first_release": "2013-06-25",
+          "last_release": "2013-07-01"
+        },
+        {
+          "name": "grada",
+          "version_count": 12,
+          "latest_version": "3.0.0",
+          "first_release": "2013-07-02",
+          "last_release": "2013-08-19"
+        }
+      ]
+    },
+    {
+      "folded": "harry",
+      "collision_created": "2013-04-03",
+      "variants": [
+        {
+          "name": "Harry",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2013-04-03",
+          "last_release": "2013-04-03"
+        },
+        {
+          "name": "harry",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2013-04-03",
+          "last_release": "2013-04-03"
+        }
+      ]
+    },
+    {
+      "folded": "hebruby",
+      "collision_created": "2009-09-24",
+      "variants": [
+        {
+          "name": "Hebruby",
+          "version_count": 2,
+          "latest_version": "1.2.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "hebruby",
+          "version_count": 6,
+          "latest_version": "2.1.1",
+          "first_release": "2009-09-24",
+          "last_release": "2018-05-01"
+        }
+      ]
+    },
+    {
+      "folded": "hello",
+      "collision_created": "2012-06-26",
+      "variants": [
+        {
+          "name": "Hello",
+          "version_count": 1,
+          "latest_version": "0.0.0",
+          "first_release": "2012-06-26",
+          "last_release": "2012-06-26"
+        },
+        {
+          "name": "hello",
+          "version_count": 2,
+          "latest_version": "0.0.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "hellogem",
+      "collision_created": "2013-01-17",
+      "variants": [
+        {
+          "name": "HelloGem",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2013-01-17",
+          "last_release": "2013-01-17"
+        },
+        {
+          "name": "hellogem",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2011-01-10",
+          "last_release": "2011-01-10"
+        }
+      ]
+    },
+    {
+      "folded": "impatient",
+      "collision_created": "2012-08-08",
+      "variants": [
+        {
+          "name": "Impatient",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2012-08-08",
+          "last_release": "2012-08-08"
+        },
+        {
+          "name": "impatient",
+          "version_count": 2,
+          "latest_version": "1.1.1",
+          "first_release": "2012-08-08",
+          "last_release": "2012-08-16"
+        }
+      ]
+    },
+    {
+      "folded": "informer",
+      "collision_created": "2009-10-29",
+      "variants": [
+        {
+          "name": "Informer",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-10-29",
+          "last_release": "2009-10-29"
+        },
+        {
+          "name": "informer",
+          "version_count": 2,
+          "latest_version": "0.2.0",
+          "first_release": "2009-10-29",
+          "last_release": "2009-11-01"
+        }
+      ]
+    },
+    {
+      "folded": "jalalidate",
+      "collision_created": "2010-03-03",
+      "variants": [
+        {
+          "name": "JalaliDate",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "jalalidate",
+          "version_count": 10,
+          "latest_version": "0.3.6",
+          "first_release": "2010-03-03",
+          "last_release": "2017-11-27"
+        }
+      ]
+    },
+    {
+      "folded": "jazz",
+      "collision_created": "2011-11-10",
+      "variants": [
+        {
+          "name": "Jazz",
+          "version_count": 2,
+          "latest_version": "0.0.4",
+          "first_release": "2011-11-10",
+          "last_release": "2011-11-10"
+        },
+        {
+          "name": "jazz",
+          "version_count": 1,
+          "latest_version": "0.1.1",
+          "first_release": "2010-03-02",
+          "last_release": "2010-03-02"
+        }
+      ]
+    },
+    {
+      "folded": "jazzez",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Jazzez",
+          "version_count": 2,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "jazzez",
+          "version_count": 1,
+          "latest_version": "1.1.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "jbootstrap",
+      "collision_created": "2012-11-13",
+      "variants": [
+        {
+          "name": "jBootstrap",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-11-13",
+          "last_release": "2012-11-13"
+        },
+        {
+          "name": "jbootstrap",
+          "version_count": 8,
+          "latest_version": "0.0.5.1",
+          "first_release": "2012-11-13",
+          "last_release": "2012-11-15"
+        }
+      ]
+    },
+    {
+      "folded": "jruby-openssl",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "JRuby-OpenSSL",
+          "version_count": 1,
+          "latest_version": "0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "jruby-openssl",
+          "version_count": 95,
+          "latest_version": "0.16.2",
+          "first_release": "2009-07-25",
+          "last_release": "2026-07-20"
+        }
+      ]
+    },
+    {
+      "folded": "jsrender-rails",
+      "collision_created": "2013-03-08",
+      "variants": [
+        {
+          "name": "jsRender-rails",
+          "version_count": 4,
+          "latest_version": "0.9.3",
+          "first_release": "2012-09-19",
+          "last_release": "2012-09-19"
+        },
+        {
+          "name": "jsrender-rails",
+          "version_count": 5,
+          "latest_version": "2.0",
+          "first_release": "2013-03-08",
+          "last_release": "2013-06-19"
+        }
+      ]
+    },
+    {
+      "folded": "kanocc",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Kanocc",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "kanocc",
+          "version_count": 2,
+          "latest_version": "0.2.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-10-01"
+        }
+      ]
+    },
+    {
+      "folded": "krakken",
+      "collision_created": "2013-06-08",
+      "variants": [
+        {
+          "name": "Krakken",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2013-06-08",
+          "last_release": "2013-06-08"
+        },
+        {
+          "name": "krakken",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2013-06-08",
+          "last_release": "2013-06-08"
+        }
+      ]
+    },
+    {
+      "folded": "labrador",
+      "collision_created": "2012-07-06",
+      "variants": [
+        {
+          "name": "Labrador",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-07-06",
+          "last_release": "2012-07-06"
+        },
+        {
+          "name": "labrador",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-07-06",
+          "last_release": "2012-07-06"
+        }
+      ]
+    },
+    {
+      "folded": "langrove",
+      "collision_created": "2012-04-23",
+      "variants": [
+        {
+          "name": "LanGrove",
+          "version_count": 2,
+          "latest_version": "0.0.2",
+          "first_release": "2012-04-21",
+          "last_release": "2012-04-22"
+        },
+        {
+          "name": "langrove",
+          "version_count": 10,
+          "latest_version": "0.0.5.4",
+          "first_release": "2012-04-23",
+          "last_release": "2012-08-09"
+        }
+      ]
+    },
+    {
+      "folded": "ledelay",
+      "collision_created": "2011-06-30",
+      "variants": [
+        {
+          "name": "LeDelay",
+          "version_count": 1,
+          "latest_version": "0.2",
+          "first_release": "2011-06-30",
+          "last_release": "2011-06-30"
+        },
+        {
+          "name": "leDelay",
+          "version_count": 1,
+          "latest_version": "0.2",
+          "first_release": "2011-06-30",
+          "last_release": "2011-06-30"
+        }
+      ]
+    },
+    {
+      "folded": "legit-the-git",
+      "collision_created": "2011-02-07",
+      "variants": [
+        {
+          "name": "Legit-the-Git",
+          "version_count": 3,
+          "latest_version": "0.0.3",
+          "first_release": "2011-01-10",
+          "last_release": "2011-01-12"
+        },
+        {
+          "name": "legit-the-git",
+          "version_count": 4,
+          "latest_version": "0.0.7",
+          "first_release": "2011-02-07",
+          "last_release": "2011-03-31"
+        }
+      ]
+    },
+    {
+      "folded": "letter",
+      "collision_created": "2012-11-14",
+      "variants": [
+        {
+          "name": "Letter",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-01-17",
+          "last_release": "2012-01-17"
+        },
+        {
+          "name": "letter",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-11-14",
+          "last_release": "2012-11-14"
+        }
+      ]
+    },
+    {
+      "folded": "linguistics",
+      "collision_created": "2009-11-18",
+      "variants": [
+        {
+          "name": "Linguistics",
+          "version_count": 2,
+          "latest_version": "1.0.5",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "linguistics",
+          "version_count": 8,
+          "latest_version": "2.1.0",
+          "first_release": "2009-11-18",
+          "last_release": "2015-09-16"
+        }
+      ]
+    },
+    {
+      "folded": "locksmith",
+      "collision_created": "2012-07-03",
+      "variants": [
+        {
+          "name": "Locksmith",
+          "version_count": 2,
+          "latest_version": "0.1.1",
+          "first_release": "2012-07-03",
+          "last_release": "2012-07-03"
+        },
+        {
+          "name": "locksmith",
+          "version_count": 4,
+          "latest_version": "0.1.1",
+          "first_release": "2011-02-22",
+          "last_release": "2011-05-08"
+        }
+      ]
+    },
+    {
+      "folded": "macaddr",
+      "collision_created": "2011-05-24",
+      "variants": [
+        {
+          "name": "MACAddr",
+          "version_count": 1,
+          "latest_version": "0.3.0",
+          "first_release": "2011-05-24",
+          "last_release": "2011-05-24"
+        },
+        {
+          "name": "macaddr",
+          "version_count": 16,
+          "latest_version": "1.7.2",
+          "first_release": "2009-07-25",
+          "last_release": "2019-06-05"
+        }
+      ]
+    },
+    {
+      "folded": "magic",
+      "collision_created": "2011-04-01",
+      "variants": [
+        {
+          "name": "Magic",
+          "version_count": 3,
+          "latest_version": "1.1.2",
+          "first_release": "2011-04-01",
+          "last_release": "2013-03-05"
+        },
+        {
+          "name": "magic",
+          "version_count": 15,
+          "latest_version": "0.2.9",
+          "first_release": "2010-01-10",
+          "last_release": "2015-04-16"
+        }
+      ]
+    },
+    {
+      "folded": "markaby",
+      "collision_created": "2009-10-10",
+      "variants": [
+        {
+          "name": "Markaby",
+          "version_count": 2,
+          "latest_version": "0.6.5",
+          "first_release": "2009-10-10",
+          "last_release": "2009-10-13"
+        },
+        {
+          "name": "markaby",
+          "version_count": 19,
+          "latest_version": "0.9.4",
+          "first_release": "2009-07-25",
+          "last_release": "2024-06-14"
+        }
+      ]
+    },
+    {
+      "folded": "medea",
+      "collision_created": "2011-01-04",
+      "variants": [
+        {
+          "name": "Medea",
+          "version_count": 2,
+          "latest_version": "0.2.27",
+          "first_release": "2011-01-04",
+          "last_release": "2011-01-04"
+        },
+        {
+          "name": "medea",
+          "version_count": 54,
+          "latest_version": "0.7.2",
+          "first_release": "2010-12-21",
+          "last_release": "2011-03-29"
+        }
+      ]
+    },
+    {
+      "folded": "memoize",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Memoize",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "memoize",
+          "version_count": 8,
+          "latest_version": "1.3.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-08-09"
+        }
+      ]
+    },
+    {
+      "folded": "midna",
+      "collision_created": "2012-05-31",
+      "variants": [
+        {
+          "name": "Midna",
+          "version_count": 2,
+          "latest_version": "0.9.0",
+          "first_release": "2012-05-31",
+          "last_release": "2012-06-05"
+        },
+        {
+          "name": "midna",
+          "version_count": 6,
+          "latest_version": "0.5.0",
+          "first_release": "2010-08-03",
+          "last_release": "2010-09-22"
+        }
+      ]
+    },
+    {
+      "folded": "missionhub",
+      "collision_created": "2012-10-10",
+      "variants": [
+        {
+          "name": "MissionHub",
+          "version_count": 13,
+          "latest_version": "2.1.2",
+          "first_release": "2012-10-02",
+          "last_release": "2013-02-19"
+        },
+        {
+          "name": "Missionhub",
+          "version_count": 1,
+          "latest_version": "1.0.2",
+          "first_release": "2012-10-10",
+          "last_release": "2012-10-10"
+        }
+      ]
+    },
+    {
+      "folded": "moby",
+      "collision_created": "2013-02-13",
+      "variants": [
+        {
+          "name": "Moby",
+          "version_count": 2,
+          "latest_version": "0.5.1",
+          "first_release": "2013-02-13",
+          "last_release": "2013-02-13"
+        },
+        {
+          "name": "moby",
+          "version_count": 10,
+          "latest_version": "1.2.0",
+          "first_release": "2012-02-01",
+          "last_release": "2012-02-03"
+        }
+      ]
+    },
+    {
+      "folded": "modelmaker",
+      "collision_created": "2012-10-16",
+      "variants": [
+        {
+          "name": "ModelMaker",
+          "version_count": 3,
+          "latest_version": "0.1.2",
+          "first_release": "2012-10-16",
+          "last_release": "2012-10-16"
+        },
+        {
+          "name": "modelmaker",
+          "version_count": 2,
+          "latest_version": "0.2.0",
+          "first_release": "2012-10-16",
+          "last_release": "2012-10-25"
+        }
+      ]
+    },
+    {
+      "folded": "mp4info",
+      "collision_created": "2010-03-15",
+      "variants": [
+        {
+          "name": "MP4Info",
+          "version_count": 6,
+          "latest_version": "0.3.3",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "mp4info",
+          "version_count": 1,
+          "latest_version": "1.7.3",
+          "first_release": "2010-03-15",
+          "last_release": "2010-03-15"
+        }
+      ]
+    },
+    {
+      "folded": "nabaztag",
+      "collision_created": "2010-02-12",
+      "variants": [
+        {
+          "name": "Nabaztag",
+          "version_count": 2,
+          "latest_version": "0.3.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "nabaztag",
+          "version_count": 2,
+          "latest_version": "0.2.3",
+          "first_release": "2010-02-12",
+          "last_release": "2010-02-12"
+        }
+      ]
+    },
+    {
+      "folded": "nilsimsa",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Nilsimsa",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "nilsimsa",
+          "version_count": 2,
+          "latest_version": "1.1.1",
+          "first_release": "2009-07-25",
+          "last_release": "2012-06-21"
+        }
+      ]
+    },
+    {
+      "folded": "nodevent",
+      "collision_created": "2012-05-07",
+      "variants": [
+        {
+          "name": "NoDevent",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2012-05-07",
+          "last_release": "2012-05-07"
+        },
+        {
+          "name": "nodevent",
+          "version_count": 21,
+          "latest_version": "3.2.0",
+          "first_release": "2012-05-07",
+          "last_release": "2013-02-13"
+        }
+      ]
+    },
+    {
+      "folded": "o_o",
+      "collision_created": "2012-05-11",
+      "variants": [
+        {
+          "name": "O_O",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2012-05-11",
+          "last_release": "2012-05-11"
+        },
+        {
+          "name": "O_o",
+          "version_count": 3,
+          "latest_version": "1.0.1",
+          "first_release": "2012-05-11",
+          "last_release": "2018-05-11"
+        }
+      ]
+    },
+    {
+      "folded": "oasis",
+      "collision_created": "2009-12-20",
+      "variants": [
+        {
+          "name": "Oasis",
+          "version_count": 1,
+          "latest_version": "0.1.1",
+          "first_release": "2009-12-20",
+          "last_release": "2009-12-20"
+        },
+        {
+          "name": "oasis",
+          "version_count": 12,
+          "latest_version": "0.5.4",
+          "first_release": "2009-12-20",
+          "last_release": "2010-02-12"
+        }
+      ]
+    },
+    {
+      "folded": "onion",
+      "collision_created": "2010-10-02",
+      "variants": [
+        {
+          "name": "Onion",
+          "version_count": 2,
+          "latest_version": "0.0.2",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "onion",
+          "version_count": 4,
+          "latest_version": "0.1.3",
+          "first_release": "2010-10-02",
+          "last_release": "2011-04-10"
+        }
+      ]
+    },
+    {
+      "folded": "onlooker",
+      "collision_created": "2010-01-24",
+      "variants": [
+        {
+          "name": "Onlooker",
+          "version_count": 1,
+          "latest_version": "0.1.1",
+          "first_release": "2010-01-24",
+          "last_release": "2010-01-24"
+        },
+        {
+          "name": "onlooker",
+          "version_count": 1,
+          "latest_version": "0.1.1",
+          "first_release": "2010-01-24",
+          "last_release": "2010-01-24"
+        }
+      ]
+    },
+    {
+      "folded": "opal",
+      "collision_created": "2010-01-22",
+      "variants": [
+        {
+          "name": "Opal",
+          "version_count": 1,
+          "latest_version": "0.2.5.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "opal",
+          "version_count": 137,
+          "latest_version": "1.8.4.rc1",
+          "first_release": "2010-01-22",
+          "last_release": "2026-05-01"
+        }
+      ]
+    },
+    {
+      "folded": "pablo",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Pablo",
+          "version_count": 3,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "pablo",
+          "version_count": 1,
+          "latest_version": "1.0.3",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "pbyf",
+      "collision_created": "2012-08-23",
+      "variants": [
+        {
+          "name": "PBYF",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-08-14",
+          "last_release": "2012-08-14"
+        },
+        {
+          "name": "pbyf",
+          "version_count": 3,
+          "latest_version": "0.0.4",
+          "first_release": "2012-08-23",
+          "last_release": "2012-08-26"
+        }
+      ]
+    },
+    {
+      "folded": "pd_x12",
+      "collision_created": "2013-03-19",
+      "variants": [
+        {
+          "name": "PD_x12",
+          "version_count": 4,
+          "latest_version": "1.3.12",
+          "first_release": "2012-12-01",
+          "last_release": "2013-01-27"
+        },
+        {
+          "name": "pd_x12",
+          "version_count": 13,
+          "latest_version": "1.5.4",
+          "first_release": "2013-03-19",
+          "last_release": "2016-02-25"
+        }
+      ]
+    },
+    {
+      "folded": "pickaxe",
+      "collision_created": "2013-07-11",
+      "variants": [
+        {
+          "name": "Pickaxe",
+          "version_count": 20,
+          "latest_version": "0.7.1",
+          "first_release": "2010-11-16",
+          "last_release": "2010-12-13"
+        },
+        {
+          "name": "pickaxe",
+          "version_count": 1,
+          "latest_version": "0.8.1",
+          "first_release": "2013-07-11",
+          "last_release": "2013-07-11"
+        }
+      ]
+    },
+    {
+      "folded": "piggy",
+      "collision_created": "2010-09-07",
+      "variants": [
+        {
+          "name": "Piggy",
+          "version_count": 7,
+          "latest_version": "0.5.1.3",
+          "first_release": "2009-07-25",
+          "last_release": "2011-01-17"
+        },
+        {
+          "name": "piggy",
+          "version_count": 2,
+          "latest_version": "0.1.0",
+          "first_release": "2010-09-07",
+          "last_release": "2010-09-09"
+        }
+      ]
+    },
+    {
+      "folded": "platform",
+      "collision_created": "2011-10-13",
+      "variants": [
+        {
+          "name": "Platform",
+          "version_count": 5,
+          "latest_version": "0.4.2",
+          "first_release": "2009-07-25",
+          "last_release": "2018-12-14"
+        },
+        {
+          "name": "platform",
+          "version_count": 4,
+          "latest_version": "3.1.4",
+          "first_release": "2011-10-13",
+          "last_release": "2012-04-14"
+        }
+      ]
+    },
+    {
+      "folded": "polar",
+      "collision_created": "2010-07-29",
+      "variants": [
+        {
+          "name": "Polar",
+          "version_count": 2,
+          "latest_version": "0.2.1",
+          "first_release": "2010-07-29",
+          "last_release": "2010-07-29"
+        },
+        {
+          "name": "polar",
+          "version_count": 1,
+          "latest_version": "0.2.1",
+          "first_release": "2010-07-29",
+          "last_release": "2010-07-29"
+        }
+      ]
+    },
+    {
+      "folded": "popen4",
+      "collision_created": "2009-11-13",
+      "variants": [
+        {
+          "name": "POpen4",
+          "version_count": 3,
+          "latest_version": "0.1.4",
+          "first_release": "2009-11-13",
+          "last_release": "2009-11-17"
+        },
+        {
+          "name": "popen4",
+          "version_count": 1,
+          "latest_version": "0.1.2",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        }
+      ]
+    },
+    {
+      "folded": "promotion",
+      "collision_created": "2012-09-19",
+      "variants": [
+        {
+          "name": "ProMotion",
+          "version_count": 63,
+          "latest_version": "3.0.0",
+          "first_release": "2012-08-30",
+          "last_release": "2020-03-05"
+        },
+        {
+          "name": "promotion",
+          "version_count": 28,
+          "latest_version": "2.1.3",
+          "first_release": "2012-09-19",
+          "last_release": "2013-11-22"
+        }
+      ]
+    },
+    {
+      "folded": "protoncouch",
+      "collision_created": "2011-02-02",
+      "variants": [
+        {
+          "name": "ProtonCouch",
+          "version_count": 1,
+          "latest_version": "1.0",
+          "first_release": "2011-02-02",
+          "last_release": "2011-02-02"
+        },
+        {
+          "name": "protoncouch",
+          "version_count": 1,
+          "latest_version": "1.0",
+          "first_release": "2011-02-02",
+          "last_release": "2011-02-02"
+        }
+      ]
+    },
+    {
+      "folded": "puke",
+      "collision_created": "2011-10-15",
+      "variants": [
+        {
+          "name": "Puke",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2011-10-15",
+          "last_release": "2011-10-15"
+        },
+        {
+          "name": "puke",
+          "version_count": 2,
+          "latest_version": "0.0.2",
+          "first_release": "2011-01-22",
+          "last_release": "2011-10-15"
+        }
+      ]
+    },
+    {
+      "folded": "pulse",
+      "collision_created": "2010-11-25",
+      "variants": [
+        {
+          "name": "Pulse",
+          "version_count": 16,
+          "latest_version": "1.3.3",
+          "first_release": "2010-11-25",
+          "last_release": "2010-12-29"
+        },
+        {
+          "name": "pulse",
+          "version_count": 2,
+          "latest_version": "0.2.0",
+          "first_release": "2009-07-25",
+          "last_release": "2012-01-10"
+        }
+      ]
+    },
+    {
+      "folded": "pushit",
+      "collision_created": "2013-06-13",
+      "variants": [
+        {
+          "name": "PushIt",
+          "version_count": 4,
+          "latest_version": "1.0.4",
+          "first_release": "2013-06-13",
+          "last_release": "2013-09-12"
+        },
+        {
+          "name": "pushit",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2011-04-20",
+          "last_release": "2011-04-20"
+        }
+      ]
+    },
+    {
+      "folded": "q",
+      "collision_created": "2011-07-06",
+      "variants": [
+        {
+          "name": "Q",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2010-08-08",
+          "last_release": "2010-08-08"
+        },
+        {
+          "name": "q",
+          "version_count": 3,
+          "latest_version": "0.0.1",
+          "first_release": "2011-07-06",
+          "last_release": "2013-12-02"
+        }
+      ]
+    },
+    {
+      "folded": "rack",
+      "collision_created": "2010-03-26",
+      "variants": [
+        {
+          "name": "Rack",
+          "version_count": 4,
+          "latest_version": "2.0.0",
+          "first_release": "2010-03-26",
+          "last_release": "2010-04-01"
+        },
+        {
+          "name": "rack",
+          "version_count": 178,
+          "latest_version": "3.2.6",
+          "first_release": "2009-07-25",
+          "last_release": "2026-04-01"
+        }
+      ]
+    },
+    {
+      "folded": "rangehash",
+      "collision_created": "2011-08-14",
+      "variants": [
+        {
+          "name": "RangeHash",
+          "version_count": 1,
+          "latest_version": "0.0.6",
+          "first_release": "2011-08-14",
+          "last_release": "2011-08-14"
+        },
+        {
+          "name": "rangehash",
+          "version_count": 7,
+          "latest_version": "0.0.7",
+          "first_release": "2010-12-29",
+          "last_release": "2011-09-29"
+        }
+      ]
+    },
+    {
+      "folded": "realiaser",
+      "collision_created": "2012-11-30",
+      "variants": [
+        {
+          "name": "Realiaser",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-11-30",
+          "last_release": "2012-11-30"
+        },
+        {
+          "name": "realiaser",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-11-30",
+          "last_release": "2012-11-30"
+        }
+      ]
+    },
+    {
+      "folded": "recalls",
+      "collision_created": "2011-05-19",
+      "variants": [
+        {
+          "name": "Recalls",
+          "version_count": 1,
+          "latest_version": "0.1",
+          "first_release": "2011-05-19",
+          "last_release": "2011-05-19"
+        },
+        {
+          "name": "recalls",
+          "version_count": 1,
+          "latest_version": "0.1",
+          "first_release": "2011-05-19",
+          "last_release": "2011-05-19"
+        }
+      ]
+    },
+    {
+      "folded": "redir",
+      "collision_created": "2012-10-24",
+      "variants": [
+        {
+          "name": "Redir",
+          "version_count": 1,
+          "latest_version": "0.0.4",
+          "first_release": "2012-10-24",
+          "last_release": "2012-10-24"
+        },
+        {
+          "name": "redir",
+          "version_count": 3,
+          "latest_version": "0.0.6",
+          "first_release": "2012-10-24",
+          "last_release": "2012-10-29"
+        }
+      ]
+    },
+    {
+      "folded": "relata",
+      "collision_created": "2010-10-22",
+      "variants": [
+        {
+          "name": "Relata",
+          "version_count": 2,
+          "latest_version": "0.0.3",
+          "first_release": "2010-10-05",
+          "last_release": "2010-10-05"
+        },
+        {
+          "name": "relata",
+          "version_count": 2,
+          "latest_version": "0.0.4",
+          "first_release": "2010-10-22",
+          "last_release": "2010-11-01"
+        }
+      ]
+    },
+    {
+      "folded": "reposh",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Reposh",
+          "version_count": 1,
+          "latest_version": "0.1.5",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "reposh",
+          "version_count": 5,
+          "latest_version": "0.1.10",
+          "first_release": "2009-07-25",
+          "last_release": "2010-12-03"
+        }
+      ]
+    },
+    {
+      "folded": "rmeetup",
+      "collision_created": "2011-01-21",
+      "variants": [
+        {
+          "name": "rMeetup",
+          "version_count": 3,
+          "latest_version": "2.1.0",
+          "first_release": "2011-01-21",
+          "last_release": "2015-01-21"
+        },
+        {
+          "name": "rmeetup",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2009-11-01",
+          "last_release": "2009-11-01"
+        }
+      ]
+    },
+    {
+      "folded": "roadrunner",
+      "collision_created": "2010-04-22",
+      "variants": [
+        {
+          "name": "RoadRunner",
+          "version_count": 3,
+          "latest_version": "4.0.1",
+          "first_release": "2009-11-19",
+          "last_release": "2010-03-12"
+        },
+        {
+          "name": "roadrunner",
+          "version_count": 2,
+          "latest_version": "4.0.4",
+          "first_release": "2010-04-22",
+          "last_release": "2010-04-29"
+        }
+      ]
+    },
+    {
+      "folded": "robin",
+      "collision_created": "2013-02-18",
+      "variants": [
+        {
+          "name": "Robin",
+          "version_count": 1,
+          "latest_version": "0.0.3",
+          "first_release": "2013-02-18",
+          "last_release": "2013-02-18"
+        },
+        {
+          "name": "robin",
+          "version_count": 1,
+          "latest_version": "0.0.4",
+          "first_release": "2013-02-18",
+          "last_release": "2013-02-18"
+        }
+      ]
+    },
+    {
+      "folded": "ron",
+      "collision_created": "2009-11-05",
+      "variants": [
+        {
+          "name": "Ron",
+          "version_count": 3,
+          "latest_version": "0.1.2",
+          "first_release": "2009-07-25",
+          "last_release": "2010-01-03"
+        },
+        {
+          "name": "ron",
+          "version_count": 4,
+          "latest_version": "0.4",
+          "first_release": "2009-11-05",
+          "last_release": "2010-03-08"
+        }
+      ]
+    },
+    {
+      "folded": "roxml",
+      "collision_created": "2009-10-17",
+      "variants": [
+        {
+          "name": "ROXML",
+          "version_count": 1,
+          "latest_version": "3.0.0",
+          "first_release": "2009-10-17",
+          "last_release": "2009-10-17"
+        },
+        {
+          "name": "roxml",
+          "version_count": 28,
+          "latest_version": "4.2.0",
+          "first_release": "2009-07-25",
+          "last_release": "2021-09-09"
+        }
+      ]
+    },
+    {
+      "folded": "rsokoban",
+      "collision_created": "2012-05-18",
+      "variants": [
+        {
+          "name": "RSokoban",
+          "version_count": 5,
+          "latest_version": "0.76.1",
+          "first_release": "2011-01-21",
+          "last_release": "2011-04-02"
+        },
+        {
+          "name": "rsokoban",
+          "version_count": 3,
+          "latest_version": "1.1.0",
+          "first_release": "2012-05-18",
+          "last_release": "2013-01-17"
+        }
+      ]
+    },
+    {
+      "folded": "rspec-steps",
+      "collision_created": "2011-07-26",
+      "variants": [
+        {
+          "name": "RSpec-Steps",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2011-04-23",
+          "last_release": "2011-04-23"
+        },
+        {
+          "name": "rspec-steps",
+          "version_count": 26,
+          "latest_version": "2.1.1",
+          "first_release": "2011-07-26",
+          "last_release": "2015-12-22"
+        }
+      ]
+    },
+    {
+      "folded": "rsruby",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "RSRuby",
+          "version_count": 1,
+          "latest_version": "0.4.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "rsruby",
+          "version_count": 8,
+          "latest_version": "0.5.1.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "rtalib",
+      "collision_created": "2012-12-28",
+      "variants": [
+        {
+          "name": "RTALib",
+          "version_count": 2,
+          "latest_version": "0.0.2.pre",
+          "first_release": "2012-12-27",
+          "last_release": "2012-12-27"
+        },
+        {
+          "name": "rtalib",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-12-28",
+          "last_release": "2012-12-28"
+        }
+      ]
+    },
+    {
+      "folded": "rtfmd",
+      "collision_created": "2011-12-28",
+      "variants": [
+        {
+          "name": "RTFMd",
+          "version_count": 16,
+          "latest_version": "0.10301.17",
+          "first_release": "2011-12-17",
+          "last_release": "2011-12-19"
+        },
+        {
+          "name": "rtfmd",
+          "version_count": 4,
+          "latest_version": "0.10301.20",
+          "first_release": "2011-12-28",
+          "last_release": "2012-03-14"
+        }
+      ]
+    },
+    {
+      "folded": "rubernate",
+      "collision_created": "2011-08-04",
+      "variants": [
+        {
+          "name": "Rubernate",
+          "version_count": 8,
+          "latest_version": "0.1.7",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "rubernate",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2011-08-04",
+          "last_release": "2011-08-04"
+        }
+      ]
+    },
+    {
+      "folded": "ruby-hl7",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Ruby-HL7",
+          "version_count": 1,
+          "latest_version": "0.1.23",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "ruby-hl7",
+          "version_count": 19,
+          "latest_version": "1.4.0",
+          "first_release": "2009-07-25",
+          "last_release": "2025-01-07"
+        }
+      ]
+    },
+    {
+      "folded": "rubyapp",
+      "collision_created": "2011-10-27",
+      "variants": [
+        {
+          "name": "RubyApp",
+          "version_count": 226,
+          "latest_version": "0.7.16",
+          "first_release": "2011-10-27",
+          "last_release": "2013-04-03"
+        },
+        {
+          "name": "rubyapp",
+          "version_count": 2,
+          "latest_version": "0.1.2",
+          "first_release": "2010-06-06",
+          "last_release": "2010-06-07"
+        }
+      ]
+    },
+    {
+      "folded": "rubysh",
+      "collision_created": "2012-09-12",
+      "variants": [
+        {
+          "name": "RubySH",
+          "version_count": 1,
+          "latest_version": "1.0",
+          "first_release": "2012-05-07",
+          "last_release": "2012-05-07"
+        },
+        {
+          "name": "rubysh",
+          "version_count": 19,
+          "latest_version": "0.3.0",
+          "first_release": "2012-09-12",
+          "last_release": "2014-05-25"
+        }
+      ]
+    },
+    {
+      "folded": "rug",
+      "collision_created": "2011-09-22",
+      "variants": [
+        {
+          "name": "Rug",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2010-11-21",
+          "last_release": "2010-11-21"
+        },
+        {
+          "name": "rug",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2011-09-22",
+          "last_release": "2011-09-22"
+        }
+      ]
+    },
+    {
+      "folded": "rvm",
+      "collision_created": "2009-08-26",
+      "variants": [
+        {
+          "name": "rVM",
+          "version_count": 15,
+          "latest_version": "0.0.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "rvm",
+          "version_count": 237,
+          "latest_version": "1.11.3.9",
+          "first_release": "2009-08-26",
+          "last_release": "2014-01-28"
+        }
+      ]
+    },
+    {
+      "folded": "sac",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Sac",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "sac",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        }
+      ]
+    },
+    {
+      "folded": "saikuro",
+      "collision_created": "2011-09-27",
+      "variants": [
+        {
+          "name": "Saikuro",
+          "version_count": 1,
+          "latest_version": "1.1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "saikuro",
+          "version_count": 3,
+          "latest_version": "1.2.1",
+          "first_release": "2011-09-27",
+          "last_release": "2011-09-27"
+        }
+      ]
+    },
+    {
+      "folded": "samplegem",
+      "collision_created": "2013-04-25",
+      "variants": [
+        {
+          "name": "SampleGem",
+          "version_count": 1,
+          "latest_version": "1.0.1",
+          "first_release": "2013-02-08",
+          "last_release": "2013-02-08"
+        },
+        {
+          "name": "samplegem",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2013-04-25",
+          "last_release": "2013-04-25"
+        }
+      ]
+    },
+    {
+      "folded": "sandrbox",
+      "collision_created": "2012-03-30",
+      "variants": [
+        {
+          "name": "Sandrbox",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-03-30",
+          "last_release": "2012-03-30"
+        },
+        {
+          "name": "sandrbox",
+          "version_count": 2,
+          "latest_version": "0.1.0",
+          "first_release": "2012-03-30",
+          "last_release": "2012-03-30"
+        }
+      ]
+    },
+    {
+      "folded": "savage",
+      "collision_created": "2013-06-18",
+      "variants": [
+        {
+          "name": "SAVAGE",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2013-06-18",
+          "last_release": "2013-06-18"
+        },
+        {
+          "name": "savage",
+          "version_count": 16,
+          "latest_version": "1.2.0",
+          "first_release": "2010-05-02",
+          "last_release": "2013-01-10"
+        }
+      ]
+    },
+    {
+      "folded": "selenium",
+      "collision_created": "2010-11-08",
+      "variants": [
+        {
+          "name": "Selenium",
+          "version_count": 8,
+          "latest_version": "1.0.4",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "selenium",
+          "version_count": 19,
+          "latest_version": "0.2.11",
+          "first_release": "2010-11-08",
+          "last_release": "2013-11-23"
+        }
+      ]
+    },
+    {
+      "folded": "selenium-client",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Selenium-Client",
+          "version_count": 1,
+          "latest_version": "0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "selenium-client",
+          "version_count": 20,
+          "latest_version": "1.2.18",
+          "first_release": "2009-07-25",
+          "last_release": "2010-01-12"
+        }
+      ]
+    },
+    {
+      "folded": "sgfparser",
+      "collision_created": "2010-10-22",
+      "variants": [
+        {
+          "name": "SgfParser",
+          "version_count": 7,
+          "latest_version": "3.0.1",
+          "first_release": "2010-01-05",
+          "last_release": "2016-04-25"
+        },
+        {
+          "name": "sgfparser",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2010-10-22",
+          "last_release": "2010-10-22"
+        }
+      ]
+    },
+    {
+      "folded": "shorty",
+      "collision_created": "2012-04-20",
+      "variants": [
+        {
+          "name": "Shorty",
+          "version_count": 5,
+          "latest_version": "0.3.1",
+          "first_release": "2012-04-20",
+          "last_release": "2012-04-27"
+        },
+        {
+          "name": "shorty",
+          "version_count": 2,
+          "latest_version": "0.1.2",
+          "first_release": "2009-10-10",
+          "last_release": "2009-11-23"
+        }
+      ]
+    },
+    {
+      "folded": "shunt",
+      "collision_created": "2011-05-17",
+      "variants": [
+        {
+          "name": "Shunt",
+          "version_count": 2,
+          "latest_version": "0.2",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "shunt",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2011-05-17",
+          "last_release": "2011-05-17"
+        }
+      ]
+    },
+    {
+      "folded": "si",
+      "collision_created": "2012-09-11",
+      "variants": [
+        {
+          "name": "SI",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "si",
+          "version_count": 7,
+          "latest_version": "0.3.0",
+          "first_release": "2012-09-11",
+          "last_release": "2025-06-27"
+        }
+      ]
+    },
+    {
+      "folded": "simplemailer",
+      "collision_created": "2013-05-27",
+      "variants": [
+        {
+          "name": "simpleMailer",
+          "version_count": 5,
+          "latest_version": "0.1.9",
+          "first_release": "2009-08-18",
+          "last_release": "2012-06-06"
+        },
+        {
+          "name": "simplemailer",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2013-05-27",
+          "last_release": "2013-05-27"
+        }
+      ]
+    },
+    {
+      "folded": "siriproxy-samsungremote",
+      "collision_created": "2011-12-06",
+      "variants": [
+        {
+          "name": "SiriProxy-SamsungRemote",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2011-12-06",
+          "last_release": "2011-12-06"
+        },
+        {
+          "name": "siriproxy-samsungremote",
+          "version_count": 4,
+          "latest_version": "0.1.3",
+          "first_release": "2011-12-06",
+          "last_release": "2011-12-07"
+        }
+      ]
+    },
+    {
+      "folded": "sitemap",
+      "collision_created": "2011-09-03",
+      "variants": [
+        {
+          "name": "SiteMap",
+          "version_count": 1,
+          "latest_version": "0.0.0",
+          "first_release": "2010-11-03",
+          "last_release": "2010-11-03"
+        },
+        {
+          "name": "sitemap",
+          "version_count": 10,
+          "latest_version": "0.3.3",
+          "first_release": "2011-09-03",
+          "last_release": "2012-09-18"
+        }
+      ]
+    },
+    {
+      "folded": "skyper",
+      "collision_created": "2012-05-07",
+      "variants": [
+        {
+          "name": "SkypeR",
+          "version_count": 8,
+          "latest_version": "0.0.8",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "skyper",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2012-05-07",
+          "last_release": "2012-05-07"
+        }
+      ]
+    },
+    {
+      "folded": "sms",
+      "collision_created": "2012-02-16",
+      "variants": [
+        {
+          "name": "SMS",
+          "version_count": 2,
+          "latest_version": "0.0.2",
+          "first_release": "2012-02-16",
+          "last_release": "2012-02-16"
+        },
+        {
+          "name": "sms",
+          "version_count": 1,
+          "latest_version": "0.1",
+          "first_release": "2011-08-04",
+          "last_release": "2011-08-04"
+        }
+      ]
+    },
+    {
+      "folded": "soroban",
+      "collision_created": "2012-04-23",
+      "variants": [
+        {
+          "name": "Soroban",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2012-04-23",
+          "last_release": "2012-04-23"
+        },
+        {
+          "name": "soroban",
+          "version_count": 13,
+          "latest_version": "0.10.0",
+          "first_release": "2012-04-23",
+          "last_release": "2014-10-24"
+        }
+      ]
+    },
+    {
+      "folded": "splice",
+      "collision_created": "2012-07-03",
+      "variants": [
+        {
+          "name": "Splice",
+          "version_count": 1,
+          "latest_version": "0.0.0",
+          "first_release": "2009-09-11",
+          "last_release": "2009-09-11"
+        },
+        {
+          "name": "splice",
+          "version_count": 4,
+          "latest_version": "0.5",
+          "first_release": "2012-07-03",
+          "last_release": "2012-08-22"
+        }
+      ]
+    },
+    {
+      "folded": "spy-vs-spy",
+      "collision_created": "2009-11-24",
+      "variants": [
+        {
+          "name": "Spy-Vs-Spy",
+          "version_count": 1,
+          "latest_version": "0.0.5",
+          "first_release": "2009-11-24",
+          "last_release": "2009-11-24"
+        },
+        {
+          "name": "spy-vs-spy",
+          "version_count": 7,
+          "latest_version": "0.0.8",
+          "first_release": "2009-11-19",
+          "last_release": "2009-11-25"
+        }
+      ]
+    },
+    {
+      "folded": "sqs",
+      "collision_created": "2009-10-09",
+      "variants": [
+        {
+          "name": "SQS",
+          "version_count": 8,
+          "latest_version": "0.1.4",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "sqs",
+          "version_count": 2,
+          "latest_version": "0.1.2",
+          "first_release": "2009-10-09",
+          "last_release": "2009-10-09"
+        }
+      ]
+    },
+    {
+      "folded": "stencil",
+      "collision_created": "2009-12-27",
+      "variants": [
+        {
+          "name": "Stencil",
+          "version_count": 2,
+          "latest_version": "0.1.1",
+          "first_release": "2009-12-27",
+          "last_release": "2010-01-04"
+        },
+        {
+          "name": "stencil",
+          "version_count": 7,
+          "latest_version": "0.1.8",
+          "first_release": "2009-11-06",
+          "last_release": "2013-11-11"
+        }
+      ]
+    },
+    {
+      "folded": "stompmq",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "StompMq",
+          "version_count": 4,
+          "latest_version": "0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "stompmq",
+          "version_count": 1,
+          "latest_version": "0.5",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "stormrets",
+      "collision_created": "2012-07-01",
+      "variants": [
+        {
+          "name": "StormRETS",
+          "version_count": 4,
+          "latest_version": "0.4.0",
+          "first_release": "2012-02-27",
+          "last_release": "2012-06-30"
+        },
+        {
+          "name": "stormrets",
+          "version_count": 1,
+          "latest_version": "0.5.0",
+          "first_release": "2012-07-01",
+          "last_release": "2012-07-01"
+        }
+      ]
+    },
+    {
+      "folded": "stream",
+      "collision_created": "2011-06-23",
+      "variants": [
+        {
+          "name": "Stream",
+          "version_count": 39,
+          "latest_version": "0.2.3.1",
+          "first_release": "2011-06-23",
+          "last_release": "2012-09-21"
+        },
+        {
+          "name": "stream",
+          "version_count": 6,
+          "latest_version": "0.5.6",
+          "first_release": "2009-11-24",
+          "last_release": "2026-05-10"
+        }
+      ]
+    },
+    {
+      "folded": "support",
+      "collision_created": "2013-03-11",
+      "variants": [
+        {
+          "name": "SUPPORT",
+          "version_count": 1,
+          "latest_version": "0.0.1pre",
+          "first_release": "2013-03-11",
+          "last_release": "2013-03-11"
+        },
+        {
+          "name": "support",
+          "version_count": 2,
+          "latest_version": "0.18",
+          "first_release": "2009-07-25",
+          "last_release": "2009-08-20"
+        }
+      ]
+    },
+    {
+      "folded": "surgicalstrike",
+      "collision_created": "2012-04-16",
+      "variants": [
+        {
+          "name": "SurgicalStrike",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-04-16",
+          "last_release": "2012-04-16"
+        },
+        {
+          "name": "surgicalstrike",
+          "version_count": 2,
+          "latest_version": "0.0.3",
+          "first_release": "2012-04-16",
+          "last_release": "2012-04-16"
+        }
+      ]
+    },
+    {
+      "folded": "svy21",
+      "collision_created": "2013-04-08",
+      "variants": [
+        {
+          "name": "SVY21",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2013-04-07",
+          "last_release": "2013-04-07"
+        },
+        {
+          "name": "svy21",
+          "version_count": 1,
+          "latest_version": "1.0.1",
+          "first_release": "2013-04-08",
+          "last_release": "2013-04-08"
+        }
+      ]
+    },
+    {
+      "folded": "sysvipc",
+      "collision_created": "2009-09-26",
+      "variants": [
+        {
+          "name": "SysVIPC",
+          "version_count": 8,
+          "latest_version": "0.10.0",
+          "first_release": "2009-08-05",
+          "last_release": "2016-08-10"
+        },
+        {
+          "name": "sysvipc",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-09-26",
+          "last_release": "2009-09-26"
+        }
+      ]
+    },
+    {
+      "folded": "test",
+      "collision_created": "2013-03-28",
+      "variants": [
+        {
+          "name": "Test",
+          "version_count": 1,
+          "latest_version": "0.0.0",
+          "first_release": "2013-03-28",
+          "last_release": "2013-03-28"
+        },
+        {
+          "name": "test",
+          "version_count": 4,
+          "latest_version": "1.0.0",
+          "first_release": "2011-08-11",
+          "last_release": "2012-12-24"
+        }
+      ]
+    },
+    {
+      "folded": "testgem",
+      "collision_created": "2013-02-08",
+      "variants": [
+        {
+          "name": "TestGem",
+          "version_count": 1,
+          "latest_version": "1.0.0",
+          "first_release": "2013-02-08",
+          "last_release": "2013-02-08"
+        },
+        {
+          "name": "testgem",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2011-08-16",
+          "last_release": "2011-08-16"
+        }
+      ]
+    },
+    {
+      "folded": "text",
+      "collision_created": "2009-10-12",
+      "variants": [
+        {
+          "name": "Text",
+          "version_count": 5,
+          "latest_version": "1.1.3",
+          "first_release": "2009-07-25",
+          "last_release": "2012-06-07"
+        },
+        {
+          "name": "text",
+          "version_count": 15,
+          "latest_version": "1.3.1",
+          "first_release": "2009-10-12",
+          "last_release": "2015-04-13"
+        }
+      ]
+    },
+    {
+      "folded": "tictactoe",
+      "collision_created": "2013-07-03",
+      "variants": [
+        {
+          "name": "TicTacToe",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2013-07-03",
+          "last_release": "2013-07-03"
+        },
+        {
+          "name": "tictactoe",
+          "version_count": 4,
+          "latest_version": "0.0.4",
+          "first_release": "2012-10-20",
+          "last_release": "2012-10-25"
+        }
+      ]
+    },
+    {
+      "folded": "todo",
+      "collision_created": "2012-09-01",
+      "variants": [
+        {
+          "name": "Todo",
+          "version_count": 2,
+          "latest_version": "0.2",
+          "first_release": "2012-09-01",
+          "last_release": "2012-09-01"
+        },
+        {
+          "name": "todo",
+          "version_count": 4,
+          "latest_version": "0.2.0",
+          "first_release": "2009-07-25",
+          "last_release": "2014-07-21"
+        }
+      ]
+    },
+    {
+      "folded": "tracker",
+      "collision_created": "2012-12-27",
+      "variants": [
+        {
+          "name": "Tracker",
+          "version_count": 3,
+          "latest_version": "1.0.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "tracker",
+          "version_count": 1,
+          "latest_version": "0.0.10",
+          "first_release": "2012-12-27",
+          "last_release": "2012-12-27"
+        }
+      ]
+    },
+    {
+      "folded": "tyler",
+      "collision_created": "2013-02-21",
+      "variants": [
+        {
+          "name": "TYLER",
+          "version_count": 1,
+          "latest_version": "0.0.2",
+          "first_release": "2013-02-21",
+          "last_release": "2013-02-21"
+        },
+        {
+          "name": "tyler",
+          "version_count": 2,
+          "latest_version": "0.1.0",
+          "first_release": "2010-09-10",
+          "last_release": "2010-09-17"
+        }
+      ]
+    },
+    {
+      "folded": "udjrb",
+      "collision_created": "2011-05-13",
+      "variants": [
+        {
+          "name": "UDJrb",
+          "version_count": 2,
+          "latest_version": "0.0.2",
+          "first_release": "2011-05-13",
+          "last_release": "2011-05-13"
+        },
+        {
+          "name": "udjrb",
+          "version_count": 1,
+          "latest_version": "0.0.3",
+          "first_release": "2011-05-13",
+          "last_release": "2011-05-13"
+        }
+      ]
+    },
+    {
+      "folded": "urbanesia",
+      "collision_created": "2012-12-09",
+      "variants": [
+        {
+          "name": "Urbanesia",
+          "version_count": 1,
+          "latest_version": "0.0.1",
+          "first_release": "2012-12-09",
+          "last_release": "2012-12-09"
+        },
+        {
+          "name": "urbanesia",
+          "version_count": 7,
+          "latest_version": "0.0.1.7",
+          "first_release": "2012-12-09",
+          "last_release": "2012-12-09"
+        }
+      ]
+    },
+    {
+      "folded": "usage",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Usage",
+          "version_count": 2,
+          "latest_version": "0.0.1",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "usage",
+          "version_count": 2,
+          "latest_version": "0.0.4",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "valuable",
+      "collision_created": "2009-12-10",
+      "variants": [
+        {
+          "name": "Valuable",
+          "version_count": 1,
+          "latest_version": "0.8",
+          "first_release": "2009-12-10",
+          "last_release": "2009-12-10"
+        },
+        {
+          "name": "valuable",
+          "version_count": 20,
+          "latest_version": "0.9.14",
+          "first_release": "2009-08-05",
+          "last_release": "2017-10-17"
+        }
+      ]
+    },
+    {
+      "folded": "vimmate",
+      "collision_created": "2009-11-14",
+      "variants": [
+        {
+          "name": "VimMate",
+          "version_count": 5,
+          "latest_version": "0.6.6",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "vimmate",
+          "version_count": 4,
+          "latest_version": "0.9.2",
+          "first_release": "2009-11-14",
+          "last_release": "2011-06-21"
+        }
+      ]
+    },
+    {
+      "folded": "walt",
+      "collision_created": "2013-01-05",
+      "variants": [
+        {
+          "name": "Walt",
+          "version_count": 2,
+          "latest_version": "0.1.1",
+          "first_release": "2012-05-15",
+          "last_release": "2012-05-15"
+        },
+        {
+          "name": "walt",
+          "version_count": 2,
+          "latest_version": "0.1.2",
+          "first_release": "2013-01-05",
+          "last_release": "2013-05-20"
+        }
+      ]
+    },
+    {
+      "folded": "websocket",
+      "collision_created": "2013-01-09",
+      "variants": [
+        {
+          "name": "WEBSocket",
+          "version_count": 5,
+          "latest_version": "0.1.1",
+          "first_release": "2013-01-09",
+          "last_release": "2013-02-12"
+        },
+        {
+          "name": "websocket",
+          "version_count": 24,
+          "latest_version": "1.2.11",
+          "first_release": "2012-11-18",
+          "last_release": "2024-07-08"
+        }
+      ]
+    },
+    {
+      "folded": "writeexcel",
+      "collision_created": "2010-01-21",
+      "variants": [
+        {
+          "name": "WriteExcel",
+          "version_count": 1,
+          "latest_version": "0.2.0",
+          "first_release": "2010-01-21",
+          "last_release": "2010-01-21"
+        },
+        {
+          "name": "writeexcel",
+          "version_count": 42,
+          "latest_version": "1.0.9",
+          "first_release": "2009-07-25",
+          "last_release": "2024-01-23"
+        }
+      ]
+    },
+    {
+      "folded": "x12",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "X12",
+          "version_count": 3,
+          "latest_version": "1.1.0",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "x12",
+          "version_count": 1,
+          "latest_version": "0.1.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        }
+      ]
+    },
+    {
+      "folded": "xmlcanonicalizer",
+      "collision_created": "2010-09-12",
+      "variants": [
+        {
+          "name": "XMLCanonicalizer",
+          "version_count": 2,
+          "latest_version": "1.0.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "xmlcanonicalizer",
+          "version_count": 4,
+          "latest_version": "0.1.2",
+          "first_release": "2010-09-12",
+          "last_release": "2012-07-05"
+        }
+      ]
+    },
+    {
+      "folded": "xray",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "XRay",
+          "version_count": 3,
+          "latest_version": "1.0",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        },
+        {
+          "name": "xray",
+          "version_count": 1,
+          "latest_version": "1.1",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        }
+      ]
+    },
+    {
+      "folded": "zliby",
+      "collision_created": "2009-08-18",
+      "variants": [
+        {
+          "name": "Zliby",
+          "version_count": 1,
+          "latest_version": "0.0.5",
+          "first_release": "2009-07-25",
+          "last_release": "2009-07-25"
+        },
+        {
+          "name": "zliby",
+          "version_count": 1,
+          "latest_version": "0.0.5",
+          "first_release": "2009-08-18",
+          "last_release": "2009-08-18"
+        }
+      ]
+    },
+    {
+      "folded": "zurb-foundation",
+      "collision_created": "2011-12-18",
+      "variants": [
+        {
+          "name": "ZURB-foundation",
+          "version_count": 17,
+          "latest_version": "2.2.1.4",
+          "first_release": "2011-12-18",
+          "last_release": "2012-06-07"
+        },
+        {
+          "name": "zurb-foundation",
+          "version_count": 67,
+          "latest_version": "4.3.2",
+          "first_release": "2011-10-15",
+          "last_release": "2013-09-23"
+        }
+      ]
+    }
+  ]
+}

@@ -39,57 +39,57 @@ corpus finding in its own right rather than a Portland question.
 
 ### Language
 
-| Question | Report | Status |
-|---|---|---|
-| Discouraged by the language itself | `script/report ruby-deprecations` (ruby/ruby NEWS files, 2.0 → head) | working |
-| Discouraged by RuboCop and other linters | `script/report rubocop` | working |
-| Disallowed on which Ruby versions | `script/report ruby-deprecations` | working (v1: extracted NEWS bullets per version) |
+| Question                                 | Report                                                               | Status                                           |
+| ---------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------------ |
+| Discouraged by the language itself       | `script/report ruby-deprecations` (ruby/ruby NEWS files, 2.0 → head) | working                                          |
+| Discouraged by RuboCop and other linters | `script/report rubocop`                                              | working                                          |
+| Disallowed on which Ruby versions        | `script/report ruby-deprecations`                                    | working (v1: extracted NEWS bullets per version) |
 
 ### Gems
 
-| Question | Report | Status |
-|---|---|---|
-| Language parts used in published gems | `script/report feature-usage` (Prism AST tally over gem sources) | working (sampled) |
-| Parts unused by any gem | `feature-usage`, full-corpus run | working (needs full-corpus run for a definitive answer) |
-| Parts only used by old/unmaintained gems | `feature-usage` joined with `gem-ages` | planned |
-| Histogram threshold of "very old/unmaintained" | `script/report gem-ages` | working |
-| Which gems work on which Ruby versions | `script/report ruby-requirements` | working |
+| Question                                       | Report                                                           | Status                                                  |
+| ---------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------- |
+| Language parts used in published gems          | `script/report feature-usage` (Prism AST tally over gem sources) | working (sampled)                                       |
+| Parts unused by any gem                        | `feature-usage`, full-corpus run                                 | working (needs full-corpus run for a definitive answer) |
+| Parts only used by old/unmaintained gems       | `feature-usage` joined with `gem-ages`                           | planned                                                 |
+| Histogram threshold of "very old/unmaintained" | `script/report gem-ages`                                         | working                                                 |
+| Which gems work on which Ruby versions         | `script/report ruby-requirements`                                | working                                                 |
 
 ### C extensions
 
-| Question | Report | Status |
-|---|---|---|
-| How many C extension gems | `script/report c-extensions` | working |
-| How many actively maintained | `c-extensions` (includes last-release-year histogram); download counts | partial |
-| Replaceable by pure Ruby | `c-extensions` + manual curation layer | planned |
-| Effectively required in the community | `c-extensions` + reverse-dependency counts | planned |
+| Question                              | Report                                                                 | Status  |
+| ------------------------------------- | ---------------------------------------------------------------------- | ------- |
+| How many C extension gems             | `script/report c-extensions`                                           | working |
+| How many actively maintained          | `c-extensions` (includes last-release-year histogram); download counts | partial |
+| Replaceable by pure Ruby              | `c-extensions` + manual curation layer                                 | planned |
+| Effectively required in the community | `c-extensions` + reverse-dependency counts                             | planned |
 
 ### Portland
 
-| Question | Report | Status |
-|---|---|---|
-| Gems using parts Portland removes/changes | `script/report portland-compatibility` | working (sampled) |
-| Gems that could Just Work™ | `portland-compatibility` (candidates = no decided removal detected) | working (syntax-level; semantic changes like truthiness need type analysis) |
-| Gems that could NOT easily migrate | `portland-compatibility` + `c-extensions` | partial |
-| Gems using things unavailable on macOS | `c-extensions` (linked system libraries) | planned |
-| Intel-only gems | `script/report platforms` | working (platform-tag heuristic; source-only C extensions need build testing) |
+| Question                                  | Report                                                              | Status                                                                        |
+| ----------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Gems using parts Portland removes/changes | `script/report portland-compatibility`                              | working (sampled)                                                             |
+| Gems that could Just Work™                | `portland-compatibility` (candidates = no decided removal detected) | working (syntax-level; semantic changes like truthiness need type analysis)   |
+| Gems that could NOT easily migrate        | `portland-compatibility` + `c-extensions`                           | partial                                                                       |
+| Gems using things unavailable on macOS    | `c-extensions` (linked system libraries)                            | planned                                                                       |
+| Intel-only gems                           | `script/report platforms`                                           | working (platform-tag heuristic; source-only C extensions need build testing) |
 
 ### Design-decision censuses
 
 Reports feeding specific open Portland decisions (see
 PORTLAND_DECISION_CANDIDATES.md):
 
-| Decision | Report | Status |
-|---|---|---|
-| Mutable values / `<<` as rebinding | `script/report mutation-shapes` (accumulator vs aliased vs shared mutation sites) | working (heuristic) |
-| Exceptions vs results | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes) | working |
-| Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `||` defaults, fetch arity) | working |
-| Heredocs (`<<` / `<<-` / `<<~`) | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working |
+| Decision                                  | Report                                                                                             | Status              |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------- |
+| Mutable values / `<<` as rebinding        | `script/report mutation-shapes` (accumulator vs aliased vs shared mutation sites)                  | working (heuristic) |
+| Exceptions vs results                     | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes)          | working             |
+| Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `                                                    |                     | ` defaults, fetch arity) | working |
+| Heredocs (`<<` / `<<-` / `<<~`)           | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working             |
 
 ## Portland removal list
 
 `config/portland_removals.yml` encodes what Portland removes/changes, derived
-from the Portland docs (docs/ruby/*.md and docs/adr/*.md in
+from the Portland docs (docs/ruby/_.md and docs/adr/_.md in
 portlandlang/portland). Each feature declares its static detection: Prism node
 types, method names, or constant references. Update that file as ADRs land;
 `portland-compatibility` picks it up on the next run. Known gaps: class
