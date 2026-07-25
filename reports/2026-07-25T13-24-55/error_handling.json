@@ -1,0 +1,30 @@
+{
+  "corpus_size": 195399,
+  "sampled": 40,
+  "analyzed": 40,
+  "errors": [],
+  "site_counts": {
+    "raise_site": 489,
+    "rescue_clause": 193,
+    "rescue_specific_class": 149,
+    "rescue_bare": 44,
+    "rescue_reraises": 51,
+    "rescue_swallows": 142,
+    "rescue_modifier": 27,
+    "ensure_block": 29,
+    "retry_site": 2,
+    "custom_error_class": 40
+  },
+  "gem_coverage": {
+    "raise_site": 27,
+    "rescue_clause": 19,
+    "rescue_specific_class": 18,
+    "rescue_bare": 8,
+    "rescue_reraises": 10,
+    "rescue_swallows": 17,
+    "rescue_modifier": 8,
+    "ensure_block": 5,
+    "retry_site": 1,
+    "custom_error_class": 16
+  }
+}

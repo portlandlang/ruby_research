@@ -1,0 +1,2326 @@
+{
+  "corpus_size": 195399,
+  "sampled": 5000,
+  "analyzed": 5000,
+  "errors": [],
+  "parse_error_count": 505,
+  "parse_errors": [
+    {
+      "gem": "ratchetio",
+      "file": "lib/generators/ratchetio/templates/initializer.rb"
+    },
+    {
+      "gem": "benaldred-clearance",
+      "file": "generators/clearance/templates/migrations/update_users.rb"
+    },
+    {
+      "gem": "benaldred-clearance",
+      "file": "test/rails_root/vendor/gems/justinfrench-formtastic-0.2.1/spec/formtastic_spec.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/agent/simulation_aspect.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/core/timed.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/core/timed/basic.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/core/timed/euler.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/core/timed/gillespie.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/core/timed/runge_kutta.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/core/timed/ticked.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/net/data_set.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/simulation.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/simulation/marking_vector/access.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/simulation/timed.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/simulation/transition_representation/T.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/simulation/transition_representation/TS.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/simulation/transitions/T.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/simulation/transitions/TS.rb"
+    },
+    {
+      "gem": "y_petri",
+      "file": "lib/y_petri/transition/T.rb"
+    },
+    {
+      "gem": "psq-dm-xapian",
+      "file": "lib/dm-xapian.rb"
+    },
+    {
+      "gem": "moneypools-capistrano-ext",
+      "file": "lib/capistrano/ext/assets/request-counter.rb"
+    },
+    {
+      "gem": "facebookbusiness",
+      "file": "lib/facebook_ads/ad_objects/ad_campaign.rb"
+    },
+    {
+      "gem": "facebookbusiness",
+      "file": "lib/facebook_ads/ad_objects/ad_campaign_group.rb"
+    },
+    {
+      "gem": "facebookbusiness",
+      "file": "lib/facebook_ads/ad_objects/ad_campaign_placement.rb"
+    },
+    {
+      "gem": "facebookbusiness",
+      "file": "lib/facebook_ads/ad_objects/adgroup.rb"
+    },
+    {
+      "gem": "modal_stack",
+      "file": "lib/generators/modal_stack/install/templates/initializer.rb"
+    },
+    {
+      "gem": "tencentcloud-sdk-cdwpg",
+      "file": "lib/v20201230/models.rb"
+    },
+    {
+      "gem": "xf-generators",
+      "file": "lib/generators/xf/concern/templates/concern_model.rb"
+    },
+    {
+      "gem": "xf-generators",
+      "file": "lib/generators/xf/concern/templates/concern_spec.rb"
+    },
+    {
+      "gem": "robokassa_api",
+      "file": "lib/robokassa_api/signature_generator.rb"
+    },
+    {
+      "gem": "bitcharts",
+      "file": "lib/generators/bitcharts/chart/templates/chart_model.rb"
+    },
+    {
+      "gem": "bitcharts",
+      "file": "lib/generators/bitcharts/scoped_chart/templates/chart_model.rb"
+    },
+    {
+      "gem": "birdbath",
+      "file": "generators/migration_test/templates/migration_test.rb"
+    },
+    {
+      "gem": "adaptation",
+      "file": "lib/rails_generator/generators/components/model/templates/unit_test.rb"
+    },
+    {
+      "gem": "adaptation",
+      "file": "lib/rails_generator/generators/components/model/templates/migration.rb"
+    },
+    {
+      "gem": "adaptation",
+      "file": "lib/rails_generator/generators/components/model/templates/model.rb"
+    },
+    {
+      "gem": "adaptation",
+      "file": "lib/rails_generator/generators/components/message/templates/unit_test.rb"
+    },
+    {
+      "gem": "adaptation",
+      "file": "lib/rails_generator/generators/components/message/templates/message.rb"
+    },
+    {
+      "gem": "adaptation",
+      "file": "lib/rails_generator/generators/components/adaptor/templates/adaptor.rb"
+    },
+    {
+      "gem": "adaptation",
+      "file": "lib/rails_generator/generators/components/adaptor/templates/functional_test.rb"
+    },
+    {
+      "gem": "nmeans-actionwebservice",
+      "file": "generators/web_service/templates/api_definition.rb"
+    },
+    {
+      "gem": "nmeans-actionwebservice",
+      "file": "generators/web_service/templates/controller.rb"
+    },
+    {
+      "gem": "nmeans-actionwebservice",
+      "file": "generators/web_service/templates/functional_test.rb"
+    },
+    {
+      "gem": "serious_business",
+      "file": "lib/generators/serious_business/templates/migration/actions.rb"
+    },
+    {
+      "gem": "xtotxt",
+      "file": "lib/xtotxt.rb"
+    },
+    {
+      "gem": "aurora-sketch",
+      "file": "lib/geometry/dsl/turtle.rb"
+    },
+    {
+      "gem": "aurora-sketch",
+      "file": "test/sketch.rb"
+    },
+    {
+      "gem": "aurora-sketch",
+      "file": "test/sketch/builder.rb"
+    },
+    {
+      "gem": "hayfork",
+      "file": "lib/generators/hayfork/templates/migrations/create.rb"
+    },
+    {
+      "gem": "hayfork",
+      "file": "lib/generators/hayfork/templates/migrations/rebuild.rb"
+    },
+    {
+      "gem": "hayfork",
+      "file": "lib/generators/hayfork/templates/model.rb"
+    },
+    {
+      "gem": "hayfork",
+      "file": "lib/generators/hayfork/templates/triggers.rb"
+    },
+    {
+      "gem": "sentientmonkey-facebooker",
+      "file": "generators/facebook_controller/templates/controller.rb"
+    },
+    {
+      "gem": "sentientmonkey-facebooker",
+      "file": "generators/facebook_controller/templates/functional_test.rb"
+    },
+    {
+      "gem": "sentientmonkey-facebooker",
+      "file": "generators/facebook_controller/templates/helper.rb"
+    },
+    {
+      "gem": "sentientmonkey-facebooker",
+      "file": "generators/facebook_publisher/templates/publisher.rb"
+    },
+    {
+      "gem": "sentientmonkey-facebooker",
+      "file": "generators/facebook_scaffold/templates/controller.rb"
+    },
+    {
+      "gem": "sentientmonkey-facebooker",
+      "file": "generators/facebook_scaffold/templates/functional_test.rb"
+    },
+    {
+      "gem": "sentientmonkey-facebooker",
+      "file": "generators/facebook_scaffold/templates/helper.rb"
+    },
+    {
+      "gem": "suj_hiya_vakathanam_sujith",
+      "file": "lib/suj_hiya_vakathanam_sujith.rb"
+    },
+    {
+      "gem": "mojodna-fire-hydrant",
+      "file": "examples/fire_eagle_visualizer.rb"
+    },
+    {
+      "gem": "webmock-rspec-helper",
+      "file": "helper.rb"
+    },
+    {
+      "gem": "mkgraph",
+      "file": "test/tt.rb"
+    },
+    {
+      "gem": "carrierwave-helper",
+      "file": "lib/carrierwave-helper/version.rb"
+    },
+    {
+      "gem": "superuser",
+      "file": "lib/generators/superuser/templates/controller_template.rb"
+    },
+    {
+      "gem": "reactive_rails_generator",
+      "file": "lib/generators/reactrb/templates/component_template.rb"
+    },
+    {
+      "gem": "reactive_rails_generator",
+      "file": "lib/generators/reactrb/templates/router_template.rb"
+    },
+    {
+      "gem": "devise_revocable_session",
+      "file": "lib/generators/devise_revocable_session/templates/migration.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_generators/model/templates/model.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/controller/templates/controller_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/helper/templates/helper_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/integration/templates/request_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/model/templates/model_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/observer/templates/observer_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/scaffold/templates/controller_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/scaffold/templates/edit_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/scaffold/templates/index_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/scaffold/templates/new_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/scaffold/templates/routing_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/my_spec/scaffold/templates/show_spec.rb"
+    },
+    {
+      "gem": "my_generators",
+      "file": "lib/generators/rails/templates/controller.rb"
+    },
+    {
+      "gem": "wechat",
+      "file": "lib/generators/wechat/templates/app/controllers/wechats_controller.rb"
+    },
+    {
+      "gem": "fastlane_pricing_fix",
+      "file": "fastlane/lib/assets/custom_action_template.rb"
+    },
+    {
+      "gem": "arrow",
+      "file": "lib/arrow/session/dbstore.rb"
+    },
+    {
+      "gem": "pasaporte",
+      "file": "lib/pasaporte/auth/remote_web_workplace.rb"
+    },
+    {
+      "gem": "meta_profiler",
+      "file": "lib/meta_profiler/profile.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/app/templates/config/application.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/app/templates/config/boot.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/app/templates/config/environment.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/app/templates/config/routes.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/authentication.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/authlogic_session.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/migration.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/sessions_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/sessions_helper.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/rspec/sessions_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/rspec/user.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/rspec/users_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/shoulda/sessions_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/shoulda/user.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/shoulda/users_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/testunit/sessions_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/testunit/user.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/tests/testunit/users_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/user.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/users_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/authentication/templates/users_helper.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/_controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/actions/create.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/actions/destroy.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/actions/edit.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/actions/index.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/actions/new.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/actions/show.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/actions/update.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/controller/templates/controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/actions/create.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/actions/destroy.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/actions/edit.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/actions/index.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/actions/new.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/actions/show.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/actions/update.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/helper.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/migration.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/model.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/rspec/actions/create.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/rspec/actions/destroy.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/rspec/actions/edit.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/rspec/actions/show.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/rspec/actions/update.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/rspec/controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/rspec/model.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/shoulda/actions/create.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/shoulda/actions/destroy.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/shoulda/actions/edit.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/shoulda/actions/show.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/shoulda/actions/update.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/shoulda/controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/shoulda/model.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/testunit/actions/create.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/testunit/actions/destroy.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/testunit/actions/edit.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/testunit/actions/show.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/testunit/actions/update.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/testunit/controller.rb"
+    },
+    {
+      "gem": "very_nifty_generators",
+      "file": "lib/generators/nifty/scaffold/templates/tests/testunit/model.rb"
+    },
+    {
+      "gem": "topfunky-github",
+      "file": "commands/commands.rb"
+    },
+    {
+      "gem": "topfunky-github",
+      "file": "commands/helpers.rb"
+    },
+    {
+      "gem": "capybara-utils",
+      "file": "lib/capybara-utils/version.rb"
+    },
+    {
+      "gem": "sdsykes_acts_as_ferret",
+      "file": "lib/ferret_extensions.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "app/controllers/sc_core/application_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/actionmailer-4.2.4/lib/rails/generators/mailer/templates/mailer.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/activejob-4.2.4/lib/rails/generators/job/templates/job.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.4/lib/rails/generators/active_record/migration/templates/create_table_migration.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.4/lib/rails/generators/active_record/migration/templates/migration.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.4/lib/rails/generators/active_record/model/templates/model.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/activerecord-4.2.4/lib/rails/generators/active_record/model/templates/module.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/activerecord-session_store-0.1.1/lib/generators/active_record/templates/migration.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/app/controllers/devise/sessions_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/active_record/templates/migration.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/active_record/templates/migration_existing.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/templates/controllers/confirmations_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/templates/controllers/omniauth_callbacks_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/templates/controllers/passwords_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/templates/controllers/registrations_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/templates/controllers/sessions_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/templates/controllers/unlocks_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/devise-3.5.2/lib/generators/templates/devise.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/draper-2.1.0/lib/generators/mini_test/templates/decorator_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/draper-2.1.0/lib/generators/mini_test/templates/decorator_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/draper-2.1.0/lib/generators/rails/templates/decorator.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/draper-2.1.0/lib/generators/rspec/templates/decorator_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/draper-2.1.0/lib/generators/test_unit/templates/decorator_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/erubis-2.7.0/lib/erubis/helpers/rails_form_helper.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/jbuilder-2.3.2/lib/generators/rails/templates/api_controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/jbuilder-2.3.2/lib/generators/rails/templates/controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/mime-types-2.6.2/lib/mime/types/logger.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/app/templates/config/application.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/app/templates/test/test_helper.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/controller/templates/controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/helper/templates/helper.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/plugin/templates/config/routes.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/plugin/templates/lib/%name%.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/plugin/templates/lib/%name%/engine.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/plugin/templates/lib/%name%/version.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/plugin/templates/rails/application.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/plugin/templates/test/%name%_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/plugin/templates/test/test_helper.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/scaffold_controller/templates/controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/rails/task/templates/task.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/test_unit/controller/templates/functional_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/test_unit/generator/templates/generator_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/test_unit/integration/templates/integration_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/test_unit/mailer/templates/functional_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/test_unit/mailer/templates/preview.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/test_unit/model/templates/unit_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/railties-4.2.4/lib/rails/generators/test_unit/scaffold/templates/functional_test.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/responders-2.1.0/lib/generators/rails/templates/controller.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/controller/templates/controller_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/controller/templates/view_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/feature/templates/feature_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/helper/templates/helper_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/install/templates/spec/rails_helper.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/integration/templates/request_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/mailer/templates/mailer_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/mailer/templates/preview.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/model/templates/model_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/observer/templates/observer_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/scaffold/templates/controller_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/scaffold/templates/edit_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/scaffold/templates/index_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/scaffold/templates/new_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/scaffold/templates/routing_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/scaffold/templates/show_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/rspec-rails-3.3.3/lib/generators/rspec/view/templates/view_spec.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/thor-0.19.1/spec/fixtures/doc/block_helper.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/thor-0.19.1/spec/fixtures/doc/config.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/thor-0.19.1/spec/sandbox/doc/block_helper.rb"
+    },
+    {
+      "gem": "sc_core",
+      "file": "test/dummy/vendor/bundle/ruby/2.2.0/gems/thor-0.19.1/spec/sandbox/doc/config.rb"
+    },
+    {
+      "gem": "decent_generators",
+      "file": "lib/templates/rails/scaffold_controller/controller.rb"
+    },
+    {
+      "gem": "Ruiby",
+      "file": "lib/ruiby_gtk/ruiby_dsl.rb"
+    },
+    {
+      "gem": "mincer",
+      "file": "lib/generators/mincer/templates/query.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "lib/uttk/generators/templates/filter.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "lib/uttk/generators/templates/generator.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "lib/uttk/generators/templates/loader.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "lib/uttk/generators/templates/dumper.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "lib/uttk/generators/templates/unit_test.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "lib/uttk/generators/templates/path_filter.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "lib/uttk/generators/templates/strategy.rb"
+    },
+    {
+      "gem": "uttk",
+      "file": "test/fixtures/unit/error.rb"
+    },
+    {
+      "gem": "jinda",
+      "file": "test/dummy/app/models/note.rb"
+    },
+    {
+      "gem": "wuclan",
+      "file": "examples/analyze/word_count/freq_user.rb"
+    },
+    {
+      "gem": "wuclan",
+      "file": "examples/analyze/word_count/freq_whole_corpus.rb"
+    },
+    {
+      "gem": "wuclan",
+      "file": "examples/analyze/word_count/word_count.rb"
+    },
+    {
+      "gem": "wuclan",
+      "file": "lib/wuclan/twitter/parse/public_timeline_parser.rb"
+    },
+    {
+      "gem": "wuclan",
+      "file": "lib/wuclan/twitter/scrape/twitter_user_request.rb"
+    },
+    {
+      "gem": "jeera",
+      "file": "lib/spec/util_spec.rb"
+    },
+    {
+      "gem": "moviepilot-restful",
+      "file": "lib/restful/serializers/xml_serializer.rb"
+    },
+    {
+      "gem": "entra_id_active_record_session_store",
+      "file": "lib/generators/entra_id_active_record_session_store/templates/create_sessions_migration.rb"
+    },
+    {
+      "gem": "turboctrl",
+      "file": "lib/generators/turboctrl/templates/controller.rb"
+    },
+    {
+      "gem": "josephwilk-rsemantic",
+      "file": "lib/semantic/transform/lsa_transform.rb"
+    },
+    {
+      "gem": "rails-auth-eassy",
+      "file": "lib/generators/rails_auth/model/templates/create_rails_auth_tables.rb"
+    },
+    {
+      "gem": "rails-auth-eassy",
+      "file": "lib/generators/rails_auth/model/templates/user.rb"
+    },
+    {
+      "gem": "brightbox",
+      "file": "lib/brightbox/recipes/configure/mongrel.rb"
+    },
+    {
+      "gem": "api_scaffold",
+      "file": "lib/generators/api_scaffold/templates/controllers/controller.rb"
+    },
+    {
+      "gem": "api_scaffold",
+      "file": "lib/generators/api_scaffold/templates/controllers/serializer_controller.rb"
+    },
+    {
+      "gem": "api_scaffold",
+      "file": "lib/generators/api_scaffold/templates/tests/rspec/controller_spec.rb"
+    },
+    {
+      "gem": "api_scaffold",
+      "file": "lib/generators/api_scaffold/templates/tests/test_unit/controller_spec.rb"
+    },
+    {
+      "gem": "apiverve_markdowntohtml",
+      "file": "lib/apiverve/client.rb"
+    },
+    {
+      "gem": "apiverve_markdowntohtml",
+      "file": "lib/apiverve_markdowntohtml/client.rb"
+    },
+    {
+      "gem": "Agiley-ec2onrails",
+      "file": "server/files/usr/local/ec2onrails/lib/vendor/ini.rb"
+    },
+    {
+      "gem": "client_authenticator",
+      "file": "lib/generators/templates/migrations/create_api_clients.rb"
+    },
+    {
+      "gem": "beef-acts_as_content_node",
+      "file": "generators/content_node_scaffold/templates/admin_controller.rb"
+    },
+    {
+      "gem": "beef-acts_as_content_node",
+      "file": "generators/content_node_scaffold/templates/helper.rb"
+    },
+    {
+      "gem": "beef-acts_as_content_node",
+      "file": "generators/content_node_scaffold/templates/helper_test.rb"
+    },
+    {
+      "gem": "beef-acts_as_content_node",
+      "file": "generators/content_node_scaffold/templates/view_controller.rb"
+    },
+    {
+      "gem": "middleman-cli",
+      "file": "lib/middleman-cli/templates/extension/lib/lib.rb"
+    },
+    {
+      "gem": "rucola",
+      "file": "app_generators/rucola/rucola_generator.rb"
+    },
+    {
+      "gem": "old_api_resource",
+      "file": "lib/old_api_resource/observing.rb"
+    },
+    {
+      "gem": "rails-add_ons",
+      "file": "lib/generators/rails/add_ons/templates/spec.rb"
+    },
+    {
+      "gem": "maglevrecord",
+      "file": "lib/maglev_record/snapshot/snapshot.rb"
+    },
+    {
+      "gem": "maglevrecord",
+      "file": "test/snapshot/test_from_file_system.rb"
+    },
+    {
+      "gem": "seo_sensei",
+      "file": "lib/generators/templates/migration.rb"
+    },
+    {
+      "gem": "glasses",
+      "file": "spec/test_only_methods/example_only_methods.rb"
+    },
+    {
+      "gem": "strong_parameters",
+      "file": "lib/generators/rails/templates/controller.rb"
+    },
+    {
+      "gem": "irjudson-dm-ldap-adapter",
+      "file": "lib/ldap_adapter.rb"
+    },
+    {
+      "gem": "image_cropper",
+      "file": "lib/generators/image_cropper/templates/migration/migrate.rb"
+    },
+    {
+      "gem": "jejune",
+      "file": "lib/jejune/grammar/lexer.rb"
+    },
+    {
+      "gem": "robopigeon",
+      "file": "lib/robopigeon/extend/templates/default/lib/robopigeon_extension.erb.rb"
+    },
+    {
+      "gem": "robopigeon",
+      "file": "lib/robopigeon/extend/templates/default/lib/robopigeon_extension/dsl.erb.rb"
+    },
+    {
+      "gem": "robopigeon",
+      "file": "lib/robopigeon/extend/templates/default/lib/robopigeon_extension/helper_dsl.erb.rb"
+    },
+    {
+      "gem": "robopigeon",
+      "file": "lib/robopigeon/extend/templates/default/lib/robopigeon_extension/version.erb.rb"
+    },
+    {
+      "gem": "robopigeon",
+      "file": "lib/robopigeon/extend/templates/default/spec/robopigeon-extension/dsl_spec.erb.rb"
+    },
+    {
+      "gem": "robopigeon",
+      "file": "lib/robopigeon/extend/templates/default/spec/robopigeon-extension/helper_dsl_spec.erb.rb"
+    },
+    {
+      "gem": "whtt-eric-beet",
+      "file": "lib/beet/recipes/rails/testing/rspec.rb"
+    },
+    {
+      "gem": "whtt-eric-beet",
+      "file": "lib/beet/recipes/rails3/file_uploads/paperclip.rb"
+    },
+    {
+      "gem": "database_repository",
+      "file": "lib/generators/database_repository/templates/repository.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/application/app/blocks/top_level.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/application/app/lib/module.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/application/config/application.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/application/config/version.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/application/target/production.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/new/generator.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/origen_infrastructure/app_generator_plugin/app/lib/application.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/origen_infrastructure/app_generator_plugin/app/lib/base.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/origen_infrastructure/app_generator_plugin/app/lib/module.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/origen_infrastructure/app_generator_plugin/app/lib/plugin.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/origen_infrastructure/app_generator_plugin/config/load_generators.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/plugin/config/boot.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "origen_app_generators/templates/app_generators/plugin/gemspec.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/attributes.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/class.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/controller.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/model.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/module.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/registers.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/sub_blocks.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/version.rb"
+    },
+    {
+      "gem": "origen",
+      "file": "templates/code_generators/version_time.rb"
+    },
+    {
+      "gem": "mark_mapper",
+      "file": "lib/rails/generators/mark_mapper/model/templates/model.rb"
+    },
+    {
+      "gem": "rivet",
+      "file": "example/autoscale/defaults.rb"
+    },
+    {
+      "gem": "squirrel-cucumber",
+      "file": "rails_generators/cucumber/templates/cucumber_environment.rb"
+    },
+    {
+      "gem": "squirrel-cucumber",
+      "file": "rails_generators/cucumber/templates/env.rb"
+    },
+    {
+      "gem": "squirrel-cucumber",
+      "file": "rails_generators/cucumber/templates/webrat_steps.rb"
+    },
+    {
+      "gem": "armstrong",
+      "file": "lib/armstrong/main_actors.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/command/templates/command.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/command/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/command_controller/templates/command_controller.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/command_controller/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/enquiry/templates/enquiry.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/enquiry/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/enquiry_controller/templates/enquiry_controller.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/enquiry_controller/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/enum/templates/enum.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/enum/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/presenter/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/presenter/templates/presenter.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/query/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/query/templates/query.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/query_filter/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/query_filter/templates/query_filter.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/service/templates/module.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/riveter/service/templates/service.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/command/templates/command_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/command_controller/templates/command_controller_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/enquiry/templates/enquiry_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/enquiry_controller/templates/enquiry_controller_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/enum/templates/enum_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/presenter/templates/presenter_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/query/templates/query_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/query_filter/templates/query_filter_spec.rb"
+    },
+    {
+      "gem": "riveter",
+      "file": "lib/generators/rspec/service/templates/service_spec.rb"
+    },
+    {
+      "gem": "newplugin",
+      "file": "newplugin_generators/controller/templates/controller.rb"
+    },
+    {
+      "gem": "newplugin",
+      "file": "newplugin_generators/migration/templates/migration.rb"
+    },
+    {
+      "gem": "newplugin",
+      "file": "newplugin_generators/model/templates/migration.rb"
+    },
+    {
+      "gem": "newplugin",
+      "file": "newplugin_generators/model/templates/model.rb"
+    },
+    {
+      "gem": "w-stdlib",
+      "file": "lib/w-stdlib/core_ext/aws.rb"
+    },
+    {
+      "gem": "autojenkins",
+      "file": "lib/autojenkins.rb"
+    },
+    {
+      "gem": "roles_data_mapper",
+      "file": "lib/generators/data_mapper/roles/templates/many_roles/role.rb"
+    },
+    {
+      "gem": "roles_data_mapper",
+      "file": "lib/generators/data_mapper/roles/templates/many_roles/user_role.rb"
+    },
+    {
+      "gem": "roles_data_mapper",
+      "file": "lib/generators/data_mapper/roles/templates/one_role/role.rb"
+    },
+    {
+      "gem": "wcc-pericope",
+      "file": "lib/cli/command.rb"
+    },
+    {
+      "gem": "are_we_there_yet",
+      "file": "lib/are_we_there_yet/profiler.rb"
+    },
+    {
+      "gem": "freshtrack",
+      "file": "lib/freshbooks/extensions/base_object.rb"
+    },
+    {
+      "gem": "fairchild-poolparty",
+      "file": "lib/poolparty/spec/templates/have_base.rb"
+    },
+    {
+      "gem": "wonkavision",
+      "file": "test/analytics/test_aggregation.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_model/templates/models/active_record_migration.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_model/templates/models/active_record_model.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_model/templates/models/fixture_data/factory_girl_factories.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_model/templates/models/fixture_data/machinist_blueprints.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_model/templates/models/tests/rspec/unit_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_model/templates/models/tests/shoulda/unit_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_model/templates/models/tests/test_unit/unit_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/prototypes/controllers/action_controller.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/prototypes/helpers/tests/rspec/unit_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/controllers/action_controller.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/controllers/inherited_resources_controller.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/controllers/tests/rspec/functional_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/controllers/tests/shoulda/functional_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/controllers/tests/test_unit/functional_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/helpers/helper.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/helpers/tests/rspec/unit_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/helpers/tests/shoulda/unit_test.rb"
+    },
+    {
+      "gem": "dry_scaffold",
+      "file": "generators/dry_scaffold/templates/helpers/tests/test_unit/unit_test.rb"
+    },
+    {
+      "gem": "mongoid-forums",
+      "file": "lib/generators/mongoid_forums/install/templates/initializer.rb"
+    },
+    {
+      "gem": "uniq_identifier",
+      "file": "lib/generators/uniq_identifier/templates/migration.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "code/ag1core/aa0begin.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "code/zz0applicationend/zz0end.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/alanguagehashbegin.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/templangfile.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/vlanguagehashend.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/zlocallangend.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/xlocallangfile.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/wlocallangstart.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/es/rwdcore/languagefile-es.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/en/rwdcore/languagefile.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/nl/rwdcore/languagefile.rb"
+    },
+    {
+      "gem": "rwdtinker",
+      "file": "lang/jp/rwdcore/languagefile.rb"
+    },
+    {
+      "gem": "code_healer",
+      "file": "lib/generators/code_healer/templates/create_healing_metrics.rb"
+    },
+    {
+      "gem": "bundler-helper",
+      "file": "lib/bundler-helper/version.rb"
+    },
+    {
+      "gem": "siphon",
+      "file": "lib/generators/templates/controller.rb"
+    },
+    {
+      "gem": "siphon",
+      "file": "lib/generators/templates/search.rb"
+    },
+    {
+      "gem": "siphon",
+      "file": "lib/generators/templates/view.rb"
+    },
+    {
+      "gem": "re-rails",
+      "file": "templates/secret_token.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "recipes/authentication.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "recipes/china.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "recipes/front_end.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "recipes/home.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "recipes/nosql.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "recipes/omniauth.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "recipes/template_language.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "test/fixtures/diff_recipe.rb"
+    },
+    {
+      "gem": "ramix",
+      "file": "test/fixtures/recipe.rb"
+    },
+    {
+      "gem": "rufirmata",
+      "file": "lib/rufirmata/board.rb"
+    },
+    {
+      "gem": "resume",
+      "file": "lib/resume.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/acl.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/acl_creating_a_grant_recipe.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/acl_reading_acl_recipe.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/acl_refreshing_cached_grants_recipe.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/bucket.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/bucket_before_refactoring.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/bucket_with_acl_mixin.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/grant.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/grant_creating_a_grant_recipe.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/grant_reading_acl_recipe.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/object.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/object_take1.rb"
+    },
+    {
+      "gem": "spatten-s3lib",
+      "file": "lib/object_with_acl_mixin.rb"
+    },
+    {
+      "gem": "pezra-contacts",
+      "file": "spec/fake_net_http.rb"
+    },
+    {
+      "gem": "pezra-contacts",
+      "file": "spec/fake_web.rb"
+    },
+    {
+      "gem": "blue_print",
+      "file": "lib/generators/rails/templates/context.rb"
+    },
+    {
+      "gem": "blue_print",
+      "file": "lib/generators/rails/templates/role.rb"
+    },
+    {
+      "gem": "blue_print",
+      "file": "lib/generators/rspec/templates/context_spec.rb"
+    },
+    {
+      "gem": "blue_print",
+      "file": "lib/generators/rspec/templates/role_spec.rb"
+    },
+    {
+      "gem": "ree",
+      "file": "lib/ree/templates/package/<%=package_subdir_name%>/<%=package_name%>.rb"
+    },
+    {
+      "gem": "dalao",
+      "file": ".ci/yank.rb"
+    },
+    {
+      "gem": "backlog",
+      "file": "lib/backlog_jira/generators/history_model/templates/functional_test.rb"
+    },
+    {
+      "gem": "backlog",
+      "file": "lib/backlog_jira/generators/history_model/templates/model.rb"
+    },
+    {
+      "gem": "backlog",
+      "file": "lib/backlog_jira/generators/history_model/templates/unit_test.rb"
+    },
+    {
+      "gem": "safetynet",
+      "file": "lib/rails/generators/safetynet/templates/initializer.rb"
+    },
+    {
+      "gem": "ateam-merb-auth",
+      "file": "datamapper_generators/ma_migration/templates/schema/migrations/add_ma_user.rb"
+    },
+    {
+      "gem": "cm-active_model_serializers",
+      "file": "lib/generators/serializer/templates/serializer.rb"
+    },
+    {
+      "gem": "deprecation_collector",
+      "file": "lib/deprecation_collector/web/views/layout.html.template.rb"
+    },
+    {
+      "gem": "jpeg2pdf",
+      "file": "lib/rpdf/document.rb"
+    },
+    {
+      "gem": "simple_form_class",
+      "file": "test/unit/base_test.rb"
+    },
+    {
+      "gem": "social_man",
+      "file": "lib/generators/templates/migration.rb"
+    },
+    {
+      "gem": "peterauth",
+      "file": "lib/auth.rb"
+    },
+    {
+      "gem": "rake_audit",
+      "file": "lib/generators/rake_audit/templates/create_rake_task_executions.rb"
+    },
+    {
+      "gem": "rwebthumb",
+      "file": "lib/rwebthumb/base.rb"
+    },
+    {
+      "gem": "active_orchestrator",
+      "file": "lib/generators/active_workflow/workflow/templates/workflow.rb"
+    },
+    {
+      "gem": "djanowski-mmangino-facebooker",
+      "file": "generators/facebook_controller/templates/controller.rb"
+    },
+    {
+      "gem": "djanowski-mmangino-facebooker",
+      "file": "generators/facebook_controller/templates/functional_test.rb"
+    },
+    {
+      "gem": "djanowski-mmangino-facebooker",
+      "file": "generators/facebook_controller/templates/helper.rb"
+    },
+    {
+      "gem": "djanowski-mmangino-facebooker",
+      "file": "generators/facebook_publisher/templates/publisher.rb"
+    },
+    {
+      "gem": "djanowski-mmangino-facebooker",
+      "file": "generators/facebook_scaffold/templates/controller.rb"
+    },
+    {
+      "gem": "djanowski-mmangino-facebooker",
+      "file": "generators/facebook_scaffold/templates/functional_test.rb"
+    },
+    {
+      "gem": "djanowski-mmangino-facebooker",
+      "file": "generators/facebook_scaffold/templates/helper.rb"
+    },
+    {
+      "gem": "allplayers_imports",
+      "file": "lib/allplayers_imports.rb"
+    },
+    {
+      "gem": "rich_i18n",
+      "file": "lib/generators/rich/translation/templates/migration.rb"
+    },
+    {
+      "gem": "rich_i18n",
+      "file": "lib/generators/rich/translation/templates/model.rb"
+    },
+    {
+      "gem": "rich_i18n",
+      "file": "lib/rich/i18n/core/enriched_string.rb"
+    },
+    {
+      "gem": "rich_i18n",
+      "file": "rails_generators/rich_i18n_translation/templates/migration.rb"
+    },
+    {
+      "gem": "rich_i18n",
+      "file": "rails_generators/rich_i18n_translation/templates/model.rb"
+    },
+    {
+      "gem": "ewoutvonk-ec2onrails",
+      "file": "server/files/usr/local/ec2onrails/lib/vendor/ini.rb"
+    },
+    {
+      "gem": "pr11",
+      "file": "lib/pr06/alimento.rb"
+    },
+    {
+      "gem": "pr11",
+      "file": "lib/pr06/plato.rb"
+    },
+    {
+      "gem": "sluggi",
+      "file": "lib/generators/create_slugs.erb.rb"
+    },
+    {
+      "gem": "gmalamid-spinal",
+      "file": "lib/spinal/shared/packet.rb"
+    },
+    {
+      "gem": "gmalamid-spinal",
+      "file": "lib/spinal/spinald.rb"
+    },
+    {
+      "gem": "sms_carrier",
+      "file": "lib/generators/rspec/templates/carrier_spec.rb"
+    },
+    {
+      "gem": "sms_carrier",
+      "file": "lib/generators/test_unit/templates/carrier_test.rb"
+    },
+    {
+      "gem": "sms_carrier",
+      "file": "lib/rails/generators/carrier/templates/carrier.rb"
+    },
+    {
+      "gem": "hola_janstilau",
+      "file": "lib/hola_janstilau.rb"
+    },
+    {
+      "gem": "bike",
+      "file": "lib/_storage/sequel.rb"
+    },
+    {
+      "gem": "journea",
+      "file": "lib/generators/journea/templates/config/initializers/journea.rb"
+    },
+    {
+      "gem": "journea",
+      "file": "lib/generators/journea/templates/config/initializers/journea2.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/actions/create.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/actions/destroy.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/actions/edit.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/actions/index.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/actions/new.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/actions/show.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/actions/update.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/controller.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/helper.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/migration.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/model.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/rspec/actions/create.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/rspec/actions/destroy.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/rspec/actions/edit.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/rspec/actions/show.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/rspec/actions/update.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/rspec/controller.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/rspec/model.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/shoulda/actions/create.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/shoulda/actions/destroy.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/shoulda/actions/edit.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/shoulda/actions/show.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/shoulda/actions/update.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/shoulda/controller.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/shoulda/model.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/testunit/actions/create.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/testunit/actions/destroy.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/testunit/actions/edit.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/testunit/actions/show.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/testunit/actions/update.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/testunit/controller.rb"
+    },
+    {
+      "gem": "entropi-bootstrap-rails",
+      "file": "lib/generators/bootstrap/scaffold/templates/tests/testunit/model.rb"
+    },
+    {
+      "gem": "block_templates",
+      "file": "lib/templates/active_record/model/model.rb"
+    },
+    {
+      "gem": "arpitjain11-ec2onrails",
+      "file": "server/files/usr/local/ec2onrails/lib/vendor/ini.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/add_association_to_audits.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/add_comment_to_audits.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/add_remote_address_to_audits.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/add_request_uuid_to_audits.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/install.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/rename_association_to_associated.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/rename_changes_to_audited_changes.rb"
+    },
+    {
+      "gem": "audited-activerecord",
+      "file": "lib/generators/audited/templates/rename_parent_to_association.rb"
+    },
+    {
+      "gem": "adhearsion-cw",
+      "file": "lib/adhearsion/voip/asterisk/manager_interface/ami_lexer.rl.rb"
+    },
+    {
+      "gem": "torrone",
+      "file": "lib/torrone/exporters/xls.rb"
+    },
+    {
+      "gem": "when_exe",
+      "file": "test/scripts/6.gcal.rb"
+    },
+    {
+      "gem": "when_exe",
+      "file": "test/scripts/6.rb"
+    },
+    {
+      "gem": "when_exe",
+      "file": "test/scripts/6.tz.rb"
+    }
+  ],
+  "prism_node_type_count": 151,
+  "used_node_type_count": 136,
+  "unused_node_types": [
+    "alias_global_variable_node",
+    "block_local_variable_node",
+    "class_variable_and_write_node",
+    "constant_and_write_node",
+    "constant_operator_write_node",
+    "constant_path_and_write_node",
+    "constant_path_operator_write_node",
+    "find_pattern_node",
+    "flip_flop_node",
+    "global_variable_and_write_node",
+    "interpolated_match_last_line_node",
+    "interpolated_xstring_node",
+    "match_last_line_node",
+    "missing_node",
+    "no_keywords_parameter_node",
+    "source_encoding_node",
+    "xstring_node"
+  ],
+  "gem_coverage": {
+    "program_node": 4843,
+    "statements_node": 4843,
+    "constant_read_node": 4797,
+    "call_node": 4790,
+    "string_node": 4786,
+    "arguments_node": 4782,
+    "def_node": 4477,
+    "local_variable_read_node": 4405,
+    "parameters_node": 4351,
+    "required_parameter_node": 4303,
+    "class_node": 4290,
+    "module_node": 4275,
+    "symbol_node": 4141,
+    "local_variable_write_node": 4122,
+    "block_node": 4097,
+    "constant_path_node": 3998,
+    "if_node": 3985,
+    "constant_write_node": 3984,
+    "block_parameters_node": 3860,
+    "embedded_statements_node": 3687,
+    "interpolated_string_node": 3662,
+    "self_node": 3632,
+    "integer_node": 3563,
+    "assoc_node": 3520,
+    "array_node": 3484,
+    "else_node": 3426,
+    "hash_node": 3328,
+    "instance_variable_write_node": 3323,
+    "instance_variable_read_node": 3118,
+    "keyword_hash_node": 3002,
+    "nil_node": 2951,
+    "true_node": 2935,
+    "optional_parameter_node": 2863,
+    "unless_node": 2844,
+    "or_node": 2672,
+    "return_node": 2605,
+    "false_node": 2588,
+    "parentheses_node": 2510,
+    "and_node": 2386,
+    "regular_expression_node": 2220,
+    "begin_node": 2130,
+    "local_variable_target_node": 1983,
+    "source_file_node": 1962,
+    "rescue_node": 1944,
+    "block_argument_node": 1789,
+    "instance_variable_or_write_node": 1694,
+    "rest_parameter_node": 1610,
+    "case_node": 1579,
+    "when_node": 1579,
+    "global_variable_read_node": 1560,
+    "splat_node": 1535,
+    "yield_node": 1405,
+    "multi_write_node": 1404,
+    "block_parameter_node": 1403,
+    "singleton_class_node": 1313,
+    "range_node": 1288,
+    "local_variable_operator_write_node": 1224,
+    "forwarding_super_node": 1069,
+    "super_node": 1002,
+    "next_node": 976,
+    "defined_node": 931,
+    "index_or_write_node": 888,
+    "float_node": 883,
+    "optional_keyword_parameter_node": 809,
+    "while_node": 785,
+    "break_node": 679,
+    "ensure_node": 661,
+    "local_variable_or_write_node": 630,
+    "interpolated_regular_expression_node": 591,
+    "alias_method_node": 522,
+    "required_keyword_parameter_node": 507,
+    "numbered_reference_read_node": 491,
+    "class_variable_write_node": 467,
+    "instance_variable_operator_write_node": 463,
+    "multi_target_node": 442,
+    "class_variable_read_node": 431,
+    "rescue_modifier_node": 422,
+    "instance_variable_target_node": 418,
+    "call_operator_write_node": 381,
+    "keyword_rest_parameter_node": 359,
+    "global_variable_write_node": 350,
+    "lambda_node": 350,
+    "assoc_splat_node": 350,
+    "index_operator_write_node": 318,
+    "interpolated_x_string_node": 315,
+    "until_node": 294,
+    "interpolated_symbol_node": 261,
+    "call_or_write_node": 234,
+    "x_string_node": 230,
+    "retry_node": 187,
+    "class_variable_or_write_node": 173,
+    "source_line_node": 140,
+    "for_node": 125,
+    "call_target_node": 110,
+    "constant_path_write_node": 99,
+    "implicit_node": 89,
+    "implicit_rest_node": 74,
+    "index_target_node": 72,
+    "undef_node": 63,
+    "back_reference_read_node": 60,
+    "embedded_variable_node": 52,
+    "forwarding_parameter_node": 48,
+    "forwarding_arguments_node": 43,
+    "class_variable_operator_write_node": 38,
+    "global_variable_target_node": 38,
+    "numbered_parameters_node": 36,
+    "constant_target_node": 36,
+    "global_variable_or_write_node": 33,
+    "global_variable_operator_write_node": 31,
+    "local_variable_and_write_node": 29,
+    "case_match_node": 24,
+    "in_node": 24,
+    "array_pattern_node": 18,
+    "match_write_node": 17,
+    "hash_pattern_node": 13,
+    "alternation_pattern_node": 13,
+    "constant_or_write_node": 13,
+    "match_required_node": 12,
+    "index_and_write_node": 12,
+    "capture_pattern_node": 12,
+    "it_parameters_node": 10,
+    "redo_node": 10,
+    "it_local_variable_read_node": 10,
+    "instance_variable_and_write_node": 7,
+    "rational_node": 6,
+    "pinned_variable_node": 6,
+    "class_variable_target_node": 4,
+    "post_execution_node": 4,
+    "imaginary_node": 3,
+    "match_predicate_node": 3,
+    "call_and_write_node": 2,
+    "constant_path_or_write_node": 2,
+    "shareable_constant_node": 1,
+    "constant_path_target_node": 1,
+    "pre_execution_node": 1,
+    "pinned_expression_node": 1
+  },
+  "occurrences": {
+    "call_node": 5020307,
+    "integer_node": 3438525,
+    "arguments_node": 3268761,
+    "local_variable_read_node": 2393707,
+    "statements_node": 2213699,
+    "string_node": 1949731,
+    "nil_node": 1649853,
+    "symbol_node": 1465367,
+    "constant_read_node": 1103208,
+    "assoc_node": 690170,
+    "required_parameter_node": 624252,
+    "def_node": 547560,
+    "constant_path_node": 504003,
+    "local_variable_write_node": 488140,
+    "parameters_node": 486852,
+    "block_node": 452221,
+    "instance_variable_read_node": 425364,
+    "if_node": 325811,
+    "array_node": 279361,
+    "embedded_statements_node": 222307,
+    "hash_node": 198888,
+    "self_node": 194438,
+    "block_parameters_node": 181790,
+    "keyword_hash_node": 169835,
+    "instance_variable_write_node": 163607,
+    "interpolated_string_node": 146903,
+    "module_node": 116783,
+    "else_node": 102411,
+    "class_node": 100611,
+    "program_node": 94427,
+    "return_node": 90692,
+    "true_node": 79827,
+    "when_node": 78808,
+    "unless_node": 75799,
+    "and_node": 74812,
+    "constant_write_node": 71023,
+    "false_node": 66824,
+    "optional_parameter_node": 66359,
+    "parentheses_node": 64511,
+    "or_node": 60113,
+    "local_variable_target_node": 58140,
+    "regular_expression_node": 57157,
+    "optional_keyword_parameter_node": 41709,
+    "begin_node": 30023,
+    "float_node": 27613,
+    "block_argument_node": 22879,
+    "multi_write_node": 20247,
+    "splat_node": 18758,
+    "rescue_node": 17591,
+    "case_node": 16563,
+    "rest_parameter_node": 15817,
+    "global_variable_read_node": 15402,
+    "instance_variable_or_write_node": 13515,
+    "block_parameter_node": 13158,
+    "next_node": 12762,
+    "local_variable_operator_write_node": 12107,
+    "source_file_node": 11979,
+    "required_keyword_parameter_node": 11806,
+    "range_node": 11706,
+    "forwarding_super_node": 10789,
+    "yield_node": 9971,
+    "super_node": 9685,
+    "alias_method_node": 8589,
+    "numbered_reference_read_node": 8062,
+    "lambda_node": 6790,
+    "break_node": 6579,
+    "keyword_rest_parameter_node": 6493,
+    "index_or_write_node": 6446,
+    "singleton_class_node": 6003,
+    "multi_target_node": 5586,
+    "defined_node": 5149,
+    "assoc_splat_node": 5123,
+    "while_node": 4865,
+    "class_variable_read_node": 4740,
+    "interpolated_regular_expression_node": 4475,
+    "interpolated_symbol_node": 4239,
+    "instance_variable_target_node": 4054,
+    "ensure_node": 3659,
+    "class_variable_write_node": 3489,
+    "local_variable_or_write_node": 3469,
+    "implicit_node": 3389,
+    "instance_variable_operator_write_node": 3061,
+    "global_variable_write_node": 2085,
+    "rescue_modifier_node": 1890,
+    "interpolated_x_string_node": 1797,
+    "in_node": 1632,
+    "index_operator_write_node": 1465,
+    "call_operator_write_node": 1429,
+    "it_local_variable_read_node": 1162,
+    "it_parameters_node": 1037,
+    "embedded_variable_node": 949,
+    "until_node": 944,
+    "x_string_node": 926,
+    "call_or_write_node": 806,
+    "source_line_node": 710,
+    "implicit_rest_node": 617,
+    "hash_pattern_node": 576,
+    "numbered_parameters_node": 565,
+    "case_match_node": 546,
+    "for_node": 535,
+    "back_reference_read_node": 501,
+    "array_pattern_node": 484,
+    "constant_path_write_node": 436,
+    "index_target_node": 424,
+    "call_target_node": 418,
+    "forwarding_parameter_node": 413,
+    "class_variable_or_write_node": 401,
+    "retry_node": 395,
+    "alternation_pattern_node": 393,
+    "forwarding_arguments_node": 327,
+    "undef_node": 279,
+    "constant_or_write_node": 207,
+    "global_variable_target_node": 206,
+    "match_required_node": 202,
+    "constant_target_node": 200,
+    "local_variable_and_write_node": 87,
+    "capture_pattern_node": 85,
+    "global_variable_operator_write_node": 80,
+    "class_variable_operator_write_node": 71,
+    "rational_node": 63,
+    "global_variable_or_write_node": 57,
+    "match_write_node": 46,
+    "match_predicate_node": 42,
+    "index_and_write_node": 31,
+    "redo_node": 27,
+    "pre_execution_node": 19,
+    "instance_variable_and_write_node": 16,
+    "pinned_variable_node": 14,
+    "class_variable_target_node": 9,
+    "shareable_constant_node": 6,
+    "imaginary_node": 4,
+    "post_execution_node": 4,
+    "constant_path_target_node": 2,
+    "call_and_write_node": 2,
+    "constant_path_or_write_node": 2,
+    "pinned_expression_node": 1
+  }
+}
