@@ -101,12 +101,94 @@ features:
     source: docs/ruby/bitwise-operators.md
     method_names: ["&", "|", "^", "~"]
 
-  - name: shift-operators
+  # ADR 0015 settled this: `<<` is NOT removed. It returns as a rebinding
+  # append operator at statement/assignment position, so migrating code keeps
+  # the spelling but needs a `mutable` binding. Counting it as a removal
+  # overstated the affected population by 45.2% of gems.
+  - name: shift-append-operator
+    kind: changed
+    status: decided
+    description: "`<<` becomes a rebinding append operator (`line << word` ≡ `line = line + word`), requiring a `mutable` binding; the spelling survives, the aliasing semantics do not"
+    source: docs/adr/0015-2026-07-23-values-never-mutate.md
+    method_names: ["<<"]
+
+  - name: right-shift-operator
     kind: removed
     status: tentative
-    description: "`<<` / `>>` tracked separately from & | ^ ~ because `<<` counts are dominated by Array/IO/String append, which travels with the undecided mutable-values question"
+    description: "`>>` leaves the grammar with the other bitwise operators"
     source: docs/ruby/bitwise-operators.md
-    method_names: ["<<", ">>"]
+    method_names: [">>"]
+
+  # ADR 0015 — values never mutate; names do. In-place mutators never exist.
+  - name: in-place-mutators
+    kind: removed
+    status: decided
+    description: "In-place mutators never exist — no push, map!, upcase!, aliased buffers. Index assignment `[]=` returns as rebinding, like `<<`"
+    source: docs/adr/0015-2026-07-23-values-never-mutate.md
+    detection_note: "Upper bound: matching is receiver-blind, so a user-defined `push`/`shift`/`insert`/`replace` on a non-collection counts too. The bang-suffixed names (map!, gsub!, upcase!) are reliable; the bare ones are not."
+    method_names:
+      - append
+      - clear
+      - compact!
+      - concat
+      - delete_at
+      - delete_if
+      - downcase!
+      - flatten!
+      - gsub!
+      - insert
+      - map!
+      - merge!
+      - pop
+      - push
+      - reject!
+      - replace
+      - reverse!
+      - select!
+      - shift
+      - sort!
+      - squeeze!
+      - strip!
+      - sub!
+      - uniq!
+      - unshift
+      - upcase!
+
+  - name: freeze-family
+    kind: removed
+    status: decided
+    description: "freeze/frozen?/dup/clone become meaningless once values never mutate — ledger entries, not features"
+    source: docs/adr/0015-2026-07-23-values-never-mutate.md
+    method_names: [clone, dup, freeze, frozen?]
+    detection_note: "Open question for the impl repo: ADR 0015 says these become meaningless, but not whether calling one is a compile error or a silently-accepted no-op. Counted as a blocker here, which assumes the former. Also receiver-blind, so a user-defined `dup` counts."
+
+  # ADR 0020 — only `<<~` survives as a heredoc opener, which is what keeps
+  # `<<` unambiguously the append operator. Detected via the opening token
+  # rather than a node type, so this needs the heredocs report, not the
+  # generic node/method matching below.
+  - name: heredoc-plain-and-dash
+    kind: removed
+    status: decided
+    description: "`<<EOS` and `<<-EOS` heredoc openers are out; only `<<~` remains, with SCREAMING_CAPS terminators"
+    source: docs/adr/0020-2026-07-23-heredocs-squiggly-only.md
+    detection_note: "See the heredocs report: `<<` and `<<-` are 10.1% and 41.0% of heredoc-using gems that shipped in 2020+, versus 24.7% and 84.1% pre-2015"
+
+  # ADR 0017 — `it` is a normal binding under no-shadow; the numbered
+  # parameters do not come along.
+  - name: numbered-block-parameters
+    kind: removed
+    status: decided
+    description: "`_1`–`_9` stay out; `it` is the single implicit block parameter"
+    source: docs/adr/0017-2026-07-23-it-under-no-shadow.md
+    node_types: [numbered_parameters_node]
+
+  # ADR 0014 — keyword arguments are Ruby 3's; splats stay out for now.
+  - name: splat-arguments
+    kind: removed
+    status: tentative
+    description: "`*args` and `**kwargs` splats stay out for now; keyword arguments are Ruby 3's"
+    source: docs/adr/0014-2026-07-22-keyword-arguments.md
+    node_types: [splat_node, assoc_splat_node]
 
   - name: ambient-nil
     kind: changed
