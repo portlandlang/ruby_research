@@ -10,8 +10,10 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
 ## Data sources
 
 - **Compact index** (`https://rubygems.org/names`, `/info/<gem>`): every gem,
-  every version, with platform, dependency/ruby/rubygems requirements, and
-  release timestamps. One HTTP request per gem, cached forever per version
+  every version, with platform, runtime dependencies, ruby/rubygems
+  requirements, and release timestamps. Development dependencies are *not*
+  carried here — verified against gemspecs — so dependency figures describe
+  what gems need to run, not what they build with. One HTTP request per gem, cached forever per version
   list. This covers most corpus questions without downloading gem files.
 - **RubyGems API** (`/api/v1/...`): download counts and gem-level metadata.
   Rate limited to 10 req/s; the client throttles and caches.
@@ -62,7 +64,7 @@ corpus finding in its own right rather than a Portland question.
 | How many C extension gems             | `script/report c-extensions`                                           | working |
 | How many actively maintained          | `c-extensions` (includes last-release-year histogram); download counts | partial |
 | Replaceable by pure Ruby              | `c-extensions` + manual curation layer                                 | planned |
-| Effectively required in the community | `c-extensions` + reverse-dependency counts                             | planned |
+| Effectively required in the community | `script/report dependencies` (reverse-dependency counts, cross-joined with `c-extensions`) | working |
 
 ### Portland
 

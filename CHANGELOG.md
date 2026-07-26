@@ -1,6 +1,11 @@
 
 # Changelog
 
+## 2026-07-25 (dependency graph)
+
+- `CompactIndexClient` now parses each version's runtime dependencies, which were previously discarded. Verified against gemspecs that the compact index carries runtime dependencies only.
+- `dependencies` report: the graph in both directions — most depended-on gems, dependent-count and dependency-count distributions, and a cross-join with `c-extensions` answering README's "which C extensions are effectively required in the community?". Full corpus in ~30s, offline. nokogiri has 6,900 dependents; json 7,518.
+
 ## 2026-07-25 (later)
 
 - `case-collisions` report: every set of gems whose names differ only in letter case (178 pairs, 356 gems), with version counts, release dates, and the date each collision came into existence. All 178 were created 2009–2013 — none since — so the registry appears to validate this now and the remaining pairs are legacy index data.

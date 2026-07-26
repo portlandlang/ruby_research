@@ -15,12 +15,6 @@ active item runs offline from cache.
   reconcile against the impl repo (ADRs, CHANGELOG, commits, issues): anything
   since decided leaves the candidates list and enters
   `config/portland_removals.yml` with detection metadata instead.
-- **Dependency-graph report, both directions** — the compact index already
-  caches each version's dependencies and `CompactIndexClient#parse_info`
-  discards them. Verified: one offline pass over the cache yields 25,708
-  depended-on gems (activesupport 12,001 dependents, rails 11,207, json 7,522,
-  nokogiri 6,900). Cross-joined with `c_extensions.json` this answers README's
-  "which C extensions are effectively required in the community?".
 - **Cohort slicing** — let every report break its findings down by release
   year, updatedness, minimum Ruby version, and dependency-graph position,
   rather than only reporting corpus-wide totals.
