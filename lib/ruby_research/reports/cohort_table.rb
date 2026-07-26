@@ -2,31 +2,56 @@
 
 module RubyResearch
   module Reports
-    # Renders a CohortTally as a markdown table: one row per finding, one
-    # column per cohort, each cell the share of that cohort's gems.
+    # Renders a CohortTally breakdown as a markdown table: one row per
+    # finding, one column per cohort.
     #
-    # Shares rather than counts, because cohorts are different sizes.
-    # Compare a row against the corpus baseline printed underneath: a
-    # finding whose 2020+ share is below the share of gems that are 2020+
-    # is declining, above it is growing.
+    # Three flavors, because they answer different questions and a reader
+    # who mistakes one for another will draw the wrong conclusion. Each
+    # renderer states its own denominator in the footer.
     module CohortTable
-      def self.render(shares:, cohort_sizes:, label: 'Finding')
-        return ['_No cohort data._'] if shares.empty?
+      EMPTY = ['_No cohort data._'].freeze
 
-        cohorts = cohort_sizes.keys
-        total = cohort_sizes.values.sum
-        lines = []
-        lines << "| #{label} | #{cohorts.join(' | ')} |"
-        lines << "|---|#{(['---'] * cohorts.size).join('|')}|"
-        shares.each do |finding, row|
-          lines << "| #{finding} | #{cohorts.map { "#{row[it]}%" }.join(' | ')} |"
+      def self.render(shares:, cohort_sizes:, label: 'Finding')
+        return EMPTY.dup if shares.empty?
+
+        table(rows: shares, cohorts: cohort_sizes.keys, label: label, unit: '%') +
+          ['', footer('Cohort sizes', cohort_sizes, 'gems') <<
+               ' Cells are the share of gems in that cohort exhibiting the row, so columns are ' \
+               'comparable to each other and to how large the cohort is overall.']
+      end
+
+      def self.composition(composition:, site_totals:, label: 'Finding')
+        return EMPTY.dup if composition.empty?
+
+        table(rows: composition, cohorts: site_totals.keys, label: label, unit: '%') +
+          ['', footer('Sites per cohort', site_totals, 'sites') <<
+               ' Cells are the share of that cohort\'s sites, so each column sums to 100%. ' \
+               'This is scale-free: it says what the code is made of, not how much code there is.']
+      end
+
+      def self.density(density:, node_totals:, label: 'Finding')
+        return ['_No density data — this report does not count AST nodes._'] if density.nil?
+        return EMPTY.dup if density.empty?
+
+        table(rows: density, cohorts: node_totals.keys, label: label, unit: '') +
+          ['', footer('AST nodes per cohort', node_totals, 'nodes') <<
+               ' Cells are sites per 100,000 AST nodes — how much of this construct per unit ' \
+               'of code, independent of gem size.']
+      end
+
+      def self.table(rows:, cohorts:, label:, unit:)
+        lines = ["| #{label} | #{cohorts.join(' | ')} |", "|---|#{(['---'] * cohorts.size).join('|')}|"]
+        rows.each do |finding, row|
+          lines << "| #{finding} | #{cohorts.map { "#{row[it]}#{unit}" }.join(' | ')} |"
         end
-        lines << ''
-        lines << "Cohort sizes: #{cohort_sizes.map { |name, size| "#{name} #{size}" }.join(', ')} " \
-                 "(#{total} gems). Percentages are of the gems within each cohort, so rows are comparable " \
-                 'across columns; compare a column against how large that cohort is overall.'
         lines
       end
+      private_class_method :table
+
+      def self.footer(title, totals, noun)
+        "#{title}: #{totals.map { |name, size| "#{name} #{size}" }.join(', ')} (#{totals.values.sum} #{noun})."
+      end
+      private_class_method :footer
     end
   end
 end

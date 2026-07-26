@@ -39,4 +39,45 @@ RSpec.describe RubyResearch::CohortTally do
 
     expect(tally.counts['ensure_block']['2020+']).to eq(2)
   end
+
+  describe 'site composition' do
+    before do
+      # rails: 3 of 4 sites are rescue. nokogiri: 1 of 4.
+      tally.record_sites('rails', { 'rescue_clause' => 3, 'ensure_block' => 1 })
+      tally.record_sites('nokogiri', { 'rescue_clause' => 1, 'ensure_block' => 3 })
+    end
+
+    it 'reports each finding as a share of the cohort own sites' do
+      expect(tally.site_composition['rescue_clause']).to eq('2020+' => 75.0, 'pre-2015' => 25.0)
+      expect(tally.site_composition['ensure_block']).to eq('2020+' => 25.0, 'pre-2015' => 75.0)
+    end
+
+    it 'has columns that sum to 100% per cohort, since it is a composition' do
+      totals = Hash.new(0.0)
+      tally.site_composition.each_value { |row| row.each { |cohort, pct| totals[cohort] += pct } }
+
+      expect(totals.values).to all(be_within(0.1).of(100.0))
+    end
+  end
+
+  describe 'site density' do
+    it 'is nil when no node counts were supplied' do
+      tally.record_sites('rails', { 'rescue_clause' => 3 })
+
+      expect(tally.site_density).to be_nil
+    end
+
+    # The property the whole class exists for: a big gem and a small gem
+    # that mutate at the same rate must show the same density, even though
+    # the big one has far more sites. Gem-share and raw counts both fail this.
+    it 'is scale-free — unaffected by how much code a gem contains' do
+      tally.record_sites('rails', { 'rescue_clause' => 100 }, total_nodes: 1_000_000)
+      tally.record_sites('nokogiri', { 'rescue_clause' => 1 }, total_nodes: 10_000)
+
+      density = tally.site_density['rescue_clause']
+
+      expect(density['2020+']).to eq(density['pre-2015'])
+      expect(density['2020+']).to eq(10.0)
+    end
+  end
 end
