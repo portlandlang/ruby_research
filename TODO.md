@@ -15,12 +15,13 @@ active item runs offline from cache.
   reconcile against the impl repo (ADRs, CHANGELOG, commits, issues): anything
   since decided leaves the candidates list and enters
   `config/portland_removals.yml` with detection metadata instead.
-- **Cohort slicing, remaining reports** — `RubyResearch::Cohorts` exists and
-  `feature-usage` is sliced by it. Apply the same treatment to
-  `error-handling`, `nil-idioms`, `mutation-shapes`, `heredocs`, and
-  `portland-compatibility`, which still report corpus-wide totals only.
-  Each already retains the per-gem data needed, so this is post-processing
-  rather than a rescan.
+- **Run the site-normalized reports at full corpus.** The composition and
+  density code is built, verified at `--sample 300–400`, and committed, but
+  the committed `reports/` still hold gem-share-only runs. Five serial
+  full-corpus runs (~70 min total) will populate the new tables. Watch for
+  whether density contradicts gem share for `class << self`, `defined?`,
+  zsuper, or `alias` — the candidates file's priority ranking assumes those
+  are growing, and density is the better evidence.
 
 ## Deferred
 

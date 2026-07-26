@@ -1,6 +1,13 @@
 
 # Changelog
 
+## 2026-07-26 (site normalization)
+
+- Full-corpus `portland-compatibility` with the corrected removal list: Just Work™ is **24.8%** (48,460 of 195,390 gems), confirming the 2,000-gem sample's 24.6%.
+- `CohortTally` gained `site_composition` (share of a cohort's sites — scale-free, columns sum to 100%) and `site_density` (sites per 100k AST nodes), alongside the existing gem shares. `CohortTable` renders all three, each stating its own denominator so they cannot be misread.
+- All five site-counting reports now emit composition and density: `mutation-shapes` (by era *and* dependents), `error-handling`, `nil-idioms`, `heredocs`, `feature-usage`. Node counting is free — every report already walked the full AST.
+- Resolves the confound flagged in the previous mutation-shapes run: gem share rose monotonically with dependent count only because widely-depended-on gems contain more code. Composition does not, and the by-dependents table now says so in the report itself.
+
 ## 2026-07-26
 
 - Reconciled `config/portland_removals.yml` against impl-repo ADRs 0012–0024. Corrected a material error: ADR 0015 makes `<<` a *rebinding append operator*, not a removal, so counting it as removed overstated the affected population by 45.2% of gems. Added the ADR 0015 mutation removals, the ADR 0017 numbered-parameter removal, and the ADR 0014 splat deferral.

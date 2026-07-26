@@ -103,7 +103,20 @@ above it is growing. As a sanity check, features that only exist in recent
 Ruby land where they should — numbered block params 99.8% in 2020+, `it`
 90.4%, `case/in` 99.7%.
 
-`feature-usage` is sliced today; the other source-based reports are not yet.
+All six source-based reports are sliced. Each reports up to three views, and
+they answer different questions — mixing them up produces wrong conclusions:
+
+| View | Denominator | Question |
+|---|---|---|
+| Share of gems | gems in the cohort | how many maintainers adopted this |
+| Site composition | sites in the cohort | what the code is made of (scale-free) |
+| Site density | AST nodes in the cohort | how much per unit of code |
+
+Only composition and density are scale-free. Gem share rises with code volume,
+which is why the mutation-shapes by-dependents table shows *every* shape
+increasing with dependent count: widely-used gems are simply bigger. Where a
+report's sites are themselves AST nodes (`feature-usage`), density is
+composition times a constant and is deliberately not reported twice.
 
 ## Portland removal list
 
