@@ -53,7 +53,7 @@ corpus finding in its own right rather than a Portland question.
 | ---------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------- |
 | Language parts used in published gems          | `script/report feature-usage` (Prism AST tally over gem sources) | working (sampled)                                       |
 | Parts unused by any gem                        | `feature-usage`, full-corpus run                                 | working (needs full-corpus run for a definitive answer) |
-| Parts only used by old/unmaintained gems       | `feature-usage` joined with `gem-ages`                           | planned                                                 |
+| Parts only used by old/unmaintained gems       | `script/report feature-usage` (cohort slicing)                   | working                                                 |
 | Histogram threshold of "very old/unmaintained" | `script/report gem-ages`                                         | working                                                 |
 | Which gems work on which Ruby versions         | `script/report ruby-requirements`                                | working                                                 |
 
@@ -87,6 +87,23 @@ PORTLAND_DECISION_CANDIDATES.md):
 | Exceptions vs results                     | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes)          | working             |
 | Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `                                                    |                     | ` defaults, fetch arity) | working |
 | Heredocs (`<<` / `<<-` / `<<~`)           | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working             |
+
+## Cohort slicing
+
+Corpus-wide totals weight a gem abandoned in 2009 the same as rails.
+`RubyResearch::Cohorts` derives four keys per gem from the cached index —
+era, last-release year, minimum Ruby version, and dependents bucket — so a
+report can ask not just "is this used?" but "is it used by code people still
+maintain?". Downloads would be the natural fifth key but the compact index
+does not carry them (see TODO.md).
+
+Read cohort numbers against the corpus baseline: **~29% of all gems shipped
+a release in 2020 or later**. A construct well below that is declining; well
+above it is growing. As a sanity check, features that only exist in recent
+Ruby land where they should — numbered block params 99.8% in 2020+, `it`
+90.4%, `case/in` 99.7%.
+
+`feature-usage` is sliced today; the other source-based reports are not yet.
 
 ## Portland removal list
 

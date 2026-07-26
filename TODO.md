@@ -15,9 +15,12 @@ active item runs offline from cache.
   reconcile against the impl repo (ADRs, CHANGELOG, commits, issues): anything
   since decided leaves the candidates list and enters
   `config/portland_removals.yml` with detection metadata instead.
-- **Cohort slicing** — let every report break its findings down by release
-  year, updatedness, minimum Ruby version, and dependency-graph position,
-  rather than only reporting corpus-wide totals.
+- **Cohort slicing, remaining reports** — `RubyResearch::Cohorts` exists and
+  `feature-usage` is sliced by it. Apply the same treatment to
+  `error-handling`, `nil-idioms`, `mutation-shapes`, `heredocs`, and
+  `portland-compatibility`, which still report corpus-wide totals only.
+  Each already retains the per-gem data needed, so this is post-processing
+  rather than a rescan.
 
 ## Deferred
 

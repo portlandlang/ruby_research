@@ -1,6 +1,12 @@
 
 # Changelog
 
+## 2026-07-25 (cohort slicing)
+
+- `RubyResearch::Cohorts`: per-gem cohort keys (era, last-release year, minimum Ruby, dependents bucket) derived from the cached compact index, so reports can break findings down instead of only reporting corpus-wide totals.
+- `feature-usage` now slices by cohort: usage-by-era per node type, the newest gem using each type, node types last used before 2020, and node types used only by gems nobody depends on. Answers README's "are there parts of the language only used by very old/unmaintained gems?" — the answer is one: `interpolated_match_last_line_node`, newest user shipped 2014.
+- Fixture corpus made self-consistent: `spec/fixtures/compact_index/names.txt` listed a gem with no info file, so a spec silently fetched it from the network and wrote 184KB into the fixtures directory.
+
 ## 2026-07-25 (dependency graph)
 
 - `CompactIndexClient` now parses each version's runtime dependencies, which were previously discarded. Verified against gemspecs that the compact index carries runtime dependencies only.
