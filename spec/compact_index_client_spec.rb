@@ -27,5 +27,28 @@ RSpec.describe RubyResearch::CompactIndexClient do
     it 'returns nil ruby requirement when none is recorded' do
       expect(client.versions_of('aclize').first[:ruby]).to be_nil
     end
+
+    # The dependency segment sits before the "|" and was previously
+    # discarded, which hid the whole dependency graph from every report.
+    it 'parses the runtime dependencies of each version' do
+      expect(client.versions_of('aclize').first[:dependencies]).to eq(
+        [
+          { name: 'actionpack', requirement: '~> 4.0' },
+          { name: 'i18n', requirement: '~> 0.7' }
+        ]
+      )
+    end
+
+    # Multiple constraints on one dependency are joined with "&", so a
+    # comma still separates dependencies rather than splitting a requirement.
+    it 'keeps multi-constraint requirements intact' do
+      actionpack = client.versions_of('aclize').last[:dependencies].first
+
+      expect(actionpack).to eq(name: 'actionpack', requirement: '< 7&>= 5.0')
+    end
+
+    it 'returns no dependencies when a version declares none' do
+      expect(client.versions_of('nokogiri').first[:dependencies]).to eq([])
+    end
   end
 end

@@ -9,6 +9,7 @@
 #   script/report c-extensions [--sample N]
 #   script/report ruby-deprecations
 #   script/report case-collisions                       (full corpus, cache only)
+#   script/report dependencies [--sample N]
 #   script/report feature-usage [--sample N]
 #   script/report portland-compatibility [--sample N]
 #   script/report error-handling [--sample N]
@@ -53,7 +54,8 @@ reports = {
   'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample).run },
   'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample).run },
   'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample).run },
-  'case-collisions' => -> { RubyResearch::Reports::CaseCollisions.new.run }
+  'case-collisions' => -> { RubyResearch::Reports::CaseCollisions.new.run },
+  'dependencies' => -> { RubyResearch::Reports::Dependencies.new(sample: sample).run }
 }
 
 selected =

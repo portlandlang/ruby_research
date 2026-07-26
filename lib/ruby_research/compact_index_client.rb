@@ -31,7 +31,7 @@ module RubyResearch
     end
 
     # Returns an array of version hashes for a gem:
-    #   { version:, platform:, ruby:, rubygems:, created_at: }
+    #   { version:, platform:, dependencies:, ruby:, rubygems:, created_at: }
     def versions_of(gem_name)
       body = cached_fetch(path: "/info/#{gem_name}", cache_file: info_cache_file(gem_name))
       parse_info(body)
@@ -62,14 +62,31 @@ module RubyResearch
         next unless version_part
 
         version, platform = version_part.split('-', 2)
-        requirements = rest.to_s.split('|').last.to_s
+        dependency_part, requirements = rest.to_s.split('|', 2)
         {
           version: version,
           platform: platform || 'ruby',
-          ruby: requirement_from(requirements, key: 'ruby'),
-          rubygems: requirement_from(requirements, key: 'rubygems'),
-          created_at: requirement_from(requirements, key: 'created_at')
+          dependencies: parse_dependencies(dependency_part),
+          ruby: requirement_from(requirements.to_s, key: 'ruby'),
+          rubygems: requirement_from(requirements.to_s, key: 'rubygems'),
+          created_at: requirement_from(requirements.to_s, key: 'created_at')
         }
+      end
+    end
+
+    # "actionpack:< 7&>= 5.0,i18n:~> 1.0" =>
+    #   [{ name: "actionpack", requirement: "< 7&>= 5.0" }, ...]
+    #
+    # Commas separate dependencies; multiple constraints on one dependency
+    # are joined with "&", so splitting on comma is safe. The compact index
+    # carries runtime dependencies only — development dependencies from the
+    # gemspec never appear here.
+    def parse_dependencies(dependency_part)
+      dependency_part.to_s.split(',').filter_map do |entry|
+        name, requirement = entry.split(':', 2)
+        next if name.nil? || name.empty?
+
+        { name: name, requirement: requirement }
       end
     end
 
