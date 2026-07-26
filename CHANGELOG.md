@@ -1,6 +1,11 @@
 
 # Changelog
 
+## 2026-07-26
+
+- Reconciled `config/portland_removals.yml` against impl-repo ADRs 0012–0024. Corrected a material error: ADR 0015 makes `<<` a *rebinding append operator*, not a removal, so counting it as removed overstated the affected population by 45.2% of gems. Added the ADR 0015 mutation removals, the ADR 0017 numbered-parameter removal, and the ADR 0014 splat deferral.
+- Rewrote `PORTLAND_DECISION_CANDIDATES.md`: full-corpus prevalence (n=195,390) with era trends against the 29.2% baseline, re-ranked priorities, a "graduated since last pass" table for the six items ADRs have since decided, corpus evidence offered back on landed ADRs, and three open questions where a decision's scope affects measurement. Cross-linked to the impl repo's `open-decisions.md`.
+
 ## 2026-07-25 (cohort slicing)
 
 - `RubyResearch::Cohorts`: per-gem cohort keys (era, last-release year, minimum Ruby, dependents bucket) derived from the cached compact index, so reports can break findings down instead of only reporting corpus-wide totals.
