@@ -58,6 +58,18 @@ runs offline from the cached corpus.
 - **Concurrency-shape census** — `Thread.new` / `Mutex` / `Queue` / `Ractor`
   sites, and how many are fork-join-shaped vs long-lived workers.
 
+### Open investigations
+
+Questions surfaced by a report, with data gathered but not yet resolved.
+Written up under `investigations/`.
+
+- **[Dependencies pointing at gems not on RubyGems.org](investigations/missing-dependencies.md)**
+  — 132 dependency edges name gems absent from the index (`active_support`
+  alone has 118 dependents). Hypotheses to test: pre-1.0 Rails naming,
+  gems hosted off RubyGems.org (rails-assets.org), version strings leaking
+  into the name field, github-gems era names, yanked gems, typos. Needs a
+  policy decision for dangling edges before deeper dependency work.
+
 ### Analysis joins
 
 - **feature-usage × gem-ages** — which language constructs are used only by
