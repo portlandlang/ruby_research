@@ -204,7 +204,9 @@ Corpus data bearing on landed ADRs, offered back as validation or challenge.
   2.0%.
 - **ADR 0015 is the single largest migration cost in the language.** With its
   removals encoded, gems that would compile verbatim drop from 39.8% to
-  **24.6%** (2,000-gem sample) — in-place mutators alone touch 49.4% of gems.
+  **24.8%** of the full corpus — in-place mutators alone touch 47.8% of gems
+  (93,434), the `<<` rebinding change another 45.0% (87,944), and the freeze
+  family 29.3%.
   For the accumulator question specifically: of 8.7M receiver-mutation sites,
   only **16.3% are accumulator-shaped** (fresh local, never escapes its
   method) and migrate to rebinding `<<` verbatim; **48.8% mutate a shared
