@@ -65,13 +65,16 @@ module RubyResearch
         progress = Progress.new(label: 'mutation-shapes')
         names.each_with_index do |name, index|
           progress.tick(index + 1, names.size)
-          gem_sites = sites_for(name)
-          next if gem_sites.nil?
+          scan = sites_for(name)
+          next if scan.nil?
 
           analyzed += 1
+          gem_sites = scan[:sites]
           present = gem_sites.select { |_shape, count| count.positive? }.keys
           tally.record(name, present)
+          tally.record_sites(name, gem_sites, total_nodes: scan[:nodes])
           dependents_tally.record(name, present)
+          dependents_tally.record_sites(name, gem_sites, total_nodes: scan[:nodes])
           gem_sites.each do |shape, count|
             site_counts[shape] += count
             gem_counts[shape] += 1 if count.positive?
@@ -93,8 +96,16 @@ module RubyResearch
           gem_coverage: SHAPES.to_h { [it, gem_counts[it]] },
           cohort_sizes: tally.cohort_sizes,
           share_by_era: tally.shares,
+          site_totals_by_era: tally.site_totals,
+          composition_by_era: tally.site_composition,
+          node_totals_by_era: tally.node_totals,
+          density_by_era: tally.site_density,
           dependents_cohort_sizes: dependents_tally.cohort_sizes,
-          share_by_dependents: dependents_tally.shares
+          share_by_dependents: dependents_tally.shares,
+          site_totals_by_dependents: dependents_tally.site_totals,
+          composition_by_dependents: dependents_tally.site_composition,
+          node_totals_by_dependents: dependents_tally.node_totals,
+          density_by_dependents: dependents_tally.site_density
         }
         writer = ReportWriter.new(name: 'mutation_shapes', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -109,28 +120,37 @@ module RubyResearch
         names.sample(@sample, random: Random.new(@seed))
       end
 
+      # Returns { sites:, nodes: } — the mutation-site tally plus the total
+      # AST nodes walked, which is the density denominator. Counting nodes
+      # is free here because finding the method definitions already visits
+      # every node.
       def sites_for(name)
         versions = @compact_index.versions_of(name)
         latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
         return nil unless latest
 
         sites = Hash.new(0)
+        nodes = 0
         @sources.each_ruby_file(name, latest[:version], platform: latest[:platform]) do |_path, source|
           result = Prism.parse(source)
           next unless result.success?
 
-          each_def_node(result.value) { classify_method(it, sites) }
+          nodes += each_def_node(result.value) { classify_method(it, sites) }
         end
-        sites
+        { sites: sites, nodes: nodes }
       end
 
+      # Yields every DefNode and returns the number of nodes visited.
       def each_def_node(root, &)
+        visited = 0
         queue = [root]
         until queue.empty?
+          visited += 1
           node = queue.pop
           yield node if node.is_a?(Prism::DefNode)
           queue.concat(node.compact_child_nodes)
         end
+        visited
       end
 
       def classify_method(def_node, sites)
@@ -226,15 +246,48 @@ module RubyResearch
         lines << ''
         lines << '## By era'
         lines << ''
+        lines << '### Share of gems'
+        lines << ''
         lines.concat(CohortTable.render(shares: data[:share_by_era], cohort_sizes: data[:cohort_sizes], label: 'Shape'))
+        lines << ''
+        lines << '### Composition of mutation sites'
+        lines << ''
+        lines.concat(CohortTable.composition(composition: data[:composition_by_era],
+                                             site_totals: data[:site_totals_by_era],
+                                             label: 'Shape'))
+        lines << ''
+        lines << '### Density'
+        lines << ''
+        lines.concat(CohortTable.density(density: data[:density_by_era],
+                                         node_totals: data[:node_totals_by_era],
+                                         label: 'Shape'))
         lines << ''
         lines << '## By how many gems depend on the gem'
         lines << ''
         lines << 'Whether widely-depended-on gems mutate differently from leaf gems.'
         lines << ''
+        lines << '**Read the composition and density tables, not the gem-share one.** Every shape rises'
+        lines << 'monotonically with dependent count in the gem-share view, but only because widely-used gems'
+        lines << 'contain more code and so exhibit more of everything. Gem share cannot separate "popular gems'
+        lines << 'mutate differently" from "popular gems are bigger"; the other two views can.'
+        lines << ''
+        lines << '### Share of gems (confounded by code volume — see above)'
+        lines << ''
         lines.concat(CohortTable.render(shares: data[:share_by_dependents],
                                         cohort_sizes: data[:dependents_cohort_sizes],
                                         label: 'Shape'))
+        lines << ''
+        lines << '### Composition of mutation sites'
+        lines << ''
+        lines.concat(CohortTable.composition(composition: data[:composition_by_dependents],
+                                             site_totals: data[:site_totals_by_dependents],
+                                             label: 'Shape'))
+        lines << ''
+        lines << '### Density'
+        lines << ''
+        lines.concat(CohortTable.density(density: data[:density_by_dependents],
+                                         node_totals: data[:node_totals_by_dependents],
+                                         label: 'Shape'))
         lines << ''
         lines << 'accumulator sites (fresh local container, never escapes its method mid-build) migrate to'
         lines << 'rebinding `<<` verbatim. escaped_local and shared_receiver sites are the aliasing population'
