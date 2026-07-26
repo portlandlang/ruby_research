@@ -45,6 +45,7 @@ module RubyResearch
         errors = []
         analyzed = []
 
+        @tally = CohortTally.new(cohorts: @cohorts)
         progress = Progress.new(label: 'feature-usage')
         names.each_with_index do |name, index|
           progress.tick(index + 1, names.size)
@@ -52,6 +53,10 @@ module RubyResearch
           next if node_types.nil?
 
           analyzed << name
+          # Every node is counted here already, so the density denominator
+          # is just the sum — no extra traversal needed.
+          @tally.record(name, node_types.keys.map(&:to_s))
+          @tally.record_sites(name, node_types.transform_keys(&:to_s), total_nodes: node_types.values.sum)
           node_types.each do |type, count|
             occurrences[type] += count
             gems_using[type] << name
@@ -106,6 +111,14 @@ module RubyResearch
         {
           stale_cutoff_year: STALE_CUTOFF,
           usage_by_era: by_era.sort.to_h,
+          era_cohort_sizes: @tally.cohort_sizes,
+          share_by_era: @tally.shares,
+          site_totals_by_era: @tally.site_totals,
+          composition_by_era: @tally.site_composition,
+          # No density here: this report's "sites" ARE AST nodes, so its
+          # density is composition times a constant. Reporting both would
+          # imply two independent measurements.
+          node_totals_by_era: @tally.node_totals,
           newest_using_gem_by_type: newest_release.sort.to_h,
           types_only_in_stale_gems: stale_types(newest_release),
           types_only_in_undepended_gems: peak_dependents.select { |_type, rank| rank.zero? }.keys.sort
@@ -197,6 +210,21 @@ module RubyResearch
         else
           data[:types_only_in_undepended_gems].each { lines << "- #{it}" }
         end
+        lines << ''
+        lines << '## By era'
+        lines << ''
+        lines << 'Share of gems in each cohort using the node type, then what share of that cohort\'s AST'
+        lines << 'the type accounts for. The second is scale-free; the first is not.'
+        lines << ''
+        lines.concat(CohortTable.render(shares: data[:share_by_era],
+                                        cohort_sizes: data[:era_cohort_sizes],
+                                        label: 'Node type'))
+        lines << ''
+        lines << '### Composition of the AST'
+        lines << ''
+        lines.concat(CohortTable.composition(composition: data[:composition_by_era],
+                                             site_totals: data[:site_totals_by_era],
+                                             label: 'Node type'))
         lines << ''
         lines << '## Gem coverage (how many gems use each node type)'
         lines << ''

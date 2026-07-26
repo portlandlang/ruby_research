@@ -59,7 +59,12 @@ module RubyResearch
           # Only gems that actually use a heredoc form part of the
           # denominator here; including the 84% that use none would drown
           # the signal.
-          tally.record(name, gem_tally[:indentation].keys + gem_tally[:quoting].keys) if gem_tally[:total].positive?
+          if gem_tally[:total].positive?
+            tally.record(name, gem_tally[:indentation].keys + gem_tally[:quoting].keys)
+            # Site tally uses indentation only. Adding quoting would count
+            # each heredoc twice, and composition columns would sum to 200%.
+            tally.record_sites(name, gem_tally[:indentation], total_nodes: gem_tally[:nodes])
+          end
           gem_tally[:casing].each_key { gems_by_casing[it] += 1 }
           gem_tally[:indentation].each_key { gems_by_indentation[it] += 1 }
           gem_tally[:quoting].each_key { gems_by_quoting[it] += 1 }
@@ -93,7 +98,11 @@ module RubyResearch
           body_size: SIZE_BUCKETS.to_h { [it, totals[:body_size][it]] },
           terminators: sort_by_count(totals[:terminators]).first(40).to_h,
           cohort_sizes: tally.cohort_sizes,
-          share_by_era: tally.shares
+          share_by_era: tally.shares,
+          site_totals_by_era: tally.site_totals,
+          composition_by_era: tally.site_composition,
+          node_totals_by_era: tally.node_totals,
+          density_by_era: tally.site_density
         }
         writer = ReportWriter.new(name: 'heredocs', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -108,6 +117,7 @@ module RubyResearch
           casing: Hash.new(0),
           indentation: Hash.new(0),
           interpolating: 0,
+          nodes: 0,
           quoting: Hash.new(0),
           stacked: 0,
           terminators: Hash.new(0),
@@ -125,6 +135,7 @@ module RubyResearch
       end
 
       def merge_tally(totals, gem_tally)
+        totals[:nodes] += gem_tally[:nodes]
         totals[:total] += gem_tally[:total]
         totals[:interpolating] += gem_tally[:interpolating]
         totals[:stacked] += gem_tally[:stacked]
@@ -151,16 +162,19 @@ module RubyResearch
         tally = new_tally
         @sources.each_ruby_file(name, latest[:version], platform: latest[:platform]) do |_path, source|
           result = Prism.parse(source)
-          collect(result.value, tally) if result.success?
+          tally[:nodes] += collect(result.value, tally) if result.success?
         end
         tally
       end
 
+      # Returns the number of nodes visited, for the density denominator.
       def collect(root, tally)
         opening_lines = Hash.new(0)
+        visited = 0
         queue = [root]
 
         until queue.empty?
+          visited += 1
           node = queue.pop
           count_call_arguments(node, tally)
 
@@ -176,6 +190,7 @@ module RubyResearch
         end
 
         tally[:stacked] += opening_lines.count { |_line, count| count > 1 }
+        visited
       end
 
       def heredoc?(node)
@@ -263,7 +278,25 @@ module RubyResearch
         lines << 'Share of *heredoc-using* gems in each cohort. `<<~` only exists since Ruby 2.3, so its'
         lines << 'standing among maintained gems matters more than its corpus-wide share.'
         lines << ''
+        lines << '### Share of heredoc-using gems'
+        lines << ''
         lines.concat(CohortTable.render(shares: data[:share_by_era], cohort_sizes: data[:cohort_sizes], label: 'Form'))
+        lines << ''
+        lines << '### Composition of heredoc sites'
+        lines << ''
+        lines << 'Indentation flavor only — counting quoting too would tally each heredoc twice. The gem-share'
+        lines << 'table above counts a gem once per form it uses anywhere, so a gem writing one `<<~` and forty'
+        lines << '`<<-` appears in both rows; this table says which form the corpus actually writes.'
+        lines << ''
+        lines.concat(CohortTable.composition(composition: data[:composition_by_era],
+                                             site_totals: data[:site_totals_by_era],
+                                             label: 'Form'))
+        lines << ''
+        lines << '### Density'
+        lines << ''
+        lines.concat(CohortTable.density(density: data[:density_by_era],
+                                         node_totals: data[:node_totals_by_era],
+                                         label: 'Form'))
         lines << ''
         lines << '## Terminator casing'
         lines << ''

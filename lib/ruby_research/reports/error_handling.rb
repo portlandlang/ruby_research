@@ -52,11 +52,13 @@ module RubyResearch
         progress = Progress.new(label: 'error-handling')
         names.each_with_index do |name, index|
           progress.tick(index + 1, names.size)
-          gem_sites = sites_for(name)
-          next if gem_sites.nil?
+          scan = sites_for(name)
+          next if scan.nil?
 
           analyzed += 1
+          gem_sites = scan[:sites]
           tally.record(name, gem_sites.select { |_shape, count| count.positive? }.keys)
+          tally.record_sites(name, gem_sites, total_nodes: scan[:nodes])
           gem_sites.each do |shape, count|
             site_counts[shape] += count
             gem_counts[shape] += 1 if count.positive?
@@ -74,7 +76,11 @@ module RubyResearch
           site_counts: SHAPES.to_h { [it, site_counts[it]] },
           gem_coverage: SHAPES.to_h { [it, gem_counts[it]] },
           cohort_sizes: tally.cohort_sizes,
-          share_by_era: tally.shares
+          share_by_era: tally.shares,
+          site_totals_by_era: tally.site_totals,
+          composition_by_era: tally.site_composition,
+          node_totals_by_era: tally.node_totals,
+          density_by_era: tally.site_density
         }
         writer = ReportWriter.new(name: 'error_handling', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -89,22 +95,28 @@ module RubyResearch
         names.sample(@sample, random: Random.new(@seed))
       end
 
+      # Returns { sites:, nodes: } — shape tally plus AST nodes walked, the
+      # density denominator. Free to count, since collect visits every node.
       def sites_for(name)
         versions = @compact_index.versions_of(name)
         latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
         return nil unless latest
 
         sites = Hash.new(0)
+        nodes = 0
         @sources.each_ruby_file(name, latest[:version], platform: latest[:platform]) do |_path, source|
           result = Prism.parse(source)
-          collect(result.value, sites) if result.success?
+          nodes += collect(result.value, sites) if result.success?
         end
-        sites
+        { sites: sites, nodes: nodes }
       end
 
+      # Returns the number of nodes visited.
       def collect(root, sites)
+        visited = 0
         queue = [root]
         until queue.empty?
+          visited += 1
           node = queue.pop
           case node
           when Prism::CallNode then sites['raise_site'] += 1 if %i[raise fail].include?(node.name)
@@ -116,6 +128,7 @@ module RubyResearch
           end
           queue.concat(node.compact_child_nodes)
         end
+        visited
       end
 
       def collect_rescue(node, sites)
@@ -164,7 +177,24 @@ module RubyResearch
         lines << 'Share of gems in each cohort using each shape, so legacy practice can be told apart from'
         lines << 'current practice.'
         lines << ''
+        lines << '### Share of gems'
+        lines << ''
         lines.concat(CohortTable.render(shares: data[:share_by_era], cohort_sizes: data[:cohort_sizes], label: 'Shape'))
+        lines << ''
+        lines << '### Composition of error-handling sites'
+        lines << ''
+        lines << 'Gem share says how many gems do something somewhere, which a single sloppy rescue in a large'
+        lines << 'gem triggers. Composition says how the average site is actually written.'
+        lines << ''
+        lines.concat(CohortTable.composition(composition: data[:composition_by_era],
+                                             site_totals: data[:site_totals_by_era],
+                                             label: 'Shape'))
+        lines << ''
+        lines << '### Density'
+        lines << ''
+        lines.concat(CohortTable.density(density: data[:density_by_era],
+                                         node_totals: data[:node_totals_by_era],
+                                         label: 'Shape'))
         lines << ''
         lines << 'Notes: rescue_reraises means the rescue body contains a raise/fail call; rescue_swallows is the complement.'
         lines << 'custom_error_class counts classes whose superclass name ends in Error/Exception.'
