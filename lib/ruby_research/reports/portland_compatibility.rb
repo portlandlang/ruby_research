@@ -23,16 +23,18 @@ module RubyResearch
       # a sample; the full list is reproducible by rerunning.
       CANDIDATE_SAMPLE_SIZE = 100
 
-      def initialize(compact_index: CompactIndexClient.new,
-                     sources: GemSourceClient.new,
+      def initialize(cohorts: Cohorts.new,
+                     compact_index: CompactIndexClient.new,
                      reports_dir: REPORTS_DIR,
                      sample: nil,
-                     seed: 42)
+                     seed: 42,
+                     sources: GemSourceClient.new)
+        @cohorts = cohorts
         @compact_index = compact_index
-        @sources = sources
         @reports_dir = reports_dir
         @sample = sample
         @seed = seed
+        @sources = sources
       end
 
       def run
@@ -41,6 +43,7 @@ module RubyResearch
         errors = []
         names = selected_names
 
+        tally = CohortTally.new(cohorts: @cohorts)
         progress = Progress.new(label: 'portland-compatibility')
         names.each_with_index do |name, index|
           progress.tick(index + 1, names.size)
@@ -49,6 +52,7 @@ module RubyResearch
 
           matched = detectable_features.select { feature_used?(it, usage) }.map { it['name'] }
           features_by_gem[name] = matched
+          tally.record(name, matched)
           matched.each { gems_by_feature[it] << name }
         rescue StandardError => e
           errors << { gem: name, error: e.message }
@@ -66,7 +70,9 @@ module RubyResearch
           just_work_candidates_count: clean_gems.size,
           just_work_candidates_sample: clean_gems.first(CANDIDATE_SAMPLE_SIZE),
           gems_affected_by_feature: gems_by_feature.transform_values(&:size).sort_by { |_feature, count| -count }.to_h,
-          undetectable_semantic_changes: undetectable_features.map { it['name'] }
+          undetectable_semantic_changes: undetectable_features.map { it['name'] },
+          cohort_sizes: tally.cohort_sizes,
+          share_by_era: tally.shares
         }
         writer = ReportWriter.new(name: 'portland_compatibility', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -145,6 +151,14 @@ module RubyResearch
           feature_percent = (count * 100.0 / data[:analyzed]).round(1)
           lines << "| #{feature} | #{count} | #{feature_percent}% |"
         end
+        lines << ''
+        lines << '## By era'
+        lines << ''
+        lines << 'Share of gems in each cohort touching each removal. A feature well below its cohort share'
+        lines << 'is already fading on its own; one above it is still being written today.'
+        lines << ''
+        lines.concat(CohortTable.render(shares: data[:share_by_era], cohort_sizes: data[:cohort_sizes],
+                                        label: 'Feature'))
         lines << ''
         lines << '## Semantic changes with no static detection'
         lines << ''

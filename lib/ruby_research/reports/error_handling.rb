@@ -27,16 +27,18 @@ module RubyResearch
         custom_error_class
       ].freeze
 
-      def initialize(compact_index: CompactIndexClient.new,
-                     sources: GemSourceClient.new,
+      def initialize(cohorts: Cohorts.new,
+                     compact_index: CompactIndexClient.new,
                      reports_dir: REPORTS_DIR,
                      sample: nil,
-                     seed: 42)
+                     seed: 42,
+                     sources: GemSourceClient.new)
+        @cohorts = cohorts
         @compact_index = compact_index
-        @sources = sources
         @reports_dir = reports_dir
         @sample = sample
         @seed = seed
+        @sources = sources
       end
 
       def run
@@ -46,6 +48,7 @@ module RubyResearch
         analyzed = 0
         names = selected_names
 
+        tally = CohortTally.new(cohorts: @cohorts)
         progress = Progress.new(label: 'error-handling')
         names.each_with_index do |name, index|
           progress.tick(index + 1, names.size)
@@ -53,6 +56,7 @@ module RubyResearch
           next if gem_sites.nil?
 
           analyzed += 1
+          tally.record(name, gem_sites.select { |_shape, count| count.positive? }.keys)
           gem_sites.each do |shape, count|
             site_counts[shape] += count
             gem_counts[shape] += 1 if count.positive?
@@ -68,7 +72,9 @@ module RubyResearch
           analyzed: analyzed,
           errors: errors,
           site_counts: SHAPES.to_h { [it, site_counts[it]] },
-          gem_coverage: SHAPES.to_h { [it, gem_counts[it]] }
+          gem_coverage: SHAPES.to_h { [it, gem_counts[it]] },
+          cohort_sizes: tally.cohort_sizes,
+          share_by_era: tally.shares
         }
         writer = ReportWriter.new(name: 'error_handling', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -152,6 +158,13 @@ module RubyResearch
           percent = (gems * 100.0 / data[:analyzed]).round(1)
           lines << "| #{shape} | #{data[:site_counts][shape]} | #{gems} | #{percent}% |"
         end
+        lines << ''
+        lines << '## By era'
+        lines << ''
+        lines << 'Share of gems in each cohort using each shape, so legacy practice can be told apart from'
+        lines << 'current practice.'
+        lines << ''
+        lines.concat(CohortTable.render(shares: data[:share_by_era], cohort_sizes: data[:cohort_sizes], label: 'Shape'))
         lines << ''
         lines << 'Notes: rescue_reraises means the rescue body contains a raise/fail call; rescue_swallows is the complement.'
         lines << 'custom_error_class counts classes whose superclass name ends in Error/Exception.'

@@ -39,16 +39,18 @@ module RubyResearch
       FRESH_CONSTANTS = %w[Array Hash Set String].freeze
       SHAPES = %w[accumulator escaped_local aliased_local shared_receiver implicit_self].freeze
 
-      def initialize(compact_index: CompactIndexClient.new,
-                     sources: GemSourceClient.new,
+      def initialize(cohorts: Cohorts.new,
+                     compact_index: CompactIndexClient.new,
                      reports_dir: REPORTS_DIR,
                      sample: nil,
-                     seed: 42)
+                     seed: 42,
+                     sources: GemSourceClient.new)
+        @cohorts = cohorts
         @compact_index = compact_index
-        @sources = sources
         @reports_dir = reports_dir
         @sample = sample
         @seed = seed
+        @sources = sources
       end
 
       def run
@@ -58,6 +60,8 @@ module RubyResearch
         analyzed = 0
         names = selected_names
 
+        tally = CohortTally.new(cohorts: @cohorts)
+        dependents_tally = CohortTally.new(cohorts: @cohorts, dimension: :dependents)
         progress = Progress.new(label: 'mutation-shapes')
         names.each_with_index do |name, index|
           progress.tick(index + 1, names.size)
@@ -65,6 +69,9 @@ module RubyResearch
           next if gem_sites.nil?
 
           analyzed += 1
+          present = gem_sites.select { |_shape, count| count.positive? }.keys
+          tally.record(name, present)
+          dependents_tally.record(name, present)
           gem_sites.each do |shape, count|
             site_counts[shape] += count
             gem_counts[shape] += 1 if count.positive?
@@ -83,7 +90,11 @@ module RubyResearch
           total_mutation_sites: total_sites,
           site_counts: SHAPES.to_h { [it, site_counts[it]] },
           site_percentages: SHAPES.to_h { [it, total_sites.zero? ? 0 : (site_counts[it] * 100.0 / total_sites).round(1)] },
-          gem_coverage: SHAPES.to_h { [it, gem_counts[it]] }
+          gem_coverage: SHAPES.to_h { [it, gem_counts[it]] },
+          cohort_sizes: tally.cohort_sizes,
+          share_by_era: tally.shares,
+          dependents_cohort_sizes: dependents_tally.cohort_sizes,
+          share_by_dependents: dependents_tally.shares
         }
         writer = ReportWriter.new(name: 'mutation_shapes', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -212,6 +223,18 @@ module RubyResearch
         data[:site_counts].each_key do |shape|
           lines << "| #{shape} | #{data[:site_counts][shape]} | #{data[:site_percentages][shape]}% | #{data[:gem_coverage][shape]} |"
         end
+        lines << ''
+        lines << '## By era'
+        lines << ''
+        lines.concat(CohortTable.render(shares: data[:share_by_era], cohort_sizes: data[:cohort_sizes], label: 'Shape'))
+        lines << ''
+        lines << '## By how many gems depend on the gem'
+        lines << ''
+        lines << 'Whether widely-depended-on gems mutate differently from leaf gems.'
+        lines << ''
+        lines.concat(CohortTable.render(shares: data[:share_by_dependents],
+                                        cohort_sizes: data[:dependents_cohort_sizes],
+                                        label: 'Shape'))
         lines << ''
         lines << 'accumulator sites (fresh local container, never escapes its method mid-build) migrate to'
         lines << 'rebinding `<<` verbatim. escaped_local and shared_receiver sites are the aliasing population'

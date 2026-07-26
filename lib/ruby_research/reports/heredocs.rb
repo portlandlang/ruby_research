@@ -23,16 +23,18 @@ module RubyResearch
     class Heredocs
       SIZE_BUCKETS = ['1 line', '2-5 lines', '6-20 lines', '21+ lines'].freeze
 
-      def initialize(compact_index: CompactIndexClient.new,
-                     sources: GemSourceClient.new,
+      def initialize(cohorts: Cohorts.new,
+                     compact_index: CompactIndexClient.new,
                      reports_dir: REPORTS_DIR,
                      sample: nil,
-                     seed: 42)
+                     seed: 42,
+                     sources: GemSourceClient.new)
+        @cohorts = cohorts
         @compact_index = compact_index
-        @sources = sources
         @reports_dir = reports_dir
         @sample = sample
         @seed = seed
+        @sources = sources
       end
 
       def run
@@ -45,6 +47,7 @@ module RubyResearch
         errors = []
         names = selected_names
 
+        tally = CohortTally.new(cohorts: @cohorts)
         progress = Progress.new(label: 'heredocs')
         names.each_with_index do |name, index|
           progress.tick(index + 1, names.size)
@@ -53,6 +56,10 @@ module RubyResearch
 
           analyzed += 1
           heredocs_per_gem[name] = gem_tally[:total] if gem_tally[:total].positive?
+          # Only gems that actually use a heredoc form part of the
+          # denominator here; including the 84% that use none would drown
+          # the signal.
+          tally.record(name, gem_tally[:indentation].keys + gem_tally[:quoting].keys) if gem_tally[:total].positive?
           gem_tally[:casing].each_key { gems_by_casing[it] += 1 }
           gem_tally[:indentation].each_key { gems_by_indentation[it] += 1 }
           gem_tally[:quoting].each_key { gems_by_quoting[it] += 1 }
@@ -84,7 +91,9 @@ module RubyResearch
           stacked_on_one_line: totals[:stacked],
           as_call_argument: totals[:as_call_argument],
           body_size: SIZE_BUCKETS.to_h { [it, totals[:body_size][it]] },
-          terminators: sort_by_count(totals[:terminators]).first(40).to_h
+          terminators: sort_by_count(totals[:terminators]).first(40).to_h,
+          cohort_sizes: tally.cohort_sizes,
+          share_by_era: tally.shares
         }
         writer = ReportWriter.new(name: 'heredocs', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
@@ -248,6 +257,13 @@ module RubyResearch
           lines << "| #{quoting} | #{count} | #{share(count,
                                                       data[:total_heredocs])} | #{gems} | #{share(gems, data[:gems_with_heredocs])} |"
         end
+        lines << ''
+        lines << '## By era'
+        lines << ''
+        lines << 'Share of *heredoc-using* gems in each cohort. `<<~` only exists since Ruby 2.3, so its'
+        lines << 'standing among maintained gems matters more than its corpus-wide share.'
+        lines << ''
+        lines.concat(CohortTable.render(shares: data[:share_by_era], cohort_sizes: data[:cohort_sizes], label: 'Form'))
         lines << ''
         lines << '## Terminator casing'
         lines << ''
