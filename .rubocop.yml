@@ -28,5 +28,10 @@ Metrics/BlockLength:
   Exclude:
     - spec/**/*
 
+# Reports take their collaborators as keyword arguments so they can be
+# driven from fixtures in specs; that legitimately exceeds five.
+Metrics/ParameterLists:
+  CountKeywordArgs: false
+
 Layout/LineLength:
   Max: 140

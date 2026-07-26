@@ -10,6 +10,7 @@ module RubyResearch
 end
 
 require_relative 'ruby_research/cache_key'
+require_relative 'ruby_research/cohorts'
 require_relative 'ruby_research/http_client'
 require_relative 'ruby_research/progress'
 require_relative 'ruby_research/report_writer'

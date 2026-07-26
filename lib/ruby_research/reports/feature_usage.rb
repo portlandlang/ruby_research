@@ -16,16 +16,25 @@ module RubyResearch
     # as unused. Files Prism can't parse are counted as parse errors —
     # those gems no longer even parse under current Ruby.
     class FeatureUsage
-      def initialize(compact_index: CompactIndexClient.new,
-                     sources: GemSourceClient.new,
+      # A gem whose newest release predates this is treated as stale for the
+      # "only used by unmaintained gems" question. 2020 sits well past the
+      # 2014 peak in the gem-ages histogram without being so recent that
+      # ordinary maintained-but-quiet gems get swept in.
+      STALE_CUTOFF = '2020'
+      DEPENDENT_RANK = { '0' => 0, '1-3' => 1, '4-10' => 2, '11-100' => 3, '100+' => 4 }.freeze
+
+      def initialize(cohorts: Cohorts.new,
+                     compact_index: CompactIndexClient.new,
                      reports_dir: REPORTS_DIR,
                      sample: nil,
-                     seed: 42)
+                     seed: 42,
+                     sources: GemSourceClient.new)
+        @cohorts = cohorts
         @compact_index = compact_index
-        @sources = sources
         @reports_dir = reports_dir
         @sample = sample
         @seed = seed
+        @sources = sources
       end
 
       def run
@@ -68,12 +77,45 @@ module RubyResearch
           unused_node_types: unused_types,
           gem_coverage: gems_using.transform_values(&:size).sort_by { |_type, count| -count }.to_h,
           occurrences: occurrences.sort_by { |_type, count| -count }.to_h
-        }
+        }.merge(cohort_data(gems_using))
         writer = ReportWriter.new(name: 'feature_usage', reports_dir: @reports_dir)
         writer.write(data: data, markdown: markdown_for(data))
       end
 
       private
+
+      # Corpus-wide counts weight a gem abandoned in 2009 the same as rails.
+      # Slicing each node type by the cohort of the gems using it answers
+      # README's "are there parts of the language only used by very
+      # old/unmaintained gems?" — a type whose newest user last shipped
+      # years ago, or whose users nobody depends on, is dead in practice
+      # even though the corpus-wide count is non-zero.
+      def cohort_data(gems_using)
+        keys = @cohorts.by_gem
+        by_era = {}
+        newest_release = {}
+        peak_dependents = {}
+
+        gems_using.each do |type, users|
+          cohorts = users.filter_map { keys[it] }
+          by_era[type] = cohorts.map { it[:era] }.tally.sort.to_h
+          newest_release[type] = cohorts.filter_map { it[:last_release_year] }.max
+          peak_dependents[type] = cohorts.map { DEPENDENT_RANK.fetch(it[:dependents], 0) }.max.to_i
+        end
+
+        {
+          stale_cutoff_year: STALE_CUTOFF,
+          usage_by_era: by_era.sort.to_h,
+          newest_using_gem_by_type: newest_release.sort.to_h,
+          types_only_in_stale_gems: stale_types(newest_release),
+          types_only_in_undepended_gems: peak_dependents.select { |_type, rank| rank.zero? }.keys.sort
+        }
+      end
+
+      def stale_types(newest_release)
+        stale = newest_release.select { |_type, year| year && year < STALE_CUTOFF }
+        stale.sort_by { |_type, year| year }.to_h
+      end
 
       def selected_names
         names = @compact_index.names
@@ -134,6 +176,27 @@ module RubyResearch
         lines << '## Node types unused by any sampled gem'
         lines << ''
         data[:unused_node_types].each { lines << "- #{it}" }
+        lines << ''
+        lines << "## Node types last used before #{data[:stale_cutoff_year]}"
+        lines << ''
+        lines << 'Alive in the corpus but not in maintained code: no gem using these has shipped a release'
+        lines << "since #{data[:stale_cutoff_year]}. Listed with the year of the newest gem that uses them."
+        lines << ''
+        if data[:types_only_in_stale_gems].empty?
+          lines << '_None — every node type is used by at least one recently released gem._'
+        else
+          lines << '| Node type | Newest using gem |'
+          lines << '|---|---|'
+          data[:types_only_in_stale_gems].each { |type, year| lines << "| #{type} | #{year} |" }
+        end
+        lines << ''
+        lines << '## Node types used only by gems nobody depends on'
+        lines << ''
+        if data[:types_only_in_undepended_gems].empty?
+          lines << '_None — every node type is used by at least one gem with dependents._'
+        else
+          data[:types_only_in_undepended_gems].each { lines << "- #{it}" }
+        end
         lines << ''
         lines << '## Gem coverage (how many gems use each node type)'
         lines << ''
