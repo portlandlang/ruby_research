@@ -59,8 +59,9 @@ was wrong about which constructs are legacy.
 2. **Singleton classes / `class << self`** — 24.9% of gems, growing (36.3%).
    Feeds the object-model session. Not removable without a blessed
    replacement for class methods.
-3. **Destructuring** — 27.1% of gems, growing (32.9%). Already flagged as an
-   ADR 0011 leftover; the numbers say it is mainstream, not legacy.
+3. **Destructuring** — 27.1% of gems, steady in every era (~30% of each
+   cohort uses it). Already flagged as an ADR 0011 leftover; the numbers say
+   it is mainstream, not legacy.
 4. **`defined?` and the reflection family** — 17.7%, growing (36.3%). Routes
    to the inference session (#9).
 5. **Class variables** — 9.3% of gems and clearly declining (20.2% vs the
@@ -82,8 +83,9 @@ was wrong about which constructs are legacy.
 ## Collides with "no runtime metaprogramming"
 
 - **`alias` / `alias_method`** — runtime method-table mutation.
-  **10.0% of gems, 32.8% 2020+ (growing).** Worth noting the docs use `alias`
-  in their own prose but never rule on it. Detect: `alias_method_node`.
+  **10.0% of gems; flat across eras** (12.1% of pre-2015 gems, 11.2% of
+  2020+ gems). Worth noting the docs use `alias` in their own prose but
+  never rule on it. Detect: `alias_method_node`.
 - **`undef` / `undef_method` / `remove_method`** — **1.1% of gems, 18.0% 2020+
   (declining).** Detect: `undef_node`, method names.
 - **Refinements (`refine` / `using`)** — scoped monkeypatching. Detect: method
@@ -143,9 +145,10 @@ recommend (`open-decisions.md` §6). Full-corpus shapes, from
   lists `%()` literals under "build-when-pulled", i.e. Ruby-match by default,
   but which survive is unstated. `%x` in particular is shell execution — see
   below.
-- **Multiple assignment / destructuring (`a, b = b, a`)** — **27.1% of gems,
-  32.9% 2020+ (growing).** Flagged as undecided in the docs; the data says
-  it is mainstream modern Ruby, not a legacy form.
+- **Multiple assignment / destructuring (`a, b = b, a`)** — **27.1% of gems;
+  steady across eras** (29.5% of pre-2015 gems, 30.5% of 2020+ gems).
+  Flagged as undecided in the docs; the data says it is mainstream in every
+  era, not a legacy form.
 - **`=begin`/`=end` blocks and `__END__`/`DATA`** — perlish file furniture the
   removed-syntax doc doesn't mention.
 
