@@ -1,0 +1,138 @@
+# Gem dependency graph on RubyGems.org
+
+Edges from the latest release of all 195399 gems, out of 195399 on RubyGems.org.
+
+Dependency kind: **runtime only (the compact index omits development dependencies)**.
+
+Edges: **310838**. Gems depended on by at least one other gem: **25560**. Gems declaring no runtime dependencies: **72298**.
+
+## Most depended-on gems
+
+| Gem | Dependents |
+|---|---|
+| activesupport | 12000 |
+| rails | 11207 |
+| json | 7518 |
+| nokogiri | 6900 |
+| thor | 6478 |
+| faraday | 5770 |
+| activerecord | 5051 |
+| httparty | 4506 |
+| rest-client | 3711 |
+| rack | 3041 |
+| railties | 2870 |
+| rake | 2681 |
+| sinatra | 2352 |
+| jekyll | 2236 |
+| colorize | 1990 |
+| multi_json | 1980 |
+| activemodel | 1778 |
+| hashie | 1713 |
+| redis | 1700 |
+| faraday_middleware | 1535 |
+| i18n | 1446 |
+| rspec | 1446 |
+| addressable | 1391 |
+| highline | 1344 |
+| bundler | 1338 |
+| actionpack | 1226 |
+| capistrano | 1215 |
+| fluentd | 1198 |
+| typhoeus | 1196 |
+| rubyzip | 1183 |
+| jquery-rails | 1161 |
+| haml | 1116 |
+| eventmachine | 1098 |
+| zeitwerk | 1092 |
+| ffi | 1080 |
+| builder | 1077 |
+| omniauth-oauth2 | 1058 |
+| aws-sdk | 1007 |
+| mime-types | 1000 |
+| concurrent-ruby | 950 |
+| omniauth | 936 |
+| sqlite3 | 908 |
+| sequel | 871 |
+| pg | 858 |
+| jwt | 844 |
+| sass | 841 |
+| mechanize | 830 |
+| net-ssh | 785 |
+| oj | 780 |
+| terminal-table | 780 |
+| rubocop | 777 |
+| mongoid | 772 |
+| rainbow | 760 |
+| http | 750 |
+| base64 | 745 |
+| dotenv | 728 |
+| logger | 725 |
+| faraday-multipart | 713 |
+| git | 710 |
+| devise | 698 |
+| trollop | 675 |
+| logstash-core-plugin-api | 667 |
+| pry | 666 |
+| octokit | 663 |
+| yajl-ruby | 654 |
+| sass-rails | 635 |
+| hoe | 624 |
+| tilt | 619 |
+| httpclient | 618 |
+| redcarpet | 616 |
+| hpricot | 613 |
+| aws-sdk-core | 600 |
+| sidekiq | 585 |
+| commander | 581 |
+| lita | 581 |
+| savon | 570 |
+| google-apis-core | 568 |
+| launchy | 556 |
+| awesome_print | 554 |
+| oauth | 552 |
+| kaminari | 535 |
+| mail | 532 |
+| thin | 527 |
+| virtus | 526 |
+| gli | 525 |
+| oauth2 | 525 |
+| capybara | 515 |
+| tty-prompt | 513 |
+| rmagick | 501 |
+| aws-sigv4 | 488 |
+| sprockets | 486 |
+| rabbit | 479 |
+| csv | 478 |
+| parallel | 457 |
+| coffee-rails | 456 |
+| mini_magick | 454 |
+| jekyll-seo-tag | 453 |
+| slop | 453 |
+| compass | 451 |
+| fog | 446 |
+
+## How many gems depend on each gem
+
+| Dependents | Gems |
+|---|---|
+| 0 | 169839 |
+| 1 | 14030 |
+| 2-3 | 5902 |
+| 4-6 | 2259 |
+| 7-10 | 1064 |
+| 11-20 | 938 |
+| 21+ | 1367 |
+
+## How many dependencies each gem declares
+
+| Dependencies | Gems |
+|---|---|
+| 0 | 72298 |
+| 1 | 51110 |
+| 2-3 | 49729 |
+| 4-6 | 15919 |
+| 7-10 | 4312 |
+| 11-20 | 1645 |
+| 21+ | 386 |
+
+Errors: 0
