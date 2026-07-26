@@ -1,6 +1,12 @@
 
 # Changelog
 
+## 2026-07-26 (later)
+
+- Two defects the full-corpus site-normalized runs exposed, both fixed:
+  - `feature-usage` now reports per-100k density instead of composition percent — at percent scale, one decimal place rounded 144 of 148 node types to 0.0%, destroying the signal the table existed to carry.
+  - `nil-idioms` excludes `nil_literal` from the site views (it stays in site counts and gem coverage): it is a literal, not a handling idiom, and generated SDK gems carry enough `x = nil` defaults that it was 86% of all 2020+ sites, diluting every real idiom.
+
 ## 2026-07-26 (site normalization)
 
 - Full-corpus `portland-compatibility` with the corrected removal list: Just Work™ is **24.8%** (48,460 of 195,390 gems), confirming the 2,000-gem sample's 24.6%.

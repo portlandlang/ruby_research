@@ -58,7 +58,11 @@ module RubyResearch
           analyzed += 1
           gem_sites = scan[:sites]
           tally.record(name, gem_sites.select { |_shape, count| count.positive? }.keys)
-          tally.record_sites(name, gem_sites, total_nodes: scan[:nodes])
+          # nil_literal is a literal, not a handling idiom, and it swamps the
+          # site views: generated SDK gems carry so many `x = nil` defaults
+          # that it was 86% of all 2020+ sites, diluting every real idiom.
+          # It stays in site_counts and gem_coverage above.
+          tally.record_sites(name, gem_sites.except('nil_literal'), total_nodes: scan[:nodes])
           gem_sites.each do |shape, count|
             site_counts[shape] += count
             gem_counts[shape] += 1 if count.positive?
@@ -190,6 +194,8 @@ module RubyResearch
         lines << ''
         lines << 'Whether `&.` is a maintainer\'s default reach or an occasional flourish — gem share cannot'
         lines << 'tell those apart, and the answer decides how central safe navigation is to the idiom set.'
+        lines << 'nil_literal is excluded here: it is a literal, not a handling idiom, and generated SDK gems'
+        lines << 'carry enough `x = nil` defaults to drown every real idiom in the site totals.'
         lines << ''
         lines.concat(CohortTable.composition(composition: data[:composition_by_era],
                                              site_totals: data[:site_totals_by_era],

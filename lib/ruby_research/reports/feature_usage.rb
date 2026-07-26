@@ -113,11 +113,13 @@ module RubyResearch
           usage_by_era: by_era.sort.to_h,
           era_cohort_sizes: @tally.cohort_sizes,
           share_by_era: @tally.shares,
-          site_totals_by_era: @tally.site_totals,
-          composition_by_era: @tally.site_composition,
-          # No density here: this report's "sites" ARE AST nodes, so its
-          # density is composition times a constant. Reporting both would
-          # imply two independent measurements.
+          # Density rather than composition, though for this report they are
+          # the same measurement (its "sites" ARE AST nodes, so composition
+          # = density / 1000). At composition's percent scale, one decimal
+          # place rounds every rare node type to 0.0% — the full-corpus run
+          # proved it: only 4 of 148 types survived rounding. Per-100k keeps
+          # the resolution.
+          density_by_era: @tally.site_density,
           node_totals_by_era: @tally.node_totals,
           newest_using_gem_by_type: newest_release.sort.to_h,
           types_only_in_stale_gems: stale_types(newest_release),
@@ -220,11 +222,14 @@ module RubyResearch
                                         cohort_sizes: data[:era_cohort_sizes],
                                         label: 'Node type'))
         lines << ''
-        lines << '### Composition of the AST'
+        lines << '### Density (occurrences per 100k AST nodes)'
         lines << ''
-        lines.concat(CohortTable.composition(composition: data[:composition_by_era],
-                                             site_totals: data[:site_totals_by_era],
-                                             label: 'Node type'))
+        lines << 'The scale-free view: how much of each era\'s AST is this node type, independent of how many'
+        lines << 'gems or how much code each era has.'
+        lines << ''
+        lines.concat(CohortTable.density(density: data[:density_by_era],
+                                         node_totals: data[:node_totals_by_era],
+                                         label: 'Node type'))
         lines << ''
         lines << '## Gem coverage (how many gems use each node type)'
         lines << ''
