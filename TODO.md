@@ -58,7 +58,8 @@ runs offline from the cached corpus.
 - **Args census** — `*args` / `**kwargs` / `&block` prevalence and shapes.
 - **Class-shape census** — share of classes that are pure data carriers
   (initialize + attr_*) vs behavior-rich; inheritance depth; include/extend
-  frequency; `class << self` idioms.
+  frequency; `class << self` idioms. The construction half is built
+  (`script/report construction`); this item now covers the rest.
 - **Concurrency-shape census** — `Thread.new` / `Mutex` / `Queue` / `Ractor`
   sites, and how many are fork-join-shaped vs long-lived workers.
 

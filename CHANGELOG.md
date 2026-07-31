@@ -1,6 +1,10 @@
 
 # Changelog
 
+## 2026-07-26 (construction census)
+
+- `construction` report, answering the impl repo's object-model questions: what `initialize` bodies contain (pure ivar assignment vs derivation vs validation-that-raises vs side effects), initialize signature shapes (positional/keyword/mixed), `Const.new` vs named class-method constructors at call sites, and `def self.new` overrides with/without `super`. Gems and occurrences counted separately throughout; era cohort shares included.
+
 ## 2026-07-26 (later)
 
 - Two defects the full-corpus site-normalized runs exposed, both fixed:

@@ -10,6 +10,7 @@
 #   script/report ruby-deprecations
 #   script/report case-collisions                       (full corpus, cache only)
 #   script/report dependencies [--sample N]
+#   script/report construction [--sample N]
 #   script/report feature-usage [--sample N]
 #   script/report portland-compatibility [--sample N]
 #   script/report error-handling [--sample N]
@@ -55,7 +56,8 @@ reports = {
   'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample).run },
   'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample).run },
   'case-collisions' => -> { RubyResearch::Reports::CaseCollisions.new.run },
-  'dependencies' => -> { RubyResearch::Reports::Dependencies.new(sample: sample).run }
+  'dependencies' => -> { RubyResearch::Reports::Dependencies.new(sample: sample).run },
+  'construction' => -> { RubyResearch::Reports::Construction.new(sample: sample).run }
 }
 
 selected =
