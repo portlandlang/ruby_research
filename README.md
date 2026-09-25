@@ -21,6 +21,7 @@ script/report error-handling --sample 100
 script/report nil-idioms --sample 100
 script/report mutation-shapes --sample 100
 script/report heredocs --sample 100
+script/report percent-literals --sample 100
 script/report all --sample 500
 ```
 

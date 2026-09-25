@@ -1,6 +1,10 @@
 
 # Changelog
 
+## 2026-09-24 (percent literal census)
+
+- `percent-literals` report, answering portland#29's per-member questions: which of `%w %W %i %I %q %Q % %s %r %x` gems write and how often, which delimiters they use per member, how often a body escapes or nests its own delimiter, and whether `%q`/`%Q`/`%` bodies actually contain a quote character. Gems and sites counted separately; era cohort shares included.
+
 ## 2026-07-26 (construction census)
 
 - `construction` report, answering the impl repo's object-model questions: what `initialize` bodies contain (pure ivar assignment vs derivation vs validation-that-raises vs side effects), initialize signature shapes (positional/keyword/mixed), `Const.new` vs named class-method constructors at call sites, and `def self.new` overrides with/without `super`. Gems and occurrences counted separately throughout; era cohort shares included.

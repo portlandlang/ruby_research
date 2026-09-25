@@ -87,6 +87,7 @@ PORTLAND_DECISION_CANDIDATES.md):
 | Exceptions vs results                     | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes)          | working             |
 | Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `                                                    |                     | ` defaults, fetch arity) | working |
 | Heredocs (`<<` / `<<-` / `<<~`)           | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working             |
+| The `%` literal family (portland#29)      | `script/report percent-literals` (member, delimiter, escaped/nested delimiters, quotes in `%q`/`%Q` bodies) | working             |
 
 ## Cohort slicing
 
