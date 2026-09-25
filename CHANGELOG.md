@@ -1,6 +1,10 @@
 
 # Changelog
 
+## 2026-09-25 (ordering census)
+
+- `ordering` report, answering portland#76: which gems define `<=>`, whether they also `include Comparable`, what a `<=>` body does (delegates to one part, compares parts as an array, or computes), how ordering is asked for at call sites (`sort` bare or with a block, `sort_by`, `min`/`max`, `min_by`/`max_by`, `<=>` in an expression, `between?`, `clamp`), and whether a `<=>` result is ever read as an integer. Gems and sites counted separately; era cohort shares included.
+
 ## 2026-09-24 (percent literal census)
 
 - `percent-literals` report, answering portland#29's per-member questions: which of `%w %W %i %I %q %Q % %s %r %x` gems write and how often, which delimiters they use per member, how often a body escapes or nests its own delimiter, and whether `%q`/`%Q`/`%` bodies actually contain a quote character. Gems and sites counted separately; era cohort shares included.

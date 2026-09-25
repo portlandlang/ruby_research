@@ -88,6 +88,7 @@ PORTLAND_DECISION_CANDIDATES.md):
 | Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `                                                    |                     | ` defaults, fetch arity) | working |
 | Heredocs (`<<` / `<<-` / `<<~`)           | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working             |
 | The `%` literal family (portland#29)      | `script/report percent-literals` (member, delimiter, escaped/nested delimiters, quotes in `%q`/`%Q` bodies) | working             |
+| Ordering: `<=>` and `Comparable` (portland#76) | `script/report ordering` (who defines `<=>`, what the body does, `include Comparable`, sort/min/max call shapes, results read as integers) | working             |
 
 ## Cohort slicing
 
