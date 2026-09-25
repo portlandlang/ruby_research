@@ -1,0 +1,182 @@
+{
+  "corpus_size": 195399,
+  "sampled": null,
+  "analyzed": 195390,
+  "errors": [
+    {
+      "gem": "aws-cdk",
+      "error": "GET https://rubygems.org/gems/aws-cdk-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "aws-cdk-asset-awscli-v1",
+      "error": "GET https://rubygems.org/gems/aws-cdk-asset-awscli-v1-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "aws-cdk-asset-node-proxy-agent-v6",
+      "error": "GET https://rubygems.org/gems/aws-cdk-asset-node-proxy-agent-v6-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "aws-cdk-cloud-assembly-schema",
+      "error": "GET https://rubygems.org/gems/aws-cdk-cloud-assembly-schema-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "aws-cdk-lib",
+      "error": "GET https://rubygems.org/gems/aws-cdk-lib-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "constructs",
+      "error": "GET https://rubygems.org/gems/constructs-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "jsii",
+      "error": "GET https://rubygems.org/gems/jsii-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "jsii-ruby-runtime",
+      "error": "GET https://rubygems.org/gems/jsii-ruby-runtime-0.0.0.pre.reserved.1.gem failed: 403"
+    },
+    {
+      "gem": "talk_to_your_app",
+      "error": "GET https://rubygems.org/gems/talk_to_your_app-0.1.0.pre.6.gem failed: 403"
+    }
+  ],
+  "defines_spaceship": 10734,
+  "includes_comparable": 6269,
+  "integer_results": 1795,
+  "body_shapes": {
+    "computes": 6344,
+    "delegates to a part": 4111,
+    "compares parts as an array": 279
+  },
+  "sites": {
+    "sort": 102493,
+    "max": 50362,
+    "min": 39290,
+    "sort_by": 37822,
+    "<=> in an expression": 32293,
+    "between?": 10242,
+    "sort with a block": 9508,
+    "clamp": 5946,
+    "max_by": 3523,
+    "min_by": 1984,
+    "max with a block": 1114,
+    "min with a block": 470
+  },
+  "gems_by_key": {
+    "sort": 22036,
+    "max": 11920,
+    "sort_by": 11294,
+    "min": 9951,
+    "<=> in an expression": 7551,
+    "defines <=>": 4940,
+    "sort with a block": 4718,
+    "includes Comparable": 2907,
+    "<=> body computes": 2724,
+    "<=> body delegates to a part": 2685,
+    "between?": 2456,
+    "max_by": 1761,
+    "min_by": 1111,
+    "clamp": 1065,
+    "max with a block": 755,
+    "reads <=> result as an integer": 728,
+    "min with a block": 285,
+    "<=> body compares parts as an array": 185
+  },
+  "cohort_sizes": {
+    "2015-2019": 63172,
+    "2020+": 57101,
+    "pre-2015": 75117
+  },
+  "share_by_era": {
+    "<=> body compares parts as an array": {
+      "2015-2019": 0.1,
+      "2020+": 0.1,
+      "pre-2015": 0.1
+    },
+    "<=> body computes": {
+      "2015-2019": 1.1,
+      "2020+": 1.7,
+      "pre-2015": 1.4
+    },
+    "<=> body delegates to a part": {
+      "2015-2019": 1.1,
+      "2020+": 1.4,
+      "pre-2015": 1.6
+    },
+    "<=> in an expression": {
+      "2015-2019": 2.8,
+      "2020+": 3.4,
+      "pre-2015": 5.1
+    },
+    "between?": {
+      "2015-2019": 1.1,
+      "2020+": 2.5,
+      "pre-2015": 0.5
+    },
+    "clamp": {
+      "2015-2019": 0.1,
+      "2020+": 1.8,
+      "pre-2015": 0.0
+    },
+    "defines <=>": {
+      "2015-2019": 2.0,
+      "2020+": 2.7,
+      "pre-2015": 2.8
+    },
+    "includes Comparable": {
+      "2015-2019": 1.3,
+      "2020+": 1.7,
+      "pre-2015": 1.5
+    },
+    "max": {
+      "2015-2019": 4.2,
+      "2020+": 9.6,
+      "pre-2015": 5.1
+    },
+    "max with a block": {
+      "2015-2019": 0.2,
+      "2020+": 0.4,
+      "pre-2015": 0.5
+    },
+    "max_by": {
+      "2015-2019": 0.7,
+      "2020+": 2.0,
+      "pre-2015": 0.3
+    },
+    "min": {
+      "2015-2019": 3.3,
+      "2020+": 8.0,
+      "pre-2015": 4.4
+    },
+    "min with a block": {
+      "2015-2019": 0.1,
+      "2020+": 0.1,
+      "pre-2015": 0.2
+    },
+    "min_by": {
+      "2015-2019": 0.3,
+      "2020+": 1.4,
+      "pre-2015": 0.1
+    },
+    "reads <=> result as an integer": {
+      "2015-2019": 0.2,
+      "2020+": 0.5,
+      "pre-2015": 0.4
+    },
+    "sort": {
+      "2015-2019": 7.9,
+      "2020+": 13.1,
+      "pre-2015": 12.7
+    },
+    "sort with a block": {
+      "2015-2019": 1.8,
+      "2020+": 2.0,
+      "pre-2015": 3.3
+    },
+    "sort_by": {
+      "2015-2019": 4.3,
+      "2020+": 8.8,
+      "pre-2015": 4.7
+    }
+  }
+}
