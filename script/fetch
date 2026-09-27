@@ -11,6 +11,12 @@
 #   script/fetch gems [--sample N] [--byte-budget X]     # .gem files (source-based reports need these)
 #   script/fetch all [--sample N] [--byte-budget X]
 #   script/fetch repair                                  # refetch gems whose cache key collided
+#   script/fetch refresh                                 # catch the cache up with rubygems.org today
+#
+# The caches never expire on their own. `refresh` compares them with
+# rubygems.org's /names and /versions and drops only the version lists that
+# changed; follow it with `index`, `metadata`, and `gems` to fetch what is
+# new, then `prune` to delete what is old.
 #
 # Same seeded sampling as script/report: `--sample 25000` here caches
 # exactly the gems `script/report ... --sample 25000` will analyze.
@@ -162,16 +168,29 @@ fetch_repair = lambda do
   warn ''
 end
 
+fetch_refresh = lambda do
+  http = RubyResearch::HttpClient.new
+  refresh = RubyResearch::CorpusRefresh.new(compact_index: compact_index,
+                                            names: http.get("#{RubyResearch::CompactIndexClient::HOST}/names"),
+                                            versions: http.get("#{RubyResearch::CompactIndexClient::HOST}/versions"))
+  { 'added' => refresh.added, 'removed' => refresh.removed, 'changed' => refresh.changed }.each do |label, changes|
+    sample_names = changes.first(5).join(', ')
+    puts "  refresh: #{changes.size} #{label}#{" (#{sample_names}#{', …' if changes.size > 5})" if changes.any?}"
+  end
+  refresh.apply
+end
+
 stages = {
   'index' => fetch_index,
   'metadata' => fetch_metadata,
   'gems' => fetch_gems,
-  'repair' => fetch_repair
+  'repair' => fetch_repair,
+  'refresh' => fetch_refresh
 }
 
 selected =
   case stage
-  when 'all' then stages.values
+  when 'all' then stages.except('refresh').values
   when *stages.keys then [stages.fetch(stage)]
   else
     warn "Unknown stage: #{stage.inspect}"
