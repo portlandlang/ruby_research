@@ -85,17 +85,24 @@ module RubyResearch
       def failures_in(paths, directory)
         errors_path = File.join(directory, '.pdx-errors')
         pid = Process.spawn(*@pdx, '--parse', *paths, chdir: directory, out: File::NULL, err: errors_path)
-        wait_or_kill(pid)
-        File.readlines(errors_path, chomp: true).filter_map do |line|
+        succeeded = wait_or_kill(pid)
+        failures = File.readlines(errors_path, chomp: true).filter_map do |line|
           match = FAILURE_LINE.match(line.scrub)
           [match[:path], match[:refusal]] if match
         end
+        # A failed run that named no file — a crash past the parser, say —
+        # is still a failure, never a pass.
+        return [[paths.first, 'pdx --parse failed without naming a file']] if failures.empty? && !succeeded
+
+        failures
       end
 
+      # Whether pdx exited cleanly.
       def wait_or_kill(pid)
         deadline = Time.now + TIMEOUT_SECONDS
         loop do
-          return if Process.wait(pid, Process::WNOHANG)
+          _pid, status = Process.wait2(pid, Process::WNOHANG)
+          return status.success? if status
 
           if Time.now > deadline
             Process.kill('KILL', pid)
