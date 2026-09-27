@@ -51,7 +51,7 @@ module RubyResearch
     # Range request usually suffices instead of downloading the gem.
     # Parsed YAML specs are cached under data/gem_metadata/.
     def full_gemspec(name, version, platform: 'ruby')
-      cache_path = File.join(metadata_cache_dir, "#{cache_basename(name, version, platform)}.yaml")
+      cache_path = metadata_path(name, version, platform: platform)
 
       unless File.exist?(cache_path)
         yaml = metadata_yaml(name, version, platform: platform)
@@ -63,13 +63,21 @@ module RubyResearch
     end
 
     def download(name, version, platform: 'ruby')
-      full_path = File.join(cache_dir, "#{cache_basename(name, version, platform)}.gem")
+      full_path = gem_path(name, version, platform: platform)
       return full_path if File.exist?(full_path)
 
       body = @http.get("#{HOST}#{remote_path(name, version, platform)}")
       FileUtils.mkdir_p(cache_dir)
       File.binwrite(full_path, body)
       full_path
+    end
+
+    # Where a version's .gem and its gemspec live in the cache, whether
+    # fetched yet or not.
+    def gem_path(name, version, platform: 'ruby') = File.join(cache_dir, "#{cache_basename(name, version, platform)}.gem")
+
+    def metadata_path(name, version, platform: 'ruby')
+      File.join(metadata_cache_dir, "#{cache_basename(name, version, platform)}.yaml")
     end
 
     private
@@ -99,7 +107,7 @@ module RubyResearch
 
     def metadata_yaml(name, version, platform:)
       path = remote_path(name, version, platform)
-      local_gem = File.join(cache_dir, "#{cache_basename(name, version, platform)}.gem")
+      local_gem = gem_path(name, version, platform: platform)
       head =
         if File.exist?(local_gem)
           File.binread(local_gem, METADATA_PROBE_BYTES)
