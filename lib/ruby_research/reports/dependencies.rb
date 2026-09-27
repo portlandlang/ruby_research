@@ -82,8 +82,7 @@ module RubyResearch
       # Dependency names of the gem's latest release, or nil when it has
       # no releases at all.
       def dependencies_of(name)
-        versions = @client.versions_of(name)
-        latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
+        latest = @client.latest_version_of(name)
         return nil unless latest
 
         latest[:dependencies].map { it[:name] }

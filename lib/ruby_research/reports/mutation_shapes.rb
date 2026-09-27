@@ -125,8 +125,7 @@ module RubyResearch
       # is free here because finding the method definitions already visits
       # every node.
       def sites_for(name)
-        versions = @compact_index.versions_of(name)
-        latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
+        latest = @compact_index.latest_version_of(name)
         return nil unless latest
 
         sites = Hash.new(0)

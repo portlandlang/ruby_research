@@ -37,6 +37,12 @@ module RubyResearch
       parse_info(body)
     end
 
+    # The one version every report analyzes and every fetch caches: the
+    # last pure-Ruby release in the index's order, else the last release.
+    def latest_version_of(gem_name) = latest_of(versions_of(gem_name))
+
+    def latest_of(versions) = versions.rfind { it[:platform] == 'ruby' } || versions.last
+
     def cached?(gem_name) = File.exist?(File.join(cache_dir, info_cache_file(gem_name)))
 
     def info_cache_file(gem_name) = File.join('info', CacheKey.for(gem_name))

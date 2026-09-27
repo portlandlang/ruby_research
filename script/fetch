@@ -70,10 +70,7 @@ fetch_index = lambda do
   warn ''
 end
 
-latest_version_of = lambda do |name|
-  versions = compact_index.versions_of(name)
-  versions.rfind { it[:platform] == 'ruby' } || versions.last
-end
+latest_version_of = ->(name) { compact_index.latest_version_of(name) }
 
 fetch_metadata = lambda do
   names.each_with_index do |name, position|

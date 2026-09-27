@@ -62,8 +62,7 @@ module RubyResearch
     def dependent_counts(names)
       counts = Hash.new(0)
       names.each do |name|
-        versions = @client.versions_of(name)
-        latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
+        latest = @client.latest_version_of(name)
         next unless latest
 
         latest[:dependencies].each { counts[it[:name]] += 1 }

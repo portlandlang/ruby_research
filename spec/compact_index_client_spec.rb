@@ -11,6 +11,24 @@ RSpec.describe RubyResearch::CompactIndexClient do
     end
   end
 
+  describe '#latest_version_of' do
+    it "answers the gem's last pure-Ruby version, in the index's order" do
+      expect(client.latest_version_of('nokogiri')).to include(version: '1.3.0', platform: 'ruby')
+    end
+  end
+
+  describe '#latest_of' do
+    it 'falls back to the last version when none is pure Ruby' do
+      versions = [{ version: '1.0', platform: 'java' }, { version: '1.1', platform: 'x86-mswin32' }]
+
+      expect(client.latest_of(versions)).to eq(version: '1.1', platform: 'x86-mswin32')
+    end
+
+    it 'answers nil for a gem with no versions' do
+      expect(client.latest_of([])).to be_nil
+    end
+  end
+
   describe '#versions_of' do
     it 'parses versions with requirements and release timestamps' do
       versions = client.versions_of('aclize')

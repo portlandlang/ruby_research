@@ -75,7 +75,7 @@ module RubyResearch
       # versions, or a hash describing the native gem.
       def native_record_for(name)
         versions = @compact_index.versions_of(name)
-        latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
+        latest = @compact_index.latest_of(versions)
         return :skipped unless latest
 
         spec = @sources.full_gemspec(name, latest[:version], platform: latest[:platform])

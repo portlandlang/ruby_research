@@ -102,8 +102,7 @@ module RubyResearch
       # Returns { sites:, nodes: } — idiom tally plus AST nodes walked, the
       # density denominator. Free to count, since collect visits every node.
       def sites_for(name)
-        versions = @compact_index.versions_of(name)
-        latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
+        latest = @compact_index.latest_version_of(name)
         return nil unless latest
 
         sites = Hash.new(0)

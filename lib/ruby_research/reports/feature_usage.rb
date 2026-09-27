@@ -152,8 +152,7 @@ module RubyResearch
       # Returns a tally of node types across the gem's Ruby files, or nil
       # when the gem has no ruby-platform release to analyze.
       def node_types_for(name, parse_errors:)
-        versions = @compact_index.versions_of(name)
-        latest = versions.rfind { it[:platform] == 'ruby' } || versions.last
+        latest = @compact_index.latest_version_of(name)
         return nil unless latest
 
         tally = Hash.new(0)
