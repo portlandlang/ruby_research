@@ -32,39 +32,67 @@ module RubyResearch
 
       def initialize(cohorts: Cohorts.new,
                      compact_index: CompactIndexClient.new,
+                     minutes: nil,
                      reports_dir: REPORTS_DIR,
+                     results_dir: File.join(DATA_DIR, 'results', 'portland_compatibility'),
                      sample: nil,
                      seed: 42,
-                     sources: GemSourceClient.new)
+                     sources: GemSourceClient.new,
+                     workers: 1)
         @cohorts = cohorts
         @compact_index = compact_index
+        @minutes = minutes
         @reports_dir = reports_dir
+        @results = GemResults.new(directory: results_dir, inputs: [__FILE__, REMOVALS_FILE])
         @sample = sample
         @seed = seed
         @sources = sources
+        @workers = workers
       end
 
+      # Analyzes every selected gem not already recorded, then writes the
+      # report once all of them are. With a time budget (`minutes`), a run
+      # that can't finish records what it reached and writes nothing; the
+      # next run picks up there.
       def run
+        entries = selected_names.filter_map do |name|
+          latest = @compact_index.latest_version_of(name)
+          [name, "#{latest[:version]}-#{latest[:platform]}"] if latest
+        end
+        pending = entries.reject { |name, version| @results.done?(name, version) }
+        deadline = @minutes ? Time.now + (@minutes * 60) : Time.now + (365 * 24 * 3600)
+        warn "  portland-compatibility: #{pending.size} of #{entries.size} gems to analyze, #{@workers} workers"
+        @results.compute(pending, deadline: deadline, workers: @workers) { |name, _version| matched_features(name) }
+
+        recorded = @results.all
+        remaining = entries.count { |name, version| recorded.dig(name, :version) != version }
+        if remaining.positive?
+          warn "  portland-compatibility: #{remaining} gems still to analyze — rerun to continue"
+          return []
+        end
+
+        write(entries.to_h { |name, _version| [name, recorded.fetch(name)] })
+      end
+
+      private
+
+      def write(recorded)
         gems_by_feature = Hash.new { |hash, key| hash[key] = [] }
         features_by_gem = {}
         errors = []
-        names = selected_names
-
         tally = CohortTally.new(cohorts: @cohorts)
-        progress = Progress.new(label: 'portland-compatibility')
-        names.each_with_index do |name, index|
-          progress.tick(index + 1, names.size)
-          usage = usage_for(name)
-          next if usage.nil?
+        recorded.each do |name, entry|
+          if entry[:error]
+            errors << { gem: name, error: entry[:error] }
+            next
+          end
+          matched = entry[:result]
+          next if matched.nil?
 
-          matched = detectable_features.select { feature_used?(it, usage) }.map { it['name'] }
           features_by_gem[name] = matched
           tally.record(name, matched)
           matched.each { gems_by_feature[it] << name }
-        rescue StandardError => e
-          errors << { gem: name, error: e.message }
         end
-        progress.finish
 
         clean_gems = features_by_gem.select { |_gem, used| used.empty? }.keys.sort
         grades = features_by_gem.values.map { grade(it) }.tally
@@ -86,7 +114,15 @@ module RubyResearch
         writer.write(data: data, markdown: markdown_for(data))
       end
 
-      private
+      # The names of the listed features a gem's source touches, or nil when
+      # the gem has no release to analyze — the per-gem result GemResults
+      # keeps between runs.
+      def matched_features(name)
+        usage = usage_for(name)
+        return nil if usage.nil?
+
+        detectable_features.select { feature_used?(it, usage) }.map { it['name'] }
+      end
 
       def features = @features ||= YAML.safe_load_file(REMOVALS_FILE).fetch('features')
 

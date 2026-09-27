@@ -12,7 +12,7 @@
 #   script/report dependencies [--sample N]
 #   script/report construction [--sample N]
 #   script/report feature-usage [--sample N]
-#   script/report portland-compatibility [--sample N]
+#   script/report portland-compatibility [--sample N] [--workers N] [--minutes M]
 #   script/report error-handling [--sample N]
 #   script/report nil-idioms [--sample N]
 #   script/report mutation-shapes [--sample N]
@@ -44,6 +44,19 @@ if (index = ARGV.index('--byte-budget'))
   RubyResearch::HttpClient.byte_budget = (value.to_f * multiplier).to_i
 end
 
+# Resumable reports (portland-compatibility so far) keep each gem's answer
+# under data/results/: --workers N forks N analyzers, and --minutes M stops
+# taking gems after M minutes, so a run too long for one sitting finishes
+# over several; the report is written by the run that completes the set.
+workers = 1
+if (index = ARGV.index('--workers'))
+  workers = Integer(ARGV[index + 1])
+end
+minutes = nil
+if (index = ARGV.index('--minutes'))
+  minutes = Float(ARGV[index + 1])
+end
+
 reports = {
   'rubocop' => -> { RubyResearch::Reports::RubocopDiscouragements.new.run },
   'ruby-requirements' => -> { RubyResearch::Reports::RubyRequirements.new(sample: sample).run },
@@ -52,7 +65,9 @@ reports = {
   'c-extensions' => -> { RubyResearch::Reports::CExtensions.new(sample: sample).run },
   'feature-usage' => -> { RubyResearch::Reports::FeatureUsage.new(sample: sample).run },
   'ruby-deprecations' => -> { RubyResearch::Reports::RubyDeprecations.new.run },
-  'portland-compatibility' => -> { RubyResearch::Reports::PortlandCompatibility.new(sample: sample).run },
+  'portland-compatibility' => lambda {
+    RubyResearch::Reports::PortlandCompatibility.new(minutes: minutes, sample: sample, workers: workers).run
+  },
   'error-handling' => -> { RubyResearch::Reports::ErrorHandling.new(sample: sample).run },
   'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample).run },
   'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample).run },
