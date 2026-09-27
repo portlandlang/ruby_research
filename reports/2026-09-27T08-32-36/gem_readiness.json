@@ -1,0 +1,7427 @@
+{
+  "generated_at": "2026-09-27T15:32:36Z",
+  "corpus_size": 196982,
+  "gems_with_lib_files": 188444,
+  "gems_parsing": 10426,
+  "gems_listed_from": 2657,
+  "gems": [
+    {
+      "name": "aws-sdk",
+      "version": "3.3.0",
+      "downloads": 384228183,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aws-sdk-resources",
+      "version": "3.274.0",
+      "downloads": 367098892,
+      "dependencies": 432,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "singleton-class-block"
+      ]
+    },
+    {
+      "name": "coffee-script-source",
+      "version": "1.12.2",
+      "downloads": 266680743,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "database_cleaner",
+      "version": "2.1.0",
+      "downloads": 218921151,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "json_pure",
+      "version": "2.8.1",
+      "downloads": 71599898,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "danger-plugin-api",
+      "version": "1.0.0",
+      "downloads": 43015587,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "find_a_port",
+      "version": "1.0.1",
+      "downloads": 37030488,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "aws-sdk-ssooidc",
+      "version": "1.25.0",
+      "downloads": 29551263,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aws-sdk-sts",
+      "version": "1.12.0",
+      "downloads": 14921892,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aws-sdk-sso",
+      "version": "1.13.0",
+      "downloads": 10570856,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "archive-tar-minitar",
+      "version": "0.12",
+      "downloads": 9854461,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "io-wait",
+      "version": "1.0.0",
+      "downloads": 9544630,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "certifi",
+      "version": "2018.01.18",
+      "downloads": 6552802,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jruby-jars",
+      "version": "10.0.7.0",
+      "downloads": 5943953,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jruby-rack",
+      "version": "2.0.0",
+      "downloads": 5333317,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jsonapi",
+      "version": "0.1.1.beta6",
+      "downloads": 4939394,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jruby-launcher",
+      "version": "2.0.2",
+      "downloads": 4788229,
+      "dependencies": 0,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "dartsass",
+      "version": "1.49.8",
+      "downloads": 4778892,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "avro-patches",
+      "version": "1.0.2",
+      "downloads": 3233889,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "activerecord-jdbcpostgresql-adapter",
+      "version": "1.3.25",
+      "downloads": 2756852,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-jdbcmysql-adapter",
+      "version": "1.3.25",
+      "downloads": 2480264,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-jdbcsqlite3-adapter",
+      "version": "1.3.25",
+      "downloads": 2263309,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "allocations",
+      "version": "1.0.5",
+      "downloads": 1920902,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "carrierwave-imageoptimizer",
+      "version": "1.6.0",
+      "downloads": 1842489,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "shift-append-operator"
+      ],
+      "taste": [
+        "global-variables",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "luhn_checksum",
+      "version": "0.1.2",
+      "downloads": 1759216,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "data_mapper",
+      "version": "1.2.0",
+      "downloads": 1741240,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "freemail",
+      "version": "0.9.0",
+      "downloads": 1713552,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": ".cat",
+      "version": "0.0.1",
+      "downloads": 1603094,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "asciidoctor-diagram-plantuml",
+      "version": "1.2026.2",
+      "downloads": 1599150,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "accentless",
+      "version": "1.0.0",
+      "downloads": 1491248,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "attr-reader",
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "commonwatir",
+      "version": "4.0.0",
+      "downloads": 1459996,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "asciidoctor-diagram-ditaamini",
+      "version": "1.0.3",
+      "downloads": 1449692,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "fast_haversine",
+      "version": "0.0.1",
+      "downloads": 1318810,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "inspec-bin",
+      "version": "7.2.1",
+      "downloads": 1093536,
+      "dependencies": 1,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "inspec-core-bin",
+      "version": "7.2.1",
+      "downloads": 1059422,
+      "dependencies": 1,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "exif",
+      "version": "2.2.4",
+      "downloads": 784696,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "appbundle-updater",
+      "version": "19.0.4.rc.1",
+      "downloads": 751456,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "hive_geoip2",
+      "version": "0.1.4",
+      "downloads": 740809,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gem-helper",
+      "version": "0.0.1",
+      "downloads": 713201,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "attr-writers",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "httpparty",
+      "version": "0.2.0",
+      "downloads": 681544,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "asciidoctor-diagram-batik",
+      "version": "1.19",
+      "downloads": 668411,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "activejob_arguments",
+      "version": "0.1.0",
+      "downloads": 643255,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "formatter",
+      "version": "0.1.0",
+      "downloads": 620880,
+      "dependencies": 2,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "clocale",
+      "version": "0.0.5.alpha.190.6",
+      "downloads": 572655,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "runtime-define-method"
+      ],
+      "taste": []
+    },
+    {
+      "name": "datamapper",
+      "version": "1.2.0",
+      "downloads": 547292,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "flipper-cloud",
+      "version": "1.4.2",
+      "downloads": 535601,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "chef-server-api",
+      "version": "10.30.4",
+      "downloads": 459416,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "gcloud",
+      "version": "0.24.1",
+      "downloads": 458903,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "feedzirra",
+      "version": "0.8.0",
+      "downloads": 453894,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "activerecord-jdbch2-adapter",
+      "version": "1.3.25",
+      "downloads": 435679,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chef-bin",
+      "version": "18.11.11",
+      "downloads": 432243,
+      "dependencies": 1,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "chef-server",
+      "version": "10.30.4",
+      "downloads": 430912,
+      "dependencies": 4,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-jdbchsqldb-adapter",
+      "version": "1.3.25",
+      "downloads": 412884,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jemalloc",
+      "version": "1.0.1",
+      "downloads": 408261,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "activerecord-jdbcderby-adapter",
+      "version": "1.3.25",
+      "downloads": 395842,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "crowdin-cli",
+      "version": "0.7.0",
+      "downloads": 352959,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-jdbcmssql-adapter",
+      "version": "1.3.25",
+      "downloads": 348412,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "flipper-activerecord",
+      "version": "1.0.0",
+      "downloads": 315285,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "fixed_width_file_parser",
+      "version": "1.0.1",
+      "downloads": 310160,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "fetch-retired"
+      ]
+    },
+    {
+      "name": "capybara-puma",
+      "version": "1.0.1",
+      "downloads": 257599,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "forever_style_guide",
+      "version": "4.2.5",
+      "downloads": 254616,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-immutable",
+      "version": "0.0.3",
+      "downloads": 246261,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "false",
+      "version": "0.0.1",
+      "downloads": 223646,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "excelsior",
+      "version": "0.1.0",
+      "downloads": 217326,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "joosy",
+      "version": "1.2.0.rc.2",
+      "downloads": 212524,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "extjs-mvc",
+      "version": "0.0.1",
+      "downloads": 202686,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "autocomplete-off",
+      "version": "0.2.0",
+      "downloads": 200553,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "john-hancock",
+      "version": "0.1.3",
+      "downloads": 199147,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "compass-h5bp",
+      "version": "1.0.0",
+      "downloads": 197402,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "cocoapods-no-dev-schemes",
+      "version": "1.0.1",
+      "downloads": 188751,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "faiss",
+      "version": "0.6.4",
+      "downloads": 183278,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "eventide-postgres",
+      "version": "2.0.1.0",
+      "downloads": 169270,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "funky-emv",
+      "version": "2.0.0",
+      "downloads": 167960,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cloudcannon-jekyll-bookshop",
+      "version": "3.3.0",
+      "downloads": 157994,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "capybara-ember",
+      "version": "0.0.1",
+      "downloads": 142415,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "chef-metal",
+      "version": "0.15",
+      "downloads": 141193,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cosine-similarity",
+      "version": "1.0.0",
+      "downloads": 140515,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fast_xirr",
+      "version": "1.1.1",
+      "downloads": 139014,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "LVS-JSONService",
+      "version": "0.0.0",
+      "downloads": 138328,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "gelf2kafka",
+      "version": "0.1.3",
+      "downloads": 135939,
+      "dependencies": 7,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cmetrics",
+      "version": "0.3.3",
+      "downloads": 134834,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-reader",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "freeze-family"
+      ],
+      "taste": [
+        "for-in-loop",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "hudson",
+      "version": "0.6.0",
+      "downloads": 132610,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "i18n-language-mapping",
+      "version": "0.1.3.1",
+      "downloads": 130642,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "i",
+      "version": "0.1.0",
+      "downloads": 130061,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "gdal",
+      "version": "3.0.0",
+      "downloads": 129301,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "action_dispatch_test_predicates",
+      "version": "0.1.0",
+      "downloads": 129241,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "falcon-rails",
+      "version": "0.3.0",
+      "downloads": 125668,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "damm",
+      "version": "0.0.1",
+      "downloads": 123512,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cascading-configuration-array",
+      "version": "3.0.0",
+      "downloads": 121596,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "clipper",
+      "version": "2.9.1",
+      "downloads": 120985,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ignore_this_gem",
+      "version": "0.7.13",
+      "downloads": 120535,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cascading-configuration-setting",
+      "version": "3.0.0",
+      "downloads": 117314,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gctrack",
+      "version": "0.1.2",
+      "downloads": 116052,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "adiwg-mdcodes",
+      "version": "2.10.1",
+      "downloads": 115917,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "enumerable_hashify",
+      "version": "0.0.2",
+      "downloads": 113634,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "alephant",
+      "version": "1.1.1",
+      "downloads": 112659,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cascading-configuration-hash",
+      "version": "3.0.0",
+      "downloads": 112655,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-connection_pool_instrumenter",
+      "version": "0.2.0",
+      "downloads": 108117,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cinderella",
+      "version": "1.0.0",
+      "downloads": 103011,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ack_rocket_cms_activerecord",
+      "version": "0.9.2",
+      "downloads": 102364,
+      "dependencies": 8,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-sort",
+      "version": "8.0.1",
+      "downloads": 102018,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "ack_rocket_cms_mongoid",
+      "version": "0.9.2",
+      "downloads": 98735,
+      "dependencies": 8,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "action_mailer_matchers",
+      "version": "1.2.0",
+      "downloads": 98276,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "jekyll-theme-lcsb-default",
+      "version": "0.5.0",
+      "downloads": 97632,
+      "dependencies": 2,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "enjoy_cms_mongoid",
+      "version": "0.4.1",
+      "downloads": 96000,
+      "dependencies": 8,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "anatomy",
+      "version": "0.4.2",
+      "downloads": 95999,
+      "dependencies": 4,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hexx",
+      "version": "9.2.0",
+      "downloads": 95990,
+      "dependencies": 5,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "jquery-foggy-rails",
+      "version": "1.1.1.0",
+      "downloads": 94798,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "foobara",
+      "version": "0.6.4",
+      "downloads": 94492,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "method-missing",
+        "runtime-define-method",
+        "eval-family",
+        "thread-model",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "fast_woothee",
+      "version": "1.6.5.pre.beta.3",
+      "downloads": 94328,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "enjoy_cms_activerecord",
+      "version": "0.4.1",
+      "downloads": 94270,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "app-tools",
+      "version": "1.18.0",
+      "downloads": 93998,
+      "dependencies": 7,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "alf",
+      "version": "0.16.3",
+      "downloads": 92776,
+      "dependencies": 6,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "ciinabox-ecs",
+      "version": "0.4.2",
+      "downloads": 92354,
+      "dependencies": 7,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "cellect",
+      "version": "3.0.2",
+      "downloads": 90303,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "env-tweaks",
+      "version": "1.0.1",
+      "downloads": 89498,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "crc32",
+      "version": "1.0.1",
+      "downloads": 88401,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cloudwatch",
+      "version": "0.0.1",
+      "downloads": 87628,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "font-awesome-middleman",
+      "version": "4.5.0",
+      "downloads": 87443,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ios-deploy",
+      "version": "1.5.0",
+      "downloads": 85671,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "amazon",
+      "version": "0.0.1",
+      "downloads": 85208,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "carrierwave-imageoptim",
+      "version": "0.1.5",
+      "downloads": 81894,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "itrg_rubocop_config",
+      "version": "1.0.4",
+      "downloads": 75292,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ethash",
+      "version": "0.2.0",
+      "downloads": 73107,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "convolver-light",
+      "version": "0.3.3",
+      "downloads": 72755,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "a-test-gem",
+      "version": "0.0.19",
+      "downloads": 71034,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jetrockets-standard",
+      "version": "1.29.0",
+      "downloads": 67445,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iris-rb",
+      "version": "0.5.3",
+      "downloads": 67095,
+      "dependencies": 3,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jquery-steps-rails",
+      "version": "1.0.4.1",
+      "downloads": 64566,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jquery-middleman",
+      "version": "3.1.2",
+      "downloads": 64229,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cider_ci-support",
+      "version": "3.2.0",
+      "downloads": 63205,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hyper-react",
+      "version": "0.99.6",
+      "downloads": 63117,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "any_channel_json_schemas",
+      "version": "0.15.0",
+      "downloads": 62514,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility"
+      ],
+      "thesis": [
+        "runtime-define-method"
+      ],
+      "taste": []
+    },
+    {
+      "name": "firstGem",
+      "version": "0.0.3",
+      "downloads": 62080,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hint-rubocop_style",
+      "version": "0.3.6",
+      "downloads": 61924,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "consistent_schema_rb-apartment",
+      "version": "0.0.4",
+      "downloads": 61521,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cbc-wrapper",
+      "version": "2.9.9.5",
+      "downloads": 61288,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chef_knives",
+      "version": "0.7.1",
+      "downloads": 58536,
+      "dependencies": 7,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "flux-theory",
+      "version": "0.0.0",
+      "downloads": 57666,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "autocop",
+      "version": "0.4.4",
+      "downloads": 57458,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jsminc",
+      "version": "2.0.0",
+      "downloads": 57311,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "coolerator.vision",
+      "version": "0.2.10",
+      "downloads": 57110,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "method-missing",
+        "eval-family",
+        "thread-model",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "from_hash",
+      "version": "0.1.0",
+      "downloads": 56619,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "jrhicks-static-generators",
+      "version": "0.1.6",
+      "downloads": 56408,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family",
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "for-in-loop",
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "actionmailer-html2text",
+      "version": "0.2.0",
+      "downloads": 55968,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "css-lint",
+      "version": "0.0.1",
+      "downloads": 55802,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "Cartesian",
+      "version": "0.4.2",
+      "downloads": 55618,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ffmpeg-video-info",
+      "version": "0.2.13",
+      "downloads": 55215,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "acme",
+      "version": "0.3.0",
+      "downloads": 55113,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "colourdistance",
+      "version": "1.2.7",
+      "downloads": 53374,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "awesome_pry",
+      "version": "0.0.1",
+      "downloads": 53094,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "consistent_company",
+      "version": "0.0.10",
+      "downloads": 52681,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aerospike_native",
+      "version": "0.5.1",
+      "downloads": 51671,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "class-variables"
+      ],
+      "taste": [
+        "global-variables",
+        "singleton-class-block"
+      ]
+    },
+    {
+      "name": "illusion",
+      "version": "2.2.1",
+      "downloads": 51213,
+      "dependencies": 8,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a1330ks_bmi",
+      "version": "0.0.1",
+      "downloads": 51130,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "A_123",
+      "version": "1.2.0",
+      "downloads": 50872,
+      "dependencies": 3,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a1412tk_bmi",
+      "version": "0.0.3",
+      "downloads": 50274,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "jake-scripts",
+      "version": "2.0.4",
+      "downloads": 49487,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "icalia-sdk-event-webhook",
+      "version": "0.3.9",
+      "downloads": 48709,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "crunchbase",
+      "version": "0.5.0",
+      "downloads": 48488,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "appengine-jruby-jars",
+      "version": "0.0.8.pre",
+      "downloads": 47598,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "card-mod-defaults",
+      "version": "0.20.0",
+      "downloads": 46381,
+      "dependencies": 24,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "icalia-sdk",
+      "version": "0.3.9",
+      "downloads": 46179,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "icalia-sdk-event",
+      "version": "0.3.9",
+      "downloads": 46032,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "anycable-thruster",
+      "version": "0.1.27",
+      "downloads": 45702,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "iqvoc_compound_forms",
+      "version": "2.11.4",
+      "downloads": 45641,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "alexcabrera-graphpaper",
+      "version": "0.2.10",
+      "downloads": 44706,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "card-mod-platypus",
+      "version": "0.20.0",
+      "downloads": 44332,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "active_guid",
+      "version": "0.0.5",
+      "downloads": 43192,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "asciipack",
+      "version": "0.2.4",
+      "downloads": 43174,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "ironmq",
+      "version": "1.2.8",
+      "downloads": 43119,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "fancy",
+      "version": "0.10.0",
+      "downloads": 43106,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "method-missing",
+        "runtime-define-method",
+        "eval-family",
+        "thread-model",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "class-variables",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "a1409yo_health",
+      "version": "0.0.2",
+      "downloads": 43023,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "insecure_random",
+      "version": "2.1.0",
+      "downloads": 41993,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "gem_liux",
+      "version": "0.0.0",
+      "downloads": 41842,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "couch",
+      "version": "0.2.1",
+      "downloads": 41598,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iqvoc_inflectionals",
+      "version": "2.11.4",
+      "downloads": 41515,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-reader",
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "a1439ty_bmiV3",
+      "version": "0.0.3",
+      "downloads": 40824,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a1436mm_age",
+      "version": "0.0.3",
+      "downloads": 40824,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "forge-rad",
+      "version": "3.2.13.0",
+      "downloads": 40822,
+      "dependencies": 37,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a0",
+      "version": "0.1.0",
+      "downloads": 40504,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chromium",
+      "version": "0.1.0",
+      "downloads": 39103,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "hoe-rubocop",
+      "version": "1.0.13",
+      "downloads": 38898,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "attr-writers",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "foobar",
+      "version": "0.0.1",
+      "downloads": 38611,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "exprc",
+      "version": "0.0.10",
+      "downloads": 38597,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "je",
+      "version": "0.1.3",
+      "downloads": 38165,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "factbook",
+      "version": "2.0.1",
+      "downloads": 37311,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "coverband_ext",
+      "version": "1.1.0",
+      "downloads": 37258,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "compass-wordpress",
+      "version": "0.1.4",
+      "downloads": 36272,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "acm",
+      "version": "0.8.1",
+      "downloads": 36072,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "alox",
+      "version": "0.0.9",
+      "downloads": 35868,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fast_parameterize",
+      "version": "0.1.2",
+      "downloads": 35737,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "i18n-country-translations-data",
+      "version": "1.1.0",
+      "downloads": 35674,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a1408nw_Ounennhei",
+      "version": "2.1.3",
+      "downloads": 34817,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "faster_haversine",
+      "version": "0.1.3",
+      "downloads": 34422,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "jetty-jsp",
+      "version": "6.1.19.2.1.1",
+      "downloads": 34348,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "compass-baseline",
+      "version": "0.4.1",
+      "downloads": 34342,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a11n",
+      "version": "0.0.0",
+      "downloads": 34159,
+      "dependencies": 1,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "ericam-compass-susy-plugin",
+      "version": "0.1.4",
+      "downloads": 33913,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a1420ks_bmi",
+      "version": "0.1.1",
+      "downloads": 33441,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "carljm-compass-susy-plugin",
+      "version": "0.1.2",
+      "downloads": 32908,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jekyll-random",
+      "version": "0.1",
+      "downloads": 32852,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jekyll-pagebreak",
+      "version": "0.9.2",
+      "downloads": 32722,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "iplocate",
+      "version": "1.0.3",
+      "downloads": 32670,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "case_transform-rust-extensions",
+      "version": "0.4.0",
+      "downloads": 32626,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "lyberteam-capistrano-devel",
+      "version": "3.2.0",
+      "downloads": 32233,
+      "dependencies": 4,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "autotest-stumpwm",
+      "version": "0.0.5",
+      "downloads": 32067,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "davegem",
+      "version": "0.0.7",
+      "downloads": 31970,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "acceptance_testing",
+      "version": "0.2.2",
+      "downloads": 31961,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "exiftoolr",
+      "version": "0.2.0",
+      "downloads": 31693,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "agilelamp-driver",
+      "version": "0.1.5",
+      "downloads": 31402,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "arb-dict",
+      "version": "0.2.4",
+      "downloads": 31290,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "adminaccess",
+      "version": "1.0.6",
+      "downloads": 31084,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "eskimo",
+      "version": "3.0.0",
+      "downloads": 31033,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ios_app_installer",
+      "version": "0.0.1",
+      "downloads": 30948,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iudex-barc",
+      "version": "1.7.1",
+      "downloads": 30945,
+      "dependencies": 3,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "exhibits_solr_conf",
+      "version": "0.1.1",
+      "downloads": 30873,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "htmldoc_remote_compile_wrapper",
+      "version": "0.10",
+      "downloads": 30735,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "gboom",
+      "version": "0.0.8",
+      "downloads": 30489,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gem_analogj_test",
+      "version": "0.1.14",
+      "downloads": 30354,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "joules",
+      "version": "0.4.4",
+      "downloads": 30323,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "js-beautify",
+      "version": "0.1.8",
+      "downloads": 30063,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "filegdb",
+      "version": "1.1.1",
+      "downloads": 30028,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "check_zfs",
+      "version": "0.2.1",
+      "downloads": 29960,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jekyll-titleize",
+      "version": "0.1.0",
+      "downloads": 29903,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ae_easy",
+      "version": "0.0.6",
+      "downloads": 29652,
+      "dependencies": 5,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "humpday",
+      "version": "1.2.1",
+      "downloads": 29649,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cesd_problems",
+      "version": "0.1.5",
+      "downloads": 29607,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jdbc-jt400",
+      "version": "9.4.0",
+      "downloads": 29380,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "informativos-api",
+      "version": "1.5.1.1.beta",
+      "downloads": 29321,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chriseppstein-compass-960-plugin",
+      "version": "0.9.10",
+      "downloads": 29229,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "Eric",
+      "version": "0.0.1",
+      "downloads": 28964,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "active_record_csv",
+      "version": "0.1.2",
+      "downloads": 28937,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "enigma_decrypter",
+      "version": "0.1.2",
+      "downloads": 28897,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "geek_typist",
+      "version": "0.2.1",
+      "downloads": 28835,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "array_groups",
+      "version": "0.0.10",
+      "downloads": 28718,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aptools",
+      "version": "1.2.0",
+      "downloads": 28644,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "act_as_nameable",
+      "version": "0.0.3",
+      "downloads": 28451,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "formatted-dates",
+      "version": "0.1.0",
+      "downloads": 27932,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator"
+      ],
+      "taste": [
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "cloudbees",
+      "version": "0.1.7",
+      "downloads": 27858,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "faiz",
+      "version": "0.0.9",
+      "downloads": 27632,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "allgravy",
+      "version": "0.1.6",
+      "downloads": 27547,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "jdbc-postgresql",
+      "version": "9.2.1000",
+      "downloads": 27264,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jhc",
+      "version": "0.0.6",
+      "downloads": 27200,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "hmsearch-postgres",
+      "version": "0.1.8",
+      "downloads": 27044,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "icy",
+      "version": "0.3.0",
+      "downloads": 26896,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "constable",
+      "version": "0.2.3",
+      "downloads": 26851,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "judoscale-rack",
+      "version": "1.13.3",
+      "downloads": 26395,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jruby-activemq",
+      "version": "5.5.1",
+      "downloads": 26262,
+      "dependencies": 0,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "for-in-loop",
+        "global-variables",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "cascading-configuration-array-unique",
+      "version": "3.0.0",
+      "downloads": 26220,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a1437ky_bmi3",
+      "version": "0.0.1",
+      "downloads": 26201,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "adventure_time",
+      "version": "1.0.4",
+      "downloads": 26069,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cuuid",
+      "version": "0.5.0",
+      "downloads": 25937,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "friendly_fk",
+      "version": "1.1.0",
+      "downloads": 25772,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "chrome",
+      "version": "0.1.0",
+      "downloads": 25583,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "itsi",
+      "version": "0.2.27",
+      "downloads": 25562,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "method-missing",
+        "runtime-define-method",
+        "eval-family",
+        "thread-model",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "class-variables",
+        "raise-rescue"
+      ],
+      "taste": [
+        "for-in-loop",
+        "global-variables",
+        "fetch-retired",
+        "numbered-block-parameters",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "f_1",
+      "version": "0.0.0",
+      "downloads": 25236,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "command-genie",
+      "version": "0.3.2",
+      "downloads": 25138,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "forkwell_cop",
+      "version": "0.10.0",
+      "downloads": 24857,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "lucky",
+      "version": "0.0.7",
+      "downloads": 24753,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "a1447ll_test",
+      "version": "0.0.1",
+      "downloads": 24641,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "flux-codex",
+      "version": "0.0.0",
+      "downloads": 24111,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cmultibyte",
+      "version": "0.1.0",
+      "downloads": 24060,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iudex-http",
+      "version": "1.7.0",
+      "downloads": 23933,
+      "dependencies": 2,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "copyright",
+      "version": "0.1.5",
+      "downloads": 23906,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "fron",
+      "version": "1.0.0rc2",
+      "downloads": 23902,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "right-shift-operator",
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "method-missing",
+        "runtime-define-method",
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "dartsclone",
+      "version": "0.3.3",
+      "downloads": 23769,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "flux-engine",
+      "version": "0.0.0",
+      "downloads": 23697,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chinwag",
+      "version": "1.2.1",
+      "downloads": 23488,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "arb-bs",
+      "version": "1.1.4",
+      "downloads": 23485,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iudex-rome",
+      "version": "1.7.0",
+      "downloads": 23390,
+      "dependencies": 2,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "splat-arguments",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "insert_from_file",
+      "version": "0.0.7",
+      "downloads": 23113,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "jekyll_ghost_importer",
+      "version": "1.1.0",
+      "downloads": 23067,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cxxproject_console",
+      "version": "0.1.7",
+      "downloads": 23029,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "arcball",
+      "version": "1.2.0",
+      "downloads": 22965,
+      "dependencies": 0,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "aroundhome_cops",
+      "version": "8.0.0",
+      "downloads": 22812,
+      "dependencies": 5,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "flux-compiler",
+      "version": "0.0.0",
+      "downloads": 22777,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jquery-cheat",
+      "version": "0.1.2",
+      "downloads": 22747,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "awesome-cli",
+      "version": "1.0.0",
+      "downloads": 22715,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ft2-ruby",
+      "version": "1.0.0",
+      "downloads": 22689,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "akka-actor-jars",
+      "version": "2.2.1",
+      "downloads": 22652,
+      "dependencies": 1,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "attribute_delegator",
+      "version": "0.0.2",
+      "downloads": 22568,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family"
+      ],
+      "taste": [
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "lte_watch",
+      "version": "0.1.7",
+      "downloads": 22508,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jhpy",
+      "version": "1.2.1",
+      "downloads": 22487,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "auto-correct",
+      "version": "1.1.0",
+      "downloads": 22468,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "abide",
+      "version": "0.0.3",
+      "downloads": 22422,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "csv2sqlite",
+      "version": "0.0.8",
+      "downloads": 22393,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "flux-parser",
+      "version": "0.0.0",
+      "downloads": 22309,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jsdj",
+      "version": "0.0.8",
+      "downloads": 22094,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "acme-r53-cli",
+      "version": "1.1.2",
+      "downloads": 22076,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "alltasks",
+      "version": "0.1.3",
+      "downloads": 21921,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "cascading-configuration-array-sorted-unique",
+      "version": "3.0.0",
+      "downloads": 21903,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "itamae-plugin-recipe-datadog",
+      "version": "0.3.2",
+      "downloads": 21884,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cascading-configuration-array-sorted",
+      "version": "3.0.0",
+      "downloads": 21746,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "activerecord-humanized_errors",
+      "version": "2.0.1",
+      "downloads": 21653,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "c_project",
+      "version": "0.2.3",
+      "downloads": 21606,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "js-get",
+      "version": "0.1.7",
+      "downloads": 21563,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "acnfp-trans-counter",
+      "version": "0.2.0",
+      "downloads": 21555,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "formula_1",
+      "version": "0.0.0",
+      "downloads": 21427,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a1508ki_ika",
+      "version": "0.1.0",
+      "downloads": 21254,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aratak-syncdb",
+      "version": "0.0.1",
+      "downloads": 21146,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hnews",
+      "version": "0.0.7",
+      "downloads": 21004,
+      "dependencies": 5,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "active_scaffold_generator",
+      "version": "0.1.1",
+      "downloads": 20930,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "3months_staff_schedule",
+      "version": "0.0.3",
+      "downloads": 20865,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jss-api",
+      "version": "0.6.2",
+      "downloads": 20808,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "avm-files",
+      "version": "0.9.0",
+      "downloads": 20769,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jekyll-truthyfalsy",
+      "version": "1.0.3",
+      "downloads": 20551,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "clean-my-vomit",
+      "version": "0.0.4",
+      "downloads": 20396,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "iudex-char-detector",
+      "version": "1.7.0",
+      "downloads": 20351,
+      "dependencies": 2,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "ey-flex",
+      "version": "0.5.2",
+      "downloads": 20286,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cft-source",
+      "version": "0.0.6",
+      "downloads": 20173,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "asples_sinatra",
+      "version": "0.0.27",
+      "downloads": 19980,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "fast_spork_runner",
+      "version": "0.0.4",
+      "downloads": 19961,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ergomentum_rubocop",
+      "version": "0.17.1",
+      "downloads": 19900,
+      "dependencies": 8,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ah",
+      "version": "1.0.2",
+      "downloads": 19679,
+      "dependencies": 7,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "async-http-client-jars",
+      "version": "1.7.6.1",
+      "downloads": 19653,
+      "dependencies": 2,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "assert-rails",
+      "version": "0.0.1",
+      "downloads": 19530,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "idology",
+      "version": "0.1.0",
+      "downloads": 19525,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "codedeploy_retry_if_needed",
+      "version": "0.1.5",
+      "downloads": 19502,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iHiD_test_gem",
+      "version": "0.0.7",
+      "downloads": 19419,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "erb-yaml",
+      "version": "1.0.2",
+      "downloads": 19403,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "chalk",
+      "version": "0.0.2",
+      "downloads": 19401,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "envdgen",
+      "version": "0.1.5",
+      "downloads": 19369,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aries_ruby_cli",
+      "version": "0.0.11",
+      "downloads": 19345,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "appcenter",
+      "version": "9001.0",
+      "downloads": 19341,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "img_return",
+      "version": "3.0.0",
+      "downloads": 19333,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "lumpy_space_princess",
+      "version": "0.0.6",
+      "downloads": 19305,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iv",
+      "version": "0.0.6",
+      "downloads": 19256,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cbr2pdf",
+      "version": "0.1.2",
+      "downloads": 19226,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "freistil-rubocop",
+      "version": "0.8.0",
+      "downloads": 19195,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "inmemory_kv",
+      "version": "0.1.6",
+      "downloads": 19119,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "d",
+      "version": "1.2.0",
+      "downloads": 18988,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "itamae-plugin-recipe-idcf-backup_to_object_storage",
+      "version": "0.1.6",
+      "downloads": 18966,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "foobara-typescript-remote-command-generator",
+      "version": "1.5.1",
+      "downloads": 18943,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "join_cache",
+      "version": "0.2.2",
+      "downloads": 18914,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family"
+      ],
+      "taste": [
+        "fetch-retired",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "comradefy",
+      "version": "0.1.1",
+      "downloads": 18849,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cloudapp-cli",
+      "version": "1.0.0.beta.7",
+      "downloads": 18752,
+      "dependencies": 2,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "i18n-timezones-data",
+      "version": "1.1.0",
+      "downloads": 18743,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "alt_printf",
+      "version": "0.2.2",
+      "downloads": 18684,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "jazzhands",
+      "version": "0.0.4",
+      "downloads": 18637,
+      "dependencies": 11,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "garage-doorkeeper",
+      "version": "2.0.0",
+      "downloads": 18537,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "avm-apps",
+      "version": "0.5.0",
+      "downloads": 18369,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gemcutter-test",
+      "version": "0.0.2",
+      "downloads": 18350,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "compressed_attributes",
+      "version": "0.2.2",
+      "downloads": 18327,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "epf-source",
+      "version": "0.1.4",
+      "downloads": 18325,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "frontkit",
+      "version": "0.0.8",
+      "downloads": 18216,
+      "dependencies": 8,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aName",
+      "version": "0.0.4",
+      "downloads": 18210,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gbdev-common_project_tasks",
+      "version": "0.1.0",
+      "downloads": 18190,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gatemedia_rubocop",
+      "version": "0.4.2",
+      "downloads": 18148,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fast_bundler",
+      "version": "0.1.2",
+      "downloads": 18034,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "countr",
+      "version": "1.1.2",
+      "downloads": 18014,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "extended_string",
+      "version": "0.1.7",
+      "downloads": 17759,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "in-place-mutators",
+        "freeze-family"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "chemistry",
+      "version": "0.1.0",
+      "downloads": 17756,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chef_deprecations",
+      "version": "0.2.0",
+      "downloads": 17623,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "coleslaw",
+      "version": "1.1.0",
+      "downloads": 17571,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "apoc",
+      "version": "0.2.5",
+      "downloads": 17559,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "dbarison_curriculum",
+      "version": "0.0.6",
+      "downloads": 17484,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "acts_as_social",
+      "version": "0.0.1",
+      "downloads": 17084,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ipconverter",
+      "version": "0.4.0",
+      "downloads": 17073,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "bitwise-operators",
+        "right-shift-operator",
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "F2C",
+      "version": "0.0.3",
+      "downloads": 16991,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "foremancli",
+      "version": "1.0",
+      "downloads": 16972,
+      "dependencies": 2,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "contracts.coffee-source",
+      "version": "0.3.1",
+      "downloads": 16924,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "g5gem",
+      "version": "0.2.0",
+      "downloads": 16890,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "contribulator",
+      "version": "1.0.0",
+      "downloads": 16859,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jfs-generators",
+      "version": "0.1.0",
+      "downloads": 16850,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "ilios",
+      "version": "1.2.0",
+      "downloads": 16796,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "class-variables",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "fortnight",
+      "version": "0.0.3",
+      "downloads": 16584,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": []
+    },
+    {
+      "name": "android_workstation",
+      "version": "0.0.3",
+      "downloads": 16561,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "integration-hipchat-plugin",
+      "version": "0.0.4",
+      "downloads": 16556,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "clipsruby",
+      "version": "0.0.47",
+      "downloads": 16508,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ilookup",
+      "version": "0.0.6",
+      "downloads": 16461,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "db_backup",
+      "version": "1.0.4",
+      "downloads": 16300,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "http_resque",
+      "version": "0.0.4",
+      "downloads": 16185,
+      "dependencies": 6,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "induction_cannon_01",
+      "version": "0.0.5",
+      "downloads": 16156,
+      "dependencies": 5,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator"
+      ],
+      "taste": [
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "gem-install-branch-test",
+      "version": "0.4.0",
+      "downloads": 16151,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "clamd_for_centos",
+      "version": "0.1.7",
+      "downloads": 16069,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hvutils",
+      "version": "0.0.4",
+      "downloads": 15908,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cipher_word",
+      "version": "1.0.4",
+      "downloads": 15859,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "ez-nginx-proxy",
+      "version": "0.0.4",
+      "downloads": 15852,
+      "dependencies": 3,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "altprintf",
+      "version": "0.4.0",
+      "downloads": 15836,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "colszowka-cucumber_table_formatter",
+      "version": "0.1.0",
+      "downloads": 15813,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "envconfig-rails",
+      "version": "1.0.0",
+      "downloads": 15807,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "coreos-deploy",
+      "version": "0.3.0",
+      "downloads": 15753,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "common_project_tasks",
+      "version": "0.3.3",
+      "downloads": 15664,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jquery-selectable-rails",
+      "version": "1.0.1",
+      "downloads": 15529,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "arraybuffer",
+      "version": "0.0.7",
+      "downloads": 15511,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cf_ruby_gems",
+      "version": "0.1.9",
+      "downloads": 15453,
+      "dependencies": 6,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jonleighton-bcms_feeds",
+      "version": "1.0.1",
+      "downloads": 15397,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "favorite_things",
+      "version": "0.1.8",
+      "downloads": 15387,
+      "dependencies": 5,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "arrg",
+      "version": "2.1.2",
+      "downloads": 15330,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "create_user",
+      "version": "1.1.2",
+      "downloads": 15309,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jruby-elasticsearch_jars",
+      "version": "0.17.2",
+      "downloads": 15278,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "db_backup_rails",
+      "version": "1.0.6",
+      "downloads": 15238,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "erptestcasehelpers",
+      "version": "0.0.8",
+      "downloads": 15194,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cookieless_sessions",
+      "version": "1.2.0",
+      "downloads": 15149,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "in-place-mutators",
+        "freeze-family"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "jekyll-hostname",
+      "version": "1.0.9",
+      "downloads": 15123,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "completecrap",
+      "version": "1.0.2",
+      "downloads": 15067,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "runtime-define-method"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "acceptance",
+      "version": "0.0.3",
+      "downloads": 14962,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hyde_admin",
+      "version": "0.0.14",
+      "downloads": 14949,
+      "dependencies": 8,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "example",
+      "version": "1.0.2",
+      "downloads": 14911,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "fallo_motor",
+      "version": "1.2.0",
+      "downloads": 14900,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "identifications",
+      "version": "9001.0",
+      "downloads": 14874,
+      "dependencies": 0,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "heroku-deploy",
+      "version": "0.0.4",
+      "downloads": 14846,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gb_mapfish_print",
+      "version": "0.2.1",
+      "downloads": 14846,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chanduworld",
+      "version": "0.0.3",
+      "downloads": 14803,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "filterable",
+      "version": "0.1.0",
+      "downloads": 14790,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "activerecord-take_or_find",
+      "version": "1.0.0",
+      "downloads": 14778,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "honeycomb",
+      "version": "0.0.4",
+      "downloads": 14770,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "copyrb",
+      "version": "0.0.3",
+      "downloads": 14755,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "eventkit",
+      "version": "1.0",
+      "downloads": 14604,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iotas",
+      "version": "0.0.5",
+      "downloads": 14594,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "imba-source",
+      "version": "0.14.5",
+      "downloads": 14543,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "colorized",
+      "version": "0.0.0",
+      "downloads": 14536,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "epic_hash_cleaner",
+      "version": "0.2.0",
+      "downloads": 14530,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "freeze-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "jekyll-file-size",
+      "version": "0.0.7",
+      "downloads": 14464,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "copyright_mafa",
+      "version": "0.1.2",
+      "downloads": 14413,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "codedeploy_slack_notify",
+      "version": "0.1.3",
+      "downloads": 14360,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gabriel",
+      "version": "0.0.3",
+      "downloads": 14341,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "approximate_date",
+      "version": "0.0.2",
+      "downloads": 14325,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jsgarvin-flibberty",
+      "version": "0.0.2",
+      "downloads": 14193,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cmake",
+      "version": "2.8.7",
+      "downloads": 14188,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "flower",
+      "version": "0.0.4",
+      "downloads": 14185,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "awesome-pry",
+      "version": "0.0.4",
+      "downloads": 14140,
+      "dependencies": 7,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "css2less-recursive",
+      "version": "0.0.4",
+      "downloads": 14134,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "architects-toolkit",
+      "version": "0.1.10",
+      "downloads": 14063,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "singleton-class-block"
+      ]
+    },
+    {
+      "name": "image-file",
+      "version": "0.1.2",
+      "downloads": 14038,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "freeze-family"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "cldr-languages",
+      "version": "0.0.4",
+      "downloads": 13978,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "iudex-brutefuzzy-protobuf",
+      "version": "1.4.0",
+      "downloads": 13947,
+      "dependencies": 1,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "application",
+      "version": "0.0.2",
+      "downloads": 13936,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "compass-ui",
+      "version": "0.0.5",
+      "downloads": 13923,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ishin",
+      "version": "0.4.0",
+      "downloads": 13879,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "attr-reader",
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family",
+        "in-place-mutators",
+        "freeze-family"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "itamae-plugin-recipe-tig",
+      "version": "0.1.7",
+      "downloads": 13831,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "garage",
+      "version": "0.0.1",
+      "downloads": 13826,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "chunky_png_subimage",
+      "version": "0.2.0",
+      "downloads": 13818,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": [
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "cranelift_ruby",
+      "version": "0.1.6",
+      "downloads": 13803,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hyper-be-roda",
+      "version": "0.0.6",
+      "downloads": 13704,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "a_okay",
+      "version": "0.1.0",
+      "downloads": 13691,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "formatafacil-templates",
+      "version": "0.1.5",
+      "downloads": 13616,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cucumber-notify",
+      "version": "0.0.5",
+      "downloads": 13501,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "itamae-plugin-recipe-tmux",
+      "version": "0.1.6",
+      "downloads": 13470,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "aerogel-bootstrap",
+      "version": "0.2.2",
+      "downloads": 13456,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fab",
+      "version": "0.3.0",
+      "downloads": 13363,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "asimov-module",
+      "version": "25.0.0.dev.6",
+      "downloads": 13335,
+      "dependencies": 1,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jekyll-drafts-as-metadata",
+      "version": "0.0.6",
+      "downloads": 13242,
+      "dependencies": 1,
+      "native": false,
+      "grade": "thesis",
+      "open_questions": [],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "current_date",
+      "version": "0.0.4",
+      "downloads": 13234,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "eusplazio",
+      "version": "0.0.3",
+      "downloads": 13166,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hows-the-serenity",
+      "version": "1.0.2",
+      "downloads": 13074,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "irb-rake-task",
+      "version": "1.0.0",
+      "downloads": 13037,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "danielsdeleo-teeth",
+      "version": "0.0.2",
+      "downloads": 13027,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [],
+      "taste": [
+        "global-variables",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "heroku_buddy",
+      "version": "0.0.8",
+      "downloads": 13027,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fried",
+      "version": "4.0.0",
+      "downloads": 13014,
+      "dependencies": 6,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iain-pizza-generators",
+      "version": "0.1.1",
+      "downloads": 12975,
+      "dependencies": 6,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "consistent_hash",
+      "version": "0.0.3",
+      "downloads": 12823,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jquery-bgswitcher-rails",
+      "version": "0.0.5",
+      "downloads": 12775,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "anything-gorepo",
+      "version": "0.0.6",
+      "downloads": 12656,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": []
+    },
+    {
+      "name": "copyright_helper",
+      "version": "0.0.3",
+      "downloads": 12601,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ancv_gem1",
+      "version": "0.0.3",
+      "downloads": 12524,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ispmail-on-rails",
+      "version": "0.3.2",
+      "downloads": 12488,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "eval-family",
+        "shift-append-operator",
+        "in-place-mutators",
+        "freeze-family",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "comprehend",
+      "version": "0.0.3",
+      "downloads": 12479,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jpartial-renderer",
+      "version": "0.0.1",
+      "downloads": 12434,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "eot",
+      "version": "0.0.3",
+      "downloads": 12416,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "fetch-retired"
+      ]
+    },
+    {
+      "name": "jambalaya-rspec",
+      "version": "0.0.2",
+      "downloads": 12368,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "json_tree",
+      "version": "0.0.3",
+      "downloads": 12354,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jruby-stemmer",
+      "version": "0.0.2",
+      "downloads": 12338,
+      "dependencies": 0,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "akka-remote-jars",
+      "version": "1.2.0.2",
+      "downloads": 12329,
+      "dependencies": 4,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "indis",
+      "version": "0.1.3",
+      "downloads": 12325,
+      "dependencies": 5,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "inesita-router",
+      "version": "0.4.0.pre.2",
+      "downloads": 12302,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "runtime-define-method",
+        "eval-family",
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "foobara-empty-ruby-project-generator",
+      "version": "1.0.5",
+      "downloads": 12295,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "fetch-retired",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "flaming-ironman",
+      "version": "0.0.3",
+      "downloads": 12285,
+      "dependencies": 9,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "formatted-gem-updates",
+      "version": "0.0.4",
+      "downloads": 12273,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fast_random",
+      "version": "1.0.0",
+      "downloads": 12270,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "exip",
+      "version": "0.0.3",
+      "downloads": 12230,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "curator-jars",
+      "version": "2.5.0.1",
+      "downloads": 12208,
+      "dependencies": 3,
+      "native": true,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "confirm_deploy",
+      "version": "1.1.0",
+      "downloads": 12155,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "fetch-retired"
+      ]
+    },
+    {
+      "name": "foobara-sh-cli-connector",
+      "version": "1.1.4",
+      "downloads": 12146,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "splat-arguments",
+        "instance-variable-writes",
+        "attr-writers",
+        "attr-reader",
+        "visibility",
+        "require-by-name",
+        "regex"
+      ],
+      "thesis": [
+        "shift-append-operator",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "singleton-class-block",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "composables",
+      "version": "0.0.13",
+      "downloads": 12121,
+      "dependencies": 7,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "Acai",
+      "version": "0.0.1",
+      "downloads": 12101,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "iboleto",
+      "version": "0.0.4",
+      "downloads": 12052,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "abstats",
+      "version": "0.0.1",
+      "downloads": 12048,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "itamae-plugin-recipe-minecraft",
+      "version": "0.0.5",
+      "downloads": 12025,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "gcm_helper",
+      "version": "0.1.2",
+      "downloads": 11990,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "assimp",
+      "version": "0.0.3",
+      "downloads": 11982,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "ar_mock",
+      "version": "0.0.1.6",
+      "downloads": 11944,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "jcnetdev-app_config",
+      "version": "1.0",
+      "downloads": 11845,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "accountancy",
+      "version": "0.0.1",
+      "downloads": 11764,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance"
+      ]
+    },
+    {
+      "name": "crystal-repl",
+      "version": "0.0.4",
+      "downloads": 11684,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "freeRangeEggs",
+      "version": "0.0.5.beta",
+      "downloads": 11684,
+      "dependencies": 2,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hexadecapress",
+      "version": "0.1.3",
+      "downloads": 11622,
+      "dependencies": 3,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "cash_flow_analysis",
+      "version": "0.2.0",
+      "downloads": 11597,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "HTStyle",
+      "version": "0.13",
+      "downloads": 11543,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "atosl",
+      "version": "0.0.4",
+      "downloads": 11542,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "accounting",
+      "version": "0.0.1",
+      "downloads": 11524,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "clock_angle_calculator",
+      "version": "1.0.3",
+      "downloads": 11513,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "visibility",
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "freezerwatch",
+      "version": "0.2.0",
+      "downloads": 11484,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "current_day_extension",
+      "version": "0.1.0",
+      "downloads": 11451,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": []
+    },
+    {
+      "name": "altimeter",
+      "version": "0.2.0",
+      "downloads": 11439,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "instance-variable-writes",
+        "require-by-name"
+      ],
+      "thesis": [
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "inheritance",
+        "instance-variable-reads"
+      ]
+    },
+    {
+      "name": "hyper-backend-roda",
+      "version": "0.0.11",
+      "downloads": 11432,
+      "dependencies": 1,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "f",
+      "version": "0.1.0",
+      "downloads": 11408,
+      "dependencies": 0,
+      "native": false,
+      "grade": "runs as is",
+      "open_questions": [],
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fast_simplify",
+      "version": "0.4.0",
+      "downloads": 11348,
+      "dependencies": 0,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [
+        "shift-append-operator"
+      ],
+      "taste": []
+    },
+    {
+      "name": "json_pp",
+      "version": "0.0.1",
+      "downloads": 11321,
+      "dependencies": 2,
+      "native": false,
+      "grade": "gap or undecided",
+      "open_questions": [
+        "require-by-name"
+      ],
+      "thesis": [],
+      "taste": []
+    }
+  ]
+}

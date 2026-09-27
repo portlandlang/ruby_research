@@ -33,6 +33,8 @@ module RubyResearch
 
     def cached?(gem_name) = File.exist?(File.join(cache_dir, 'versions', "#{CacheKey.for(gem_name)}.json"))
 
+    def gem_cached?(gem_name) = File.exist?(File.join(cache_dir, 'gems', "#{CacheKey.for(gem_name)}.json"))
+
     private
 
     def fetch_json(path:, cache_file:)
