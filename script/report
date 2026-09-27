@@ -16,6 +16,7 @@
 #   script/report pdx-parse [--sample N] [--workers N] [--minutes M]  (needs a built pdx; see the report)
 #   script/report first-gem-candidates                  (after pdx-parse and portland-compatibility)
 #   script/report gem-readiness [--minutes M]           (the same; downloads fetched within the budget)
+#   script/report test-frameworks [--workers N] [--minutes M]
 #   script/report error-handling [--sample N]
 #   script/report nil-idioms [--sample N]
 #   script/report mutation-shapes [--sample N]
@@ -76,6 +77,7 @@ reports = {
   },
   'first-gem-candidates' => -> { RubyResearch::Reports::FirstGemCandidates.new.run },
   'gem-readiness' => -> { RubyResearch::Reports::GemReadinessExport.new(minutes: minutes).run },
+  'test-frameworks' => -> { RubyResearch::Reports::TestFrameworks.new(minutes: minutes, workers: workers).run },
   'error-handling' => -> { RubyResearch::Reports::ErrorHandling.new(sample: sample).run },
   'nil-idioms' => -> { RubyResearch::Reports::NilIdioms.new(sample: sample).run },
   'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample).run },

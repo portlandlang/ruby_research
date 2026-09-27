@@ -4,6 +4,7 @@ AllCops:
   Exclude:
     - data/**/*
     - reports/**/*
+    - spec/fixtures/**/*
     - vendor/**/*
 
 Style/Documentation:
