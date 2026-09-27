@@ -51,6 +51,9 @@ module RubyResearch
         @workers = workers
       end
 
+      # Every gem's recorded result so far, for reports built on this one.
+      def recorded = @results.all
+
       # Analyzes every selected gem not already recorded, then writes the
       # report once all of them are. With a time budget (`minutes`), a run
       # that can't finish records what it reached and writes nothing; the

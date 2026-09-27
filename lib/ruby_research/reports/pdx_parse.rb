@@ -35,6 +35,9 @@ module RubyResearch
         @workers = workers
       end
 
+      # Every gem's recorded result so far, for reports built on this one.
+      def recorded = @results.all
+
       def run
         entries = selected_names.filter_map do |name|
           latest = @compact_index.latest_version_of(name)

@@ -1,0 +1,293 @@
+{
+  "funnel": [
+    {
+      "stage": "every lib/ file parses under pdx",
+      "gems": 33589
+    },
+    {
+      "stage": "no runtime dependencies",
+      "gems": 20394
+    },
+    {
+      "stage": "pure Ruby, no C extension",
+      "gems": 19399
+    },
+    {
+      "stage": "no open question (gap or undecided)",
+      "gems": 5701
+    },
+    {
+      "stage": "ships its own tests",
+      "gems": 28
+    }
+  ],
+  "candidates": [
+    {
+      "name": "nido",
+      "version": "1.0.0",
+      "downloads": 549422,
+      "test_files": 1,
+      "thesis": [],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "BigCat",
+      "version": "1.0.2",
+      "downloads": 58160,
+      "test_files": 1,
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "aa",
+      "version": "1.1",
+      "downloads": 35437,
+      "test_files": 1,
+      "thesis": [
+        "method-missing",
+        "runtime-define-method",
+        "class-variables"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "regex_replace",
+      "version": "1.0.4",
+      "downloads": 15853,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "bigcat",
+      "version": "1.0.3",
+      "downloads": 12630,
+      "test_files": 1,
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables"
+      ]
+    },
+    {
+      "name": "whinytasks",
+      "version": "0.0.2",
+      "downloads": 12158,
+      "test_files": 1,
+      "thesis": [
+        "eval-family",
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "crash",
+      "version": "1.0.22",
+      "downloads": 11617,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "freeman",
+      "version": "0.0.4",
+      "downloads": 10340,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "configur",
+      "version": "1.1.0",
+      "downloads": 9801,
+      "test_files": 1,
+      "thesis": [
+        "method-missing",
+        "class-variables"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "hash-polyfill",
+      "version": "0.1.20180120",
+      "downloads": 7107,
+      "test_files": 1,
+      "thesis": [
+        "in-place-mutators"
+      ],
+      "taste": []
+    },
+    {
+      "name": "mono",
+      "version": "0.0.1",
+      "downloads": 7084,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "JosephPecoraro-rr",
+      "version": "1.0.3",
+      "downloads": 6426,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "switchout",
+      "version": "0.0.2",
+      "downloads": 5966,
+      "test_files": 1,
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": [
+        "global-variables",
+        "singleton-class-block"
+      ]
+    },
+    {
+      "name": "draft",
+      "version": "0.0.0",
+      "downloads": 5890,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "htmldog",
+      "version": "1.0.0",
+      "downloads": 5750,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "machospec",
+      "version": "0.0.0.1",
+      "downloads": 4932,
+      "test_files": 1,
+      "thesis": [
+        "raise-rescue"
+      ],
+      "taste": []
+    },
+    {
+      "name": "scream",
+      "version": "0.0.1",
+      "downloads": 4897,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "opal-json",
+      "version": "0.0.1",
+      "downloads": 4886,
+      "test_files": 2,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "matic_timestamp",
+      "version": "0.0.1",
+      "downloads": 4731,
+      "test_files": 1,
+      "thesis": [
+        "eval-family"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "meth",
+      "version": "0.1.0",
+      "downloads": 4630,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "reraise",
+      "version": "0.0.1",
+      "downloads": 4483,
+      "test_files": 1,
+      "thesis": [
+        "method-missing",
+        "in-place-mutators",
+        "raise-rescue"
+      ],
+      "taste": [
+        "inheritance"
+      ]
+    },
+    {
+      "name": "cols",
+      "version": "0.0.1",
+      "downloads": 4480,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "fizzbuzzard",
+      "version": "0.0.1",
+      "downloads": 4472,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "haml-partial",
+      "version": "0.1.0",
+      "downloads": 4044,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "kic",
+      "version": "0.0.1",
+      "downloads": 3937,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "stop-words",
+      "version": "0.0.1",
+      "downloads": 3770,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "veganstraightedge-htmldog",
+      "version": "1.0.0.200903121450",
+      "downloads": 3752,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    },
+    {
+      "name": "hola_world",
+      "version": "0.0.0",
+      "downloads": 2989,
+      "test_files": 1,
+      "thesis": [],
+      "taste": []
+    }
+  ]
+}
