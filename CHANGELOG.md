@@ -1,6 +1,10 @@
 
 # Changelog
 
+## 2026-09-27 (refresh)
+
+- `script/fetch refresh` catches the cache up with rubygems.org (#5): it reads the fresh `/names` and `/versions`, whose last line per gem carries the MD5 of that gem's current `/info` file, and deletes only the cached version lists whose digest no longer matches, so `script/fetch index` refetches those alone. It prints what was added, removed, and changed, and replaces the cached names. First run against the 2026-07-22 snapshot: 2,057 gems added, 474 removed, 5,531 changed; a second run straight after finds nothing. `all` doesn't include it.
+
 ## 2026-09-25 (ordering census)
 
 - `ordering` report, answering portland#76: which gems define `<=>`, whether they also `include Comparable`, what a `<=>` body does (delegates to one part, compares parts as an array, or computes), how ordering is asked for at call sites (`sort` bare or with a block, `sort_by`, `min`/`max`, `min_by`/`max_by`, `<=>` in an expression, `between?`, `clamp`), and whether a `<=>` result is ever read as an integer. Gems and sites counted separately; era cohort shares included.
