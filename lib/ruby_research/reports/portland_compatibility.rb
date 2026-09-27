@@ -16,7 +16,7 @@ module RubyResearch
     # nil, mutability) are reported separately since they affect nearly all
     # code via the type checker.
     class PortlandCompatibility
-      REMOVALS_FILE = File.join(ROOT, 'config', 'portland_removals.yml')
+      REMOVALS_FILE = PortlandCompatibilityAnalysis::REMOVALS_FILE
 
       # At full corpus the candidate list runs to tens of thousands of gem
       # names. Listing them all made a 16MB report that no human could read
@@ -39,14 +39,15 @@ module RubyResearch
                      seed: 42,
                      sources: GemSourceClient.new,
                      workers: 1)
+        @analysis = PortlandCompatibilityAnalysis.new(compact_index: compact_index, sources: sources)
         @cohorts = cohorts
         @compact_index = compact_index
         @minutes = minutes
         @reports_dir = reports_dir
-        @results = GemResults.new(directory: results_dir, inputs: [__FILE__, REMOVALS_FILE])
+        analysis_file = File.join(__dir__, 'portland_compatibility_analysis.rb')
+        @results = GemResults.new(directory: results_dir, inputs: [analysis_file, REMOVALS_FILE])
         @sample = sample
         @seed = seed
-        @sources = sources
         @workers = workers
       end
 
@@ -62,7 +63,7 @@ module RubyResearch
         pending = entries.reject { |name, version| @results.done?(name, version) }
         deadline = @minutes ? Time.now + (@minutes * 60) : Time.now + (365 * 24 * 3600)
         warn "  portland-compatibility: #{pending.size} of #{entries.size} gems to analyze, #{@workers} workers"
-        @results.compute(pending, deadline: deadline, workers: @workers) { |name, _version| matched_features(name) }
+        @results.compute(pending, deadline: deadline, workers: @workers) { |name, _version| @analysis.matched_features(name) }
 
         recorded = @results.all
         remaining = entries.count { |name, version| recorded.dig(name, :version) != version }
@@ -114,17 +115,7 @@ module RubyResearch
         writer.write(data: data, markdown: markdown_for(data))
       end
 
-      # The names of the listed features a gem's source touches, or nil when
-      # the gem has no release to analyze — the per-gem result GemResults
-      # keeps between runs.
-      def matched_features(name)
-        usage = usage_for(name)
-        return nil if usage.nil?
-
-        detectable_features.select { feature_used?(it, usage) }.map { it['name'] }
-      end
-
-      def features = @features ||= YAML.safe_load_file(REMOVALS_FILE).fetch('features')
+      def features = @analysis.features
 
       def grade(feature_names)
         used = features.select { feature_names.include?(it['name']) }
@@ -133,10 +124,6 @@ module RubyResearch
         return 'taste only' if used.any?
 
         'runs as is'
-      end
-
-      def detectable_features
-        features.select { it['node_types'] || it['method_names'] || it['constant_names'] }
       end
 
       def undetectable_features
@@ -148,41 +135,6 @@ module RubyResearch
         return names unless @sample
 
         names.sample(@sample, random: Random.new(@seed))
-      end
-
-      def feature_used?(feature, usage)
-        usage[:node_types].intersect?(Array(feature['node_types'])) ||
-          usage[:method_names].intersect?(Array(feature['method_names'])) ||
-          usage[:constant_names].intersect?(Array(feature['constant_names']))
-      end
-
-      # Collects the node types, called/defined method names, and constant
-      # reads across a gem's Ruby files. Returns nil when the gem has no
-      # release to analyze.
-      def usage_for(name)
-        latest = @compact_index.latest_version_of(name)
-        return nil unless latest
-
-        usage = { node_types: Set.new, method_names: Set.new, constant_names: Set.new }
-        @sources.each_ruby_file(name, latest[:version], platform: latest[:platform]) do |_path, source|
-          result = Prism.parse(source)
-          collect(result.value, usage) if result.success?
-        end
-        usage
-      end
-
-      def collect(root, usage)
-        queue = [root]
-        until queue.empty?
-          node = queue.pop
-          usage[:node_types] << node.type.to_s
-          case node
-          when Prism::CallNode, Prism::DefNode then usage[:method_names] << node.name.to_s
-          when Prism::ClassNode then usage[:node_types] << 'class_node_with_superclass' if node.superclass
-          when Prism::ConstantReadNode then usage[:constant_names] << node.name.to_s
-          end
-          queue.concat(node.compact_child_nodes)
-        end
       end
 
       def markdown_for(data)

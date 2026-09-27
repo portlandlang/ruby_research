@@ -5,20 +5,17 @@ require 'spec_helper'
 RSpec.describe RubyResearch::Reports::PortlandCompatibility do
   subject(:report) { described_class.new }
 
-  def usage_of(source)
-    usage = { node_types: Set.new, method_names: Set.new, constant_names: Set.new }
-    report.send(:collect, Prism.parse(source).value, usage)
-    usage
-  end
+  let(:analysis) { RubyResearch::Reports::PortlandCompatibilityAnalysis.new }
 
   def features_in(source)
-    usage = usage_of(source)
-    report.send(:detectable_features).select { report.send(:feature_used?, it, usage) }.map { it['name'] }
+    usage = analysis.empty_usage
+    analysis.collect(Prism.parse(source).value, usage)
+    analysis.features_in(usage)
   end
 
   describe 'the removals list' do
     it 'tags every feature with a difference, a status, and an owner' do
-      features = report.send(:features)
+      features = analysis.features
 
       expect(features.map { it['difference'] }.uniq.sort).to eq(%w[gap taste thesis])
       expect(features.map { it['status'] }.uniq.sort).to eq(%w[decided undecided])
