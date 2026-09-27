@@ -12,6 +12,7 @@
 #   script/fetch all [--sample N] [--byte-budget X]
 #   script/fetch repair                                  # refetch gems whose cache key collided
 #   script/fetch refresh                                 # catch the cache up with rubygems.org today
+#   script/fetch prune [--dry-run]                       # delete every file that isn't a listed gem's latest
 #
 # The caches never expire on their own. `refresh` compares them with
 # rubygems.org's /names and /versions and drops only the version lists that
@@ -177,17 +178,32 @@ fetch_refresh = lambda do
   refresh.apply
 end
 
+fetch_prune = lambda do
+  prune = RubyResearch::CorpusPrune.new(compact_index: compact_index, sources: sources)
+  stale = prune.stale_files
+  gigabytes = ->(bytes) { (bytes / (1024.0**3)).round(2) }
+  stale_bytes = stale.sum { File.size(it) }
+  puts "  prune: #{stale.size} stale files, #{gigabytes.call(stale_bytes)} GB"
+  if ARGV.include?('--dry-run')
+    stale.first(10).each { puts "    #{it}" }
+    puts '  prune: dry run, nothing deleted'
+  else
+    puts "  prune: freed #{gigabytes.call(prune.apply)} GB"
+  end
+end
+
 stages = {
   'index' => fetch_index,
   'metadata' => fetch_metadata,
   'gems' => fetch_gems,
   'repair' => fetch_repair,
-  'refresh' => fetch_refresh
+  'refresh' => fetch_refresh,
+  'prune' => fetch_prune
 }
 
 selected =
   case stage
-  when 'all' then stages.except('refresh').values
+  when 'all' then stages.except('prune', 'refresh').values
   when *stages.keys then [stages.fetch(stage)]
   else
     warn "Unknown stage: #{stage.inspect}"

@@ -4,6 +4,7 @@
 ## 2026-09-27 (refresh)
 
 - `script/fetch refresh` catches the cache up with rubygems.org (#5): it reads the fresh `/names` and `/versions`, whose last line per gem carries the MD5 of that gem's current `/info` file, and deletes only the cached version lists whose digest no longer matches, so `script/fetch index` refetches those alone. It prints what was added, removed, and changed, and replaces the cached names. First run against the 2026-07-22 snapshot: 2,057 gems added, 474 removed, 5,531 changed; a second run straight after finds nothing. `all` doesn't include it.
+- `script/fetch prune [--dry-run]` keeps the corpus at one version per gem (#6): it deletes every cached `.gem`, gemspec, and version list that isn't a listed gem's latest version, by the same selector the reports use, now one method (`CompactIndexClient#latest_version_of`) where there were thirteen copies. It refuses while any listed gem's version list is uncached, since right after a refresh a changed gem's latest is unknown and its files would look stale. First run: 12,446 files and 4.72 GB, among them old versions of refreshed gems and pre-case-safe-key duplicates the repair stage had left behind.
 
 ## 2026-09-25 (ordering census)
 
