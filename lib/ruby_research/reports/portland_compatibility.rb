@@ -104,6 +104,7 @@ module RubyResearch
           errors: errors,
           removals_file: 'config/portland_removals.yml',
           gems_by_grade: GRADES.to_h { [it, grades.fetch(it, 0)] },
+          open_questions: unblocked_by(features_by_gem),
           just_work_candidates_count: clean_gems.size,
           just_work_candidates_sample: clean_gems.first(CANDIDATE_SAMPLE_SIZE),
           gems_affected_by_feature: gems_by_feature.transform_values(&:size).sort_by { |_feature, count| -count }.to_h,
@@ -117,9 +118,29 @@ module RubyResearch
 
       def features = @analysis.features
 
+      def open_question?(feature) = feature['difference'] == 'gap' || feature['status'] == 'undecided'
+
+      # For each gap or undecided feature: how many gems it is the only open
+      # question for (answer it and they have only decided differences
+      # left), and how many it is the only listed difference of any kind for
+      # (answer it favorably and they run as is). Ranks the open questions
+      # by the gems they hold back.
+      def unblocked_by(features_by_gem)
+        open_names = features.select { open_question?(it) }.map { it['name'] }
+        counts = Hash.new { |hash, key| hash[key] = { sole_open_question: 0, sole_difference: 0 } }
+        features_by_gem.each_value do |used|
+          open_used = used & open_names
+          next unless open_used.size == 1
+
+          counts[open_used.first][:sole_open_question] += 1
+          counts[open_used.first][:sole_difference] += 1 if used.size == 1
+        end
+        counts.sort_by { |_name, count| -count[:sole_open_question] }.to_h
+      end
+
       def grade(feature_names)
         used = features.select { feature_names.include?(it['name']) }
-        return 'gap or undecided' if used.any? { it['difference'] == 'gap' || it['status'] == 'undecided' }
+        return 'gap or undecided' if used.any? { open_question?(it) }
         return 'thesis' if used.any? { it['difference'] == 'thesis' }
         return 'taste only' if used.any?
 
@@ -157,6 +178,19 @@ module RubyResearch
         data[:gems_by_grade].each do |grade, count|
           grade_percent = data[:analyzed].zero? ? 0 : (count * 100.0 / data[:analyzed]).round(1)
           lines << "| #{grade} | #{count} | #{grade_percent}% |"
+        end
+        lines << ''
+        lines << '## Open questions, by the gems they hold back'
+        lines << ''
+        lines << 'For each gap or undecided question: the gems for which it is the only open question ' \
+                 '(answered, they have only decided differences left) and the gems for which it is the ' \
+                 'only listed difference of any kind (answered favorably, they run as is).'
+        lines << ''
+        lines << '| Question | Owner | Only open question | Only difference |'
+        lines << '|---|---|---:|---:|'
+        data[:open_questions].each do |feature, count|
+          owner = features.find { it['name'] == feature }['owner']
+          lines << "| #{feature} | #{owner} | #{count[:sole_open_question]} | #{count[:sole_difference]} |"
         end
         lines << ''
         lines << '## Gems affected, by removed/changed feature'

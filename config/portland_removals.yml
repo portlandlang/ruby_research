@@ -318,8 +318,8 @@ features:
     kind: removed
     difference: taste
     status: undecided
-    owner: docs/ruby/classes.md
-    description: "`attr_reader :text` doesn't parse; a struct lists its fields bare. Whether it becomes a spelling of the field list is unasked"
+    owner: https://github.com/portlandlang/portland/issues/134
+    description: "`attr_reader :text` doesn't parse; a struct lists its fields bare. Whether it becomes a spelling of the field list is portland#134"
     source: docs/ruby/classes.md
     method_names: [attr_reader]
 
@@ -337,8 +337,8 @@ features:
     kind: removed
     difference: gap
     status: undecided
-    owner: docs/language.md
-    description: "`private` / `protected` / `public` are not yet designed"
+    owner: https://github.com/portlandlang/portland/issues/133
+    description: "`private` / `protected` / `public` are not yet designed; in a type body they refuse naming portland#133"
     source: docs/language.md
     method_names: [module_function, private, private_class_method, private_constant, protected, public]
 

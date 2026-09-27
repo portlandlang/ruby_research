@@ -37,6 +37,22 @@ RSpec.describe RubyResearch::Reports::PortlandCompatibility do
     end
   end
 
+  describe 'open questions ranked by the gems they hold back' do
+    it 'counts, per open question, the gems it alone holds open and the gems it alone keeps from running' do
+      features_by_gem = {
+        'a' => %w[require-by-name],
+        'b' => %w[require-by-name raise-rescue],
+        'c' => %w[require-by-name regex],
+        'd' => %w[regex]
+      }
+
+      expect(report.send(:unblocked_by, features_by_gem)).to eq(
+        'require-by-name' => { sole_open_question: 2, sole_difference: 1 },
+        'regex' => { sole_open_question: 1, sole_difference: 1 }
+      )
+    end
+  end
+
   describe 'grading a gem' do
     def grade(*names) = report.send(:grade, names)
 
