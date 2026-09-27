@@ -71,7 +71,7 @@ corpus finding in its own right rather than a Portland question.
 | Question                                  | Report                                                              | Status                                                                        |
 | ----------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Gems using parts Portland removes/changes | `script/report portland-compatibility`                              | working (sampled)                                                             |
-| Gems that could Just Work™                | `portland-compatibility` (candidates = no decided removal detected) | working (syntax-level; semantic changes like truthiness need type analysis)   |
+| Gems that could Just Work™                | `portland-compatibility` (candidates = no listed difference detected) | working (syntax-level; semantic changes like truthiness need type analysis)   |
 | Gems that could NOT easily migrate        | `portland-compatibility` + `c-extensions`                           | partial                                                                       |
 | Gems using things unavailable on macOS    | `c-extensions` (linked system libraries)                            | planned                                                                       |
 | Intel-only gems                           | `script/report platforms`                                           | working (platform-tag heuristic; source-only C extensions need build testing) |
@@ -125,11 +125,14 @@ composition times a constant and is deliberately not reported twice.
 `config/portland_removals.yml` encodes what Portland removes/changes, derived
 from the Portland docs (docs/ruby/_.md and docs/adr/_.md in
 portlandlang/portland). Each feature declares its static detection: Prism node
-types, method names, or constant references. Update that file as ADRs land;
-`portland-compatibility` picks it up on the next run. Known gaps: class
-variables and `alias` are not asserted as removed by the docs; `<<` counts are
-inflated by Array/IO append; tentative features (bitwise operators, thread
-model) are excluded from the Just Work™ headline.
+types, method names, or constant references — plus its `difference` (thesis,
+taste, or gap, per portland's principle 2), its `status` (decided or
+undecided), and the `owner` that holds the ruling or the question. Update that
+file as ADRs land; `portland-compatibility` picks it up on the next run and
+grades each gem by the hardest difference it touches: runs as is, taste only,
+thesis, or gap or undecided. A Just Work™ candidate touches none. Known gaps:
+`<<` counts are inflated by Array/IO append, and method-name matching is
+receiver-blind.
 
 ## Sampling
 

@@ -10,10 +10,11 @@ module RubyResearch
     # Loads config/portland_removals.yml (derived from the Portland docs),
     # then scans each sampled gem's sources with Prism, matching removed
     # features by AST node type, called/defined method name, and constant
-    # reference. A gem touching no decided removal is a Just Work™
-    # candidate at the syntax level; semantic changes with no static
-    # detection (truthiness, ambient nil, mutability) are reported
-    # separately since they affect nearly all code via the type checker.
+    # reference. Each gem is graded by the hardest difference it touches
+    # (GRADES); a gem touching none is a Just Work™ candidate at the syntax
+    # level. Semantic changes with no static detection (truthiness, ambient
+    # nil, mutability) are reported separately since they affect nearly all
+    # code via the type checker.
     class PortlandCompatibility
       REMOVALS_FILE = File.join(ROOT, 'config', 'portland_removals.yml')
 
@@ -22,6 +23,12 @@ module RubyResearch
       # and that git had to store afresh every run, so record the count plus
       # a sample; the full list is reproducible by rerunning.
       CANDIDATE_SAMPLE_SIZE = 100
+
+      # A gem's grade is the hardest difference it touches, easiest first:
+      # nothing; only taste differences, each one a spelling the migration
+      # linter can rewrite; a thesis difference, the language's price; or a
+      # gap or undecided question, which no rewrite can answer yet.
+      GRADES = ['runs as is', 'taste only', 'thesis', 'gap or undecided'].freeze
 
       def initialize(cohorts: Cohorts.new,
                      compact_index: CompactIndexClient.new,
@@ -59,14 +66,15 @@ module RubyResearch
         end
         progress.finish
 
-        decided = detectable_features.select { it['status'] == 'decided' }.map { it['name'] }
-        clean_gems = features_by_gem.reject { |_gem, used| used.intersect?(decided) }.keys.sort
+        clean_gems = features_by_gem.select { |_gem, used| used.empty? }.keys.sort
+        grades = features_by_gem.values.map { grade(it) }.tally
         data = {
           corpus_size: @compact_index.names.size,
           sampled: @sample,
           analyzed: features_by_gem.size,
           errors: errors,
           removals_file: 'config/portland_removals.yml',
+          gems_by_grade: GRADES.to_h { [it, grades.fetch(it, 0)] },
           just_work_candidates_count: clean_gems.size,
           just_work_candidates_sample: clean_gems.first(CANDIDATE_SAMPLE_SIZE),
           gems_affected_by_feature: gems_by_feature.transform_values(&:size).sort_by { |_feature, count| -count }.to_h,
@@ -81,6 +89,15 @@ module RubyResearch
       private
 
       def features = @features ||= YAML.safe_load_file(REMOVALS_FILE).fetch('features')
+
+      def grade(feature_names)
+        used = features.select { feature_names.include?(it['name']) }
+        return 'gap or undecided' if used.any? { it['difference'] == 'gap' || it['status'] == 'undecided' }
+        return 'thesis' if used.any? { it['difference'] == 'thesis' }
+        return 'taste only' if used.any?
+
+        'runs as is'
+      end
 
       def detectable_features
         features.select { it['node_types'] || it['method_names'] || it['constant_names'] }
@@ -125,6 +142,7 @@ module RubyResearch
           usage[:node_types] << node.type.to_s
           case node
           when Prism::CallNode, Prism::DefNode then usage[:method_names] << node.name.to_s
+          when Prism::ClassNode then usage[:node_types] << 'class_node_with_superclass' if node.superclass
           when Prism::ConstantReadNode then usage[:constant_names] << node.name.to_s
           end
           queue.concat(node.compact_child_nodes)
@@ -139,16 +157,28 @@ module RubyResearch
         lines << "Based on #{scope}, out of #{data[:corpus_size]} on RubyGems.org, " \
                  "scanned for the Ruby features Portland removes or changes (#{data[:removals_file]})."
         lines << ''
-        percent = data[:analyzed].zero? ? 0 : (data[:just_work_candidates_count] * 100.0 / data[:analyzed]).round(1)
-        lines << "Just Work™ candidates (no decided removal detected): **#{data[:just_work_candidates_count]}** (#{percent}%)."
+        lines << '## Gems by the hardest difference they touch'
+        lines << ''
+        lines << 'Each gem is graded by the hardest listed difference its source touches (principle 2): ' \
+                 'none; only taste differences, spellings a linter can rewrite; a thesis difference, ' \
+                 "the language's price; or a gap or undecided question, which no rewrite answers yet. " \
+                 'Semantic changes with no static detection (below) apply to every gem and are not graded.'
+        lines << ''
+        lines << '| Grade | Gems | % of gems |'
+        lines << '|---|---:|---:|'
+        data[:gems_by_grade].each do |grade, count|
+          grade_percent = data[:analyzed].zero? ? 0 : (count * 100.0 / data[:analyzed]).round(1)
+          lines << "| #{grade} | #{count} | #{grade_percent}% |"
+        end
         lines << ''
         lines << '## Gems affected, by removed/changed feature'
         lines << ''
-        lines << '| Feature | Gems | % of gems |'
-        lines << '|---|---|---|'
+        lines << '| Feature | Difference | Status | Gems | % of gems |'
+        lines << '|---|---|---|---:|---:|'
         data[:gems_affected_by_feature].each do |feature, count|
           feature_percent = (count * 100.0 / data[:analyzed]).round(1)
-          lines << "| #{feature} | #{count} | #{feature_percent}% |"
+          listed = features.find { it['name'] == feature }
+          lines << "| #{feature} | #{listed['difference']} | #{listed['status']} | #{count} | #{feature_percent}% |"
         end
         lines << ''
         lines << '## By era'
@@ -167,7 +197,7 @@ module RubyResearch
         lines << ''
         lines << '## Just Work™ candidates'
         lines << ''
-        lines << "#{data[:just_work_candidates_count]} gems touch no decided removal. First " \
+        lines << "#{data[:just_work_candidates_count]} gems touch no listed difference. First " \
                  "#{data[:just_work_candidates_sample].size}, alphabetically:"
         lines << ''
         data[:just_work_candidates_sample].each { lines << "- #{it}" }

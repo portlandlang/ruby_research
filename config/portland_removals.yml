@@ -2,26 +2,46 @@
 # (https://github.com/portlandlang/portland — docs/ruby/*.md and docs/adr/*.md).
 #
 # Each feature declares how it can be detected statically in gem source:
-#   node_types:     Prism AST node types (snake_case, as Prism::Node#type)
+#   node_types:     Prism AST node types (snake_case, as Prism::Node#type),
+#                   plus class_node_with_superclass, which the report adds
+#                   for a `class A < B` (Prism gives every class one type)
 #   method_names:   method names on CallNode / DefNode
 #   constant_names: constant reads (Thread, Mutex, ...)
 # Features with no detection keys are semantic changes that affect code via
 # type checking, not via any single syntax form; they're listed for
 # completeness and reported as "not statically detectable".
 #
-# status: decided | tentative (tentative = ADR marks it undecided/leaning)
+# difference: which kind of difference this is, by portland's principle 2
+#   (docs/principles.md, "The promise to Rubyists"):
+#     thesis — why Portland exists: values never mutate, absence is explicit,
+#              failures are values, the runtime is closed, one concurrency
+#              model, static types. Its friction is the language's price.
+#     taste  — a spelling removed as redundant or unclean. Taste defaults to
+#              Ruby, so each one must name what it buys, and may come back.
+#     gap    — nothing decided removes it; Portland lacks it for now.
+# status: decided | undecided — whether a ruling exists.
+# owner: the ADR, ledger page, or issue that holds the ruling or the question.
+#
+# Every entry here refuses on the seed today (probed 2026-09-27), though most
+# refusals are not yet the designed sentence naming the rewrite; except
+# method-missing, whose def is accepted as an ordinary method that nothing
+# dispatches to.
 
 features:
   - name: for-in-loop
     kind: removed
+    difference: taste
     status: decided
+    owner: docs/ruby/removed-syntax.md
     description: "`for x in list` is deleted; `each` is the one way"
     source: docs/ruby/removed-syntax.md
     node_types: [for_node]
 
   - name: global-variables
     kind: removed
+    difference: taste
     status: decided
+    owner: docs/ruby/removed-syntax.md
     description: "Global variables ($foo) and the perlish special-variable zoo are removed"
     source: docs/ruby/removed-syntax.md
     node_types:
@@ -36,35 +56,45 @@ features:
 
   - name: begin-end-execution-blocks
     kind: removed
+    difference: taste
     status: decided
+    owner: docs/ruby/removed-syntax.md
     description: "BEGIN {} / END {} blocks are removed as perlisms"
     source: docs/ruby/removed-syntax.md
     node_types: [pre_execution_node, post_execution_node]
 
   - name: flip-flops
     kind: removed
+    difference: taste
     status: decided
+    owner: docs/ruby/removed-syntax.md
     description: "Flip-flop range operators in conditions are removed"
     source: docs/ruby/removed-syntax.md
     node_types: [flip_flop_node]
 
   - name: method-missing
     kind: removed
+    difference: thesis
     status: decided
+    owner: docs/ruby/metaprogramming.md
     description: "method_missing / respond_to_missing? dynamic dispatch is removed"
     source: docs/ruby/metaprogramming.md
     method_names: [method_missing, respond_to_missing?]
 
   - name: runtime-define-method
     kind: removed
+    difference: thesis
     status: decided
+    owner: docs/ruby/metaprogramming.md
     description: "Runtime define_method / const_get dispatch is removed; replaced by compile-time macros"
     source: docs/ruby/metaprogramming.md
     method_names: [const_get, const_set, define_method]
 
   - name: eval-family
     kind: removed
+    difference: thesis
     status: decided
+    owner: docs/ruby/metaprogramming.md
     description: "eval / instance_eval / class_eval and runtime reflection are removed"
     source: docs/ruby/metaprogramming.md
     method_names:
@@ -80,24 +110,33 @@ features:
       - public_send
       - send
 
+  # Retired because `hash[key] or default` says it, and a missing key is an
+  # explicit maybe rather than a KeyError (ADR 0010) — a spelling judged
+  # redundant, so taste.
   - name: fetch-retired
     kind: removed
+    difference: taste
     status: decided
+    owner: docs/ruby/lookups.md
     description: "Hash/Array#fetch retires in favor of the or-guard"
     source: docs/ruby/lookups.md
     method_names: [fetch]
 
   - name: thread-model
     kind: removed
-    status: tentative
+    difference: thesis
+    status: decided
+    owner: docs/ruby/concurrency.md
     description: "Thread/Fiber/Ractor/Mutex/Queue model removed; concurrency is together/meanwhile"
     source: docs/ruby/concurrency.md
     constant_names: [Fiber, Mutex, Queue, Ractor, Thread]
 
   - name: bitwise-operators
     kind: removed
-    status: tentative
-    description: "Bitwise operators & | ^ ~ leave the grammar (named methods remain)"
+    difference: taste
+    status: undecided
+    owner: docs/adr/0003-2026-07-20-bitwise-operators-out.md
+    description: "Bitwise operators & | ^ ~ leave the grammar (named methods remain) — tentative"
     source: docs/ruby/bitwise-operators.md
     method_names: ["&", "|", "^", "~"]
 
@@ -107,25 +146,31 @@ features:
   # overstated the affected population by 45.2% of gems.
   - name: shift-append-operator
     kind: changed
+    difference: thesis
     status: decided
+    owner: docs/adr/0015-2026-07-23-values-never-mutate.md
     description: "`<<` becomes a rebinding append operator (`line << word` ≡ `line = line + word`), requiring a `mutable` binding; the spelling survives, the aliasing semantics do not"
     source: docs/adr/0015-2026-07-23-values-never-mutate.md
     method_names: ["<<"]
 
   - name: right-shift-operator
     kind: removed
-    status: tentative
-    description: "`>>` leaves the grammar with the other bitwise operators"
+    difference: taste
+    status: undecided
+    owner: docs/adr/0003-2026-07-20-bitwise-operators-out.md
+    description: "`>>` leaves the grammar with the other bitwise operators — tentative"
     source: docs/ruby/bitwise-operators.md
     method_names: [">>"]
 
   # ADR 0015 — values never mutate; names do. In-place mutators never exist.
   - name: in-place-mutators
     kind: removed
+    difference: thesis
     status: decided
+    owner: docs/adr/0015-2026-07-23-values-never-mutate.md
     description: "In-place mutators never exist — no push, map!, upcase!, aliased buffers. Index assignment `[]=` returns as rebinding, like `<<`"
     source: docs/adr/0015-2026-07-23-values-never-mutate.md
-    detection_note: "Upper bound: matching is receiver-blind, so a user-defined `push`/`shift`/`insert`/`replace` on a non-collection counts too. The bang-suffixed names (map!, gsub!, upcase!) are reliable; the bare ones are not."
+    detection_note: "Upper bound: matching is receiver-blind, so a user-defined `push`/`shift`/`insert`/`replace` on a non-collection counts too. The bang-suffixed names (map!, gsub!, upcase!) are reliable; the bare ones are not. Whether a bang method becomes rebinding sugar is portland#103's question."
     method_names:
       - append
       - clear
@@ -156,11 +201,13 @@ features:
 
   - name: freeze-family
     kind: removed
+    difference: thesis
     status: decided
+    owner: docs/adr/0015-2026-07-23-values-never-mutate.md
     description: "freeze/frozen?/dup/clone become meaningless once values never mutate — ledger entries, not features"
     source: docs/adr/0015-2026-07-23-values-never-mutate.md
     method_names: [clone, dup, freeze, frozen?]
-    detection_note: "Open question for the impl repo: ADR 0015 says these become meaningless, but not whether calling one is a compile error or a silently-accepted no-op. Counted as a blocker here, which assumes the former. Also receiver-blind, so a user-defined `dup` counts."
+    detection_note: "Each refuses on the seed as a missing method (probed 2026-09-27). Also receiver-blind, so a user-defined `dup` counts."
 
   # ADR 0020 — only `<<~` survives as a heredoc opener, which is what keeps
   # `<<` unambiguously the append operator. Detected via the opening token
@@ -168,7 +215,9 @@ features:
   # generic node/method matching below.
   - name: heredoc-plain-and-dash
     kind: removed
+    difference: taste
     status: decided
+    owner: docs/adr/0020-2026-07-23-heredocs-squiggly-only.md
     description: "`<<EOS` and `<<-EOS` heredoc openers are out; only `<<~` remains, with SCREAMING_CAPS terminators"
     source: docs/adr/0020-2026-07-23-heredocs-squiggly-only.md
     detection_note: "See the heredocs report: `<<` and `<<-` are 10.1% and 41.0% of heredoc-using gems that shipped in 2020+, versus 24.7% and 84.1% pre-2015"
@@ -177,45 +226,181 @@ features:
   # parameters do not come along.
   - name: numbered-block-parameters
     kind: removed
+    difference: taste
     status: decided
+    owner: docs/adr/0017-2026-07-23-it-under-no-shadow.md
     description: "`_1`–`_9` stay out; `it` is the single implicit block parameter"
     source: docs/adr/0017-2026-07-23-it-under-no-shadow.md
     node_types: [numbered_parameters_node]
 
-  # ADR 0014 — keyword arguments are Ruby 3's; splats stay out for now.
+  # ADR 0014 deferred splats rather than removing them: a gap, not a ruling.
   - name: splat-arguments
     kind: removed
-    status: tentative
-    description: "`*args` and `**kwargs` splats stay out for now; keyword arguments are Ruby 3's"
+    difference: gap
+    status: undecided
+    owner: docs/adr/0014-2026-07-22-keyword-arguments.md
+    description: "`*args` and `**kwargs` splats are deferred; keyword arguments are Ruby 3's"
     source: docs/adr/0014-2026-07-22-keyword-arguments.md
     node_types: [splat_node, assoc_splat_node]
 
+  # ADR 0028 flattened hierarchies into traits; ADR 0056 brought `class`
+  # back as a spelling of `struct` but kept inheritance out. Tagged taste,
+  # since principle 2's thesis list doesn't name it; what it buys is ADR
+  # 0028's: no subtyping, so inference stays whole.
+  - name: inheritance
+    kind: removed
+    difference: taste
+    status: decided
+    owner: docs/adr/0028-2026-07-27-object-model-structs-and-traits.md
+    description: "`class A < B` and `super` refuse; shared behavior moves into a trait"
+    source: docs/ruby/mixins-and-inheritance.md
+    node_types: [class_node_with_superclass, super_node, forwarding_super_node]
+
+  - name: singleton-class-block
+    kind: removed
+    difference: taste
+    status: decided
+    owner: docs/adr/0056-2026-09-27-class-is-a-spelling-of-struct.md
+    description: "`class << self` refuses; each method becomes `def self.name`"
+    source: docs/ruby/classes.md
+    node_types: [singleton_class_node]
+
+  # A struct's fields are read by their bare names; `@text` refuses naming
+  # `text` (ADR 0056), a mechanical rewrite.
+  - name: instance-variable-reads
+    kind: removed
+    difference: taste
+    status: decided
+    owner: docs/adr/0056-2026-09-27-class-is-a-spelling-of-struct.md
+    description: "`@text` refuses; a field is read by its bare name"
+    source: docs/ruby/classes.md
+    node_types: [instance_variable_read_node]
+
+  - name: instance-variable-writes
+    kind: removed
+    difference: thesis
+    status: undecided
+    owner: https://github.com/portlandlang/portland/issues/103
+    description: "`@position += 1` — mutable instance state has no home until portland#103 decides"
+    source: docs/ruby/classes.md
+    node_types:
+      - instance_variable_and_write_node
+      - instance_variable_operator_write_node
+      - instance_variable_or_write_node
+      - instance_variable_target_node
+      - instance_variable_write_node
+
+  - name: class-variables
+    kind: removed
+    difference: thesis
+    status: decided
+    owner: docs/adr/0056-2026-09-27-class-is-a-spelling-of-struct.md
+    description: "`@@count` refuses; shared mutable state has no Portland meaning"
+    source: docs/ruby/classes.md
+    node_types:
+      - class_variable_and_write_node
+      - class_variable_operator_write_node
+      - class_variable_or_write_node
+      - class_variable_read_node
+      - class_variable_target_node
+      - class_variable_write_node
+
+  - name: attr-writers
+    kind: removed
+    difference: thesis
+    status: undecided
+    owner: https://github.com/portlandlang/portland/issues/103
+    description: "`attr_writer` / `attr_accessor` generate setters, which mutate; portland#103's question"
+    source: docs/ruby/classes.md
+    method_names: [attr_accessor, attr_writer]
+
+  - name: attr-reader
+    kind: removed
+    difference: taste
+    status: undecided
+    owner: docs/ruby/classes.md
+    description: "`attr_reader :text` doesn't parse; a struct lists its fields bare. Whether it becomes a spelling of the field list is unasked"
+    source: docs/ruby/classes.md
+    method_names: [attr_reader]
+
+  - name: raise-rescue
+    kind: removed
+    difference: thesis
+    status: decided
+    owner: docs/adr/0027-2026-07-27-errors-as-typed-results.md
+    description: "`raise` / `rescue` / `ensure` / `retry` don't exist; a fallible operation returns its value or a failure"
+    source: docs/ruby/errors.md
+    method_names: [fail, raise]
+    node_types: [ensure_node, rescue_modifier_node, rescue_node, retry_node]
+
+  - name: visibility
+    kind: removed
+    difference: gap
+    status: undecided
+    owner: docs/language.md
+    description: "`private` / `protected` / `public` are not yet designed"
+    source: docs/language.md
+    method_names: [module_function, private, private_class_method, private_constant, protected, public]
+
+  - name: require-by-name
+    kind: removed
+    difference: gap
+    status: undecided
+    owner: https://github.com/portlandlang/portland/issues/116
+    description: "`require \"name\"` has no load path yet; only `require_relative` resolves"
+    source: docs/language.md
+    method_names: [require]
+
+  - name: regex
+    kind: removed
+    difference: gap
+    status: undecided
+    owner: https://github.com/portlandlang/portland/issues/74
+    description: "Regex literals and matching wait on portland#74"
+    source: docs/language.md
+    node_types:
+      - interpolated_match_last_line_node
+      - interpolated_regular_expression_node
+      - match_last_line_node
+      - match_write_node
+      - regular_expression_node
+
   - name: ambient-nil
     kind: changed
+    difference: thesis
     status: decided
+    owner: docs/ruby/nil-and-optionals.md
     description: "nil becomes the empty case of a typed maybe; no NilClass, not falsy"
     source: docs/ruby/nil-and-optionals.md
 
   - name: truthiness
     kind: changed
+    difference: thesis
     status: decided
+    owner: docs/ruby/truthiness.md
     description: "Conditions accept booleans only; `if maybe_value` is a compile error"
     source: docs/ruby/truthiness.md
 
   - name: mutable-by-default
     kind: changed
+    difference: thesis
     status: decided
+    owner: docs/ruby/mutability.md
     description: "Immutable by default; rebinding requires the `mutable` keyword"
     source: docs/ruby/mutability.md
 
   - name: monkeypatching-open-classes
     kind: removed
+    difference: thesis
     status: decided
+    owner: docs/ruby/metaprogramming.md
     description: "Reopening core or any classes at runtime is removed"
     source: docs/ruby/metaprogramming.md
 
   - name: dynamic-typing
     kind: changed
+    difference: thesis
     status: decided
-    description: "Static Hindley-Milner inferred typing; duck typing becomes structural typing"
+    owner: docs/ruby/types.md
+    description: "Static inferred typing; duck typing becomes structural typing"
     source: docs/ruby/types.md
