@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Stands in for portland's `pdx --parse` in specs, speaking its output
+# format: one line per failing file, carrying the refusal, then a count. A
+# file fails here when it mentions an instance variable, as it does under
+# the real parser.
+paths = ARGV.drop(1)
+failed = paths.filter_map do |path|
+  variable = File.read(path)[/@\w+/]
+  next unless variable
+
+  warn "pdx --parse: #{path} does not parse: '#{variable}' is an instance variable, which Portland does not " \
+       "have — a field is read by its bare name, '#{variable.delete('@')}'"
+  path
+end
+warn "pdx --parse: #{failed.size} of #{paths.size} files do not parse" if failed.any?
+exit(failed.any? ? 1 : 0)
