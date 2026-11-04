@@ -1,0 +1,282 @@
+{
+  "corpus_size": 196982,
+  "sampled": 5000,
+  "analyzed": 5000,
+  "errors": [],
+  "gems_with_sites": 1377,
+  "total_sites": 15004,
+  "top_gems_by_site_count": {
+    "ory-client": 1745,
+    "onfido": 1459,
+    "shortcut_client_ruby": 708,
+    "candlepin-api": 520,
+    "bag_kadaster_client": 502,
+    "integration_api": 366,
+    "kabustation_client": 337,
+    "mlh-rubocop-config": 336,
+    "commonlit-clever-ruby": 336,
+    "anthropic": 243
+  },
+  "construct": {
+    "to_sym": 10460,
+    "interpolated symbol": 2389,
+    "transform_keys(&:to_sym)": 981,
+    "intern": 392,
+    "symbolize_keys": 284,
+    "symbolize_names:": 203,
+    "with_indifferent_access": 160,
+    "deep_symbolize_keys": 69,
+    "symbolize_keys!": 52,
+    "deep_symbolize_keys!": 14
+  },
+  "gems_by_construct": {
+    "to_sym": 1156,
+    "interpolated symbol": 299,
+    "symbolize_keys": 129,
+    "symbolize_names:": 97,
+    "with_indifferent_access": 73,
+    "transform_keys(&:to_sym)": 57,
+    "intern": 54,
+    "symbolize_keys!": 32,
+    "deep_symbolize_keys": 24,
+    "deep_symbolize_keys!": 8
+  },
+  "receiver": {
+    "a variable or call": 10317,
+    "an interpolated string": 436,
+    "a string literal": 56,
+    "no receiver": 43
+  },
+  "consumer": {
+    "a hash key": 3339,
+    "a metaprogramming call": 2109,
+    "a membership test": 1719,
+    "other": 1668,
+    "a binding": 1598,
+    "a case subject": 1493,
+    "an argument to another method": 917,
+    "a comparison with a non-literal": 146,
+    "a receiver of another method": 132,
+    "a comparison with a literal symbol": 119,
+    "a receiver of to_s or to_proc": 1
+  },
+  "gems_by_consumer": {
+    "a hash key": 579,
+    "other": 487,
+    "a binding": 485,
+    "a metaprogramming call": 338,
+    "an argument to another method": 310,
+    "a membership test": 269,
+    "a case subject": 83,
+    "a comparison with a literal symbol": 59,
+    "a comparison with a non-literal": 48,
+    "a receiver of another method": 44,
+    "a receiver of to_s or to_proc": 1
+  },
+  "consumer_by_construct": {
+    "interpolated symbol": {
+      "a metaprogramming call": 1689,
+      "a hash key": 182,
+      "an argument to another method": 177,
+      "a binding": 168,
+      "other": 157,
+      "a membership test": 13,
+      "a comparison with a non-literal": 2,
+      "a receiver of another method": 1
+    },
+    "to_sym": {
+      "a hash key": 3104,
+      "a membership test": 1700,
+      "a case subject": 1492,
+      "other": 1425,
+      "a binding": 1314,
+      "an argument to another method": 682,
+      "a metaprogramming call": 404,
+      "a comparison with a non-literal": 144,
+      "a comparison with a literal symbol": 119,
+      "a receiver of another method": 75,
+      "a receiver of to_s or to_proc": 1
+    },
+    "intern": {
+      "a binding": 116,
+      "other": 86,
+      "an argument to another method": 58,
+      "a receiver of another method": 56,
+      "a hash key": 53,
+      "a metaprogramming call": 16,
+      "a membership test": 6,
+      "a case subject": 1
+    }
+  },
+  "cohort_sizes": {
+    "2015-2019": 1604,
+    "2020+": 1510,
+    "pre-2015": 1886
+  },
+  "share_by_era": {
+    "deep_symbolize_keys": {
+      "2015-2019": 0.5,
+      "2020+": 0.9,
+      "pre-2015": 0.2
+    },
+    "deep_symbolize_keys!": {
+      "2015-2019": 0.2,
+      "2020+": 0.2,
+      "pre-2015": 0.1
+    },
+    "intern": {
+      "2015-2019": 0.5,
+      "2020+": 0.5,
+      "pre-2015": 2.1
+    },
+    "interpolated symbol": {
+      "2015-2019": 3.6,
+      "2020+": 9.6,
+      "pre-2015": 5.1
+    },
+    "symbolize_keys": {
+      "2015-2019": 1.9,
+      "2020+": 3.5,
+      "pre-2015": 2.4
+    },
+    "symbolize_keys!": {
+      "2015-2019": 0.1,
+      "2020+": 0.5,
+      "pre-2015": 1.2
+    },
+    "symbolize_names:": {
+      "2015-2019": 1.6,
+      "2020+": 4.0,
+      "pre-2015": 0.6
+    },
+    "to_sym": {
+      "2015-2019": 18.4,
+      "2020+": 28.0,
+      "pre-2015": 23.2
+    },
+    "transform_keys(&:to_sym)": {
+      "2015-2019": 0.1,
+      "2020+": 3.7,
+      "pre-2015": 0.0
+    },
+    "with_indifferent_access": {
+      "2015-2019": 0.7,
+      "2020+": 2.7,
+      "pre-2015": 1.1
+    }
+  },
+  "site_totals_by_era": {
+    "2015-2019": 2052,
+    "2020+": 9828,
+    "pre-2015": 3124
+  },
+  "composition_by_era": {
+    "deep_symbolize_keys": {
+      "2015-2019": 1.8,
+      "2020+": 0.3,
+      "pre-2015": 0.2
+    },
+    "deep_symbolize_keys!": {
+      "2015-2019": 0.3,
+      "2020+": 0.1,
+      "pre-2015": 0.1
+    },
+    "intern": {
+      "2015-2019": 2.7,
+      "2020+": 1.1,
+      "pre-2015": 7.3
+    },
+    "interpolated symbol": {
+      "2015-2019": 9.6,
+      "2020+": 18.3,
+      "pre-2015": 12.7
+    },
+    "symbolize_keys": {
+      "2015-2019": 2.9,
+      "2020+": 1.3,
+      "pre-2015": 3.2
+    },
+    "symbolize_keys!": {
+      "2015-2019": 0.1,
+      "2020+": 0.2,
+      "pre-2015": 1.1
+    },
+    "symbolize_names:": {
+      "2015-2019": 1.9,
+      "2020+": 1.4,
+      "pre-2015": 0.7
+    },
+    "to_sym": {
+      "2015-2019": 79.6,
+      "2020+": 66.6,
+      "pre-2015": 73.0
+    },
+    "transform_keys(&:to_sym)": {
+      "2015-2019": 0.1,
+      "2020+": 10.0,
+      "pre-2015": 0.0
+    },
+    "with_indifferent_access": {
+      "2015-2019": 0.8,
+      "2020+": 0.9,
+      "pre-2015": 1.8
+    }
+  },
+  "node_totals_by_era": {
+    "2015-2019": 3771948,
+    "2020+": 15737283,
+    "pre-2015": 11299942
+  },
+  "density_by_era": {
+    "deep_symbolize_keys": {
+      "2015-2019": 1.0,
+      "2020+": 0.2,
+      "pre-2015": 0.0
+    },
+    "deep_symbolize_keys!": {
+      "2015-2019": 0.2,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "intern": {
+      "2015-2019": 1.5,
+      "2020+": 0.7,
+      "pre-2015": 2.0
+    },
+    "interpolated symbol": {
+      "2015-2019": 5.2,
+      "2020+": 11.4,
+      "pre-2015": 3.5
+    },
+    "symbolize_keys": {
+      "2015-2019": 1.6,
+      "2020+": 0.8,
+      "pre-2015": 0.9
+    },
+    "symbolize_keys!": {
+      "2015-2019": 0.1,
+      "2020+": 0.1,
+      "pre-2015": 0.3
+    },
+    "symbolize_names:": {
+      "2015-2019": 1.1,
+      "2020+": 0.9,
+      "pre-2015": 0.2
+    },
+    "to_sym": {
+      "2015-2019": 43.3,
+      "2020+": 41.6,
+      "pre-2015": 20.2
+    },
+    "transform_keys(&:to_sym)": {
+      "2015-2019": 0.1,
+      "2020+": 6.2,
+      "pre-2015": 0.0
+    },
+    "with_indifferent_access": {
+      "2015-2019": 0.5,
+      "2020+": 0.5,
+      "pre-2015": 0.5
+    }
+  }
+}

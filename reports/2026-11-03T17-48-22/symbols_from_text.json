@@ -1,0 +1,272 @@
+{
+  "corpus_size": 196982,
+  "sampled": 100,
+  "analyzed": 100,
+  "errors": [],
+  "gems_with_sites": 26,
+  "total_sites": 620,
+  "top_gems_by_site_count": {
+    "candlepin-api": 520,
+    "appfuel": 31,
+    "jamnagar": 6,
+    "reline": 6,
+    "paperclip-neo4j": 6,
+    "jsonapi-validations": 5,
+    "madscience": 4,
+    "fit_parser": 4,
+    "meteoroid": 4,
+    "json_mapper": 4
+  },
+  "construct": {
+    "to_sym": 491,
+    "intern": 90,
+    "interpolated symbol": 15,
+    "symbolize_keys": 6,
+    "symbolize_names:": 5,
+    "with_indifferent_access": 5,
+    "deep_symbolize_keys!": 3,
+    "deep_symbolize_keys": 2,
+    "transform_keys(&:to_sym)": 2,
+    "symbolize_keys!": 1
+  },
+  "gems_by_construct": {
+    "to_sym": 23,
+    "interpolated symbol": 6,
+    "symbolize_names:": 3,
+    "with_indifferent_access": 3,
+    "symbolize_keys": 2,
+    "deep_symbolize_keys!": 1,
+    "deep_symbolize_keys": 1,
+    "symbolize_keys!": 1,
+    "transform_keys(&:to_sym)": 1,
+    "intern": 1
+  },
+  "receiver": {
+    "a variable or call": 523,
+    "an interpolated string": 28,
+    "a string literal": 21,
+    "no receiver": 9
+  },
+  "consumer": {
+    "a binding": 139,
+    "other": 133,
+    "a hash key": 133,
+    "an argument to another method": 83,
+    "a receiver of another method": 38,
+    "a metaprogramming call": 26,
+    "a membership test": 22,
+    "a comparison with a non-literal": 18,
+    "a comparison with a literal symbol": 3,
+    "a case subject": 1
+  },
+  "gems_by_consumer": {
+    "a binding": 9,
+    "an argument to another method": 8,
+    "a hash key": 8,
+    "a membership test": 7,
+    "a metaprogramming call": 6,
+    "other": 5,
+    "a receiver of another method": 2,
+    "a comparison with a non-literal": 2,
+    "a comparison with a literal symbol": 1,
+    "a case subject": 1
+  },
+  "consumer_by_construct": {
+    "interpolated symbol": {
+      "an argument to another method": 11,
+      "a binding": 2,
+      "a metaprogramming call": 1,
+      "other": 1
+    },
+    "to_sym": {
+      "other": 123,
+      "a hash key": 123,
+      "a binding": 112,
+      "an argument to another method": 56,
+      "a metaprogramming call": 25,
+      "a membership test": 22,
+      "a comparison with a non-literal": 18,
+      "a receiver of another method": 8,
+      "a comparison with a literal symbol": 3,
+      "a case subject": 1
+    },
+    "intern": {
+      "a receiver of another method": 30,
+      "a binding": 25,
+      "an argument to another method": 16,
+      "a hash key": 10,
+      "other": 9
+    }
+  },
+  "cohort_sizes": {
+    "2015-2019": 41,
+    "2020+": 25,
+    "pre-2015": 34
+  },
+  "share_by_era": {
+    "deep_symbolize_keys": {
+      "2015-2019": 2.4,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "deep_symbolize_keys!": {
+      "2015-2019": 2.4,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "intern": {
+      "2015-2019": 0.0,
+      "2020+": 0.0,
+      "pre-2015": 2.9
+    },
+    "interpolated symbol": {
+      "2015-2019": 2.4,
+      "2020+": 8.0,
+      "pre-2015": 8.8
+    },
+    "symbolize_keys": {
+      "2015-2019": 2.4,
+      "2020+": 0.0,
+      "pre-2015": 2.9
+    },
+    "symbolize_keys!": {
+      "2015-2019": 2.4,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "symbolize_names:": {
+      "2015-2019": 2.4,
+      "2020+": 0.0,
+      "pre-2015": 5.9
+    },
+    "to_sym": {
+      "2015-2019": 22.0,
+      "2020+": 28.0,
+      "pre-2015": 20.6
+    },
+    "transform_keys(&:to_sym)": {
+      "2015-2019": 0.0,
+      "2020+": 4.0,
+      "pre-2015": 0.0
+    },
+    "with_indifferent_access": {
+      "2015-2019": 4.9,
+      "2020+": 4.0,
+      "pre-2015": 0.0
+    }
+  },
+  "site_totals_by_era": {
+    "2015-2019": 60,
+    "2020+": 23,
+    "pre-2015": 537
+  },
+  "composition_by_era": {
+    "deep_symbolize_keys": {
+      "2015-2019": 3.3,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "deep_symbolize_keys!": {
+      "2015-2019": 5.0,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "intern": {
+      "2015-2019": 0.0,
+      "2020+": 0.0,
+      "pre-2015": 16.8
+    },
+    "interpolated symbol": {
+      "2015-2019": 1.7,
+      "2020+": 21.7,
+      "pre-2015": 1.7
+    },
+    "symbolize_keys": {
+      "2015-2019": 3.3,
+      "2020+": 0.0,
+      "pre-2015": 0.7
+    },
+    "symbolize_keys!": {
+      "2015-2019": 1.7,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "symbolize_names:": {
+      "2015-2019": 1.7,
+      "2020+": 0.0,
+      "pre-2015": 0.7
+    },
+    "to_sym": {
+      "2015-2019": 76.7,
+      "2020+": 65.2,
+      "pre-2015": 80.1
+    },
+    "transform_keys(&:to_sym)": {
+      "2015-2019": 0.0,
+      "2020+": 8.7,
+      "pre-2015": 0.0
+    },
+    "with_indifferent_access": {
+      "2015-2019": 6.7,
+      "2020+": 4.3,
+      "pre-2015": 0.0
+    }
+  },
+  "node_totals_by_era": {
+    "2015-2019": 104130,
+    "2020+": 128006,
+    "pre-2015": 3479068
+  },
+  "density_by_era": {
+    "deep_symbolize_keys": {
+      "2015-2019": 1.9,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "deep_symbolize_keys!": {
+      "2015-2019": 2.9,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "intern": {
+      "2015-2019": 0.0,
+      "2020+": 0.0,
+      "pre-2015": 2.6
+    },
+    "interpolated symbol": {
+      "2015-2019": 1.0,
+      "2020+": 3.9,
+      "pre-2015": 0.3
+    },
+    "symbolize_keys": {
+      "2015-2019": 1.9,
+      "2020+": 0.0,
+      "pre-2015": 0.1
+    },
+    "symbolize_keys!": {
+      "2015-2019": 1.0,
+      "2020+": 0.0,
+      "pre-2015": 0.0
+    },
+    "symbolize_names:": {
+      "2015-2019": 1.0,
+      "2020+": 0.0,
+      "pre-2015": 0.1
+    },
+    "to_sym": {
+      "2015-2019": 44.2,
+      "2020+": 11.7,
+      "pre-2015": 12.4
+    },
+    "transform_keys(&:to_sym)": {
+      "2015-2019": 0.0,
+      "2020+": 1.6,
+      "pre-2015": 0.0
+    },
+    "with_indifferent_access": {
+      "2015-2019": 3.8,
+      "2020+": 0.8,
+      "pre-2015": 0.0
+    }
+  }
+}
