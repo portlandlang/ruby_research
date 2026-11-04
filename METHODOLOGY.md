@@ -89,6 +89,7 @@ PORTLAND_DECISION_CANDIDATES.md):
 | Heredocs (`<<` / `<<-` / `<<~`)           | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working             |
 | The `%` literal family (portland#29)      | `script/report percent-literals` (member, delimiter, escaped/nested delimiters, quotes in `%q`/`%Q` bodies) | working             |
 | Ordering: `<=>` and `Comparable` (portland#76) | `script/report ordering` (who defines `<=>`, what the body does, `include Comparable`, sort/min/max call shapes, results read as integers) | working             |
+| Symbols from text: `to_sym` and kin (portland ADR 0023 §3, re-opened) | `script/report symbols-from-text` (the constructs that build a symbol from text, what `to_sym` is called on, and what the runtime symbol feeds — hash key, comparison, membership, metaprogramming) | working             |
 
 ## Cohort slicing
 

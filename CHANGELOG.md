@@ -1,6 +1,10 @@
 
 # Changelog
 
+## 2026-11-03
+
+- `symbols-from-text` report, for portland ADR 0023 §3 re-opened (no `String#to_sym`): every way a gem builds a symbol from text — `to_sym`, `intern`, an interpolated symbol, `symbolize_names:`, `symbolize_keys` and its deep and ActiveSupport cousins, `transform_keys(&:to_sym)`, `with_indifferent_access` — what `to_sym`/`intern` are called on (a string literal, an interpolated string, or text the program did not write), and what the runtime symbol feeds: a hash key, a comparison or `case` against literal symbols, a membership test, a metaprogramming call, another method's argument, a binding. The consumer column is the question the re-opening turns on: how much goes to open positions the proposal allows, and how much would meet a declared vocabulary. Cohort-sliced like the other source-based reports.
+
 ## 2026-09-27 (refresh)
 
 - `dependency-closure` report, readiness level 2 (#11): for each of the 10,426 gems whose `lib/` parses under pdx, its whole runtime dependency closure through each dependency's latest version. 7,254 have no runtime dependencies, 41 have dependencies that all parse, and 3,131 are held back by one that doesn't. The dependencies holding back the most are Ruby's own default gems — `logger` 1,574, `base64` 1,373, `bigdecimal`, `json`, `benchmark`, `securerandom`, `ostruct`, `timeout` — then concurrent-ruby, i18n, activesupport, rake, and rack: a stdlib question (portland#78) as much as a porting one.

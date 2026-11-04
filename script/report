@@ -23,6 +23,7 @@
 #   script/report mutation-shapes [--sample N]
 #   script/report heredocs [--sample N]
 #   script/report percent-literals [--sample N]
+#   script/report symbols-from-text [--sample N]
 #   script/report ordering [--sample N]
 #   script/report all [--sample N]
 #
@@ -85,6 +86,7 @@ reports = {
   'mutation-shapes' => -> { RubyResearch::Reports::MutationShapes.new(sample: sample).run },
   'heredocs' => -> { RubyResearch::Reports::Heredocs.new(sample: sample).run },
   'percent-literals' => -> { RubyResearch::Reports::PercentLiterals.new(sample: sample).run },
+  'symbols-from-text' => -> { RubyResearch::Reports::SymbolsFromText.new(sample: sample).run },
   'ordering' => -> { RubyResearch::Reports::Ordering.new(sample: sample).run },
   'case-collisions' => -> { RubyResearch::Reports::CaseCollisions.new.run },
   'dependencies' => -> { RubyResearch::Reports::Dependencies.new(sample: sample).run },
