@@ -3,48 +3,18 @@
 Planned work for this harness. See METHODOLOGY.md for how existing reports
 answer the questions in README.md, and CHANGELOG.md for what has landed.
 
-Nothing here requires new network fetches unless it says so. The corpus
-snapshot in `data/` (195,399 gems, fetched 2026-07-22) is complete, so every
-active item runs offline from cache.
+Nothing here requires new network fetches unless it says so. `script/fetch refresh` and `script/fetch prune` keep the cached corpus at one version per gem; an item that needs `.gem` sources says so, since the source cache may have been pruned.
 
 ## Active
 
-- **Update PORTLAND_DECISION_CANDIDATES.md** — its prevalence figures all cite
-  the old 50-gem sample; replace with full-corpus numbers (n=195,390) and
-  re-rank the priorities, which were chosen from that small sample. Also
-  reconcile against the impl repo (ADRs, CHANGELOG, commits, issues): anything
-  since decided leaves the candidates list and enters
-  `config/portland_removals.yml` with detection metadata instead.
-- **Run the site-normalized reports at full corpus.** The composition and
-  density code is built, verified at `--sample 300–400`, and committed, but
-  the committed `reports/` still hold gem-share-only runs. Five serial
-  full-corpus runs (~70 min total) will populate the new tables. Watch for
-  whether density contradicts gem share for `class << self`, `defined?`,
-  zsuper, or `alias` — the candidates file's priority ranking assumes those
-  are growing, and density is the better evidence.
+- **Reconcile PORTLAND_DECISION_CANDIDATES.md against the impl repo** (ADRs, CHANGELOG, commits, issues): anything since decided leaves the candidates list for `config/portland_removals.yml` with detection metadata instead, whose own update is [ruby_research#18](https://github.com/portlandlang/ruby_research/issues/18).
 
 ## Deferred
 
 ### Needs fetching from rubygems.org
 
-- **Download counts / usage weighting.** The most valuable missing dimension:
-  today every report weights a 2009 abandoned gem equally with rails, which
-  answers "what is in the corpus" but not "what does the code people actually
-  run look like" — the question implementers, linter authors, and editor
-  authors care about. Not derivable from the compact index. Investigate bulk
-  sources (RubyGems.org database dumps, if published) before considering
-  ~195k throttled API calls (~5.4 hours). Would also carry ownership data,
-  which closes the open question on the case-collisions report: whether those
-  178 colliding pairs are one author's rename or genuinely different projects.
-- **Incremental index refresh.** `names.txt` and the per-gem info files are
-  cached indefinitely, so new gems and new versions of known gems never
-  appear. A full refresh is ~290MB. The compact index protocol supports
-  conditional/ranged updates, so a `script/fetch refresh` could update only
-  what changed. Note that refreshing changes seeded sample membership, so the
-  current snapshot should stay frozen for the duration of an analysis cycle.
-- **Intel-only verification.** `platforms` flags 153 gems by platform tag
-  alone. Source-only C extensions that fail to build on arm64 need actual
-  build testing to catch.
+- **Download counts / usage weighting.** The most valuable missing dimension: most reports weight a 2009 abandoned gem equally with rails; only `gem-readiness` reads downloads, and only for the gems that parse. That answers "what is in the corpus" but not "what does the code people actually run look like" — the question implementers, linter authors, and editor authors care about. Not derivable from the compact index. Investigate bulk sources (RubyGems.org database dumps, if published) before considering one throttled API call per gem. Would also carry ownership data, which closes the open question on the case-collisions report: whether the colliding pairs are one author's rename or genuinely different projects.
+- **Intel-only verification.** `platforms` flags Intel-only gems by platform tag alone. Source-only C extensions that fail to build on arm64 need actual build testing to catch.
 
 ### Unbuilt censuses
 
@@ -88,20 +58,12 @@ Written up under `investigations/`.
 
 ### Harness quality
 
-- **Single-pass architecture.** The six source-based reports each
-  independently decompress and Prism-parse all 195k gems, which is why each
-  takes ~20 minutes. One pass emitting per-gem records would make every
-  aggregation cheap post-processing, make arbitrary slicing free, and let new
-  questions be answered without touching the corpus again.
+- **Single-pass architecture.** The source-based reports each independently decompress and Prism-parse the corpus; one pass emitting per-gem records would make every aggregation cheap post-processing, make arbitrary slicing free, and let new questions be answered without touching the corpus again.
 - **Structured deprecations.** `ruby-deprecations` is v1: keyword-matched
   NEWS bullets. Could become feature-level structured data.
 
 ### Direction, not yet actionable
 
-- **Decouple from Portland.** The harness is intended to be useful to the
-  wider Ruby community — implementations (MRI, JRuby, MagLev), gem hosts
-  (RubyGems.org, gem.coop), linters (RuboCop, Standard), and editors. Most
-  reports are already general; the Portland-specific surface is just
-  `portland_compatibility` and `config/portland_removals.yml`.
+- **Decouple from Portland.** The harness is intended to be useful to the wider Ruby community — implementations (MRI, JRuby, MagLev), gem hosts (RubyGems.org, gem.coop), linters (RuboCop, Standard), and editors. Most reports are already general; the Portland-specific surface is the readiness reports (`portland-compatibility`, `pdx-parse`, `gem-readiness`, `first-gem-candidates`) and `config/portland_removals.yml`.
 - **Move PORTLAND_DECISION_CANDIDATES.md to the impl repo**, leaving this
   repo as data, research, scripts, and reports only.

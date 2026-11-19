@@ -26,13 +26,7 @@ time) and mirrored to `reports/latest/`. All fetched data is cached under
 
 ## Cache keys
 
-Cache filenames are derived from gem names, but macOS folds filename case,
-so distinct gems like `Abundance` and `abundance` (178 such collisions in the
-corpus) would share one file and silently serve one gem's data for the other.
-`RubyResearch::CacheKey` leaves all-lowercase names alone and gives any name
-carrying uppercase a digest suffix (`Abundance@2f1c8e3d`). `script/fetch repair`
-migrates pre-existing entries to the new key by renaming on disk — no refetch —
-and refills any group whose cached data was poisoned.
+Cache filenames are derived from gem names, but macOS folds filename case, so distinct gems like `Abundance` and `abundance` (a corpus finding of its own; see `case-collisions`) would share one file and silently serve one gem's data for the other. `RubyResearch::CacheKey` leaves all-lowercase names alone and gives any name carrying uppercase a digest suffix (`Abundance@2f1c8e3d`). `script/fetch repair` migrates pre-existing entries to the new key by renaming on disk — no refetch — and refills any group whose cached data was poisoned.
 
 `script/report case-collisions` lists the colliding pairs themselves, which is a
 corpus finding in its own right rather than a Portland question.
@@ -51,8 +45,8 @@ corpus finding in its own right rather than a Portland question.
 
 | Question                                       | Report                                                           | Status                                                  |
 | ---------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------- |
-| Language parts used in published gems          | `script/report feature-usage` (Prism AST tally over gem sources) | working (sampled)                                       |
-| Parts unused by any gem                        | `feature-usage`, full-corpus run                                 | working (needs full-corpus run for a definitive answer) |
+| Language parts used in published gems          | `script/report feature-usage` (Prism AST tally over gem sources) | working                                                 |
+| Parts unused by any gem                        | `feature-usage`, full-corpus run                                 | working                                                 |
 | Parts only used by old/unmaintained gems       | `script/report feature-usage` (cohort slicing)                   | working                                                 |
 | Histogram threshold of "very old/unmaintained" | `script/report gem-ages`                                         | working                                                 |
 | Which gems work on which Ruby versions         | `script/report ruby-requirements`                                | working                                                 |
@@ -70,7 +64,7 @@ corpus finding in its own right rather than a Portland question.
 
 | Question                                  | Report                                                              | Status                                                                        |
 | ----------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| Gems using parts Portland removes/changes | `script/report portland-compatibility`                              | working (sampled)                                                             |
+| Gems using parts Portland removes/changes | `script/report portland-compatibility`                              | working                                                                       |
 | Gems that could Just Work™                | `portland-compatibility` (candidates = no listed difference detected) | working (syntax-level; semantic changes like truthiness need type analysis)   |
 | Gems that could NOT easily migrate        | `portland-compatibility` + `c-extensions`                           | partial                                                                       |
 | Gems using things unavailable on macOS    | `c-extensions` (linked system libraries)                            | planned                                                                       |
@@ -78,18 +72,17 @@ corpus finding in its own right rather than a Portland question.
 
 ### Design-decision censuses
 
-Reports feeding specific open Portland decisions (see
-PORTLAND_DECISION_CANDIDATES.md):
+Reports that fed specific Portland decisions, each named by the ADR that ruled:
 
 | Decision                                  | Report                                                                                             | Status              |
 | ----------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------- |
-| Mutable values / `<<` as rebinding        | `script/report mutation-shapes` (accumulator vs aliased vs shared mutation sites)                  | working (heuristic) |
-| Exceptions vs results                     | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes)          | working             |
-| Optionals / fetch retirement / truthiness | `script/report nil-idioms` (nil checks, `&.`, `                                                    |                     | ` defaults, fetch arity) | working |
-| Heredocs (`<<` / `<<-` / `<<~`)           | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working             |
-| The `%` literal family (portland#29)      | `script/report percent-literals` (member, delimiter, escaped/nested delimiters, quotes in `%q`/`%Q` bodies) | working             |
-| Ordering: `<=>` and `Comparable` (portland#76) | `script/report ordering` (who defines `<=>`, what the body does, `include Comparable`, sort/min/max call shapes, results read as integers) | working             |
-| Symbols from text: `to_sym` and kin (portland ADR 0023 §3, re-opened) | `script/report symbols-from-text` (the constructs that build a symbol from text, what `to_sym` is called on, and what the runtime symbol feeds — hash key, comparison, membership, metaprogramming) | working             |
+| Mutable values / `<<` as rebinding (portland ADR 0015) | `script/report mutation-shapes` (accumulator vs aliased vs shared mutation sites)     | working (heuristic) |
+| Exceptions vs results (portland ADRs 0027 and 0044) | `script/report error-handling` (rescue shapes, swallow vs re-raise, custom error classes) | working             |
+| Optionals / fetch retirement / truthiness (portland ADRs 0005 and 0010) | `script/report nil-idioms` (nil checks, `&.`, `\|\|` defaults, fetch arity) | working |
+| Heredocs (`<<` / `<<-` / `<<~`) (portland ADR 0020) | `script/report heredocs` (indentation flavor, quoting, interpolation, terminators, size, stacking) | working |
+| The `%` literal family (portland ADR 0051) | `script/report percent-literals` (member, delimiter, escaped/nested delimiters, quotes in `%q`/`%Q` bodies) | working             |
+| Ordering: `<=>` and `Comparable` (portland ADR 0054) | `script/report ordering` (who defines `<=>`, what the body does, `include Comparable`, sort/min/max call shapes, results read as integers) | working             |
+| Symbols from text: `to_sym` and kin (portland ADR 0071) | `script/report symbols-from-text` (the constructs that build a symbol from text, what `to_sym` is called on, and what the runtime symbol feeds — hash key, comparison, membership, metaprogramming) | working             |
 
 ## Cohort slicing
 
@@ -100,14 +93,9 @@ report can ask not just "is this used?" but "is it used by code people still
 maintain?". Downloads would be the natural fifth key but the compact index
 does not carry them (see TODO.md).
 
-Read cohort numbers against the corpus baseline: **~29% of all gems shipped
-a release in 2020 or later**. A construct well below that is declining; well
-above it is growing. As a sanity check, features that only exist in recent
-Ruby land where they should — numbered block params 99.8% in 2020+, `it`
-90.4%, `case/in` 99.7%.
+Read cohort numbers against the corpus baseline: in the 2026-07-22 snapshot, **~29% of all gems shipped a release in 2020 or later**. A construct well below that is declining; well above it is growing. As a sanity check, features that only exist in recent Ruby land where they should — in the 2026-07-22 snapshot, numbered block params 99.8% in 2020+, `it` 90.4%, `case/in` 99.7%.
 
-All six source-based reports are sliced. Each reports up to three views, and
-they answer different questions — mixing them up produces wrong conclusions:
+Every source-based report is sliced. Each reports up to three views, and they answer different questions — mixing them up produces wrong conclusions:
 
 | View | Denominator | Question |
 |---|---|---|
@@ -123,20 +111,8 @@ composition times a constant and is deliberately not reported twice.
 
 ## Portland removal list
 
-`config/portland_removals.yml` encodes what Portland removes/changes, derived
-from the Portland docs (docs/ruby/_.md and docs/adr/_.md in
-portlandlang/portland). Each feature declares its static detection: Prism node
-types, method names, or constant references — plus its `difference` (thesis,
-taste, or gap, per portland's principle 2), its `status` (decided or
-undecided), and the `owner` that holds the ruling or the question. Update that
-file as ADRs land; `portland-compatibility` picks it up on the next run and
-grades each gem by the hardest difference it touches: runs as is, taste only,
-thesis, or gap or undecided. A Just Work™ candidate touches none. Known gaps:
-`<<` counts are inflated by Array/IO append, and method-name matching is
-receiver-blind.
+`config/portland_removals.yml` encodes what Portland removes/changes, derived from the Portland docs (`docs/ruby/*.md` and `docs/adr/*.md` in portlandlang/portland). Each feature declares its static detection: Prism node types, method names, or constant references — plus its `difference` (thesis or taste, per portland's principle 2, or gap for what Portland has not decided or built), its `status` (decided or undecided), and the `owner` that holds the ruling or the question. Update that file as ADRs land; `portland-compatibility` picks it up on the next run and grades each gem by the hardest difference it touches: runs as is, taste only, thesis, or gap or undecided. A Just Work™ candidate touches none. Known gaps: `<<` counts are inflated by Array/IO append, and method-name matching is receiver-blind.
 
 ## Sampling
 
-Corpus reports accept `--sample N` for fast, reproducible (seeded) random
-samples. Omitting `--sample` runs the full corpus (~195k gems, one request
-each on first run; fully cached afterward).
+Corpus reports accept `--sample N` for fast, reproducible (seeded) random samples. Omitting `--sample` runs the full corpus (one request per gem on first run; fully cached afterward).

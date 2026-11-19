@@ -1,6 +1,10 @@
 
 # Changelog
 
+## 2026-11-18 (docs brought up to date)
+
+- README, METHODOLOGY.md, TODO.md, `investigations/missing-dependencies.md`, and `PORTLAND_DECISION_CANDIDATES.md` brought up to date with the harness and with Portland, for [portlandlang/portland#288](https://github.com/portlandlang/portland/issues/288): the README lists every report `script/report` runs and describes the corpus as a cached snapshot `script/fetch refresh` updates; METHODOLOGY names the ADR that ruled each design-decision census, marks the full-corpus runs as done, attributes cohort percentages to the 2026-07-22 snapshot, and repairs a table row an unescaped `||` broke; TODO drops the items `script/fetch refresh` and the full-corpus site-normalized runs finished; and the candidates file is reconciled through portland ADR 0089 — the five priority candidates and most of the rest moved to its decided table, each naming the ADR, ledger page, or never-port issue that ruled, `proc`/`lambda` and shell execution pointed at portland#77 and portland#179, and its three open questions answered.
+
 ## 2026-11-03
 
 - `symbols-from-text` report, for portland ADR 0023 §3 re-opened (no `String#to_sym`): every way a gem builds a symbol from text — `to_sym`, `intern`, an interpolated symbol, `symbolize_names:`, `symbolize_keys` and its deep and ActiveSupport cousins, `transform_keys(&:to_sym)`, `with_indifferent_access` — what `to_sym`/`intern` are called on (a string literal, an interpolated string, or text the program did not write), and what the runtime symbol feeds: a hash key, a comparison or `case` against literal symbols, a membership test, a metaprogramming call, another method's argument, a binding. The consumer column is the question the re-opening turns on: how much goes to open positions the proposal allows, and how much would meet a declared vocabulary. Cohort-sliced like the other source-based reports.
