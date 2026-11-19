@@ -90,9 +90,7 @@ missing.sort_by { |dep, users| -users.size }.each { puts "#{it[0]} (#{it[1].size
 '
 ```
 
-To test hypotheses 1, 5, and 6, the RubyGems API will say whether a name
-ever existed (`/api/v1/gems/<name>.json` → 404 vs a tombstone). That is
-network access, currently deferred — see TODO.md.
+To test hypotheses 1, 5, and 6, the RubyGems API will say whether a name ever existed (`/api/v1/gems/<name>.json` → 404 vs a tombstone). That is network access, through the rate-limited API client `gem-readiness` already uses (`RubyResearch::RubygemsApiClient`).
 
 ## Next steps
 
