@@ -13,16 +13,16 @@ script/report platforms --sample 500
 script/report gem-ages --sample 500
 script/report c-extensions --sample 500
 script/report ruby-deprecations
-script/report case-collisions               # full corpus, cache only
+script/report case-collisions                # full corpus, cache only
 script/report dependencies --sample 500
 script/report construction --sample 100
 script/report feature-usage --sample 100     # downloads gems; heavier
 script/report portland-compatibility --sample 100
 script/report pdx-parse --sample 100         # needs a built pdx
-script/report first-gem-candidates          # after pdx-parse and portland-compatibility
-script/report gem-readiness                 # the same; fetches downloads
+script/report first-gem-candidates           # after pdx-parse and portland-compatibility
+script/report gem-readiness                  # the same; fetches downloads
 script/report test-frameworks
-script/report dependency-closure            # after pdx-parse
+script/report dependency-closure             # after pdx-parse
 script/report error-handling --sample 100
 script/report nil-idioms --sample 100
 script/report mutation-shapes --sample 100
