@@ -25,6 +25,7 @@
 #   script/report percent-literals [--sample N]
 #   script/report symbols-from-text [--sample N]
 #   script/report ordering [--sample N]
+#   script/report random-seeding [--sample N]
 #   script/report all [--sample N]
 #
 # Every report runs against the full corpus unless --sample is given.
@@ -88,6 +89,7 @@ reports = {
   'percent-literals' => -> { RubyResearch::Reports::PercentLiterals.new(sample: sample).run },
   'symbols-from-text' => -> { RubyResearch::Reports::SymbolsFromText.new(sample: sample).run },
   'ordering' => -> { RubyResearch::Reports::Ordering.new(sample: sample).run },
+  'random-seeding' => -> { RubyResearch::Reports::RandomSeeding.new(sample: sample).run },
   'case-collisions' => -> { RubyResearch::Reports::CaseCollisions.new.run },
   'dependencies' => -> { RubyResearch::Reports::Dependencies.new(sample: sample).run },
   'construction' => -> { RubyResearch::Reports::Construction.new(sample: sample).run }

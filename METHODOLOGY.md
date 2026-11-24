@@ -70,6 +70,7 @@ Reports that fed specific Portland decisions, each named by the ADR that ruled:
 | The `%` literal family (portland ADR 0051)                              | `script/report percent-literals` (member, delimiter, escaped/nested delimiters, quotes in `%q`/`%Q` bodies)                                                                                         | working             |
 | Ordering: `<=>` and `Comparable` (portland ADR 0054)                    | `script/report ordering` (who defines `<=>`, what the body does, `include Comparable`, sort/min/max call shapes, results read as integers)                                                          | working             |
 | Symbols from text: `to_sym` and kin (portland ADR 0071)                 | `script/report symbols-from-text` (the constructs that build a symbol from text, what `to_sym` is called on, and what the runtime symbol feeds — hash key, comparison, membership, metaprogramming) | working             |
+| Random numbers and their seeds (portland#548) | `script/report random-seeding` (the draws that name no seed, the ways a seed is named, what the seed is — a number written down, the environment, the clock or fresh entropy, a value handed in — and whether the site is in the library, tests, or examples) | written; first run pending |
 
 ## Cohort slicing
 
