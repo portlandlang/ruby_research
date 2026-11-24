@@ -30,6 +30,7 @@ script/report heredocs --sample 100
 script/report percent-literals --sample 100
 script/report symbols-from-text --sample 100
 script/report ordering --sample 100
+script/report random-seeding --sample 100
 script/report all --sample 500
 ```
 
